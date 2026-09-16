@@ -3,353 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>XoluGG TradeLab</title>
-
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
   <div class="app">
 
-    <!-- HEADER -->
+    <!-- HEADER COMPACTO -->
     <header class="topbar">
-
       <div class="brand">
         <div class="brand-icon">📈</div>
-
         <div>
           <h1>XoluGG <span>TradeLab</span></h1>
           <p>Asistente de tradeo EA SPORTS FC 27</p>
         </div>
       </div>
 
-      <div class="capital-summary">
+      <div class="topbar-right">
 
-        <div class="summary-card">
-          <span class="summary-label">Capital actual</span>
-          <strong id="capitalActual">22.000</strong>
-        </div>
-
-        <div class="summary-card">
-          <span class="summary-label">Invertido</span>
-          <strong id="capitalInvertido">0</strong>
-        </div>
-
-        <div class="summary-card">
-          <span class="summary-label">Capital libre</span>
-          <strong id="capitalLibre">22.000</strong>
-        </div>
-
-        <div class="summary-card profit">
-          <span class="summary-label">Beneficio del día</span>
-          <strong id="beneficioDia">+0</strong>
-        </div>
-
-      </div>
-
-    </header>
-
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main class="dashboard">
-
-      <!-- CALCULADORA -->
-      <section class="panel calculator-panel">
-
-        <div class="panel-title">
-          <h2>🧮 Calculadora de tradeo</h2>
-          <span>Calcula si una compra merece la pena</span>
-        </div>
-
-        <div class="form-grid">
-
-          <div class="field">
-            <label for="jugador">Jugador</label>
-            <input
-              type="text"
-              id="jugador"
-              placeholder="Ej: Rațiu"
-            />
-          </div>
-
-          <div class="field">
-            <label for="precioVenta">Precio de venta</label>
-            <input
-              type="number"
-              id="precioVenta"
-              placeholder="2200"
-              min="0"
-            />
-          </div>
-
-          <div class="field">
-            <label for="precioCompra">Precio de compra / puja</label>
-            <input
-              type="number"
-              id="precioCompra"
-              placeholder="1600"
-              min="0"
-            />
-          </div>
-
-          <div class="field">
-            <label for="beneficioMinimo">Beneficio mínimo deseado</label>
-            <input
-              type="number"
-              id="beneficioMinimo"
-              value="300"
-              min="0"
-            />
-          </div>
-
-        </div>
-
-        <button id="btnCalcular" class="primary-button">
-          Calcular trade
-        </button>
-
-
-        <!-- RESULTADOS -->
-        <div class="results">
-
-          <div class="result-row">
-            <span>Neto después del 5%</span>
-            <strong id="resultadoNeto">0</strong>
-          </div>
-
-          <div class="result-row">
-            <span>Beneficio</span>
-            <strong id="resultadoBeneficio">0</strong>
-          </div>
-
-          <div class="result-row">
-            <span>ROI</span>
-            <strong id="resultadoROI">0%</strong>
-          </div>
-
-          <div class="result-row">
-            <span>Compra ideal</span>
-            <strong id="resultadoIdeal">0 - 0</strong>
-          </div>
-
-          <div class="result-row">
-            <span>Compra máxima</span>
-            <strong id="resultadoMaximo">0</strong>
-          </div>
-
-        </div>
-
-        <div id="estadoTrade" class="trade-status neutral">
-          Esperando datos
-        </div>
-
-        <button id="btnAgregarWatchlist" class="secondary-button">
-          + Añadir a watchlist
-        </button>
-
-      </section>
-
-
-      <!-- WATCHLIST -->
-      <section class="panel watchlist-panel">
-
-        <div class="panel-title horizontal">
-
-          <div>
-            <h2>👀 Watchlist</h2>
-            <span>Jugadores que estamos siguiendo</span>
-          </div>
-
-          <button id="btnLimpiarWatchlist" class="small-button">
-            Limpiar
-          </button>
-
-        </div>
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-              <tr>
-                <th>Jugador</th>
-                <th>Venta</th>
-                <th>Ideal</th>
-                <th>Máximo</th>
-                <th>Estado</th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody id="watchlistBody">
-
-              <!-- Se llena desde JS -->
-
-            </tbody>
-
-          </table>
-
-        </div>
-
-      </section>
-
-
-      <!-- CAPITAL -->
-      <section class="panel capital-panel">
-
-        <div class="panel-title">
-          <h2>💰 Gestión de capital</h2>
-          <span>Actualiza tu bankroll</span>
-        </div>
-
-        <div class="capital-form">
-
-          <div class="field">
-            <label for="nuevoCapital">Capital actual</label>
-
+        <!-- GESTIÓN DE CAPITAL ARRIBA -->
+        <div class="quick-capital-card">
+          <div class="quick-capital-title">💰 Capital</div>
+          <div class="quick-capital-form">
             <input
               type="number"
               id="nuevoCapital"
               placeholder="22000"
               min="0"
             />
+            <button id="btnActualizarCapital" class="small-primary">
+              Actualizar
+            </button>
           </div>
-
-          <button id="btnActualizarCapital" class="primary-button">
-            Actualizar capital
-          </button>
-
         </div>
 
+        <!-- RESUMEN PRINCIPAL -->
+        <div class="capital-summary">
+          <div class="summary-card">
+            <span class="summary-label">Capital actual</span>
+            <strong id="capitalActual">22.000</strong>
+          </div>
+
+          <div class="summary-card">
+            <span class="summary-label">Invertido</span>
+            <strong id="capitalInvertido">0</strong>
+          </div>
+
+          <div class="summary-card">
+            <span class="summary-label">Capital libre</span>
+            <strong id="capitalLibre">22.000</strong>
+          </div>
+
+          <div class="summary-card profit">
+            <span class="summary-label">Beneficio del día</span>
+            <strong id="beneficioDia">+0</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD -->
+    <main class="dashboard">
+
+      <!-- COLUMNA IZQUIERDA -->
+      <section class="column left-column">
+
+        <!-- CALCULADORA -->
+        <section class="panel calculator-panel">
+          <div class="panel-title">
+            <h2>🧮 Calculadora de tradeo</h2>
+            <span>Calcula si una compra merece la pena</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="jugador">Jugador</label>
+              <input type="text" id="jugador" placeholder="Ej: Rațiu" />
+            </div>
+
+            <div class="field">
+              <label for="precioVenta">Precio de venta</label>
+              <input type="number" id="precioVenta" placeholder="2200" min="0" />
+            </div>
+
+            <div class="field">
+              <label for="precioCompra">Precio de compra / puja</label>
+              <input type="number" id="precioCompra" placeholder="1600" min="0" />
+            </div>
+
+            <div class="field">
+              <label for="beneficioMinimo">Beneficio mínimo deseado</label>
+              <input type="number" id="beneficioMinimo" value="300" min="0" />
+            </div>
+          </div>
+
+          <div class="calc-actions">
+            <button id="btnCalcular" class="primary-button">
+              Calcular trade
+            </button>
+
+            <button id="btnAgregarWatchlist" class="secondary-button">
+              + Añadir a watchlist
+            </button>
+          </div>
+
+          <div class="results compact-results">
+            <div class="result-row">
+              <span>Neto después del 5%</span>
+              <strong id="resultadoNeto">0</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Beneficio</span>
+              <strong id="resultadoBeneficio">0</strong>
+            </div>
+
+            <div class="result-row">
+              <span>ROI</span>
+              <strong id="resultadoROI">0%</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Compra ideal</span>
+              <strong id="resultadoIdeal">0 - 0</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Compra máxima</span>
+              <strong id="resultadoMaximo">0</strong>
+            </div>
+          </div>
+
+          <div id="estadoTrade" class="trade-status neutral">
+            Esperando datos
+          </div>
+        </section>
+
+        <!-- TRADES REALIZADOS -->
+        <section class="panel history-panel">
+          <div class="panel-title horizontal">
+            <div>
+              <h2>📋 Trades realizados</h2>
+              <span>Historial de operaciones</span>
+            </div>
+
+            <button id="btnLimpiarHistorial" class="small-button">
+              Limpiar
+            </button>
+          </div>
+
+          <div class="trade-form compact-trade-form">
+            <input type="text" id="tradeJugador" placeholder="Jugador" />
+            <input type="number" id="tradeCompra" placeholder="Compra" />
+            <input type="number" id="tradeVenta" placeholder="Venta" />
+            <button id="btnRegistrarTrade" class="primary-button">
+              Registrar
+            </button>
+          </div>
+
+          <div class="table-wrapper compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jugador</th>
+                  <th>Compra</th>
+                  <th>Venta</th>
+                  <th>Beneficio</th>
+                  <th>ROI</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="historialBody"></tbody>
+            </table>
+          </div>
+        </section>
       </section>
 
+      <!-- COLUMNA DERECHA -->
+      <section class="column right-column">
 
-      <!-- HISTORIAL -->
-      <section class="panel history-panel">
+        <!-- WATCHLIST -->
+        <section class="panel watchlist-panel">
+          <div class="panel-title horizontal">
+            <div>
+              <h2>👀 Watchlist</h2>
+              <span>Jugadores que estamos siguiendo</span>
+            </div>
 
-        <div class="panel-title horizontal">
-
-          <div>
-            <h2>📋 Trades realizados</h2>
-            <span>Historial de operaciones</span>
+            <button id="btnLimpiarWatchlist" class="small-button">
+              Limpiar
+            </button>
           </div>
 
-          <button id="btnLimpiarHistorial" class="small-button">
-            Limpiar
-          </button>
+          <div class="table-wrapper compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Jugador</th>
+                  <th>Venta</th>
+                  <th>Ideal</th>
+                  <th>Máximo</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="watchlistBody"></tbody>
+            </table>
+          </div>
+        </section>
 
-        </div>
+        <!-- LEYENDA -->
+        <section class="panel legend-panel">
+          <div class="panel-title">
+            <h2>🚦 Estados</h2>
+            <span>Interpretación rápida</span>
+          </div>
 
-        <div class="trade-form">
+          <div class="legend-grid">
+            <div class="legend-item">
+              <span class="legend-icon excellent">🔥</span>
+              <div>
+                <strong>Excelente</strong>
+                <p>Muy buen margen y ROI.</p>
+              </div>
+            </div>
 
-          <input
-            type="text"
-            id="tradeJugador"
-            placeholder="Jugador"
-          />
+            <div class="legend-item">
+              <span class="legend-icon good">✅</span>
+              <div>
+                <strong>Buena</strong>
+                <p>Cumple el beneficio mínimo.</p>
+              </div>
+            </div>
 
-          <input
-            type="number"
-            id="tradeCompra"
-            placeholder="Compra"
-          />
+            <div class="legend-item">
+              <span class="legend-icon fair">🟡</span>
+              <div>
+                <strong>Justa</strong>
+                <p>Margen bajo. Mejor esperar.</p>
+              </div>
+            </div>
 
-          <input
-            type="number"
-            id="tradeVenta"
-            placeholder="Venta"
-          />
-
-          <button id="btnRegistrarTrade" class="primary-button">
-            Registrar trade
-          </button>
-
-        </div>
-
-        <div class="table-wrapper">
-
-          <table>
-
-            <thead>
-              <tr>
-                <th>Jugador</th>
-                <th>Compra</th>
-                <th>Venta</th>
-                <th>Beneficio</th>
-                <th>ROI</th>
-                <th></th>
-              </tr>
-            </thead>
-
-            <tbody id="historialBody">
-
-              <!-- Se llena desde JS -->
-
-            </tbody>
-
-          </table>
-
-        </div>
+            <div class="legend-item">
+              <span class="legend-icon bad">❌</span>
+              <div>
+                <strong>No comprar</strong>
+                <p>No compensa el riesgo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </section>
-
-
-      <!-- LEYENDA -->
-      <section class="panel legend-panel">
-
-        <div class="panel-title">
-          <h2>🚦 Estados</h2>
-          <span>Interpretación rápida</span>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-icon excellent">🔥</span>
-          <div>
-            <strong>Excelente</strong>
-            <p>Muy buen margen y ROI.</p>
-          </div>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-icon good">✅</span>
-          <div>
-            <strong>Buena</strong>
-            <p>Cumple el beneficio mínimo.</p>
-          </div>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-icon fair">🟡</span>
-          <div>
-            <strong>Justa</strong>
-            <p>Margen bajo. Mejor esperar.</p>
-          </div>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-icon bad">❌</span>
-          <div>
-            <strong>No comprar</strong>
-            <p>No compensa el riesgo.</p>
-          </div>
-        </div>
-
-      </section>
-
     </main>
 
-
-    <!-- FOOTER -->
     <footer>
       XoluGG TradeLab · EA SPORTS FC 27
     </footer>
-
   </div>
 
-
   <script src="app.js"></script>
-
 </body>
 </html>
