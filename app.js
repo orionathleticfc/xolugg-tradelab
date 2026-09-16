@@ -30,6 +30,47 @@ function loadState() {
   }
 }
 
+/* =========================================================
+   STEPS DINÁMICOS
+   < 1000  -> 50 en 50
+   >= 1000 -> 100 en 100
+========================================================= */
+
+function aplicarStepDinamico(input) {
+  const actualizarStep = () => {
+    const valor = Number(input.value) || 0;
+    input.step = valor >= 1000 ? 100 : 50;
+  };
+
+  input.addEventListener("input", actualizarStep);
+  input.addEventListener("focus", actualizarStep);
+
+  actualizarStep();
+}
+
+function activarStepsDinamicos() {
+  const ids = [
+    "precioVenta",
+    "precioCompra",
+    "beneficioMinimo",
+    "nuevoCapital",
+    "tradeCompra",
+    "tradeVenta"
+  ];
+
+  ids.forEach((id) => {
+    const input = document.getElementById(id);
+
+    if (input) {
+      aplicarStepDinamico(input);
+    }
+  });
+}
+
+/* =========================================================
+   CÁLCULOS
+========================================================= */
+
 function getTradeMetrics(precioVenta, precioCompra, beneficioMinimo) {
   const venta = Number(precioVenta);
   const compra = Number(precioCompra);
@@ -113,6 +154,10 @@ function getTradeStatus(metrics, beneficioMinimo) {
   };
 }
 
+/* =========================================================
+   CAPITAL
+========================================================= */
+
 function renderCapital() {
   const invertido = state.watchlist.reduce((total, item) => {
     return total + Number(item.compraActual || 0);
@@ -140,6 +185,27 @@ function renderCapital() {
       ? `+${formatCoins(beneficioDia)}`
       : formatCoins(beneficioDia);
 }
+
+function actualizarCapital() {
+  const nuevoCapital =
+    Number(document.getElementById("nuevoCapital").value);
+
+  if (nuevoCapital < 0 || Number.isNaN(nuevoCapital)) {
+    alert("Ingresa un capital válido.");
+    return;
+  }
+
+  state.capital = nuevoCapital;
+
+  saveState();
+  renderCapital();
+
+  document.getElementById("nuevoCapital").value = "";
+}
+
+/* =========================================================
+   CALCULADORA
+========================================================= */
 
 function calcularTrade() {
   const jugador =
@@ -209,6 +275,10 @@ function calcularTrade() {
     status
   };
 }
+
+/* =========================================================
+   WATCHLIST
+========================================================= */
 
 function addToWatchlist() {
   const result = calcularTrade();
@@ -309,22 +379,9 @@ function limpiarWatchlist() {
   renderCapital();
 }
 
-function actualizarCapital() {
-  const nuevoCapital =
-    Number(document.getElementById("nuevoCapital").value);
-
-  if (!nuevoCapital || nuevoCapital < 0) {
-    alert("Ingresa un capital válido.");
-    return;
-  }
-
-  state.capital = nuevoCapital;
-
-  saveState();
-  renderCapital();
-
-  document.getElementById("nuevoCapital").value = "";
-}
+/* =========================================================
+   HISTORIAL DE TRADES
+========================================================= */
 
 function registrarTrade() {
   const jugador =
@@ -461,6 +518,10 @@ function limpiarHistorial() {
   renderCapital();
 }
 
+/* =========================================================
+   INIT
+========================================================= */
+
 function init() {
   loadState();
 
@@ -468,47 +529,31 @@ function init() {
   renderWatchlist();
   renderHistorial();
 
+  activarStepsDinamicos();
+
   document
     .getElementById("btnCalcular")
-    .addEventListener(
-      "click",
-      calcularTrade
-    );
+    .addEventListener("click", calcularTrade);
 
   document
     .getElementById("btnAgregarWatchlist")
-    .addEventListener(
-      "click",
-      addToWatchlist
-    );
+    .addEventListener("click", addToWatchlist);
 
   document
     .getElementById("btnActualizarCapital")
-    .addEventListener(
-      "click",
-      actualizarCapital
-    );
+    .addEventListener("click", actualizarCapital);
 
   document
     .getElementById("btnRegistrarTrade")
-    .addEventListener(
-      "click",
-      registrarTrade
-    );
+    .addEventListener("click", registrarTrade);
 
   document
     .getElementById("btnLimpiarWatchlist")
-    .addEventListener(
-      "click",
-      limpiarWatchlist
-    );
+    .addEventListener("click", limpiarWatchlist);
 
   document
     .getElementById("btnLimpiarHistorial")
-    .addEventListener(
-      "click",
-      limpiarHistorial
-    );
+    .addEventListener("click", limpiarHistorial);
 }
 
 document.addEventListener(
