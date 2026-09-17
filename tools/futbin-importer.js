@@ -169,6 +169,11 @@ async function processFile(file) {
     setStatus("PDF procesado", "success");
     try {
       await analyzeCards(diagnostic);
+      try {
+        await compareCardsWithCatalog();
+      } catch (error) {
+        comparisonUi["comparison-status"].textContent = "Error en la comparación: " + error.message;
+      }
     } catch (error) {
       cardUi["cards-status"].textContent = "Error en el análisis: " + error.message;
       cardUi["metric-errors"].textContent = "1";
@@ -232,6 +237,7 @@ let cardOffset = 0;
 const CARDS_PER_VIEW = 50;
 
 function resetCards() {
+  resetComparison();
   parsedCards = null;
   cardOffset = 0;
   cardUi["cards-body"].replaceChildren();
@@ -334,4 +340,124 @@ cardUi["cards-next"].addEventListener("click", () => { cardOffset += CARDS_PER_V
 cardUi["export-cards"].addEventListener("click", () => {
   if (parsedCards) downloadJson(parsedCards, diagnostic.fileName.replace(/\.pdf$/i, "") + "-cartas.json");
 });
+
+const comparisonKeys = ["updated", "new", "notInCurrentSnapshot", "needsReview", "unchanged"];
+const comparisonMetricKeys = ["catalog", "snapshot", "exactMatches", "partialMatches", ...comparisonKeys];
+const comparisonUi = Object.fromEntries([
+  "comparison-status", "comparison-filter", "comparison-export", "comparison-body",
+  "comparison-previous", "comparison-next", "comparison-range",
+  ...comparisonMetricKeys.map(key => "comparison-" + key)
+].map(id => [id, document.getElementById(id)]));
+let comparisonResult = null;
+let comparisonOffset = 0;
+
+function resetComparison() {
+  comparisonResult = null;
+  comparisonOffset = 0;
+  comparisonUi["comparison-body"].replaceChildren();
+  comparisonUi["comparison-filter"].value = "";
+  comparisonUi["comparison-range"].textContent = "";
+  comparisonUi["comparison-status"].textContent = "Esperando cartas detectadas.";
+  for (const key of comparisonMetricKeys) comparisonUi["comparison-" + key].textContent =
+    key === "catalog" && Array.isArray(window.PLAYERS_DATA) ? String(window.PLAYERS_DATA.length) : "—";
+  for (const key of ["filter", "export", "previous", "next"]) comparisonUi["comparison-" + key].disabled = true;
+}
+
+function compareCardsWithCatalog() {
+  comparisonUi["comparison-status"].textContent = "Comparando identidades con el catálogo…";
+  return new Promise((resolve, reject) => {
+    if (!Array.isArray(window.PLAYERS_DATA)) {
+      reject(new Error("No se pudo cargar players-data.js. El diagnóstico y las cartas siguen disponibles."));
+      return;
+    }
+    const worker = new Worker("futbin-matcher-worker.mjs", { type: "module" });
+    const fail = error => { worker.terminate(); reject(error); };
+    worker.onerror = event => fail(new Error(event.message || "No se pudo iniciar el comparador."));
+    worker.onmessageerror = () => fail(new Error("No se pudo recibir la comparación."));
+    worker.onmessage = event => {
+      worker.terminate();
+      if (event.data.error) { reject(new Error(event.data.error)); return; }
+      comparisonResult = event.data.result;
+      for (const key of comparisonMetricKeys) comparisonUi["comparison-" + key].textContent = String(comparisonResult.summary[key]);
+      comparisonUi["comparison-filter"].disabled = false;
+      comparisonUi["comparison-export"].disabled = false;
+      comparisonUi["comparison-status"].textContent = "Comparación terminada. Los cambios son solo una vista previa.";
+      renderComparison();
+      resolve();
+    };
+    try {
+      worker.postMessage({ snapshot: parsedCards.cards, catalog: window.PLAYERS_DATA,
+        metadata: { fileName: diagnostic.fileName, extractedAt: diagnostic.extractedAt,
+          parserVersion: parsedCards.parserVersion, parserMetrics: parsedCards.metrics, parserErrors: parsedCards.errors } });
+    } catch (error) { fail(error); }
+  });
+}
+
+function renderComparison() {
+  const filter = comparisonUi["comparison-filter"].value;
+  const rows = comparisonResult ? (filter ? comparisonResult[filter] : comparisonKeys.flatMap(key => comparisonResult[key])) : [];
+  const fragment = document.createDocumentFragment();
+  const display = value => value === null || value === undefined ? "—" : String(value);
+  rows.slice(comparisonOffset, comparisonOffset + 50).forEach((entry, index) => {
+    const card = entry.pdfCard || entry.currentRecord;
+    const row = document.createElement("tr");
+    const values = [card?.nombre, card?.ovr, card?.posicionPrincipal, entry.status,
+      entry.currentRecord?.precioReferencia, entry.pdfCard?.precioReferencia,
+      entry.currentRecord?.popularidadFuente, entry.pdfCard?.popularidadFuente, entry.confidence];
+    values.forEach((value, index) => {
+      const td = document.createElement("td");
+      td.textContent = display(value);
+      if (index === 3) td.dataset.comparisonStatus = entry.status;
+      row.append(td);
+    });
+    const detailRow = document.createElement("tr");
+    detailRow.hidden = true;
+    detailRow.className = "card-detail-row";
+    detailRow.id = "comparison-detail-" + (comparisonOffset + index);
+    const detailCell = document.createElement("td");
+    detailCell.colSpan = 10;
+    detailRow.append(detailCell);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Detalles";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", detailRow.id);
+    button.setAttribute("aria-label", "Comparación de " + (card?.nombre || "carta sin identificar"));
+    button.addEventListener("click", () => {
+      detailRow.hidden = !detailRow.hidden;
+      button.setAttribute("aria-expanded", String(!detailRow.hidden));
+      if (!detailRow.hidden && !detailCell.children.length) {
+        const sections = {
+          "Identidad detectada": entry.identity, "Registro actual relacionado": entry.currentRecord,
+          "Datos del PDF": entry.pdfCard, "Diff de mercado": entry.marketDiff,
+          "Razón del match": entry.matchReason, "Confidence": entry.confidence,
+          "Fields used": entry.fieldsUsed, "Warnings": entry.warnings,
+          "Candidatos y conflictos estructurales": entry.candidates
+        };
+        for (const [title, value] of Object.entries(sections)) {
+          const heading = document.createElement("h3");
+          heading.textContent = title;
+          const pre = document.createElement("pre");
+          pre.textContent = typeof value === "string" ? value : JSON.stringify(value, null, 2);
+          detailCell.append(heading, pre);
+        }
+      }
+    });
+    const action = document.createElement("td");
+    action.append(button); row.append(action); fragment.append(row, detailRow);
+  });
+  comparisonUi["comparison-body"].replaceChildren(fragment);
+  comparisonUi["comparison-range"].textContent = rows.length
+    ? (comparisonOffset + 1) + "–" + Math.min(comparisonOffset + 50, rows.length) + " de " + rows.length
+    : "Sin registros para este filtro";
+  comparisonUi["comparison-previous"].disabled = comparisonOffset === 0;
+  comparisonUi["comparison-next"].disabled = comparisonOffset + 50 >= rows.length;
+}
+comparisonUi["comparison-filter"].addEventListener("change", () => { comparisonOffset = 0; renderComparison(); });
+comparisonUi["comparison-previous"].addEventListener("click", () => { comparisonOffset = Math.max(0, comparisonOffset - 50); renderComparison(); });
+comparisonUi["comparison-next"].addEventListener("click", () => { comparisonOffset += 50; renderComparison(); });
+comparisonUi["comparison-export"].addEventListener("click", () => {
+  if (comparisonResult) downloadJson(comparisonResult, diagnostic.fileName.replace(/\.pdf$/i, "") + "-comparacion.json");
+});
+resetComparison();
 

@@ -73,3 +73,63 @@ Los nombres en múltiples líneas o cambios de agrupación de tokens pueden requ
 ajustes; el panel de evidencia permite revisarlos. No hay OCR ni comparación con
 catálogos, snapshots, persistencia o actualización de precios.
 
+
+## Comparación con catálogo — Fase 3
+
+La página carga `../players-data.js` en modo de solo lectura. El módulo puro
+`futbin-matcher.mjs` recibe las cartas del parser y el catálogo, y
+`futbin-matcher-worker.mjs` ejecuta la comparación fuera del hilo de la UI.
+No modifica el parser, el catálogo ni la aplicación principal.
+
+`compareFutbinSnapshot(snapshot, catalog, metadata)` devuelve:
+`metadata`, `summary`, `unchanged`, `updated`, `new`,
+`notInCurrentSnapshot` y `needsReview`.
+
+La identidad normaliza nombre (diacríticos, mayúsculas y espacios), OVR, posición,
+seis stats de campo o de portero, pie, skills y weakFoot. No usa el ID para resolver
+coincidencias, ni incluye precios, popularidad, rating o página PDF.
+Las posiciones alternativas se comparan como conjuntos y solo generan una
+advertencia si difieren.
+
+- Una identidad completa e igual produce `exact_identity / high`, aunque el
+  parser marque la carta partial por falta de rating.
+- Una identidad parcial con nombre, OVR y posición, sin conflictos en los campos
+  conocidos y con un único candidato, produce `partial_identity / medium`.
+- Candidatos múltiples, identidad insuficiente o conflictos estructurales con el
+  mismo nombre/OVR requieren revisión.
+- Un OVR distinto, o la ausencia de candidatos razonables, permite clasificar NEW.
+- Si varias cartas del PDF reclaman el mismo registro, todas pasan a revisión;
+  no se resuelve el conflicto por orden, ID, precio ni popularidad.
+- Los candidatos pendientes de revisión no se marcan como ausentes. Por ello,
+  exact + partial + notInCurrentSnapshot no necesariamente suma todo el catálogo.
+
+Los cuatro campos de mercado generan diffs con old, new, delta y deltaPercent.
+Null se conserva como ausencia: una transición hacia/desde null es visible,
+pero no tiene delta numérico. Old = 0 tampoco genera porcentaje.
+Perder un valor de mercado en el PDF añade `missing_snapshot_market_value`.
+Todo es preview; estos diffs no constituyen instrucciones de actualización.
+
+Validación adicional:
+
+```text
+node --test tools/futbin-parser.test.mjs tools/futbin-matcher.test.mjs
+node --check tools/futbin-matcher.mjs
+node --check tools/futbin-matcher-worker.mjs
+```
+
+Resultado real de esta fase:
+- Catálogo: 250; snapshot: 250.
+- Exact matches definitivos: 189; partial matches definitivos: 0.
+- Unchanged: 0; updated: 189; new: 35.
+- Not in current snapshot: 37; needs review: 26.
+- 14 registros requieren revisión por candidatos múltiples; 12 por reclamaciones
+  repetidas del mismo registro desde el PDF. Los parciales con candidato único
+  aparecen también acompañados de otra carta que reclama ese candidato.
+- Gordon, Frimpong, Pedro Neto y Mamardashvili son exact matches con cambios de
+  mercado. Barcola y Lamine Yamal incluyen identidades no distinguibles con los
+  campos disponibles y conservan sus candidatos para revisión.
+
+Pasaron 20 pruebas y el flujo con PDF real en Edge: filtros de comparación,
+detalle de conflictos, exportación de comparación, las dos exportaciones
+anteriores y comprobación de que window.PLAYERS_DATA permanece sin cambios.
+

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>XoluGG · Diagnóstico PDF FUTBIN</title>
   <link rel="stylesheet" href="futbin-importer.css">
+  <script src="../players-data.js"></script>
   <script type="module" src="futbin-importer.js"></script>
 </head>
 <body>
@@ -73,6 +74,44 @@
     </div>
     <div class="pagination"><button id="cards-previous" type="button" disabled>Anterior</button>
       <span id="cards-range"></span><button id="cards-next" type="button" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="comparison-title">
+    <h2 id="comparison-title">Comparación con catálogo actual</h2>
+    <p>Solo comparación y preview. «Not in current snapshot» significa que una carta no aparece en este PDF; no indica eliminación. Los candidatos pendientes de revisión no se cuentan como ausentes.</p>
+    <p id="comparison-status" role="status" aria-live="polite">Esperando cartas detectadas.</p>
+    <dl class="comparison-metrics">
+      <div><dt>Catálogo actual</dt><dd id="comparison-catalog">—</dd></div>
+      <div><dt>Snapshot PDF</dt><dd id="comparison-snapshot">—</dd></div>
+      <div><dt>Exact matches</dt><dd id="comparison-exactMatches">—</dd></div>
+      <div><dt>Partial matches</dt><dd id="comparison-partialMatches">—</dd></div>
+      <div><dt>Unchanged</dt><dd id="comparison-unchanged">—</dd></div>
+      <div><dt>Updated</dt><dd id="comparison-updated">—</dd></div>
+      <div><dt>New</dt><dd id="comparison-new">—</dd></div>
+      <div><dt>Not in current snapshot</dt><dd id="comparison-notInCurrentSnapshot">—</dd></div>
+      <div><dt>Needs review</dt><dd id="comparison-needsReview">—</dd></div>
+    </dl>
+    <div class="filters">
+      <div><label for="comparison-filter">Estado de comparación</label>
+        <select id="comparison-filter" disabled>
+          <option value="">Todas</option><option value="updated">Updated</option>
+          <option value="new">New</option><option value="notInCurrentSnapshot">Not in snapshot</option>
+          <option value="needsReview">Needs review</option><option value="unchanged">Unchanged</option>
+        </select>
+      </div>
+      <div class="export-cards"><button id="comparison-export" type="button" disabled>Exportar comparación JSON</button></div>
+    </div>
+    <div class="table-scroll cards-scroll" tabindex="0" aria-label="Comparación con catálogo actual">
+      <table class="comparison-table">
+        <thead><tr><th scope="col">Jugador</th><th scope="col">OVR</th><th scope="col">Pos</th>
+          <th scope="col">Estado</th><th scope="col">Precio anterior</th><th scope="col">Precio nuevo</th>
+          <th scope="col">Popularidad anterior</th><th scope="col">Popularidad nueva</th>
+          <th scope="col">Confidence</th><th scope="col">Detalles</th></tr></thead>
+        <tbody id="comparison-body"></tbody>
+      </table>
+    </div>
+    <div class="pagination"><button id="comparison-previous" type="button" disabled>Anterior</button>
+      <span id="comparison-range"></span><button id="comparison-next" type="button" disabled>Siguiente</button></div>
   </section>
 </main>
 </body>

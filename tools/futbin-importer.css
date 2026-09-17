@@ -44,3 +44,11 @@ td:nth-child(2) { min-width: 160px; max-width: 480px; overflow-wrap: anywhere; w
 @media (max-width: 800px) { .card-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 450px) { .card-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
+.comparison-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.comparison-table { font-size: 13px; }
+.comparison-table td:nth-child(2) { min-width: auto; max-width: none; }
+.comparison-table td:first-child { min-width: 120px; }
+[data-comparison-status="UPDATED"], [data-comparison-status="NEW"] { color: var(--green); }
+[data-comparison-status="NEEDS_REVIEW"] { color: #f1c84b; }
+[data-comparison-status="NOT_IN_CURRENT_SNAPSHOT"] { color: var(--muted); }
+@media (max-width: 500px) { .comparison-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
