@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=9"
+    href="style.css?v=10"
   />
 </head>
 
@@ -283,9 +283,11 @@
                 <input
                   type="number"
                   id="precioCompra"
+                  aria-describedby="purchasePriceHint"
                   placeholder="0"
                   min="0"
                 />
+                <small id="purchasePriceHint" class="field-hint">Máximo sugerido según tu beneficio objetivo</small>
 
               </div>
 
@@ -445,7 +447,9 @@
 
             <div class="trade-form compact-trade-form">
 
-              <div class="player-input-wrapper">
+              <div class="field">
+                <label for="tradeJugador">Jugador</label>
+                <div class="player-input-wrapper">
                   <input
                 type="text"
                 id="tradeJugador"
@@ -455,22 +459,29 @@
                     data-clear-player="tradeJugador" title="Limpiar jugador"
                     aria-label="Limpiar jugador">×</button>
                 </div>
+              </div>
 
 
-              <input
+              <div class="field">
+                <label for="tradeCompra">Precio de compra</label>
+                <input
                 type="number"
                 id="tradeCompra"
                 placeholder="0"
                 min="0"
               />
+              </div>
 
 
-              <input
+              <div class="field">
+                <label for="tradeVenta">Precio de venta</label>
+                <input
                 type="number"
                 id="tradeVenta"
                 placeholder="0"
                 min="0"
               />
+              </div>
 
 
               <button
@@ -1003,7 +1014,7 @@
 
   <script src="meta-players.js?v=5"></script>
 
-  <script src="app.js?v=9"></script>
+  <script src="app.js?v=10"></script>
 
 
   <!-- =====================================================

@@ -1679,3 +1679,40 @@ footer {
 .popular-advanced-checks input { width: 15px; height: 15px; }
 @media (max-width: 900px) { .popular-advanced-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .popular-advanced-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.field-hint { color: var(--muted); font-size: 10px; }
+.compact-trade-form { align-items: end; }
+
+
+/* Sugerencias compartidas por los campos Jugador. */
+.player-suggestions {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  background: var(--panel-3);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 24px #0006;
+}
+
+.player-suggestions [role="option"] {
+  padding: 9px 12px;
+  min-height: 36px;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.player-suggestions [role="option"]:hover,
+.player-suggestions [aria-selected="true"] {
+  background: var(--panel);
+  color: var(--green);
+  outline: 1px solid var(--green);
+  outline-offset: -1px;
+}

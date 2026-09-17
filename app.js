@@ -3106,7 +3106,7 @@ function configurarEnterCalculadora() {
         (event) => {
           if (
             event.key ===
-            "Enter"
+            "Enter" && !event.defaultPrevented && !event.isComposing
           ) {
             calcularTrade();
           }
@@ -4281,12 +4281,136 @@ function configurarEventosPopular() {
    INIT
 ========================================================= */
 
+function updateAutomaticPurchasePrice() {
+  const saleInput = document.getElementById("precioVenta");
+  const profitInput = document.getElementById("beneficioMinimo");
+  const purchaseInput = document.getElementById("precioCompra");
+  const sale = Number(saleInput?.value);
+  const profit = Number(profitInput?.value || 0);
+  if (!purchaseInput || !Number.isFinite(sale) || sale <= 0 ||
+      !Number.isFinite(profit)) return;
+
+  const net = Math.floor(sale * (1 - TAX_RATE));
+  const suggested = roundDownMarketPrice(Math.max(0, net - profit));
+  purchaseInput.value = String(suggested);
+  purchaseInput.step = getMarketStep(suggested);
+}
+
+
+
+let uniquePopularPlayerNames;
+
+function getUniquePopularPlayerNames() {
+  if (!uniquePopularPlayerNames) {
+    const names = new Map();
+    for (const card of window.PLAYERS_DATA || []) {
+      const name = String(card.nombre || "").trim();
+      const normalized = normalizeText(name);
+      if (normalized && !names.has(normalized)) names.set(normalized, name);
+    }
+    uniquePopularPlayerNames = Array.from(names, ([normalized, name]) => ({ name, normalized }));
+  }
+  return uniquePopularPlayerNames;
+}
+
+function setupPlayerAutocomplete(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  const wrapper = input.closest(".player-input-wrapper");
+  const list = document.createElement("div");
+  list.id = inputId + "-suggestions";
+  list.className = "player-suggestions";
+  list.setAttribute("role", "listbox");
+  list.setAttribute("aria-label", "Sugerencias de jugadores");
+  list.hidden = true;
+  wrapper.append(list);
+  input.setAttribute("role", "combobox");
+  input.setAttribute("aria-autocomplete", "list");
+  input.setAttribute("aria-controls", list.id);
+  input.setAttribute("aria-expanded", "false");
+  input.setAttribute("autocomplete", "off");
+  const names = getUniquePopularPlayerNames();
+  let matches = [];
+  let activeIndex = -1;
+
+  function close() {
+    list.hidden = true;
+    activeIndex = -1;
+    input.setAttribute("aria-expanded", "false");
+    input.removeAttribute("aria-activedescendant");
+  }
+
+  function activate(index) {
+    activeIndex = index;
+    Array.from(list.children).forEach((option, i) => {
+      option.setAttribute("aria-selected", String(i === index));
+    });
+    const option = list.children[index];
+    input.setAttribute("aria-activedescendant", option.id);
+    option.scrollIntoView({ block: "nearest" });
+  }
+
+  function select(index) {
+    input.value = matches[index].name;
+    close();
+  }
+
+  function renderPlayerSuggestions() {
+    const query = normalizeText(input.value);
+    matches = query ? names.filter((player) => player.normalized.includes(query)) : [];
+    close();
+    list.replaceChildren();
+    matches.forEach((player, index) => {
+      const option = document.createElement("div");
+      option.id = list.id + "-" + index;
+      option.setAttribute("role", "option");
+      option.setAttribute("aria-selected", "false");
+      option.textContent = player.name;
+      option.addEventListener("mouseenter", () => activate(index));
+      option.addEventListener("mousedown", (event) => event.preventDefault());
+      option.addEventListener("click", () => select(index));
+      list.append(option);
+    });
+    list.hidden = matches.length === 0;
+    input.setAttribute("aria-expanded", String(matches.length > 0));
+    list.scrollTop = 0;
+  }
+
+  input.addEventListener("input", renderPlayerSuggestions);
+  input.addEventListener("focus", renderPlayerSuggestions);
+  input.addEventListener("keydown", (event) => {
+    if (event.isComposing) return;
+    if (event.key === "Escape") {
+      if (!list.hidden) event.preventDefault();
+      close();
+    } else if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      if (list.hidden) renderPlayerSuggestions();
+      if (!matches.length) return;
+      event.preventDefault();
+      const next = activeIndex < 0
+        ? (event.key === "ArrowDown" ? 0 : matches.length - 1)
+        : (activeIndex + (event.key === "ArrowDown" ? 1 : -1) + matches.length) % matches.length;
+      activate(next);
+    } else if (event.key === "Enter" && !list.hidden) {
+      event.preventDefault();
+      select(activeIndex < 0 ? 0 : activeIndex);
+    } else if (event.key === "Tab") {
+      close();
+    }
+  });
+  input.addEventListener("blur", close);
+  document.addEventListener("pointerdown", (event) => {
+    if (!wrapper.contains(event.target)) close();
+  });
+}
+
 function configurarBotonesLimpiarJugador() {
   document.querySelectorAll("[data-clear-player]").forEach((button) => {
     button.addEventListener("click", () => {
       const input = document.getElementById(button.dataset.clearPlayer);
       if (input) {
         input.value = "";
+        input.dispatchEvent(new Event("input", { bubbles: true }));
         input.focus();
       }
     });
@@ -4315,6 +4439,9 @@ function init() {
   /* STEPS */
 
   activarStepsDinamicos();
+  for (const id of ["precioVenta", "beneficioMinimo"]) {
+    document.getElementById(id)?.addEventListener("input", updateAutomaticPurchasePrice);
+  }
 
 
   /* EVENTOS */
@@ -4322,6 +4449,8 @@ function init() {
   configurarEventosPopular();
   configurarFiltrosPopularesAvanzados();
   configurarBotonesLimpiarJugador();
+  setupPlayerAutocomplete("jugador");
+  setupPlayerAutocomplete("tradeJugador");
   configurarEventosTablas();
   configurarEnterCalculadora();
   configurarEventosBackup();
