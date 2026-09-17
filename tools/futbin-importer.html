@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XoluGG · Diagnóstico PDF FUTBIN</title>
+  <link rel="stylesheet" href="futbin-importer.css">
+  <script type="module" src="futbin-importer.js"></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">XoluGG · Laboratorio</p>
+    <h1>Diagnóstico PDF FUTBIN</h1>
+    <p>EA FC 27 Popular Players · Extracción de texto y coordenadas</p>
+  </header>
+  <section class="panel" aria-label="Lectura del PDF">
+    <label for="pdf-file">Seleccionar PDF</label>
+    <input id="pdf-file" type="file" accept="application/pdf" aria-describedby="privacy">
+    <p id="privacy">El archivo se procesa localmente en tu navegador. Solo se descarga la librería PDF.js; el PDF no se envía a ningún servidor.</p>
+    <p id="status" role="status" aria-live="polite" data-state="idle">Esperando PDF</p>
+    <progress id="progress" hidden aria-label="Páginas procesadas"></progress>
+    <p id="error" role="alert" hidden></p>
+    <ul id="warnings" aria-label="Advertencias"></ul>
+    <dl><div><dt>Archivo</dt><dd id="file-name">—</dd></div>
+      <div><dt>Páginas</dt><dd id="page-count">—</dd></div>
+      <div><dt>Elementos de texto</dt><dd id="item-count">—</dd></div></dl>
+    <button id="export" type="button" disabled>Exportar diagnóstico JSON</button>
+  </section>
+  <section class="panel" aria-label="Texto extraído">
+    <div class="filters">
+      <div><label for="page-filter">Página</label><select id="page-filter" disabled><option value="">Todas las páginas</option></select></div>
+      <div><label for="search">Buscar texto</label><input id="search" type="search" placeholder="Gordon, Frimpong, PAC, 294, 3.5K" disabled></div>
+    </div>
+    <p>Coordenadas originales del PDF: X/Y indican el origen del texto, no la esquina de una caja. No se aplica rotación ni conversión a píxeles de pantalla.</p>
+    <p id="results" role="status">Selecciona un PDF para inspeccionar sus elementos.</p>
+    <div class="table-scroll" tabindex="0" aria-label="Tabla de diagnóstico">
+      <table><thead><tr><th scope="col">Página</th><th scope="col">Texto</th><th scope="col">X</th><th scope="col">Y</th><th scope="col">Width</th><th scope="col">Height</th></tr></thead>
+      <tbody id="tokens"></tbody></table>
+    </div>
+    <div class="pagination"><button id="previous" disabled>Anterior</button><span id="range"></span><button id="next" disabled>Siguiente</button></div>
+  </section>
+</main>
+</body>
+</html>
+
