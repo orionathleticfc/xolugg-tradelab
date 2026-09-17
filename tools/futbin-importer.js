@@ -83,6 +83,7 @@ function filterItems() {
 
 async function processFile(file) {
   diagnostic = null;
+  resetCards();
   filtered = [];
   offset = 0;
   ui.tokens.replaceChildren();
@@ -166,6 +167,12 @@ async function processFile(file) {
     for (const id of ["export", "page-filter", "search"]) ui[id].disabled = false;
     filterItems();
     setStatus("PDF procesado", "success");
+    try {
+      await analyzeCards(diagnostic);
+    } catch (error) {
+      cardUi["cards-status"].textContent = "Error en el análisis: " + error.message;
+      cardUi["metric-errors"].textContent = "1";
+    }
   } catch (error) {
     setStatus("Error", "error");
     ui.error.textContent = error?.name === "PasswordException"
@@ -183,11 +190,15 @@ async function processFile(file) {
 
 function exportDiagnostic() {
   if (!diagnostic) return;
-  const blob = new Blob([JSON.stringify(diagnostic, null, 2)], { type: "application/json" });
+  downloadJson(diagnostic, diagnostic.fileName.replace(/\.pdf$/i, "") + "-diagnostico.json");
+}
+
+function downloadJson(value, fileName) {
+  const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = diagnostic.fileName.replace(/\.pdf$/i, "") + "-diagnostico.json";
+  link.download = fileName;
   document.body.append(link);
   link.click();
   link.remove();
@@ -207,4 +218,120 @@ ui.search.addEventListener("input", () => {
 ui.previous.addEventListener("click", () => { offset = Math.max(0, offset - ROWS_PER_VIEW); renderRows(); });
 ui.next.addEventListener("click", () => { offset += ROWS_PER_VIEW; renderRows(); });
 ui.export.addEventListener("click", exportDiagnostic);
+
+
+
+// Card parsing runs in a separate worker; PDF diagnostics remain independently usable.
+const cardUi = Object.fromEntries([
+  "cards-status", "card-status-filter", "export-cards", "cards-body",
+  "cards-previous", "cards-next", "cards-range", "parser-errors",
+  ...["slots", "cards", "complete", "partial", "ambiguous", "errors"].map(key => "metric-" + key)
+].map(id => [id, document.getElementById(id)]));
+let parsedCards = null;
+let cardOffset = 0;
+const CARDS_PER_VIEW = 50;
+
+function resetCards() {
+  parsedCards = null;
+  cardOffset = 0;
+  cardUi["cards-body"].replaceChildren();
+  cardUi["parser-errors"].replaceChildren();
+  cardUi["cards-status"].textContent = "Esperando análisis.";
+  cardUi["cards-range"].textContent = "";
+  cardUi["card-status-filter"].value = "";
+  for (const key of ["slots", "cards", "complete", "partial", "ambiguous", "errors"]) {
+    cardUi["metric-" + key].textContent = "—";
+  }
+  for (const id of ["card-status-filter", "export-cards", "cards-previous", "cards-next"]) cardUi[id].disabled = true;
+}
+
+function analyzeCards(data) {
+  cardUi["cards-status"].textContent = "Analizando geometría de cartas…";
+  return new Promise((resolve, reject) => {
+    const worker = new Worker("futbin-parser-worker.mjs", { type: "module" });
+    const fail = error => { worker.terminate(); reject(error); };
+    worker.onerror = event => fail(new Error(event.message || "No se pudo iniciar el parser."));
+    worker.onmessageerror = () => fail(new Error("No se pudo recibir el resultado del parser."));
+    worker.onmessage = event => {
+      worker.terminate();
+      if (event.data.error) { reject(new Error(event.data.error)); return; }
+      parsedCards = event.data.result;
+      for (const [key, value] of Object.entries(parsedCards.metrics)) {
+        cardUi["metric-" + key].textContent = String(value);
+      }
+      for (const error of parsedCards.errors) {
+        const li = document.createElement("li");
+        li.textContent = "Página " + error.page + ": " + error.code;
+        cardUi["parser-errors"].append(li);
+      }
+      cardUi["card-status-filter"].disabled = false;
+      cardUi["export-cards"].disabled = false;
+      cardUi["cards-status"].textContent = parsedCards.cards.length
+        ? "Análisis terminado. Expande una carta para revisar valores, advertencias y tokens."
+        : "No se detectaron cartas compatibles con esta geometría.";
+      renderCards();
+      resolve();
+    };
+    try { worker.postMessage(data); } catch (error) { fail(error); }
+  });
+}
+
+function renderCards() {
+  const status = cardUi["card-status-filter"].value;
+  const cards = (parsedCards?.cards || []).filter(card => !status || card.parseStatus === status);
+  const fragment = document.createDocumentFragment();
+  const display = value => value === null || value === undefined ? "—" : String(value);
+  cards.slice(cardOffset, cardOffset + CARDS_PER_VIEW).forEach((card, index) => {
+    const row = document.createElement("tr");
+    const values = [card.nombre, card.ovr, card.posicionPrincipal,
+      Object.entries(card.stats).map(([key, value]) => key.toUpperCase() + " " + display(value)).join(" · "),
+      card.ratingFuente, card.popularidadFuente, card.precioReferencia, card.valorSecundarioFuente,
+      card.sourcePage, card.parseStatus];
+    values.forEach((value, index) => {
+      const td = document.createElement("td");
+      td.textContent = display(value);
+      if (index === 9) td.dataset.status = card.parseStatus;
+      row.append(td);
+    });
+    const detailRow = document.createElement("tr");
+    detailRow.hidden = true;
+    detailRow.className = "card-detail-row";
+    detailRow.id = "card-detail-" + (cardOffset + index);
+    const detailCell = document.createElement("td");
+    detailCell.colSpan = 11;
+    detailRow.append(detailCell);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Detalles";
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-controls", detailRow.id);
+    button.setAttribute("aria-label", "Detalles de " + (card.nombre || "carta sin identificar"));
+    button.addEventListener("click", () => {
+      detailRow.hidden = !detailRow.hidden;
+      button.setAttribute("aria-expanded", String(!detailRow.hidden));
+      if (!detailRow.hidden && !detailCell.children.length) {
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify(card, null, 2);
+        detailCell.append(pre);
+      }
+    });
+    const action = document.createElement("td");
+    action.append(button);
+    row.append(action);
+    fragment.append(row, detailRow);
+  });
+  cardUi["cards-body"].replaceChildren(fragment);
+  cardUi["cards-range"].textContent = cards.length
+    ? (cardOffset + 1) + "–" + Math.min(cardOffset + CARDS_PER_VIEW, cards.length) + " de " + cards.length
+    : "Sin cartas para este filtro";
+  cardUi["cards-previous"].disabled = cardOffset === 0;
+  cardUi["cards-next"].disabled = cardOffset + CARDS_PER_VIEW >= cards.length;
+}
+
+cardUi["card-status-filter"].addEventListener("change", () => { cardOffset = 0; renderCards(); });
+cardUi["cards-previous"].addEventListener("click", () => { cardOffset = Math.max(0, cardOffset - CARDS_PER_VIEW); renderCards(); });
+cardUi["cards-next"].addEventListener("click", () => { cardOffset += CARDS_PER_VIEW; renderCards(); });
+cardUi["export-cards"].addEventListener("click", () => {
+  if (parsedCards) downloadJson(parsedCards, diagnostic.fileName.replace(/\.pdf$/i, "") + "-cartas.json");
+});
 

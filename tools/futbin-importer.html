@@ -39,7 +39,41 @@
     </div>
     <div class="pagination"><button id="previous" disabled>Anterior</button><span id="range"></span><button id="next" disabled>Siguiente</button></div>
   </section>
+
+  <section class="panel" aria-labelledby="cards-title">
+    <h2 id="cards-title">Cartas detectadas</h2>
+    <p>Solo análisis y preview. Los valores ausentes se muestran como —; no se actualiza ningún catálogo.</p>
+    <p id="cards-status" role="status" aria-live="polite">Esperando análisis.</p>
+    <dl class="card-metrics">
+      <div><dt>Celdas</dt><dd id="metric-slots">—</dd></div>
+      <div><dt>Total detectadas</dt><dd id="metric-cards">—</dd></div>
+      <div><dt>Complete</dt><dd id="metric-complete">—</dd></div>
+      <div><dt>Partial</dt><dd id="metric-partial">—</dd></div>
+      <div><dt>Ambiguous</dt><dd id="metric-ambiguous">—</dd></div>
+      <div><dt>Errores</dt><dd id="metric-errors">—</dd></div>
+    </dl>
+    <ul id="parser-errors" aria-label="Errores del parser"></ul>
+    <div class="filters">
+      <div><label for="card-status-filter">Estado de carta</label>
+        <select id="card-status-filter" disabled>
+          <option value="">Todas</option><option value="complete">Complete</option>
+          <option value="partial">Partial</option><option value="ambiguous">Ambiguous</option>
+        </select>
+      </div>
+      <div class="export-cards"><button id="export-cards" type="button" disabled>Exportar cartas detectadas JSON</button></div>
+    </div>
+    <div class="table-scroll cards-scroll" tabindex="0" aria-label="Cartas detectadas">
+      <table class="cards-table">
+        <thead><tr><th scope="col">Nombre</th><th scope="col">OVR</th><th scope="col">Pos</th>
+          <th scope="col">Stats</th><th scope="col">Rating</th><th scope="col">Popularidad</th>
+          <th scope="col">Precio</th><th scope="col">Valor secundario</th><th scope="col">Página</th>
+          <th scope="col">Estado</th><th scope="col">Detalles</th></tr></thead>
+        <tbody id="cards-body"></tbody>
+      </table>
+    </div>
+    <div class="pagination"><button id="cards-previous" type="button" disabled>Anterior</button>
+      <span id="cards-range"></span><button id="cards-next" type="button" disabled>Siguiente</button></div>
+  </section>
 </main>
 </body>
 </html>
-
