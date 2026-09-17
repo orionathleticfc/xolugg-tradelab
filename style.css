@@ -1553,3 +1553,62 @@ footer {
   color: var(--green);
   background: rgba(39, 241, 163, 0.1);
 }
+
+/* Mercado Popular: controles compactos dentro de la tabla existente. */
+.popular-price-editor,
+.popular-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.popular-price-editor .meta-price-input {
+  width: 90px;
+  height: 30px;
+  padding: 4px 6px;
+  font-size: 11px;
+}
+
+.popular-price-source {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 9px;
+}
+
+/* Limpieza del nombre sin afectar los otros campos. */
+.player-input-wrapper {
+  position: relative;
+  min-width: 0;
+}
+
+.player-input-wrapper input {
+  padding-right: 34px;
+}
+
+.clear-player-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clear-player-button:hover,
+.clear-player-button:focus-visible {
+  color: var(--text);
+  background: var(--panel-3);
+}
+
+.clear-player-button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+}
