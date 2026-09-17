@@ -473,11 +473,7 @@ function renderCapital() {
     );
 
 
-  const capitalLibre =
-    Math.max(
-      0,
-      state.capital - invertido
-    );
+  const capitalLibre = getPopularAvailableCapital();
 
 
   const capitalActualEl =
@@ -539,6 +535,9 @@ function renderCapital() {
       beneficioDia >= 0
         ? "positive"
         : "negative";
+  }
+  if (document.getElementById("popularOnlyAffordable")?.checked) {
+    renderPopularPlayers();
   }
 }
 
@@ -3558,22 +3557,99 @@ function getPopularPlayerData(card) {
   };
 }
 
+
+let popularQuickPriceLimit = null;
+
+function getPopularAvailableCapital() {
+  const invested = state.watchlist.reduce(
+    (total, item) => total + Number(item.compraActual || 0), 0
+  );
+  return Math.max(0, state.capital - invested);
+}
+
+function readPopularFilters() {
+  const number = (id, zeroIsEmpty = false) => {
+    const value = document.getElementById(id)?.value ?? "";
+    const parsed = Number(value);
+    return value.trim() === "" || (zeroIsEmpty && parsed === 0) ? null : parsed;
+  };
+  const checked = id => document.getElementById(id)?.checked || false;
+  return {
+    search: normalizeText(document.getElementById("metaSearch")?.value),
+    position: document.getElementById("metaCategory")?.value || "ALL",
+    maxPrice: number("metaMaxPrice"),
+    onlyPrice: checked("metaOnlyWithPrice"),
+    minOvr: number("popularMinOvr", true),
+    maxOvr: number("popularMaxOvr", true),
+    minPac: number("popularMinPac", true),
+    minSkills: number("popularMinSkills"),
+    minWeakFoot: number("popularMinWeakFoot"),
+    minRating: number("popularMinRating", true),
+    minPopularity: number("popularMinPopularity", true),
+    affordable: checked("popularOnlyAffordable"),
+    manual: checked("popularOnlyManual"),
+    reference: checked("popularOnlyReference"),
+    availableCapital: getPopularAvailableCapital()
+  };
+}
+
+function matchesPopularFilters(card, filters) {
+  const minimum = (value, limit) => limit === null ||
+    (Number.isFinite(value) && Number.isFinite(limit) && value >= limit);
+  const maximum = (value, limit) => limit === null ||
+    (Number.isFinite(value) && Number.isFinite(limit) && value <= limit);
+  return (!filters.search || normalizeText(card.nombre).includes(filters.search)) &&
+    (filters.position === "ALL" || card.posicionPrincipal === filters.position ||
+      (card.posiciones || []).includes(filters.position)) &&
+    (!filters.onlyPrice || card.precioEfectivo > 0) &&
+    maximum(card.precioEfectivo, filters.maxPrice) &&
+    (popularQuickPriceLimit === null || card.precioEfectivo < popularQuickPriceLimit) &&
+    minimum(card.ovr, filters.minOvr) &&
+    maximum(card.ovr, filters.maxOvr) &&
+    (filters.minPac === null || (card.posicionPrincipal !== "GK" &&
+      minimum(card.stats?.pac, filters.minPac))) &&
+    minimum(card.skills, filters.minSkills) &&
+    minimum(card.weakFoot, filters.minWeakFoot) &&
+    minimum(card.ratingFuente, filters.minRating) &&
+    minimum(card.popularidadFuente, filters.minPopularity) &&
+    (!filters.affordable || (card.precioEfectivo > 0 &&
+      card.precioEfectivo <= filters.availableCapital)) &&
+    (!filters.manual || card.precioUsuario !== null) &&
+    (!filters.reference || card.precioReferencia > 0);
+}
+
+function updatePopularQuickPriceButtons() {
+  document.querySelectorAll("[data-popular-price-limit]").forEach(button => {
+    const active = Number(button.dataset.popularPriceLimit) === popularQuickPriceLimit;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function configurarFiltrosPopularesAvanzados() {
+  for (const id of ["popularMinOvr", "popularMaxOvr", "popularMinPac",
+    "popularMinRating", "popularMinPopularity"]) {
+    document.getElementById(id)?.addEventListener("input", renderPopularPlayers);
+  }
+  for (const id of ["popularMinSkills", "popularMinWeakFoot",
+    "popularOnlyAffordable", "popularOnlyManual", "popularOnlyReference"]) {
+    document.getElementById(id)?.addEventListener("change", renderPopularPlayers);
+  }
+  document.querySelectorAll("[data-popular-price-limit]").forEach(button => {
+    button.addEventListener("click", () => {
+      popularQuickPriceLimit = Number(button.dataset.popularPriceLimit);
+      document.getElementById("metaMaxPrice").value = String(popularQuickPriceLimit);
+      renderPopularPlayers();
+    });
+  });
+}
+
+
 function getFilteredPopularPlayers() {
-  const search = normalizeText(document.getElementById("metaSearch")?.value);
-  const position = document.getElementById("metaCategory")?.value || "ALL";
-  const maxValue = document.getElementById("metaMaxPrice")?.value ?? "";
-  const max = maxValue.trim() === "" ? null : Number(maxValue);
-  const onlyPrice = document.getElementById("metaOnlyWithPrice")?.checked;
+  const filters = readPopularFilters();
   const sort = document.getElementById("metaSort")?.value || "popularity-desc";
   const cards = getPopularPlayers().filter(card => card.activo !== false)
-    .map(getPopularPlayerData).filter(card =>
-      (!search || normalizeText(card.nombre).includes(search)) &&
-      (position === "ALL" || card.posicionPrincipal === position ||
-        (card.posiciones || []).includes(position)) &&
-      (!onlyPrice || card.precioEfectivo !== null) &&
-      (max === null || (Number.isFinite(max) && card.precioEfectivo !== null &&
-        card.precioEfectivo <= max))
-    );
+    .map(getPopularPlayerData).filter(card => matchesPopularFilters(card, filters));
   const sorts = {
     "popularity-desc": ["popularidadFuente", -1],
     "popularity-asc": ["popularidadFuente", 1],
@@ -3582,6 +3658,9 @@ function getFilteredPopularPlayers() {
     "rating-desc": ["ratingFuente", -1],
     "ovr-desc": ["ovr", -1],
     "ovr-asc": ["ovr", 1],
+    "pac-desc": ["pac", -1],
+    "skills-desc": ["skills", -1],
+    "weakfoot-desc": ["weakFoot", -1],
     "updated-desc": ["ultimaActualizacion", -1]
   };
   return cards.sort((a, b) => {
@@ -3590,7 +3669,9 @@ function getFilteredPopularPlayers() {
       result = a.nombre.localeCompare(b.nombre, "es") * (sort === "name-desc" ? -1 : 1);
     } else {
       const [key, direction] = sorts[sort] || sorts["popularity-desc"];
-      const value = card => key === "ultimaActualizacion"
+      const value = card => key === "pac"
+        ? (card.posicionPrincipal === "GK" ? null : card.stats?.pac)
+        : key === "ultimaActualizacion"
         ? (card[key] ? Date.parse(card[key]) : null) : card[key];
       const av = value(a), bv = value(b);
       const missingA = !Number.isFinite(av), missingB = !Number.isFinite(bv);
@@ -3678,6 +3759,7 @@ function togglePopularPlayerDetails(cardId) {
 
 
 function renderPopularPlayers() {
+  updatePopularQuickPriceButtons();
   const tbody = document.getElementById("metaPlayersBody");
   if (!tbody) return;
   const cards = getFilteredPopularPlayers();
@@ -3760,7 +3842,10 @@ function actualizarPrecioPopular(cardId) {
 }
 
 function limpiarFiltrosPopular() {
-  for (const id of ["metaSearch", "metaMaxPrice"]) {
+  popularQuickPriceLimit = null;
+  for (const id of ["metaSearch", "metaMaxPrice", "popularMinOvr",
+    "popularMaxOvr", "popularMinPac", "popularMinSkills", "popularMinWeakFoot",
+    "popularMinRating", "popularMinPopularity"]) {
     const input = document.getElementById(id);
     if (input) input.value = "";
   }
@@ -3770,6 +3855,10 @@ function limpiarFiltrosPopular() {
   if (position) position.value = "ALL";
   if (sort) sort.value = "popularity-desc";
   if (only) only.checked = false;
+  for (const id of ["popularOnlyAffordable", "popularOnlyManual", "popularOnlyReference"]) {
+    const checkbox = document.getElementById(id);
+    if (checkbox) checkbox.checked = false;
+  }
   renderPopularPlayers();
 }
 
@@ -4073,10 +4162,10 @@ function configurarEventosPopular() {
   );
 
 
-  maxPrice?.addEventListener(
-    "input",
-    renderPopularPlayers
-  );
+  maxPrice?.addEventListener("input", () => {
+    popularQuickPriceLimit = null;
+    renderPopularPlayers();
+  });
 
 
   onlyWithPrice?.addEventListener(
@@ -4231,6 +4320,7 @@ function init() {
   /* EVENTOS */
 
   configurarEventosPopular();
+  configurarFiltrosPopularesAvanzados();
   configurarBotonesLimpiarJugador();
   configurarEventosTablas();
   configurarEnterCalculadora();

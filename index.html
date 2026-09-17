@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=8"
+    href="style.css?v=9"
   />
 </head>
 
@@ -847,6 +847,9 @@
               <option value="ovr-asc">OVR: menor → mayor</option>
               <option value="name-asc">Nombre: A → Z</option>
               <option value="name-desc">Nombre: Z → A</option>
+              <option value="pac-desc">PAC: mayor → menor</option>
+              <option value="skills-desc">Skills: mayor → menor</option>
+              <option value="weakfoot-desc">Weak Foot: mayor → menor</option>
               <option value="updated-desc">Actualización: más reciente</option>
             </select>
 
@@ -905,6 +908,30 @@
         <!-- =================================================
              TABLA META
         ================================================== -->
+
+<div class="popular-quick-prices" role="group" aria-label="Precios rápidos">
+<button type="button" class="small-button" data-popular-price-limit="2000" aria-pressed="false" title="Precio inferior a 2000">&lt; 2K</button>
+<button type="button" class="small-button" data-popular-price-limit="5000" aria-pressed="false" title="Precio inferior a 5000">&lt; 5K</button>
+<button type="button" class="small-button" data-popular-price-limit="10000" aria-pressed="false" title="Precio inferior a 10000">&lt; 10K</button>
+<button type="button" class="small-button" data-popular-price-limit="20000" aria-pressed="false" title="Precio inferior a 20000">&lt; 20K</button>
+</div>
+<details class="popular-advanced-filters">
+<summary>Filtros avanzados</summary>
+<div class="popular-advanced-grid">
+<div class="meta-filter"><label for="popularMinOvr">OVR mínimo</label><input type="number" id="popularMinOvr" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMaxOvr">OVR máximo</label><input type="number" id="popularMaxOvr" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinPac">PAC mínimo</label><input type="number" id="popularMinPac" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinRating">Rating mínimo</label><input type="number" id="popularMinRating" min="0"  step="0.1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinPopularity">Popularidad mínima</label><input type="number" id="popularMinPopularity" min="0"  step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinSkills">Skills mínimo</label><select id="popularMinSkills"><option value="">Todas</option><option value="3">3+</option><option value="4">4+</option><option value="5">5</option></select></div>
+<div class="meta-filter"><label for="popularMinWeakFoot">Weak Foot mínimo</label><select id="popularMinWeakFoot"><option value="">Todas</option><option value="3">3+</option><option value="4">4+</option><option value="5">5</option></select></div>
+</div>
+<div class="popular-advanced-checks">
+<label><input type="checkbox" id="popularOnlyAffordable"> Solo asequibles con mi capital</label>
+<label><input type="checkbox" id="popularOnlyManual"> Solo actualizados por mí</label>
+<label><input type="checkbox" id="popularOnlyReference"> Solo con precio de referencia</label>
+</div>
+</details>
 
         <div class="table-wrapper meta-table-wrapper">
 
@@ -976,7 +1003,7 @@
 
   <script src="meta-players.js?v=5"></script>
 
-  <script src="app.js?v=8"></script>
+  <script src="app.js?v=9"></script>
 
 
   <!-- =====================================================
