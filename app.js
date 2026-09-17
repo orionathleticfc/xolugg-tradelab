@@ -1291,6 +1291,50 @@ function limpiarHistorial() {
 
 
 /* =========================================================
+   CATÁLOGO POPULAR (DIAGNÓSTICO)
+========================================================= */
+
+function getPopularPlayers() {
+  return Array.isArray(window.PLAYERS_DATA)
+    ? window.PLAYERS_DATA
+    : [];
+}
+
+
+function validatePopularPlayersCatalog() {
+  const players = getPopularPlayers();
+  const ids = players
+    .map((player) => player?.id)
+    .filter((id) => typeof id === "string" && id.trim() !== "");
+  const conPrecioReferencia = players.filter(
+    (player) => Number.isFinite(player?.precioReferencia) &&
+      player.precioReferencia > 0
+  ).length;
+  const porteros = players.filter(
+    (player) => player?.posicionPrincipal === "GK"
+  ).length;
+
+  const resumen = {
+    total: players.length,
+    idsUnicos: new Set(ids).size,
+    conPrecioReferencia,
+    sinPrecioReferencia: players.length - conPrecioReferencia,
+    porteros,
+    jugadoresCampo: players.length - porteros
+  };
+
+  console.log("Popular Players cargados: " + resumen.total);
+  console.log("IDs únicos: " + resumen.idsUnicos);
+  console.log("Con precio referencia: " + resumen.conPrecioReferencia);
+  console.log("Sin precio referencia: " + resumen.sinPrecioReferencia);
+  console.log("Porteros: " + resumen.porteros);
+  console.log("Jugadores de campo: " + resumen.jugadoresCampo);
+
+  return resumen;
+}
+
+
+/* =========================================================
    BASE DE JUGADORES META
 ========================================================= */
 
@@ -3457,6 +3501,8 @@ function configurarEventosBackup() {
 ========================================================= */
 
 function init() {
+  validatePopularPlayersCatalog();
+
   /* CARGAR DATOS */
 
   loadState();
