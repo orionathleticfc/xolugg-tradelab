@@ -59,16 +59,33 @@ function normalizeText(text) {
 /* =========================================================
    SALTOS DEL MERCADO
 
-   < 1000  = 50
-   >=1000  = 100
+   <= 1000   = 50
+   <= 10000  = 100
+   <= 50000  = 250
+   <= 100000 = 500
+   > 100000  = 1000
 ========================================================= */
 
 function getMarketStep(value) {
   const number = Number(value) || 0;
 
-  return number >= 1000
-    ? 100
-    : 50;
+  if (number <= 1000) {
+    return 50;
+  }
+
+  if (number <= 10000) {
+    return 100;
+  }
+
+  if (number <= 50000) {
+    return 250;
+  }
+
+  if (number <= 100000) {
+    return 500;
+  }
+
+  return 1000;
 }
 
 
@@ -94,17 +111,37 @@ function aplicarStepDinamico(input) {
     return;
   }
 
+  const esPrecio = input.matches(
+    "#precioVenta, #precioCompra, #tradeCompra, #tradeVenta, #metaMaxPrice, .meta-price-input"
+  );
+  let valorAnterior = Number(input.value) || 0;
+
   const actualizarStep = () => {
     const valor =
       Number(input.value) || 0;
 
     input.step =
       getMarketStep(valor);
+    valorAnterior = valor;
   };
 
   input.addEventListener(
     "input",
-    actualizarStep
+    (event) => {
+      // Native arrows have no inputType; text editing does.
+      if (esPrecio && !event.inputType && !event.isComposing) {
+        const valor = Number(input.value) || 0;
+        const redondeado = roundDownMarketPrice(valor);
+
+        if (valor > valorAnterior && valor !== redondeado) {
+          input.value = redondeado + getMarketStep(valor);
+        } else if (valor < valorAnterior) {
+          input.value = redondeado;
+        }
+      }
+
+      actualizarStep();
+    }
   );
 
   input.addEventListener(
