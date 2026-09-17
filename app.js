@@ -4,17 +4,12 @@
 ========================================================= */
 
 const TAX_RATE = 0.05;
-
 const DEFAULT_META_PROFIT = 300;
 
-const STORAGE_STATE =
-  "xoluggTradeLab";
+const STORAGE_STATE = "xoluggTradeLab";
+const STORAGE_META_PRICES = "xoluggMetaPrices";
 
-const STORAGE_META_PRICES =
-  "xoluggMetaPrices";
-
-const APP_VERSION =
-  "1.0.0";
+const APP_VERSION = "1.1.0";
 
 
 /* =========================================================
@@ -22,15 +17,10 @@ const APP_VERSION =
 ========================================================= */
 
 let state = {
-
   capital: 22000,
-
   watchlist: [],
-
   historial: []
-
 };
-
 
 let metaPriceOverrides = {};
 
@@ -40,167 +30,111 @@ let metaPriceOverrides = {};
 ========================================================= */
 
 function formatCoins(value) {
-
   if (
     value === null ||
     value === undefined ||
     Number.isNaN(Number(value))
   ) {
-
     return "—";
-
   }
 
-
-  return Number(value)
-    .toLocaleString("es-CO");
-
+  return Number(value).toLocaleString("es-CO");
 }
 
 
 function formatPercent(value) {
-
-  return `${Number(value || 0)
-    .toFixed(1)}%`;
-
+  return `${Number(value || 0).toFixed(1)}%`;
 }
 
 
 function normalizeText(text) {
-
   return String(text || "")
     .normalize("NFD")
-    .replace(
-      /[\u0300-\u036f]/g,
-      ""
-    )
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .trim();
-
 }
 
 
 /* =========================================================
    SALTOS DEL MERCADO
+
+   < 1000  = 50
+   >=1000  = 100
 ========================================================= */
 
 function getMarketStep(value) {
+  const number = Number(value) || 0;
 
-  const number =
-    Number(value) || 0;
-
-
-  if (number >= 1000) {
-
-    return 100;
-
-  }
-
-
-  return 50;
-
+  return number >= 1000
+    ? 100
+    : 50;
 }
 
 
 function roundDownMarketPrice(value) {
-
-  const number =
-    Math.max(
-      0,
-      Number(value) || 0
-    );
-
+  const number = Math.max(
+    0,
+    Number(value) || 0
+  );
 
   const step =
     getMarketStep(number);
-
 
   return (
     Math.floor(
       number / step
     ) * step
   );
-
 }
 
 
 function aplicarStepDinamico(input) {
-
   if (!input) {
-
     return;
-
   }
 
-
   const actualizarStep = () => {
-
     const valor =
       Number(input.value) || 0;
 
-
     input.step =
       getMarketStep(valor);
-
   };
-
 
   input.addEventListener(
     "input",
     actualizarStep
   );
 
-
   input.addEventListener(
     "focus",
     actualizarStep
   );
 
-
   actualizarStep();
-
 }
 
 
 function activarStepsDinamicos() {
-
   const ids = [
-
     "precioVenta",
-
     "precioCompra",
-
     "beneficioMinimo",
-
     "nuevoCapital",
-
     "tradeCompra",
-
     "tradeVenta",
-
     "metaMaxPrice"
-
   ];
 
+  ids.forEach((id) => {
+    const input =
+      document.getElementById(id);
 
-  ids.forEach(
-    (id) => {
-
-      const input =
-        document.getElementById(id);
-
-
-      if (input) {
-
-        aplicarStepDinamico(
-          input
-        );
-
-      }
-
+    if (input) {
+      aplicarStepDinamico(input);
     }
-  );
-
+  });
 }
 
 
@@ -209,45 +143,30 @@ function activarStepsDinamicos() {
 ========================================================= */
 
 function saveState() {
-
   localStorage.setItem(
-
     STORAGE_STATE,
-
     JSON.stringify(state)
-
   );
-
 }
 
 
 function loadState() {
-
   const saved =
     localStorage.getItem(
       STORAGE_STATE
     );
 
-
   if (!saved) {
-
     return;
-
   }
 
-
   try {
-
     const parsed =
       JSON.parse(saved);
 
-
     state = {
-
       capital:
-        Number(
-          parsed.capital
-        ) || 0,
+        Number(parsed.capital) || 0,
 
       watchlist:
         Array.isArray(
@@ -262,68 +181,47 @@ function loadState() {
         )
           ? parsed.historial
           : []
-
     };
-
   } catch (error) {
-
     console.error(
-      "Error cargando los datos de XoluGG:",
+      "Error cargando datos de XoluGG:",
       error
     );
-
   }
-
 }
 
 
 function saveMetaPrices() {
-
   localStorage.setItem(
-
     STORAGE_META_PRICES,
-
     JSON.stringify(
       metaPriceOverrides
     )
-
   );
-
 }
 
 
 function loadMetaPrices() {
-
   const saved =
     localStorage.getItem(
       STORAGE_META_PRICES
     );
 
-
   if (!saved) {
-
     return;
-
   }
 
-
   try {
-
     metaPriceOverrides =
       JSON.parse(saved) || {};
-
   } catch (error) {
-
     console.error(
       "Error cargando precios Meta:",
       error
     );
 
-
     metaPriceOverrides = {};
-
   }
-
 }
 
 
@@ -336,33 +234,21 @@ function getTradeMetrics(
   precioCompra,
   beneficioMinimo
 ) {
-
   const venta =
-    Number(
-      precioVenta
-    ) || 0;
-
+    Number(precioVenta) || 0;
 
   const compra =
-    Number(
-      precioCompra
-    ) || 0;
-
+    Number(precioCompra) || 0;
 
   const objetivo =
-    Number(
-      beneficioMinimo
-    ) || 0;
+    Number(beneficioMinimo) || 0;
 
 
-  /* -----------------------------------------
-     EA cobra 5 % al vender
-  ----------------------------------------- */
+  /* 5% DE IMPUESTO */
 
   const neto =
     Math.floor(
-      venta *
-        (1 - TAX_RATE)
+      venta * (1 - TAX_RATE)
     );
 
 
@@ -372,115 +258,59 @@ function getTradeMetrics(
 
   const roi =
     compra > 0
-      ? (
-          beneficio /
-          compra
-        ) * 100
+      ? (beneficio / compra) * 100
       : 0;
 
 
-  /* -----------------------------------------
-     COMPRA MÁXIMA
-
-     Ejemplo:
-
-     Venta:
-     2200
-
-     Neto:
-     2090
-
-     Objetivo:
-     300
-
-     Máximo matemático:
-     1790
-
-     Máximo válido de mercado:
-     1700
-  ----------------------------------------- */
+  /* COMPRA MÁXIMA */
 
   const compraMaxima =
     roundDownMarketPrice(
-
       Math.max(
-
         0,
-
         neto - objetivo
-
       )
-
     );
 
 
-  /* -----------------------------------------
-     COMPRA IDEAL
-
-     Dejamos margen adicional
-     por debajo del máximo.
-  ----------------------------------------- */
+  /* RANGO IDEAL */
 
   const compraIdealMin =
     roundDownMarketPrice(
-
       Math.max(
-
         0,
-
-        compraMaxima -
-          objetivo
-
+        compraMaxima - objetivo
       )
-
     );
 
 
   const bufferSuperior =
     Math.max(
-
       50,
-
       objetivo / 3
-
     );
 
 
   const compraIdealMax =
     roundDownMarketPrice(
-
       Math.max(
-
         compraIdealMin,
-
         compraMaxima -
           bufferSuperior
-
       )
-
     );
 
 
   return {
-
     venta,
-
     compra,
-
     neto,
-
     beneficio,
-
     roi,
-
     compraMaxima,
-
     compraIdealMin,
-
     compraIdealMax
-
   };
-
 }
 
 
@@ -492,106 +322,57 @@ function getTradeStatus(
   metrics,
   beneficioMinimo
 ) {
-
   const objetivo =
-    Number(
-      beneficioMinimo
-    ) || 0;
+    Number(beneficioMinimo) || 0;
 
 
-  if (
-    metrics.beneficio <= 0
-  ) {
-
+  if (metrics.beneficio <= 0) {
     return {
-
-      className:
-        "bad",
-
-      label:
-        "❌ NO COMPRAR"
-
+      className: "bad",
+      label: "❌ NO COMPRAR"
     };
-
   }
 
 
   if (
-
     metrics.beneficio >=
       objetivo * 1.75 ||
-
     metrics.roi >= 25
-
   ) {
-
     return {
-
-      className:
-        "excellent",
-
-      label:
-        "🔥 EXCELENTE COMPRA"
-
+      className: "excellent",
+      label: "🔥 EXCELENTE COMPRA"
     };
-
   }
 
 
   if (
-
-    metrics.beneficio >=
-      objetivo ||
-
+    metrics.beneficio >= objetivo ||
     metrics.roi >= 15
-
   ) {
-
     return {
-
-      className:
-        "good",
-
-      label:
-        "✅ BUENA COMPRA"
-
+      className: "good",
+      label: "✅ BUENA COMPRA"
     };
-
   }
 
 
   if (
-
     metrics.beneficio >=
       objetivo * 0.5 ||
-
     metrics.roi >= 8
-
   ) {
-
     return {
-
-      className:
-        "fair",
-
-      label:
-        "🟡 COMPRA JUSTA"
-
+      className: "fair",
+      label: "🟡 COMPRA JUSTA"
     };
-
   }
 
 
   return {
-
-    className:
-      "bad",
-
-    label:
-      "❌ NO COMPRAR"
-
+    className: "bad",
+    label: "❌ NO COMPRAR"
   };
-
 }
 
 
@@ -600,66 +381,35 @@ function getTradeStatus(
 ========================================================= */
 
 function renderCapital() {
-
-  /*
-     Por ahora consideramos como invertido
-     el precio de compra registrado
-     en los elementos de la Watchlist.
-  */
-
   const invertido =
     state.watchlist.reduce(
-
       (total, item) => {
-
         return (
-
           total +
-
           Number(
             item.compraActual || 0
           )
-
         );
-
       },
-
       0
-
     );
 
 
-  /* -----------------------------------------
-     BENEFICIO SOLO DEL DÍA ACTUAL
-  ----------------------------------------- */
-
   const beneficioDia =
     state.historial.reduce(
-
-      (
-        total,
-        trade
-      ) => {
-
+      (total, trade) => {
         if (!trade.fecha) {
-
           return total;
-
         }
 
-
         const fechaTrade =
-          new Date(
-            trade.fecha
-          );
-
+          new Date(trade.fecha);
 
         const hoy =
           new Date();
 
 
         const mismoDia =
-
           fechaTrade.getFullYear() ===
             hoy.getFullYear() &&
 
@@ -671,37 +421,25 @@ function renderCapital() {
 
 
         if (!mismoDia) {
-
           return total;
-
         }
 
 
         return (
-
           total +
-
           Number(
             trade.beneficio || 0
           )
-
         );
-
       },
-
       0
-
     );
 
 
   const capitalLibre =
     Math.max(
-
       0,
-
-      state.capital -
-        invertido
-
+      state.capital - invertido
     );
 
 
@@ -710,18 +448,15 @@ function renderCapital() {
       "capitalActual"
     );
 
-
   const invertidoEl =
     document.getElementById(
       "capitalInvertido"
     );
 
-
   const libreEl =
     document.getElementById(
       "capitalLibre"
     );
-
 
   const beneficioEl =
     document.getElementById(
@@ -730,37 +465,30 @@ function renderCapital() {
 
 
   if (capitalActualEl) {
-
     capitalActualEl.textContent =
       formatCoins(
         state.capital
       );
-
   }
 
 
   if (invertidoEl) {
-
     invertidoEl.textContent =
       formatCoins(
         invertido
       );
-
   }
 
 
   if (libreEl) {
-
     libreEl.textContent =
       formatCoins(
         capitalLibre
       );
-
   }
 
 
   if (beneficioEl) {
-
     beneficioEl.textContent =
       beneficioDia >= 0
         ? `+${formatCoins(
@@ -770,14 +498,11 @@ function renderCapital() {
             beneficioDia
           );
 
-
     beneficioEl.className =
       beneficioDia >= 0
         ? "positive"
         : "negative";
-
   }
-
 }
 
 
@@ -786,7 +511,6 @@ function renderCapital() {
 ========================================================= */
 
 function actualizarCapital() {
-
   const input =
     document.getElementById(
       "nuevoCapital"
@@ -794,29 +518,23 @@ function actualizarCapital() {
 
 
   if (!input) {
-
     return;
-
   }
 
 
   if (
     input.value.trim() === ""
   ) {
-
     alert(
       "Ingresa tu capital actual."
     );
 
     return;
-
   }
 
 
   const nuevoCapital =
-    Number(
-      input.value
-    );
+    Number(input.value);
 
 
   if (
@@ -825,13 +543,11 @@ function actualizarCapital() {
     ) ||
     nuevoCapital < 0
   ) {
-
     alert(
       "Ingresa un capital válido."
     );
 
     return;
-
   }
 
 
@@ -840,12 +556,10 @@ function actualizarCapital() {
 
 
   saveState();
-
   renderCapital();
 
 
   input.value = "";
-
 }
 
 
@@ -854,24 +568,20 @@ function actualizarCapital() {
 ========================================================= */
 
 function calcularTrade() {
-
   const jugadorInput =
     document.getElementById(
       "jugador"
     );
-
 
   const ventaInput =
     document.getElementById(
       "precioVenta"
     );
 
-
   const compraInput =
     document.getElementById(
       "precioCompra"
     );
-
 
   const beneficioInput =
     document.getElementById(
@@ -907,35 +617,26 @@ function calcularTrade() {
     !precioVenta ||
     !precioCompra
   ) {
-
     alert(
       "Ingresa precio de venta y precio de compra."
     );
 
     return null;
-
   }
 
 
   const metrics =
     getTradeMetrics(
-
       precioVenta,
-
       precioCompra,
-
       beneficioMinimo
-
     );
 
 
   const status =
     getTradeStatus(
-
       metrics,
-
       beneficioMinimo
-
     );
 
 
@@ -944,30 +645,25 @@ function calcularTrade() {
       "resultadoNeto"
     );
 
-
   const beneficioEl =
     document.getElementById(
       "resultadoBeneficio"
     );
-
 
   const roiEl =
     document.getElementById(
       "resultadoROI"
     );
 
-
   const idealEl =
     document.getElementById(
       "resultadoIdeal"
     );
 
-
   const maximoEl =
     document.getElementById(
       "resultadoMaximo"
     );
-
 
   const statusEl =
     document.getElementById(
@@ -976,17 +672,12 @@ function calcularTrade() {
 
 
   if (netoEl) {
-
     netoEl.textContent =
-      formatCoins(
-        metrics.neto
-      );
-
+      formatCoins(metrics.neto);
   }
 
 
   if (beneficioEl) {
-
     beneficioEl.textContent =
       metrics.beneficio >= 0
         ? `+${formatCoins(
@@ -996,62 +687,49 @@ function calcularTrade() {
             metrics.beneficio
           );
 
-
     beneficioEl.className =
       metrics.beneficio >= 0
         ? "positive"
         : "negative";
-
   }
 
 
   if (roiEl) {
-
     roiEl.textContent =
       formatPercent(
         metrics.roi
       );
-
   }
 
 
   if (idealEl) {
-
     idealEl.textContent =
-
       `${formatCoins(
         metrics.compraIdealMin
       )} - ${formatCoins(
         metrics.compraIdealMax
       )}`;
-
   }
 
 
   if (maximoEl) {
-
     maximoEl.textContent =
       formatCoins(
         metrics.compraMaxima
       );
-
   }
 
 
   if (statusEl) {
-
     statusEl.className =
       `trade-status ${status.className}`;
 
-
     statusEl.textContent =
       status.label;
-
   }
 
 
   return {
-
     jugador,
 
     beneficioMinimo:
@@ -1062,9 +740,7 @@ function calcularTrade() {
     ...metrics,
 
     status
-
   };
-
 }
 
 
@@ -1073,31 +749,25 @@ function calcularTrade() {
 ========================================================= */
 
 function addToWatchlist() {
-
   const result =
     calcularTrade();
 
 
   if (!result) {
-
     return;
-
   }
 
 
   if (!result.jugador) {
-
     alert(
       "Ingresa el nombre del jugador."
     );
 
     return;
-
   }
 
 
   const item = {
-
     id:
       Date.now(),
 
@@ -1126,9 +796,7 @@ function addToWatchlist() {
       result.status.className,
 
     fecha:
-      new Date()
-        .toISOString()
-
+      new Date().toISOString()
   };
 
 
@@ -1138,16 +806,12 @@ function addToWatchlist() {
 
 
   saveState();
-
   renderWatchlist();
-
   renderCapital();
-
 }
 
 
 function renderWatchlist() {
-
   const tbody =
     document.getElementById(
       "watchlistBody"
@@ -1155,9 +819,7 @@ function renderWatchlist() {
 
 
   if (!tbody) {
-
     return;
-
   }
 
 
@@ -1167,11 +829,8 @@ function renderWatchlist() {
   if (
     state.watchlist.length === 0
   ) {
-
     tbody.innerHTML = `
-
       <tr>
-
         <td
           colspan="6"
           style="
@@ -1181,20 +840,15 @@ function renderWatchlist() {
         >
           No hay jugadores en seguimiento
         </td>
-
       </tr>
-
     `;
 
-
     return;
-
   }
 
 
   state.watchlist.forEach(
     (item) => {
-
       const tr =
         document.createElement(
           "tr"
@@ -1202,13 +856,11 @@ function renderWatchlist() {
 
 
       tr.innerHTML = `
-
         <td>
           <strong>
             ${item.jugador}
           </strong>
         </td>
-
 
         <td>
           ${formatCoins(
@@ -1216,40 +868,27 @@ function renderWatchlist() {
           )}
         </td>
 
-
         <td>
-
           ${formatCoins(
             item.compraIdealMin
           )}
-
           -
-
           ${formatCoins(
             item.compraIdealMax
           )}
-
         </td>
 
-
         <td>
-
           ${formatCoins(
             item.compraMaxima
           )}
-
         </td>
 
-
         <td>
-
           ${item.estado}
-
         </td>
 
-
         <td>
-
           <button
             class="remove-button"
             data-watch-delete="${item.id}"
@@ -1258,51 +897,38 @@ function renderWatchlist() {
           >
             ×
           </button>
-
         </td>
-
       `;
 
 
       tbody.appendChild(
         tr
       );
-
     }
   );
-
 }
 
 
 function removeWatchlistItem(id) {
-
   state.watchlist =
     state.watchlist.filter(
-
       (item) =>
         Number(item.id) !==
         Number(id)
-
     );
 
 
   saveState();
-
   renderWatchlist();
-
   renderCapital();
-
 }
 
 
 function limpiarWatchlist() {
-
   if (
     state.watchlist.length === 0
   ) {
-
     return;
-
   }
 
 
@@ -1313,9 +939,7 @@ function limpiarWatchlist() {
 
 
   if (!confirmar) {
-
     return;
-
   }
 
 
@@ -1323,11 +947,8 @@ function limpiarWatchlist() {
 
 
   saveState();
-
   renderWatchlist();
-
   renderCapital();
-
 }
 
 
@@ -1336,18 +957,15 @@ function limpiarWatchlist() {
 ========================================================= */
 
 function registrarTrade() {
-
   const jugadorInput =
     document.getElementById(
       "tradeJugador"
     );
 
-
   const compraInput =
     document.getElementById(
       "tradeCompra"
     );
-
 
   const ventaInput =
     document.getElementById(
@@ -1382,23 +1000,18 @@ function registrarTrade() {
     !compra ||
     !venta
   ) {
-
     alert(
       "Completa jugador, compra y venta."
     );
 
     return;
-
   }
 
 
   const neto =
     Math.floor(
-
       venta *
-
-      (1 - TAX_RATE)
-
+        (1 - TAX_RATE)
     );
 
 
@@ -1416,7 +1029,6 @@ function registrarTrade() {
 
 
   const trade = {
-
     id:
       Date.now(),
 
@@ -1433,9 +1045,7 @@ function registrarTrade() {
     roi,
 
     fecha:
-      new Date()
-        .toISOString()
-
+      new Date().toISOString()
   };
 
 
@@ -1444,47 +1054,32 @@ function registrarTrade() {
   );
 
 
-  /*
-     Sumamos solamente el beneficio
-     al capital registrado.
-  */
-
   state.capital +=
     beneficio;
 
 
   saveState();
-
   renderHistorial();
-
   renderCapital();
 
 
   if (jugadorInput) {
-
     jugadorInput.value = "";
-
   }
 
 
   if (compraInput) {
-
     compraInput.value = "";
-
   }
 
 
   if (ventaInput) {
-
     ventaInput.value = "";
-
   }
-
 }
 
 
 function renderHistorial() {
-
   const tbody =
     document.getElementById(
       "historialBody"
@@ -1492,9 +1087,7 @@ function renderHistorial() {
 
 
   if (!tbody) {
-
     return;
-
   }
 
 
@@ -1504,11 +1097,8 @@ function renderHistorial() {
   if (
     state.historial.length === 0
   ) {
-
     tbody.innerHTML = `
-
       <tr>
-
         <td
           colspan="6"
           style="
@@ -1518,20 +1108,15 @@ function renderHistorial() {
         >
           Todavía no hay trades registrados
         </td>
-
       </tr>
-
     `;
 
-
     return;
-
   }
 
 
   state.historial.forEach(
     (trade) => {
-
       const tr =
         document.createElement(
           "tr"
@@ -1545,15 +1130,11 @@ function renderHistorial() {
 
 
       tr.innerHTML = `
-
         <td>
-
           <strong>
             ${trade.jugador}
           </strong>
-
         </td>
-
 
         <td>
           ${formatCoins(
@@ -1561,18 +1142,15 @@ function renderHistorial() {
           )}
         </td>
 
-
         <td>
           ${formatCoins(
             trade.venta
           )}
         </td>
 
-
         <td
           class="${beneficioClass}"
         >
-
           ${
             trade.beneficio >= 0
               ? "+"
@@ -1582,9 +1160,7 @@ function renderHistorial() {
           ${formatCoins(
             trade.beneficio
           )}
-
         </td>
-
 
         <td>
           ${formatPercent(
@@ -1592,9 +1168,7 @@ function renderHistorial() {
           )}
         </td>
 
-
         <td>
-
           <button
             class="remove-button"
             data-history-delete="${trade.id}"
@@ -1603,71 +1177,54 @@ function renderHistorial() {
           >
             ×
           </button>
-
         </td>
-
       `;
 
 
       tbody.appendChild(
         tr
       );
-
     }
   );
-
 }
 
 
 function removeHistorialItem(id) {
-
   const trade =
     state.historial.find(
-
       (item) =>
         Number(item.id) ===
         Number(id)
-
     );
 
 
   if (trade) {
-
     state.capital -=
       Number(
         trade.beneficio || 0
       );
-
   }
 
 
   state.historial =
     state.historial.filter(
-
       (item) =>
         Number(item.id) !==
         Number(id)
-
     );
 
 
   saveState();
-
   renderHistorial();
-
   renderCapital();
-
 }
 
 
 function limpiarHistorial() {
-
   if (
     state.historial.length === 0
   ) {
-
     return;
-
   }
 
 
@@ -1678,27 +1235,21 @@ function limpiarHistorial() {
 
 
   if (!confirmar) {
-
     return;
-
   }
 
 
   /*
-     No modificamos el capital porque
-     limpiar historial no significa
-     deshacer los trades.
+    Limpiar historial NO modifica
+    el capital actual.
   */
 
   state.historial = [];
 
 
   saveState();
-
   renderHistorial();
-
   renderCapital();
-
 }
 
 
@@ -1707,25 +1258,20 @@ function limpiarHistorial() {
 ========================================================= */
 
 function getMetaPlayers() {
-
   if (
     !Array.isArray(
       window.META_PLAYERS
     )
   ) {
-
     console.warn(
       "META_PLAYERS no está disponible."
     );
 
-
     return [];
-
   }
 
 
   return window.META_PLAYERS;
-
 }
 
 
@@ -1733,10 +1279,7 @@ function getMetaPlayers() {
    DATOS META + PRECIOS LOCALES
 ========================================================= */
 
-function getMetaPlayerData(
-  player
-) {
-
+function getMetaPlayerData(player) {
   const override =
     metaPriceOverrides[
       player.id
@@ -1759,10 +1302,8 @@ function getMetaPlayerData(
         "precioMercado"
       )
   ) {
-
     precioMercado =
       override.precioMercado;
-
   }
 
 
@@ -1774,60 +1315,41 @@ function getMetaPlayerData(
         "ultimaActualizacion"
       )
   ) {
-
     ultimaActualizacion =
       override.ultimaActualizacion;
-
   }
 
 
   let compraIdealMin = null;
-
   let compraIdealMax = null;
-
   let compraMaxima = null;
 
 
   if (
-
     precioMercado !== null &&
-
     precioMercado !== undefined &&
-
-    Number(
-      precioMercado
-    ) > 0
-
+    Number(precioMercado) > 0
   ) {
-
     const metrics =
       getTradeMetrics(
-
         precioMercado,
-
         0,
-
         DEFAULT_META_PROFIT
-
       );
 
 
     compraIdealMin =
       metrics.compraIdealMin;
 
-
     compraIdealMax =
       metrics.compraIdealMax;
 
-
     compraMaxima =
       metrics.compraMaxima;
-
   }
 
 
   return {
-
     ...player,
 
     precioMercado,
@@ -1839,9 +1361,7 @@ function getMetaPlayerData(
     compraIdealMax,
 
     compraMaxima
-
   };
-
 }
 
 
@@ -1852,26 +1372,18 @@ function getMetaPlayerData(
 function renderMetaPriority(
   prioridad
 ) {
-
   const cantidad =
-    Number(
-      prioridad
-    ) || 0;
+    Number(prioridad) || 0;
 
 
-  if (
-    cantidad <= 0
-  ) {
-
+  if (cantidad <= 0) {
     return "—";
-
   }
 
 
   return "🔥".repeat(
     cantidad
   );
-
 }
 
 
@@ -1882,19 +1394,11 @@ function renderMetaPriority(
 function getPriceFreshness(
   dateString
 ) {
-
   if (!dateString) {
-
     return {
-
-      className:
-        "unknown",
-
-      text:
-        "Sin fecha"
-
+      className: "unknown",
+      text: "Sin fecha"
     };
-
   }
 
 
@@ -1909,17 +1413,10 @@ function getPriceFreshness(
       date.getTime()
     )
   ) {
-
     return {
-
-      className:
-        "unknown",
-
-      text:
-        "Sin fecha"
-
+      className: "unknown",
+      text: "Sin fecha"
     };
-
   }
 
 
@@ -1933,64 +1430,36 @@ function getPriceFreshness(
 
   const diffMinutes =
     Math.max(
-
       0,
-
       Math.floor(
         diffMs / 60000
       )
-
     );
 
 
-  if (
-    diffMinutes < 1
-  ) {
-
+  if (diffMinutes < 1) {
     return {
-
-      className:
-        "fresh",
-
-      text:
-        "Ahora"
-
+      className: "fresh",
+      text: "Ahora"
     };
-
   }
 
 
-  if (
-    diffMinutes < 30
-  ) {
-
+  if (diffMinutes < 30) {
     return {
-
-      className:
-        "fresh",
-
+      className: "fresh",
       text:
         `${diffMinutes} min`
-
     };
-
   }
 
 
-  if (
-    diffMinutes <= 90
-  ) {
-
+  if (diffMinutes <= 90) {
     return {
-
-      className:
-        "warning",
-
+      className: "warning",
       text:
         `${diffMinutes} min`
-
     };
-
   }
 
 
@@ -2000,20 +1469,12 @@ function getPriceFreshness(
     );
 
 
-  if (
-    diffHours < 24
-  ) {
-
+  if (diffHours < 24) {
     return {
-
-      className:
-        "old",
-
+      className: "old",
       text:
         `${diffHours} h`
-
     };
-
   }
 
 
@@ -2024,15 +1485,166 @@ function getPriceFreshness(
 
 
   return {
-
-    className:
-      "old",
-
+    className: "old",
     text:
       `${diffDays} d`
-
   };
+}
 
+
+/* =========================================================
+   COPIAR NOMBRE DEL JUGADOR
+========================================================= */
+
+async function copiarNombreJugador(
+  playerId,
+  button
+) {
+  const player =
+    getMetaPlayers().find(
+      (item) =>
+        item.id === playerId
+    );
+
+
+  if (!player) {
+    return;
+  }
+
+
+  const nombre =
+    player.nombre;
+
+
+  let copiado = false;
+
+
+  /*
+     MÉTODO PRINCIPAL
+     GitHub Pages usa HTTPS, por lo que
+     normalmente navigator.clipboard funciona.
+  */
+
+  try {
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
+      await navigator.clipboard.writeText(
+        nombre
+      );
+
+      copiado = true;
+    }
+  } catch (error) {
+    console.warn(
+      "Clipboard API no disponible:",
+      error
+    );
+  }
+
+
+  /*
+     MÉTODO ALTERNATIVO
+  */
+
+  if (!copiado) {
+    try {
+      const textarea =
+        document.createElement(
+          "textarea"
+        );
+
+      textarea.value =
+        nombre;
+
+      textarea.setAttribute(
+        "readonly",
+        ""
+      );
+
+      textarea.style.position =
+        "absolute";
+
+      textarea.style.left =
+        "-9999px";
+
+
+      document.body.appendChild(
+        textarea
+      );
+
+      textarea.select();
+
+      textarea.setSelectionRange(
+        0,
+        textarea.value.length
+      );
+
+
+      copiado =
+        document.execCommand(
+          "copy"
+        );
+
+
+      document.body.removeChild(
+        textarea
+      );
+    } catch (error) {
+      console.error(
+        "No se pudo copiar:",
+        error
+      );
+    }
+  }
+
+
+  /*
+     CONFIRMACIÓN VISUAL
+  */
+
+  if (
+    copiado &&
+    button
+  ) {
+    const contenidoOriginal =
+      button.innerHTML;
+
+
+    button.innerHTML =
+      "✓ Copiado";
+
+
+    button.classList.add(
+      "copied"
+    );
+
+
+    button.disabled = true;
+
+
+    setTimeout(
+      () => {
+        button.innerHTML =
+          contenidoOriginal;
+
+        button.classList.remove(
+          "copied"
+        );
+
+        button.disabled = false;
+      },
+      1200
+    );
+  }
+
+
+  if (!copiado) {
+    alert(
+      `No se pudo copiar automáticamente.\n\nNombre: ${nombre}`
+    );
+  }
 }
 
 
@@ -2041,7 +1653,6 @@ function getPriceFreshness(
 ========================================================= */
 
 function getFilteredMetaPlayers() {
-
   let players =
     getMetaPlayers()
 
@@ -2057,13 +1668,11 @@ function getFilteredMetaPlayers() {
 
   const search =
     normalizeText(
-
       document
         .getElementById(
           "metaSearch"
         )
         ?.value
-
     );
 
 
@@ -2110,21 +1719,15 @@ function getFilteredMetaPlayers() {
     false;
 
 
-  /* -----------------------------------------
-     BUSCADOR
-  ----------------------------------------- */
+  /* BUSCADOR */
 
   if (search) {
-
     players =
       players.filter(
         (player) => {
-
           const searchable =
             normalizeText(
-
               [
-
                 player.nombre,
 
                 player.posicionPrincipal,
@@ -2140,103 +1743,74 @@ function getFilteredMetaPlayers() {
                 ),
 
                 player.perfil
-
               ].join(" ")
-
             );
 
 
           return searchable.includes(
             search
           );
-
         }
       );
-
   }
 
 
-  /* -----------------------------------------
-     CATEGORÍA
-  ----------------------------------------- */
+  /* CATEGORÍA */
 
   if (
     category !== "ALL"
   ) {
-
     players =
       players.filter(
-
         (player) =>
           player.categoria ===
           category
-
       );
-
   }
 
 
-  /* -----------------------------------------
-     PRIORIDAD
-  ----------------------------------------- */
+  /* PRIORIDAD */
 
   if (
     priority !== "ALL"
   ) {
-
     players =
       players.filter(
-
         (player) =>
           Number(
             player.prioridadMeta
           ) ===
           Number(priority)
-
       );
-
   }
 
 
-  /* -----------------------------------------
-     SOLO JUGADORES CON PRECIO
-  ----------------------------------------- */
+  /* SOLO CON PRECIO */
 
   if (
     onlyWithPrice
   ) {
-
     players =
       players.filter(
-
         (player) =>
           Number(
             player.precioMercado
           ) > 0
-
       );
-
   }
 
 
-  /* -----------------------------------------
-     PRECIO MÁXIMO
-  ----------------------------------------- */
+  /* PRECIO MÁXIMO */
 
   if (
-
     maxPrice !== null &&
-
     !Number.isNaN(
       maxPrice
     )
-
   ) {
-
     players =
       players.filter(
         (player) => {
-
           const price =
             Number(
               player.precioMercado
@@ -2244,32 +1818,18 @@ function getFilteredMetaPlayers() {
 
 
           return (
-
             price > 0 &&
-
             price <= maxPrice
-
           );
-
         }
       );
-
   }
 
 
-  /* -----------------------------------------
-     ORDEN
-
-     1. Mayor prioridad Meta
-     2. Nombre
-  ----------------------------------------- */
+  /* ORDEN */
 
   players.sort(
-    (
-      a,
-      b
-    ) => {
-
+    (a, b) => {
       const diferencia =
         Number(
           b.prioridadMeta
@@ -2282,26 +1842,19 @@ function getFilteredMetaPlayers() {
       if (
         diferencia !== 0
       ) {
-
         return diferencia;
-
       }
 
 
       return a.nombre.localeCompare(
-
         b.nombre,
-
         "es"
-
       );
-
     }
   );
 
 
   return players;
-
 }
 
 
@@ -2310,7 +1863,6 @@ function getFilteredMetaPlayers() {
 ========================================================= */
 
 function renderMetaPlayers() {
-
   const tbody =
     document.getElementById(
       "metaPlayersBody"
@@ -2318,9 +1870,7 @@ function renderMetaPlayers() {
 
 
   if (!tbody) {
-
     return;
-
   }
 
 
@@ -2335,10 +1885,8 @@ function renderMetaPlayers() {
 
 
   if (counter) {
-
     counter.textContent =
       players.length;
-
   }
 
 
@@ -2348,11 +1896,8 @@ function renderMetaPlayers() {
   if (
     players.length === 0
   ) {
-
     tbody.innerHTML = `
-
       <tr>
-
         <td
           colspan="9"
           style="
@@ -2362,20 +1907,15 @@ function renderMetaPlayers() {
         >
           No hay jugadores que coincidan con los filtros.
         </td>
-
       </tr>
-
     `;
 
-
     return;
-
   }
 
 
   players.forEach(
     (player) => {
-
       const freshness =
         getPriceFreshness(
           player.ultimaActualizacion
@@ -2405,27 +1945,16 @@ function renderMetaPlayers() {
           player.tags
         )
           ? player.tags
-              .slice(
-                0,
-                3
-              )
-              .join(
-                " · "
-              )
+              .slice(0, 3)
+              .join(" · ")
           : "";
 
 
       const freshnessDot =
         freshness.className ===
-          "fresh"
-          ? "●"
-          : freshness.className ===
-              "warning"
-          ? "●"
-          : freshness.className ===
-              "old"
-          ? "●"
-          : "";
+          "unknown"
+          ? ""
+          : "●";
 
 
       const tr =
@@ -2436,6 +1965,8 @@ function renderMetaPlayers() {
 
       tr.innerHTML = `
 
+        <!-- JUGADOR -->
+
         <td>
 
           <div
@@ -2443,9 +1974,27 @@ function renderMetaPlayers() {
             title="${player.perfil || ""}"
           >
 
-            <strong>
-              ${player.nombre}
-            </strong>
+            <div
+              class="meta-player-name-row"
+            >
+
+              <strong>
+                ${player.nombre}
+              </strong>
+
+
+              <button
+                class="copy-player-button"
+                data-meta-action="copy-name"
+                data-player-id="${player.id}"
+                type="button"
+                title="Copiar nombre de ${player.nombre}"
+              >
+                📋
+              </button>
+
+            </div>
+
 
             <span>
               ${tags}
@@ -2455,6 +2004,8 @@ function renderMetaPlayers() {
 
         </td>
 
+
+        <!-- POSICIÓN -->
 
         <td>
 
@@ -2470,6 +2021,8 @@ function renderMetaPlayers() {
         </td>
 
 
+        <!-- OVR -->
+
         <td>
 
           ${
@@ -2481,6 +2034,8 @@ function renderMetaPlayers() {
 
         </td>
 
+
+        <!-- META -->
 
         <td>
 
@@ -2496,6 +2051,8 @@ function renderMetaPlayers() {
 
         </td>
 
+
+        <!-- PRECIO -->
 
         <td>
 
@@ -2538,45 +2095,43 @@ function renderMetaPlayers() {
         </td>
 
 
+        <!-- COMPRA IDEAL -->
+
         <td>
 
           ${
             player.compraIdealMin !== null
-
               ? `
-
                 ${formatCoins(
                   player.compraIdealMin
                 )}
-
                 -
-
                 ${formatCoins(
                   player.compraIdealMax
                 )}
-
               `
-
               : "—"
           }
 
         </td>
 
+
+        <!-- MÁXIMO -->
 
         <td>
 
           ${
             player.compraMaxima !== null
-
               ? formatCoins(
                   player.compraMaxima
                 )
-
               : "—"
           }
 
         </td>
 
+
+        <!-- ACTUALIZACIÓN -->
 
         <td>
 
@@ -2596,6 +2151,8 @@ function renderMetaPlayers() {
         </td>
 
 
+        <!-- ACCIONES -->
+
         <td>
 
           <button
@@ -2603,6 +2160,7 @@ function renderMetaPlayers() {
             data-meta-action="calculator"
             data-player-id="${player.id}"
             type="button"
+            title="Enviar a calculadora"
           >
             🧮 Calcular
           </button>
@@ -2615,13 +2173,11 @@ function renderMetaPlayers() {
       tbody.appendChild(
         tr
       );
-
     }
   );
 
 
   activarStepsMetaInputs();
-
 }
 
 
@@ -2630,7 +2186,6 @@ function renderMetaPlayers() {
 ========================================================= */
 
 function activarStepsMetaInputs() {
-
   const inputs =
     document.querySelectorAll(
       ".meta-price-input"
@@ -2639,14 +2194,11 @@ function activarStepsMetaInputs() {
 
   inputs.forEach(
     (input) => {
-
       aplicarStepDinamico(
         input
       );
-
     }
   );
-
 }
 
 
@@ -2657,96 +2209,72 @@ function activarStepsMetaInputs() {
 function actualizarPrecioMeta(
   playerId
 ) {
-
   const input =
     document.querySelector(
-
       `.meta-price-input[data-player-id="${playerId}"]`
-
     );
 
 
   if (!input) {
-
     return;
-
   }
 
 
   /*
-     Si borramos el campo,
-     eliminamos el precio manual.
+     SI QUEDA VACÍO,
+     ELIMINAMOS PRECIO MANUAL
   */
 
   if (
     input.value.trim() === ""
   ) {
-
     metaPriceOverrides[
       playerId
     ] = {
-
       precioMercado:
         null,
 
       ultimaActualizacion:
         null
-
     };
 
 
     saveMetaPrices();
-
     renderMetaPlayers();
 
     return;
-
   }
 
 
   const price =
-    Number(
-      input.value
-    );
+    Number(input.value);
 
 
   if (
-
-    Number.isNaN(
-      price
-    ) ||
-
+    Number.isNaN(price) ||
     price <= 0
-
   ) {
-
     alert(
       "Ingresa un precio válido."
     );
 
     return;
-
   }
 
 
   metaPriceOverrides[
     playerId
   ] = {
-
     precioMercado:
       price,
 
     ultimaActualizacion:
-      new Date()
-        .toISOString()
-
+      new Date().toISOString()
   };
 
 
   saveMetaPrices();
-
   renderMetaPlayers();
-
 }
 
 
@@ -2757,21 +2285,16 @@ function actualizarPrecioMeta(
 function usarMetaEnCalculadora(
   playerId
 ) {
-
   const basePlayer =
     getMetaPlayers().find(
-
       (player) =>
         player.id ===
         playerId
-
     );
 
 
   if (!basePlayer) {
-
     return;
-
   }
 
 
@@ -2781,23 +2304,16 @@ function usarMetaEnCalculadora(
     );
 
 
-  /*
-     Cambiamos automáticamente
-     al Dashboard.
-  */
+  /* IR AL DASHBOARD */
 
   const dashboardTab =
     document.querySelector(
-
       '.nav-tab[data-section="dashboardSection"]'
-
     );
 
 
   if (dashboardTab) {
-
     dashboardTab.click();
-
   }
 
 
@@ -2806,18 +2322,15 @@ function usarMetaEnCalculadora(
       "jugador"
     );
 
-
   const ventaInput =
     document.getElementById(
       "precioVenta"
     );
 
-
   const compraInput =
     document.getElementById(
       "precioCompra"
     );
-
 
   const beneficioInput =
     document.getElementById(
@@ -2826,33 +2339,22 @@ function usarMetaEnCalculadora(
 
 
   if (jugadorInput) {
-
     jugadorInput.value =
       player.nombre;
-
   }
 
 
   if (ventaInput) {
-
     ventaInput.value =
       player.precioMercado ||
       "";
-
   }
 
 
-  /*
-     Tú introducirás aquí
-     la puja o BIN que estés viendo.
-  */
-
   if (compraInput) {
-
     compraInput.value = "";
 
     compraInput.focus();
-
   }
 
 
@@ -2860,21 +2362,15 @@ function usarMetaEnCalculadora(
     beneficioInput &&
     !beneficioInput.value
   ) {
-
     beneficioInput.value =
       DEFAULT_META_PROFIT;
-
   }
 
 
   window.scrollTo({
-
     top: 0,
-
     behavior: "smooth"
-
   });
-
 }
 
 
@@ -2883,30 +2379,25 @@ function usarMetaEnCalculadora(
 ========================================================= */
 
 function limpiarFiltrosMeta() {
-
   const search =
     document.getElementById(
       "metaSearch"
     );
-
 
   const category =
     document.getElementById(
       "metaCategory"
     );
 
-
   const priority =
     document.getElementById(
       "metaPriority"
     );
 
-
   const maxPrice =
     document.getElementById(
       "metaMaxPrice"
     );
-
 
   const onlyWithPrice =
     document.getElementById(
@@ -2915,45 +2406,34 @@ function limpiarFiltrosMeta() {
 
 
   if (search) {
-
     search.value = "";
-
   }
 
 
   if (category) {
-
     category.value =
       "ALL";
-
   }
 
 
   if (priority) {
-
     priority.value =
       "ALL";
-
   }
 
 
   if (maxPrice) {
-
     maxPrice.value = "";
-
   }
 
 
   if (onlyWithPrice) {
-
     onlyWithPrice.checked =
       false;
-
   }
 
 
   renderMetaPlayers();
-
 }
 
 
@@ -2962,36 +2442,30 @@ function limpiarFiltrosMeta() {
 ========================================================= */
 
 function configurarEventosMeta() {
-
   const search =
     document.getElementById(
       "metaSearch"
     );
-
 
   const category =
     document.getElementById(
       "metaCategory"
     );
 
-
   const priority =
     document.getElementById(
       "metaPriority"
     );
-
 
   const maxPrice =
     document.getElementById(
       "metaMaxPrice"
     );
 
-
   const onlyWithPrice =
     document.getElementById(
       "metaOnlyWithPrice"
     );
-
 
   const clear =
     document.getElementById(
@@ -3000,56 +2474,38 @@ function configurarEventosMeta() {
 
 
   search?.addEventListener(
-
     "input",
-
     renderMetaPlayers
-
   );
 
 
   category?.addEventListener(
-
     "change",
-
     renderMetaPlayers
-
   );
 
 
   priority?.addEventListener(
-
     "change",
-
     renderMetaPlayers
-
   );
 
 
   maxPrice?.addEventListener(
-
     "input",
-
     renderMetaPlayers
-
   );
 
 
   onlyWithPrice?.addEventListener(
-
     "change",
-
     renderMetaPlayers
-
   );
 
 
   clear?.addEventListener(
-
     "click",
-
     limpiarFiltrosMeta
-
   );
 
 
@@ -3060,13 +2516,12 @@ function configurarEventosMeta() {
 
 
   /*
-     Botones de la tabla
+     ACCIONES DE LA TABLA META
   */
 
   tbody?.addEventListener(
     "click",
     (event) => {
-
       const button =
         event.target.closest(
           "[data-meta-action]"
@@ -3074,9 +2529,7 @@ function configurarEventosMeta() {
 
 
       if (!button) {
-
         return;
-
       }
 
 
@@ -3092,11 +2545,20 @@ function configurarEventosMeta() {
         action ===
         "save-price"
       ) {
-
         actualizarPrecioMeta(
           playerId
         );
+      }
 
+
+      if (
+        action ===
+        "copy-name"
+      ) {
+        copiarNombreJugador(
+          playerId,
+          button
+        );
       }
 
 
@@ -3104,32 +2566,26 @@ function configurarEventosMeta() {
         action ===
         "calculator"
       ) {
-
         usarMetaEnCalculadora(
           playerId
         );
-
       }
-
     }
   );
 
 
   /*
-     ENTER en precio
-     guarda automáticamente.
+     ENTER EN PRECIO =
+     GUARDAR PRECIO
   */
 
   tbody?.addEventListener(
     "keydown",
     (event) => {
-
       if (
         event.key !== "Enter"
       ) {
-
         return;
-
       }
 
 
@@ -3140,19 +2596,15 @@ function configurarEventosMeta() {
 
 
       if (!input) {
-
         return;
-
       }
 
 
       actualizarPrecioMeta(
         input.dataset.playerId
       );
-
     }
   );
-
 }
 
 
@@ -3161,7 +2613,6 @@ function configurarEventosMeta() {
 ========================================================= */
 
 function configurarEventosTablas() {
-
   const watchlistBody =
     document.getElementById(
       "watchlistBody"
@@ -3171,7 +2622,6 @@ function configurarEventosTablas() {
   watchlistBody?.addEventListener(
     "click",
     (event) => {
-
       const button =
         event.target.closest(
           "[data-watch-delete]"
@@ -3179,19 +2629,14 @@ function configurarEventosTablas() {
 
 
       if (!button) {
-
         return;
-
       }
 
 
       removeWatchlistItem(
-
         button.dataset
           .watchDelete
-
       );
-
     }
   );
 
@@ -3205,7 +2650,6 @@ function configurarEventosTablas() {
   historialBody?.addEventListener(
     "click",
     (event) => {
-
       const button =
         event.target.closest(
           "[data-history-delete]"
@@ -3213,22 +2657,16 @@ function configurarEventosTablas() {
 
 
       if (!button) {
-
         return;
-
       }
 
 
       removeHistorialItem(
-
         button.dataset
           .historyDelete
-
       );
-
     }
   );
-
 }
 
 
@@ -3237,23 +2675,16 @@ function configurarEventosTablas() {
 ========================================================= */
 
 function configurarEnterCalculadora() {
-
   const ids = [
-
     "jugador",
-
     "precioVenta",
-
     "precioCompra",
-
     "beneficioMinimo"
-
   ];
 
 
   ids.forEach(
     (id) => {
-
       const input =
         document.getElementById(
           id
@@ -3263,22 +2694,16 @@ function configurarEnterCalculadora() {
       input?.addEventListener(
         "keydown",
         (event) => {
-
           if (
             event.key ===
             "Enter"
           ) {
-
             calcularTrade();
-
           }
-
         }
       );
-
     }
   );
-
 }
 
 
@@ -3287,7 +2712,6 @@ function configurarEnterCalculadora() {
 ========================================================= */
 
 function getLocalDateString() {
-
   const now =
     new Date();
 
@@ -3317,7 +2741,6 @@ function getLocalDateString() {
   return (
     `${year}-${month}-${day}`
   );
-
 }
 
 
@@ -3326,19 +2749,11 @@ function getLocalDateString() {
 ========================================================= */
 
 function exportarBackup() {
-
-  /*
-     Primero aseguramos que todo
-     esté guardado.
-  */
-
   saveState();
-
   saveMetaPrices();
 
 
   const backup = {
-
     app:
       "XoluGG TradeLab",
 
@@ -3346,11 +2761,9 @@ function exportarBackup() {
       APP_VERSION,
 
     exportedAt:
-      new Date()
-        .toISOString(),
+      new Date().toISOString(),
 
     state: {
-
       capital:
         state.capital,
 
@@ -3359,39 +2772,28 @@ function exportarBackup() {
 
       historial:
         state.historial
-
     },
 
     metaPriceOverrides:
       metaPriceOverrides
-
   };
 
 
   const json =
     JSON.stringify(
-
       backup,
-
       null,
-
       2
-
     );
 
 
   const blob =
     new Blob(
-
       [json],
-
       {
-
         type:
           "application/json"
-
       }
-
     );
 
 
@@ -3431,16 +2833,14 @@ function exportarBackup() {
   URL.revokeObjectURL(
     url
   );
-
 }
 
 
 /* =========================================================
-   ABRIR SELECTOR DE BACKUP
+   ABRIR IMPORTADOR
 ========================================================= */
 
 function abrirImportadorBackup() {
-
   const input =
     document.getElementById(
       "backupFileInput"
@@ -3448,22 +2848,14 @@ function abrirImportadorBackup() {
 
 
   if (!input) {
-
     return;
-
   }
 
-
-  /*
-     Esto permite volver a elegir
-     incluso el mismo archivo.
-  */
 
   input.value = "";
 
 
   input.click();
-
 }
 
 
@@ -3472,75 +2864,51 @@ function abrirImportadorBackup() {
 ========================================================= */
 
 function validarBackup(data) {
-
   if (
-
     !data ||
-
     typeof data !==
       "object"
-
   ) {
-
     return false;
-
   }
 
 
   if (
-
     !data.state ||
-
     typeof data.state !==
       "object"
-
   ) {
-
     return false;
-
   }
 
 
   if (
-
     typeof data.state.capital !==
       "number"
-
   ) {
-
     return false;
-
   }
 
 
   if (
-
     !Array.isArray(
       data.state.watchlist
     )
-
   ) {
-
     return false;
-
   }
 
 
   if (
-
     !Array.isArray(
       data.state.historial
     )
-
   ) {
-
     return false;
-
   }
 
 
   return true;
-
 }
 
 
@@ -3551,15 +2919,12 @@ function validarBackup(data) {
 function importarBackupArchivo(
   event
 ) {
-
   const file =
     event.target.files?.[0];
 
 
   if (!file) {
-
     return;
-
   }
 
 
@@ -3571,9 +2936,7 @@ function importarBackupArchivo(
     function (
       readerEvent
     ) {
-
       try {
-
         const contenido =
           readerEvent
             .target
@@ -3591,36 +2954,26 @@ function importarBackupArchivo(
             data
           )
         ) {
-
           alert(
-
             "El archivo seleccionado no parece ser un backup válido de XoluGG TradeLab."
-
           );
 
-
           return;
-
         }
 
 
         const confirmar =
           confirm(
-
             "Esto reemplazará los datos actuales de XoluGG TradeLab por los datos del backup.\n\n¿Deseas continuar?"
-
           );
 
 
         if (!confirmar) {
-
           return;
-
         }
 
 
         state = {
-
           capital:
             Number(
               data.state.capital
@@ -3639,43 +2992,32 @@ function importarBackupArchivo(
             )
               ? data.state.historial
               : []
-
         };
 
 
         metaPriceOverrides =
-
           data.metaPriceOverrides &&
-
           typeof (
             data.metaPriceOverrides
           ) === "object"
-
             ? data.metaPriceOverrides
-
             : {};
 
 
         saveState();
-
         saveMetaPrices();
 
 
         renderCapital();
-
         renderWatchlist();
-
         renderHistorial();
-
         renderMetaPlayers();
 
 
         alert(
           "✅ Backup importado correctamente."
         );
-
       } catch (error) {
-
         console.error(
           "Error importando backup:",
           error
@@ -3683,52 +3025,40 @@ function importarBackupArchivo(
 
 
         alert(
-
           "No se pudo leer el archivo. Verifica que sea un JSON exportado desde XoluGG TradeLab."
-
         );
-
       }
-
     };
 
 
   reader.onerror =
     function () {
-
       alert(
-
         "No se pudo leer el archivo seleccionado."
-
       );
-
     };
 
 
   reader.readAsText(
     file
   );
-
 }
 
 
 /* =========================================================
-   CONFIGURAR EVENTOS BACKUP
+   EVENTOS BACKUP
 ========================================================= */
 
 function configurarEventosBackup() {
-
   const exportButton =
     document.getElementById(
       "btnExportBackup"
     );
 
-
   const importButton =
     document.getElementById(
       "btnImportBackup"
     );
-
 
   const input =
     document.getElementById(
@@ -3737,31 +3067,21 @@ function configurarEventosBackup() {
 
 
   exportButton?.addEventListener(
-
     "click",
-
     exportarBackup
-
   );
 
 
   importButton?.addEventListener(
-
     "click",
-
     abrirImportadorBackup
-
   );
 
 
   input?.addEventListener(
-
     "change",
-
     importarBackupArchivo
-
   );
-
 }
 
 
@@ -3770,63 +3090,42 @@ function configurarEventosBackup() {
 ========================================================= */
 
 function init() {
-
-  /* -----------------------------------------
-     CARGAR DATOS
-  ----------------------------------------- */
+  /* CARGAR DATOS */
 
   loadState();
-
   loadMetaPrices();
 
 
-  /* -----------------------------------------
-     RENDER INICIAL
-  ----------------------------------------- */
+  /* RENDER */
 
   renderCapital();
-
   renderWatchlist();
-
   renderHistorial();
-
   renderMetaPlayers();
 
 
-  /* -----------------------------------------
-     STEPS
-  ----------------------------------------- */
+  /* STEPS */
 
   activarStepsDinamicos();
 
 
-  /* -----------------------------------------
-     EVENTOS GENERALES
-  ----------------------------------------- */
+  /* EVENTOS */
 
   configurarEventosMeta();
-
   configurarEventosTablas();
-
   configurarEnterCalculadora();
-
   configurarEventosBackup();
 
 
-  /* -----------------------------------------
-     CALCULADORA
-  ----------------------------------------- */
+  /* CALCULADORA */
 
   document
     .getElementById(
       "btnCalcular"
     )
     ?.addEventListener(
-
       "click",
-
       calcularTrade
-
     );
 
 
@@ -3835,91 +3134,67 @@ function init() {
       "btnAgregarWatchlist"
     )
     ?.addEventListener(
-
       "click",
-
       addToWatchlist
-
     );
 
 
-  /* -----------------------------------------
-     CAPITAL
-  ----------------------------------------- */
+  /* CAPITAL */
 
   document
     .getElementById(
       "btnActualizarCapital"
     )
     ?.addEventListener(
-
       "click",
-
       actualizarCapital
-
     );
 
 
-  /* -----------------------------------------
-     HISTORIAL
-  ----------------------------------------- */
+  /* HISTORIAL */
 
   document
     .getElementById(
       "btnRegistrarTrade"
     )
     ?.addEventListener(
-
       "click",
-
       registrarTrade
-
     );
 
 
-  /* -----------------------------------------
-     LIMPIAR WATCHLIST
-  ----------------------------------------- */
+  /* LIMPIAR WATCHLIST */
 
   document
     .getElementById(
       "btnLimpiarWatchlist"
     )
     ?.addEventListener(
-
       "click",
-
       limpiarWatchlist
-
     );
 
 
-  /* -----------------------------------------
-     LIMPIAR HISTORIAL
-  ----------------------------------------- */
+  /* LIMPIAR HISTORIAL */
 
   document
     .getElementById(
       "btnLimpiarHistorial"
     )
     ?.addEventListener(
-
       "click",
-
       limpiarHistorial
-
     );
 
 
   console.log(
-    "XoluGG TradeLab cargado ✅"
+    "XoluGG TradeLab v1.1 cargado ✅"
   );
 
 
   console.log(
     `Jugadores Meta cargados: ${getMetaPlayers().length}`
   );
-
 }
 
 
@@ -3928,9 +3203,6 @@ function init() {
 ========================================================= */
 
 document.addEventListener(
-
   "DOMContentLoaded",
-
   init
-
 );
