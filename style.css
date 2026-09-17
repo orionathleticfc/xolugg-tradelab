@@ -1515,3 +1515,41 @@ footer {
     margin-left: 0;
   }
 }
+
+/* =========================================================
+   COPIAR JUGADOR
+========================================================= */
+
+.meta-player-name-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.copy-player-button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+
+  padding: 3px 5px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.copy-player-button:hover {
+  background: rgba(39, 241, 163, 0.1);
+  color: var(--green);
+}
+
+.copy-player-button.copied {
+  color: var(--green);
+  background: rgba(39, 241, 163, 0.1);
+}
