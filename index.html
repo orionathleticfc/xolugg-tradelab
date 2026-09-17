@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css"
+    href="style.css?v=5"
   />
 </head>
 
@@ -81,7 +81,7 @@
         </div>
 
 
-        <!-- RESUMEN DE CAPITAL -->
+        <!-- RESUMEN CAPITAL -->
 
         <div class="capital-summary">
 
@@ -166,8 +166,6 @@
         🔥 Jugadores Meta
       </button>
 
-
-      <!-- BACKUP -->
 
       <div class="backup-actions">
 
@@ -331,7 +329,6 @@
 
             <div class="results compact-results">
 
-
               <div class="result-row">
 
                 <span>
@@ -441,7 +438,6 @@
 
 
             <div class="trade-form compact-trade-form">
-
 
               <input
                 type="text"
@@ -790,7 +786,7 @@
           </div>
 
 
-          <!-- CATEGORÍA -->
+          <!-- POSICIÓN -->
 
           <div class="meta-filter">
 
@@ -853,6 +849,65 @@
 
               <option value="1">
                 🔥
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- ORDENAR -->
+
+          <div class="meta-filter">
+
+            <label for="metaSort">
+              Ordenar por
+            </label>
+
+            <select id="metaSort">
+
+              <option value="meta-desc">
+                🔥 Meta: mayor → menor
+              </option>
+
+              <option value="name-asc">
+                Nombre: A → Z
+              </option>
+
+              <option value="name-desc">
+                Nombre: Z → A
+              </option>
+
+              <option value="price-asc">
+                Precio: menor → mayor
+              </option>
+
+              <option value="price-desc">
+                Precio: mayor → menor
+              </option>
+
+              <option value="ovr-desc">
+                OVR: mayor → menor
+              </option>
+
+              <option value="ovr-asc">
+                OVR: menor → mayor
+              </option>
+
+              <option value="meta-asc">
+                🔥 Meta: menor → mayor
+              </option>
+
+              <option value="maxbuy-asc">
+                Compra máx.: menor → mayor
+              </option>
+
+              <option value="maxbuy-desc">
+                Compra máx.: mayor → menor
+              </option>
+
+              <option value="updated-desc">
+                Actualización: más reciente
               </option>
 
             </select>
@@ -1008,14 +1063,9 @@
        SCRIPTS
   ====================================================== -->
 
-  <!-- BASE DE JUGADORES META -->
+  <script src="meta-players.js?v=5"></script>
 
-  <script src="meta-players.js?v=3"></script>
-
-
-  <!-- LÓGICA PRINCIPAL -->
-
-  <script src="app.js?v=3"></script>
+  <script src="app.js?v=5"></script>
 
 
   <!-- =====================================================
