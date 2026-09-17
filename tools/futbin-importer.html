@@ -81,6 +81,9 @@
     <p>Solo comparación y preview. «Not in current snapshot» significa que una carta no aparece en este PDF; no indica eliminación. Los candidatos pendientes de revisión no se cuentan como ausentes.</p>
     <p id="comparison-status" role="status" aria-live="polite">Esperando cartas detectadas.</p>
     <dl class="comparison-metrics">
+      <div><dt>Apariciones duplicadas</dt><dd id="comparison-snapshotDuplicates">—</dd></div>
+      <div><dt>Grupos duplicados</dt><dd id="comparison-snapshotDuplicateGroups">—</dd></div>
+      <div><dt>Precios fuente 0 no disponibles</dt><dd id="comparison-unavailableZeroPrices">—</dd></div>
       <div><dt>Catálogo actual</dt><dd id="comparison-catalog">—</dd></div>
       <div><dt>Snapshot PDF</dt><dd id="comparison-snapshot">—</dd></div>
       <div><dt>Exact matches</dt><dd id="comparison-exactMatches">—</dd></div>
@@ -112,6 +115,17 @@
     </div>
     <div class="pagination"><button id="comparison-previous" type="button" disabled>Anterior</button>
       <span id="comparison-range"></span><button id="comparison-next" type="button" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="snapshot-duplicates-title">
+    <h2 id="snapshot-duplicates-title">Duplicados del snapshot</h2>
+    <p>Estos grupos no están resueltos ni fusionados. Cada aparición conserva sus datos y tokens originales.</p>
+    <p>Balance del PDF: Unchanged + Updated + New + Needs review + apariciones duplicadas = Snapshot PDF.
+    Not in current snapshot corresponde al catálogo anterior y se contabiliza por separado.</p>
+    <p>En la comparación, precio fuente «0» significa sin precio disponible; un precio actual existente se conserva.
+    El diagnóstico y la exportación del parser mantienen el valor original.</p>
+    <p id="snapshot-duplicates-status" role="status">Esperando comparación.</p>
+    <div id="snapshot-duplicates"></div>
   </section>
 </main>
 </body>

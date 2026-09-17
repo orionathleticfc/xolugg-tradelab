@@ -41,9 +41,54 @@ function compareIdentity(a, b) {
   return { fieldsUsed, conflicts };
 }
 
+
+/** Commercial view only; original parser cards/tokens remain untouched. */
+export function normalizeSnapshotPrice(card) {
+  const raw = card.precioFuenteRaw ?? card.precioReferenciaRaw ??
+    (card.precioReferencia == null ? null : String(card.precioReferencia));
+  const value = number(card.precioReferencia);
+  const available = card.precioDisponible !== false && text(raw) !== "0" && value !== null && value > 0;
+  return { ...card, precioFuenteRaw: raw, precioDisponible: available,
+    precioReferencia: available ? value : null };
+}
+
+/** Groups are unresolved evidence, never a merged or selected canonical card. */
+export function detectSnapshotDuplicates(snapshot) {
+  const identities = snapshot.map(normalizeIdentity);
+  const parents = snapshot.map((_, index) => index);
+  const root = index => { while (parents[index] !== index) index = parents[index]; return index; };
+  for (let i = 0; i < snapshot.length; i++) for (let j = i + 1; j < snapshot.length; j++) {
+    const a = identities[i], b = identities[j];
+    if (!BASE_FIELDS.every(key => a[key] !== null && a[key] === b[key])) continue;
+    if (full(a) && full(b) && compareIdentity(a, b).conflicts.length) continue;
+    parents[root(j)] = root(i);
+  }
+  const groups = new Map();
+  snapshot.forEach((_, index) => { const key = root(index); const list = groups.get(key) || []; list.push(index); groups.set(key, list); });
+  return [...groups.values()].filter(indices => indices.length > 1).map((indices, index) => {
+    const structuralConflicts = [], marketConflicts = [];
+    for (let a = 0; a < indices.length; a++) for (let b = a + 1; b < indices.length; b++) {
+      const first = indices[a], second = indices[b];
+      const conflicts = compareIdentity(identities[first], identities[second]).conflicts;
+      if (conflicts.length) structuralConflicts.push({ indices: [first, second], conflicts });
+      // Compare original source values, including zero, without price-preservation policy.
+      const fields = MARKET_FIELDS.filter(field => number(snapshot[first][field]) !== number(snapshot[second][field]));
+      if (fields.length) marketConflicts.push({ indices: [first, second], fields });
+    }
+    return { groupId: "snapshot-duplicate-" + index, status: "SNAPSHOT_DUPLICATE",
+      identity: identities[indices[0]], snapshotIndices: indices,
+      reason: structuralConflicts.length ? "partial_bridge_structural_conflict" :
+        marketConflicts.length ? "duplicate_identity_market_conflict" :
+        indices.some(i => !full(identities[i])) ? "complete_partial_candidate" : "repeated_strong_identity",
+      structuralConflicts, marketConflicts, resolution: "manual_review_required" };
+  });
+}
+
 export function marketDiff(current, snapshot) {
+  snapshot = normalizeSnapshotPrice(snapshot);
   const diff = {};
   for (const field of MARKET_FIELDS) {
+    if (field === 'precioReferencia' && !snapshot.precioDisponible) continue;
     const oldValue = number(current[field]), newValue = number(snapshot[field]);
     if (oldValue === newValue) continue;
     const delta = oldValue !== null && newValue !== null ? newValue - oldValue : null;
@@ -57,7 +102,10 @@ export function compareFutbinSnapshot(snapshot, catalog, metadata = {}) {
   if (!Array.isArray(snapshot) || !Array.isArray(catalog)) throw new TypeError("Snapshot y catálogo deben ser arrays.");
   if ([...snapshot, ...catalog].some(card => !card || typeof card !== "object")) throw new TypeError("Registro de carta inválido.");
   const entries = catalog.map((record, index) => ({ index, record, identity: normalizeIdentity(record) }));
-  const rows = snapshot.map((pdfCard, snapshotIndex) => {
+  const duplicateGroups = detectSnapshotDuplicates(snapshot);
+  const duplicateIndices = new Set(duplicateGroups.flatMap(group => group.snapshotIndices));
+  const rows = snapshot.map((parserCard, snapshotIndex) => {
+    const pdfCard = normalizeSnapshotPrice(parserCard);
     const identity = normalizeIdentity(pdfCard);
     const sameName = entries.filter(entry => identity.nombre && entry.identity.nombre === identity.nombre);
     // OVR changes separate versions. Same name/OVR structural conflicts need review.
@@ -65,10 +113,14 @@ export function compareFutbinSnapshot(snapshot, catalog, metadata = {}) {
     const candidates = possible.map(entry => ({ catalogIndex: entry.index, record: entry.record,
       identity: entry.identity, ...compareIdentity(identity, entry.identity) }));
     const compatible = candidates.filter(candidate => !candidate.conflicts.length);
-    const row = { snapshotIndex, status: null, identity, pdfCard, currentRecord: null, catalogIndex: null,
+    const row = { snapshotIndex, status: null, identity, pdfCard, parserCard, currentRecord: null, catalogIndex: null,
       marketDiff: {}, matchReason: null, confidence: "none", fieldsUsed: [], warnings: [...(pdfCard.warnings || [])], candidates };
     const sufficient = identity.nombre && identity.ovr !== null && identity.posicionPrincipal;
-    if (!sufficient || pdfCard.parseStatus === "ambiguous") {
+    if (duplicateIndices.has(snapshotIndex)) {
+      row.status = "SNAPSHOT_DUPLICATE"; row.matchReason = "snapshot_duplicate";
+    } else if (Object.values(identity.stats).some(value => value === null)) {
+      row.status = "NEEDS_REVIEW"; row.matchReason = "missing_stats_requires_reconciliation";
+    } else if (!sufficient || pdfCard.parseStatus === "ambiguous") {
       row.status = "NEEDS_REVIEW"; row.matchReason = "insufficient_identity";
     } else if (compatible.length > 1) {
       row.status = "NEEDS_REVIEW"; row.matchReason = "multiple_candidates";
@@ -80,6 +132,10 @@ export function compareFutbinSnapshot(snapshot, catalog, metadata = {}) {
       row.matchReason = full(identity) && full(candidate.identity) ? "exact_identity" : "partial_identity";
       row.confidence = row.matchReason === "exact_identity" ? "high" : "medium";
       row.marketDiff = marketDiff(candidate.record, pdfCard);
+      row.priceDecision = { old: number(candidate.record.precioReferencia), snapshot: pdfCard.precioReferencia,
+        effective: pdfCard.precioDisponible ? pdfCard.precioReferencia : number(candidate.record.precioReferencia),
+        reason: pdfCard.precioDisponible ? "available_snapshot_price" : "preserve_current_price_unavailable_source" };
+      if (!pdfCard.precioDisponible) row.warnings.push("source_price_unavailable_current_preserved");
       row.status = Object.keys(row.marketDiff).length ? "UPDATED" : "UNCHANGED";
       const positions = card => [...new Set((card.posiciones || []).map(p => text(p).toUpperCase()))].sort();
       if (JSON.stringify(positions(candidate.record)) !== JSON.stringify(positions(pdfCard))) row.warnings.push("alternative_positions_differ");
@@ -105,7 +161,7 @@ export function compareFutbinSnapshot(snapshot, catalog, metadata = {}) {
   const accounted = new Set();
   for (const row of rows) {
     if (row.catalogIndex !== null) accounted.add(row.catalogIndex);
-    if (row.status === "NEEDS_REVIEW") for (const candidate of row.candidates) accounted.add(candidate.catalogIndex);
+    if (["NEEDS_REVIEW", "SNAPSHOT_DUPLICATE"].includes(row.status)) for (const candidate of row.candidates) accounted.add(candidate.catalogIndex);
   }
   const notInCurrentSnapshot = entries.filter(entry => !accounted.has(entry.index)).map(entry => ({
     status: "NOT_IN_CURRENT_SNAPSHOT", catalogIndex: entry.index, identity: entry.identity,
@@ -118,15 +174,18 @@ export function compareFutbinSnapshot(snapshot, catalog, metadata = {}) {
   const added = rows.filter(row => row.status === "NEW");
   const needsReview = rows.filter(row => row.status === "NEEDS_REVIEW");
   const matched = [...unchanged, ...updated];
+  const snapshotDuplicates = duplicateGroups.map(group => ({ ...group, occurrences: group.snapshotIndices.map(index => rows[index]) }));
   return {
-    metadata: { matcherVersion: "0.3.0", ...metadata, comparedAt: new Date().toISOString(),
-      policy: "Preview only. Null is missing, zero is a value. Review candidates are not declared absent." },
+    metadata: { matcherVersion: "0.3.1", ...metadata, comparedAt: new Date().toISOString(),
+      policy: "Preview only. Raw zero means unavailable price; retain current price. Duplicate occurrences are exclusively grouped for manual review. Indices are zero-based." },
     summary: { catalog: catalog.length, snapshot: snapshot.length,
       exactMatches: matched.filter(row => row.matchReason === "exact_identity").length,
       partialMatches: matched.filter(row => row.matchReason === "partial_identity").length,
       unchanged: unchanged.length, updated: updated.length, new: added.length,
-      notInCurrentSnapshot: notInCurrentSnapshot.length, needsReview: needsReview.length },
-    unchanged, updated, new: added, notInCurrentSnapshot, needsReview
+      notInCurrentSnapshot: notInCurrentSnapshot.length, needsReview: needsReview.length,
+      snapshotDuplicates: duplicateIndices.size, snapshotDuplicateGroups: snapshotDuplicates.length,
+      unavailableZeroPrices: snapshot.filter(card => number(card.precioReferencia) === 0 || text(card.precioFuenteRaw ?? card.precioReferenciaRaw) === "0").length },
+    unchanged, updated, new: added, notInCurrentSnapshot, needsReview, snapshotDuplicates
   };
 }
 

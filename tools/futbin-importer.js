@@ -342,7 +342,7 @@ cardUi["export-cards"].addEventListener("click", () => {
 });
 
 const comparisonKeys = ["updated", "new", "notInCurrentSnapshot", "needsReview", "unchanged"];
-const comparisonMetricKeys = ["catalog", "snapshot", "exactMatches", "partialMatches", ...comparisonKeys];
+const comparisonMetricKeys = ["catalog", "snapshot", "exactMatches", "partialMatches", "snapshotDuplicates", "snapshotDuplicateGroups", "unavailableZeroPrices", ...comparisonKeys];
 const comparisonUi = Object.fromEntries([
   "comparison-status", "comparison-filter", "comparison-export", "comparison-body",
   "comparison-previous", "comparison-next", "comparison-range",
@@ -353,6 +353,7 @@ let comparisonOffset = 0;
 
 function resetComparison() {
   comparisonResult = null;
+  renderSnapshotDuplicates();
   comparisonOffset = 0;
   comparisonUi["comparison-body"].replaceChildren();
   comparisonUi["comparison-filter"].value = "";
@@ -378,6 +379,7 @@ function compareCardsWithCatalog() {
       worker.terminate();
       if (event.data.error) { reject(new Error(event.data.error)); return; }
       comparisonResult = event.data.result;
+      renderSnapshotDuplicates();
       for (const key of comparisonMetricKeys) comparisonUi["comparison-" + key].textContent = String(comparisonResult.summary[key]);
       comparisonUi["comparison-filter"].disabled = false;
       comparisonUi["comparison-export"].disabled = false;
@@ -429,7 +431,8 @@ function renderComparison() {
       if (!detailRow.hidden && !detailCell.children.length) {
         const sections = {
           "Identidad detectada": entry.identity, "Registro actual relacionado": entry.currentRecord,
-          "Datos del PDF": entry.pdfCard, "Diff de mercado": entry.marketDiff,
+          "Datos del PDF (uso comercial)": entry.pdfCard, "Evidencia del parser sin modificar": entry.parserCard,
+          "Decisión de precio": entry.priceDecision ?? null, "Diff de mercado": entry.marketDiff,
           "Razón del match": entry.matchReason, "Confidence": entry.confidence,
           "Fields used": entry.fieldsUsed, "Warnings": entry.warnings,
           "Candidatos y conflictos estructurales": entry.candidates
@@ -461,3 +464,59 @@ comparisonUi["comparison-export"].addEventListener("click", () => {
 });
 resetComparison();
 
+
+function renderSnapshotDuplicates() {
+  const container = document.getElementById("snapshot-duplicates");
+  container.replaceChildren();
+  const result = comparisonResult;
+  document.getElementById("snapshot-duplicates-status").textContent = result
+    ? result.summary.snapshotDuplicateGroups + " grupos · " + result.summary.snapshotDuplicates +
+      " apariciones pendientes de revisión. Índices de snapshot desde 0. Ninguna se cuenta además como New."
+    : "Esperando comparación.";
+  if (!result) return;
+  const reasons = {
+    duplicate_identity_market_conflict: "Identidad repetida con diferencias de precio, popularidad, rating o valor secundario",
+    complete_partial_candidate: "Aparición completa y/o parcial: requiere conciliación",
+    repeated_strong_identity: "Identidad fuerte repetida",
+    partial_bridge_structural_conflict: "Una aparición parcial conecta identidades estructurales contradictorias"
+  };
+  for (const group of result.snapshotDuplicates) {
+    const panel = document.createElement("article");
+    panel.className = "duplicate-group";
+    const heading = document.createElement("h3");
+    const first = group.occurrences[0].pdfCard;
+    heading.textContent = [first.nombre, first.ovr, first.posicionPrincipal].join(" · ");
+    const reason = document.createElement("p");
+    reason.textContent = reasons[group.reason] || group.reason;
+    const scroll = document.createElement("div");
+    scroll.className = "table-scroll";
+    const table = document.createElement("table");
+    const head = document.createElement("thead");
+    const header = document.createElement("tr");
+    for (const title of ["Índice", "Estado parser", "Precio disponible", "Precio raw", "Popularidad", "Rating", "Valor secundario", "Página PDF"]) {
+      const th = document.createElement("th"); th.scope = "col"; th.textContent = title; header.append(th);
+    }
+    head.append(header);table.append(head);
+    const body = document.createElement("tbody");
+    for (const occurrence of group.occurrences) {
+      const card = occurrence.pdfCard;
+      const tr = document.createElement("tr");
+      for (const value of [occurrence.snapshotIndex, card.parseStatus,
+        card.precioDisponible ? card.precioReferencia : "Sin precio", card.precioFuenteRaw,
+        card.popularidadFuente, card.ratingFuente, card.valorSecundarioFuente, card.sourcePage]) {
+        const td = document.createElement("td");td.textContent = value == null ? "—" : String(value);tr.append(td);
+      }
+      body.append(tr);
+    }
+    table.append(body);scroll.append(table);
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");summary.textContent = "Evidencia original, candidatos y conflictos";
+    details.append(summary);
+    details.addEventListener("toggle", () => {
+      if (details.open && details.children.length === 1) {
+        const pre = document.createElement("pre");pre.textContent = JSON.stringify(group, null, 2);details.append(pre);
+      }
+    });
+    panel.append(heading, reason, scroll, details);container.append(panel);
+  }
+}

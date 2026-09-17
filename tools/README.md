@@ -133,3 +133,60 @@ Pasaron 20 pruebas y el flujo con PDF real en Edge: filtros de comparación,
 detalle de conflictos, exportación de comparación, las dos exportaciones
 anteriores y comprobación de que window.PLAYERS_DATA permanece sin cambios.
 
+
+## Saneamiento — Fase 3.1 (política vigente)
+
+Esta sección sustituye la política de precios cero y conciliación de parciales
+descrita para la Fase 3 anterior.
+
+- Antes del matching, se detectan identidades fuertes repetidas (incluidos stats
+  de portero). Cuando hay una aparición parcial, se usa la identidad candidata
+  nombre/OVR/posición/pie/skills/weakFoot.
+- Los grupos son evidencia pendiente de revisión, nunca una fusión automática.
+  Dos cartas completas con stats contradictorios no se agrupan por sí solas.
+  Si una parcial conecta ambas, el grupo explicita el conflicto estructural.
+- Se comparan también los valores de mercado originales para señalar conflictos,
+  sin emplearlos como identidad ni escoger una aparición ganadora.
+- Cada aparición pertenece exclusivamente a un estado final del snapshot.
+  El JSON exporta `snapshotDuplicates` como lista de grupos con índices desde 0,
+  motivos, conflictos y `occurrences`. Cada aparición conserva `parserCard`
+  original, `pdfCard` comercial y candidatos del catálogo.
+- `summary.snapshotDuplicates` cuenta apariciones (30), mientras que
+  `summary.snapshotDuplicateGroups` cuenta grupos (15). Ninguna aparición de
+  esos grupos se repite en new o needsReview.
+- Un precio fuente cero genera `precioFuenteRaw: "0"`,
+  `precioDisponible: false`, `precioReferencia: null` en la vista comercial.
+  El parser y su exportación original conservan precio numérico 0 y todos sus tokens.
+- Cuando no hay precio disponible, no se genera diff destructivo de precio.
+  `priceDecision` expone el precio actual conservado; los otros campos de mercado
+  pueden cambiar. No se escribe nada en el catálogo.
+- Una carta sin stats y sin grupo conciliable requiere revisión manual incluso
+  si el catálogo ofrece un único candidato. Missing rating por sí solo sigue
+  permitiendo un match exacto.
+
+Resultado con los fixtures reales:
+catálogo 250, snapshot 250, exactMatches 189, partialMatches 0;
+unchanged 1, updated 188, new 27, needsReview 4;
+snapshotDuplicates 30 apariciones en 15 grupos;
+notInCurrentSnapshot 37; unavailableZeroPrices 49.
+
+Balance del snapshot: 1 + 188 + 27 + 4 + 30 = 250.
+Los 37 ausentes pertenecen al catálogo previo y no se suman a ese balance.
+
+Los 15 grupos pendientes son Fernando Torres, White, Pepe, Schweinsteiger,
+Rummenigge, Heath, Formiga, Nagasato, Riise, Pirlo, Barcola, Marmoush,
+Lamine Yamal, Agüero y Diaby (cada uno con dos apariciones).
+Las cuatro revisiones de catálogo restantes son Diomande, Endrick,
+Álvaro Carreras y Nmecha, por candidatos múltiples.
+
+Comprobaciones de Fase 3.1:
+
+```text
+node --test tools/futbin-parser.test.mjs tools/futbin-matcher.test.mjs tools/futbin-matcher-sanitization.test.mjs
+```
+
+26 pruebas aprobadas. También pasó el PDF real en Edge: sección de 15 grupos,
+30 filas de apariciones, evidencia expandible, precios normalizados, filtros y
+las tres exportaciones. Van de Ven conserva el precio actual y cambia su
+popularidad; los seis porteros sin rating siguen teniendo identidad exacta.
+
