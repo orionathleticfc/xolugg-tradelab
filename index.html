@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=5"
+    href="style.css?v=9"
   />
 </head>
 
@@ -64,7 +64,7 @@
             <input
               type="number"
               id="nuevoCapital"
-              placeholder="22000"
+              placeholder="0"
               min="0"
             />
 
@@ -92,7 +92,7 @@
             </span>
 
             <strong id="capitalActual">
-              22.000
+              0
             </strong>
 
           </div>
@@ -118,7 +118,7 @@
             </span>
 
             <strong id="capitalLibre">
-              22.000
+              0
             </strong>
 
           </div>
@@ -163,7 +163,7 @@
         data-section="metaPlayersSection"
         type="button"
       >
-        🔥 Jugadores Meta
+        🔥 Mercado Popular
       </button>
 
 
@@ -244,11 +244,16 @@
                   Jugador
                 </label>
 
-                <input
+                <div class="player-input-wrapper">
+                  <input
                   type="text"
                   id="jugador"
                   placeholder="Ej: Rațiu"
                 />
+                  <button type="button" class="clear-player-button"
+                    data-clear-player="jugador" title="Limpiar jugador"
+                    aria-label="Limpiar jugador">×</button>
+                </div>
 
               </div>
 
@@ -262,7 +267,7 @@
                 <input
                   type="number"
                   id="precioVenta"
-                  placeholder="2200"
+                  placeholder="0"
                   min="0"
                 />
 
@@ -278,7 +283,7 @@
                 <input
                   type="number"
                   id="precioCompra"
-                  placeholder="1600"
+                  placeholder="0"
                   min="0"
                 />
 
@@ -294,7 +299,8 @@
                 <input
                   type="number"
                   id="beneficioMinimo"
-                  value="300"
+                  value="0"
+                  placeholder="0"
                   min="0"
                 />
 
@@ -439,17 +445,22 @@
 
             <div class="trade-form compact-trade-form">
 
-              <input
+              <div class="player-input-wrapper">
+                  <input
                 type="text"
                 id="tradeJugador"
                 placeholder="Jugador"
               />
+                  <button type="button" class="clear-player-button"
+                    data-clear-player="tradeJugador" title="Limpiar jugador"
+                    aria-label="Limpiar jugador">×</button>
+                </div>
 
 
               <input
                 type="number"
                 id="tradeCompra"
-                placeholder="Compra"
+                placeholder="0"
                 min="0"
               />
 
@@ -457,7 +468,7 @@
               <input
                 type="number"
                 id="tradeVenta"
-                placeholder="Venta"
+                placeholder="0"
                 min="0"
               />
 
@@ -737,11 +748,11 @@
           <div>
 
             <h2>
-              🔥 Jugadores Meta FC27
+              🔥 Mercado Popular FC27
             </h2>
 
             <p>
-              Base de jugadores interesantes para gameplay y tradeo.
+              Catálogo de cartas populares con precios de referencia y seguimiento personal.
             </p>
 
           </div>
@@ -750,7 +761,7 @@
           <div class="meta-counter">
 
             <span>
-              Jugadores
+              Cartas
             </span>
 
             <strong id="metaPlayersCount">
@@ -795,65 +806,27 @@
             </label>
 
             <select id="metaCategory">
-
-              <option value="ALL">
-                Todas
-              </option>
-
-              <option value="DEL">
-                Delanteros
-              </option>
-
-              <option value="EXT">
-                Extremos
-              </option>
-
-              <option value="MED">
-                Mediocampistas
-              </option>
-
-              <option value="DEF">
-                Defensas
-              </option>
-
-              <option value="POR">
-                Porteros
-              </option>
-
+              <option value="ALL">Todas</option>
+              <option value="GK">GK</option>
+              <option value="CB">CB</option>
+              <option value="LB">LB</option>
+              <option value="RB">RB</option>
+              <option value="LWB">LWB</option>
+              <option value="RWB">RWB</option>
+              <option value="CDM">CDM</option>
+              <option value="CM">CM</option>
+              <option value="CAM">CAM</option>
+              <option value="LM">LM</option>
+              <option value="RM">RM</option>
+              <option value="LW">LW</option>
+              <option value="RW">RW</option>
+              <option value="CF">CF</option>
+              <option value="ST">ST</option>
             </select>
 
           </div>
 
 
-          <!-- PRIORIDAD -->
-
-          <div class="meta-filter">
-
-            <label for="metaPriority">
-              Prioridad Meta
-            </label>
-
-            <select id="metaPriority">
-
-              <option value="ALL">
-                Todas
-              </option>
-
-              <option value="3">
-                🔥🔥🔥
-              </option>
-
-              <option value="2">
-                🔥🔥
-              </option>
-
-              <option value="1">
-                🔥
-              </option>
-
-            </select>
-
-          </div>
 
 
           <!-- ORDENAR -->
@@ -865,51 +838,19 @@
             </label>
 
             <select id="metaSort">
-
-              <option value="meta-desc">
-                🔥 Meta: mayor → menor
-              </option>
-
-              <option value="name-asc">
-                Nombre: A → Z
-              </option>
-
-              <option value="name-desc">
-                Nombre: Z → A
-              </option>
-
-              <option value="price-asc">
-                Precio: menor → mayor
-              </option>
-
-              <option value="price-desc">
-                Precio: mayor → menor
-              </option>
-
-              <option value="ovr-desc">
-                OVR: mayor → menor
-              </option>
-
-              <option value="ovr-asc">
-                OVR: menor → mayor
-              </option>
-
-              <option value="meta-asc">
-                🔥 Meta: menor → mayor
-              </option>
-
-              <option value="maxbuy-asc">
-                Compra máx.: menor → mayor
-              </option>
-
-              <option value="maxbuy-desc">
-                Compra máx.: mayor → menor
-              </option>
-
-              <option value="updated-desc">
-                Actualización: más reciente
-              </option>
-
+              <option value="popularity-desc">Popularidad: mayor → menor</option>
+              <option value="popularity-asc">Popularidad: menor → mayor</option>
+              <option value="price-asc">Precio: menor → mayor</option>
+              <option value="price-desc">Precio: mayor → menor</option>
+              <option value="rating-desc">Rating: mayor → menor</option>
+              <option value="ovr-desc">OVR: mayor → menor</option>
+              <option value="ovr-asc">OVR: menor → mayor</option>
+              <option value="name-asc">Nombre: A → Z</option>
+              <option value="name-desc">Nombre: Z → A</option>
+              <option value="pac-desc">PAC: mayor → menor</option>
+              <option value="skills-desc">Skills: mayor → menor</option>
+              <option value="weakfoot-desc">Weak Foot: mayor → menor</option>
+              <option value="updated-desc">Actualización: más reciente</option>
             </select>
 
           </div>
@@ -926,7 +867,7 @@
             <input
               type="number"
               id="metaMaxPrice"
-              placeholder="Ej: 5000"
+              placeholder="0"
               min="0"
             />
 
@@ -968,52 +909,47 @@
              TABLA META
         ================================================== -->
 
+<div class="popular-quick-prices" role="group" aria-label="Precios rápidos">
+<button type="button" class="small-button" data-popular-price-limit="2000" aria-pressed="false" title="Precio inferior a 2000">&lt; 2K</button>
+<button type="button" class="small-button" data-popular-price-limit="5000" aria-pressed="false" title="Precio inferior a 5000">&lt; 5K</button>
+<button type="button" class="small-button" data-popular-price-limit="10000" aria-pressed="false" title="Precio inferior a 10000">&lt; 10K</button>
+<button type="button" class="small-button" data-popular-price-limit="20000" aria-pressed="false" title="Precio inferior a 20000">&lt; 20K</button>
+</div>
+<details class="popular-advanced-filters">
+<summary>Filtros avanzados</summary>
+<div class="popular-advanced-grid">
+<div class="meta-filter"><label for="popularMinOvr">OVR mínimo</label><input type="number" id="popularMinOvr" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMaxOvr">OVR máximo</label><input type="number" id="popularMaxOvr" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinPac">PAC mínimo</label><input type="number" id="popularMinPac" min="0" max="99" step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinRating">Rating mínimo</label><input type="number" id="popularMinRating" min="0"  step="0.1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinPopularity">Popularidad mínima</label><input type="number" id="popularMinPopularity" min="0"  step="1" placeholder="0"></div>
+<div class="meta-filter"><label for="popularMinSkills">Skills mínimo</label><select id="popularMinSkills"><option value="">Todas</option><option value="3">3+</option><option value="4">4+</option><option value="5">5</option></select></div>
+<div class="meta-filter"><label for="popularMinWeakFoot">Weak Foot mínimo</label><select id="popularMinWeakFoot"><option value="">Todas</option><option value="3">3+</option><option value="4">4+</option><option value="5">5</option></select></div>
+</div>
+<div class="popular-advanced-checks">
+<label><input type="checkbox" id="popularOnlyAffordable"> Solo asequibles con mi capital</label>
+<label><input type="checkbox" id="popularOnlyManual"> Solo actualizados por mí</label>
+<label><input type="checkbox" id="popularOnlyReference"> Solo con precio de referencia</label>
+</div>
+</details>
+
         <div class="table-wrapper meta-table-wrapper">
 
           <table class="meta-table">
 
             <thead>
-
               <tr>
-
-                <th>
-                  Jugador
-                </th>
-
-                <th>
-                  Pos.
-                </th>
-
-                <th>
-                  OVR
-                </th>
-
-                <th>
-                  Meta
-                </th>
-
-                <th>
-                  Precio
-                </th>
-
-                <th>
-                  Compra ideal
-                </th>
-
-                <th>
-                  Máximo
-                </th>
-
-                <th>
-                  Actualizado
-                </th>
-
-                <th>
-                  Acción
-                </th>
-
+                <th>Jugador</th>
+                <th>OVR</th>
+                <th>Pos.</th>
+                <th>Popularidad</th>
+                <th>Rating</th>
+                <th>Precio</th>
+                <th>Compra ideal</th>
+                <th>Máximo</th>
+                <th>Actualizado</th>
+                <th>Acciones</th>
               </tr>
-
             </thead>
 
 
@@ -1022,13 +958,13 @@
               <tr>
 
                 <td
-                  colspan="9"
+                  colspan="10"
                   style="
                     text-align:center;
                     color:#8fa8b3;
                   "
                 >
-                  Cargando jugadores meta...
+                  Cargando cartas populares...
                 </td>
 
               </tr>
@@ -1063,9 +999,11 @@
        SCRIPTS
   ====================================================== -->
 
+  <script src="players-data.js?v=1"></script>
+
   <script src="meta-players.js?v=5"></script>
 
-  <script src="app.js?v=5"></script>
+  <script src="app.js?v=9"></script>
 
 
   <!-- =====================================================

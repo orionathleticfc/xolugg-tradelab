@@ -17,7 +17,7 @@ const APP_VERSION = "1.2.0";
 ========================================================= */
 
 let state = {
-  capital: 22000,
+  capital: 0,
   watchlist: [],
   historial: []
 };
@@ -473,11 +473,7 @@ function renderCapital() {
     );
 
 
-  const capitalLibre =
-    Math.max(
-      0,
-      state.capital - invertido
-    );
+  const capitalLibre = getPopularAvailableCapital();
 
 
   const capitalActualEl =
@@ -539,6 +535,9 @@ function renderCapital() {
       beneficioDia >= 0
         ? "positive"
         : "negative";
+  }
+  if (document.getElementById("popularOnlyAffordable")?.checked) {
+    renderPopularPlayers();
   }
 }
 
@@ -1287,6 +1286,50 @@ function limpiarHistorial() {
   saveState();
   renderHistorial();
   renderCapital();
+}
+
+
+/* =========================================================
+   CATÁLOGO POPULAR (DIAGNÓSTICO)
+========================================================= */
+
+function getPopularPlayers() {
+  return Array.isArray(window.PLAYERS_DATA)
+    ? window.PLAYERS_DATA
+    : [];
+}
+
+
+function validatePopularPlayersCatalog() {
+  const players = getPopularPlayers();
+  const ids = players
+    .map((player) => player?.id)
+    .filter((id) => typeof id === "string" && id.trim() !== "");
+  const conPrecioReferencia = players.filter(
+    (player) => Number.isFinite(player?.precioReferencia) &&
+      player.precioReferencia > 0
+  ).length;
+  const porteros = players.filter(
+    (player) => player?.posicionPrincipal === "GK"
+  ).length;
+
+  const resumen = {
+    total: players.length,
+    idsUnicos: new Set(ids).size,
+    conPrecioReferencia,
+    sinPrecioReferencia: players.length - conPrecioReferencia,
+    porteros,
+    jugadoresCampo: players.length - porteros
+  };
+
+  console.log("Popular Players cargados: " + resumen.total);
+  console.log("IDs únicos: " + resumen.idsUnicos);
+  console.log("Con precio referencia: " + resumen.conPrecioReferencia);
+  console.log("Sin precio referencia: " + resumen.sinPrecioReferencia);
+  console.log("Porteros: " + resumen.porteros);
+  console.log("Jugadores de campo: " + resumen.jugadoresCampo);
+
+  return resumen;
 }
 
 
@@ -3118,6 +3161,7 @@ function getLocalDateString() {
 function exportarBackup() {
   saveState();
   saveMetaPrices();
+  savePopularPrices();
 
 
   const backup = {
@@ -3142,7 +3186,9 @@ function exportarBackup() {
     },
 
     metaPriceOverrides:
-      metaPriceOverrides
+      metaPriceOverrides,
+
+    popularPriceOverrides: popularPriceOverrides
   };
 
 
@@ -3371,14 +3417,17 @@ function importarBackupArchivo(
             : {};
 
 
+        popularPriceOverrides = normalizePopularPrices(data.popularPriceOverrides);
+
         saveState();
         saveMetaPrices();
+        savePopularPrices();
 
 
         renderCapital();
         renderWatchlist();
         renderHistorial();
-        renderMetaPlayers();
+        renderPopularPlayers();
 
 
         alert(
@@ -3452,15 +3501,807 @@ function configurarEventosBackup() {
 }
 
 
+
+/* =========================================================
+   MERCADO POPULAR
+========================================================= */
+
+const STORAGE_POPULAR_PRICES = "xoluggPopularPrices";
+let popularPriceOverrides = {};
+
+function normalizePopularPrices(value) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {};
+  return Object.fromEntries(Object.entries(value).filter(([id, entry]) =>
+    id.trim() && entry && typeof entry === "object" &&
+    Number.isFinite(entry.precioUsuario) && entry.precioUsuario > 0 &&
+    typeof entry.ultimaActualizacion === "string" &&
+    Number.isFinite(Date.parse(entry.ultimaActualizacion))
+  ).map(([id, entry]) => [id, {
+    precioUsuario: entry.precioUsuario,
+    ultimaActualizacion: entry.ultimaActualizacion
+  }]));
+}
+
+function loadPopularPrices() {
+  try {
+    popularPriceOverrides = normalizePopularPrices(
+      JSON.parse(localStorage.getItem(STORAGE_POPULAR_PRICES) || "{}")
+    );
+  } catch (error) {
+    console.warn("No se pudieron cargar los precios populares:", error);
+    popularPriceOverrides = {};
+  }
+}
+
+function savePopularPrices() {
+  localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(popularPriceOverrides));
+}
+
+function getPopularPlayerData(card) {
+  const manual = Object.prototype.hasOwnProperty.call(popularPriceOverrides, card.id)
+    ? popularPriceOverrides[card.id] : null;
+  const precioUsuario = manual?.precioUsuario ?? null;
+  const referencia = Number.isFinite(card.precioReferencia) && card.precioReferencia > 0
+    ? card.precioReferencia : null;
+  const precioEfectivo = precioUsuario ?? referencia;
+  const metrics = precioEfectivo !== null
+    ? getTradeMetrics(precioEfectivo, 0, DEFAULT_META_PROFIT) : null;
+  return {
+    ...card,
+    precioUsuario,
+    precioEfectivo,
+    ultimaActualizacion: manual?.ultimaActualizacion ?? null,
+    compraIdealMin: metrics?.compraIdealMin ?? null,
+    compraIdealMax: metrics?.compraIdealMax ?? null,
+    compraMaxima: metrics?.compraMaxima ?? null
+  };
+}
+
+
+let popularQuickPriceLimit = null;
+
+function getPopularAvailableCapital() {
+  const invested = state.watchlist.reduce(
+    (total, item) => total + Number(item.compraActual || 0), 0
+  );
+  return Math.max(0, state.capital - invested);
+}
+
+function readPopularFilters() {
+  const number = (id, zeroIsEmpty = false) => {
+    const value = document.getElementById(id)?.value ?? "";
+    const parsed = Number(value);
+    return value.trim() === "" || (zeroIsEmpty && parsed === 0) ? null : parsed;
+  };
+  const checked = id => document.getElementById(id)?.checked || false;
+  return {
+    search: normalizeText(document.getElementById("metaSearch")?.value),
+    position: document.getElementById("metaCategory")?.value || "ALL",
+    maxPrice: number("metaMaxPrice"),
+    onlyPrice: checked("metaOnlyWithPrice"),
+    minOvr: number("popularMinOvr", true),
+    maxOvr: number("popularMaxOvr", true),
+    minPac: number("popularMinPac", true),
+    minSkills: number("popularMinSkills"),
+    minWeakFoot: number("popularMinWeakFoot"),
+    minRating: number("popularMinRating", true),
+    minPopularity: number("popularMinPopularity", true),
+    affordable: checked("popularOnlyAffordable"),
+    manual: checked("popularOnlyManual"),
+    reference: checked("popularOnlyReference"),
+    availableCapital: getPopularAvailableCapital()
+  };
+}
+
+function matchesPopularFilters(card, filters) {
+  const minimum = (value, limit) => limit === null ||
+    (Number.isFinite(value) && Number.isFinite(limit) && value >= limit);
+  const maximum = (value, limit) => limit === null ||
+    (Number.isFinite(value) && Number.isFinite(limit) && value <= limit);
+  return (!filters.search || normalizeText(card.nombre).includes(filters.search)) &&
+    (filters.position === "ALL" || card.posicionPrincipal === filters.position ||
+      (card.posiciones || []).includes(filters.position)) &&
+    (!filters.onlyPrice || card.precioEfectivo > 0) &&
+    maximum(card.precioEfectivo, filters.maxPrice) &&
+    (popularQuickPriceLimit === null || card.precioEfectivo < popularQuickPriceLimit) &&
+    minimum(card.ovr, filters.minOvr) &&
+    maximum(card.ovr, filters.maxOvr) &&
+    (filters.minPac === null || (card.posicionPrincipal !== "GK" &&
+      minimum(card.stats?.pac, filters.minPac))) &&
+    minimum(card.skills, filters.minSkills) &&
+    minimum(card.weakFoot, filters.minWeakFoot) &&
+    minimum(card.ratingFuente, filters.minRating) &&
+    minimum(card.popularidadFuente, filters.minPopularity) &&
+    (!filters.affordable || (card.precioEfectivo > 0 &&
+      card.precioEfectivo <= filters.availableCapital)) &&
+    (!filters.manual || card.precioUsuario !== null) &&
+    (!filters.reference || card.precioReferencia > 0);
+}
+
+function updatePopularQuickPriceButtons() {
+  document.querySelectorAll("[data-popular-price-limit]").forEach(button => {
+    const active = Number(button.dataset.popularPriceLimit) === popularQuickPriceLimit;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function configurarFiltrosPopularesAvanzados() {
+  for (const id of ["popularMinOvr", "popularMaxOvr", "popularMinPac",
+    "popularMinRating", "popularMinPopularity"]) {
+    document.getElementById(id)?.addEventListener("input", renderPopularPlayers);
+  }
+  for (const id of ["popularMinSkills", "popularMinWeakFoot",
+    "popularOnlyAffordable", "popularOnlyManual", "popularOnlyReference"]) {
+    document.getElementById(id)?.addEventListener("change", renderPopularPlayers);
+  }
+  document.querySelectorAll("[data-popular-price-limit]").forEach(button => {
+    button.addEventListener("click", () => {
+      popularQuickPriceLimit = Number(button.dataset.popularPriceLimit);
+      document.getElementById("metaMaxPrice").value = String(popularQuickPriceLimit);
+      renderPopularPlayers();
+    });
+  });
+}
+
+
+function getFilteredPopularPlayers() {
+  const filters = readPopularFilters();
+  const sort = document.getElementById("metaSort")?.value || "popularity-desc";
+  const cards = getPopularPlayers().filter(card => card.activo !== false)
+    .map(getPopularPlayerData).filter(card => matchesPopularFilters(card, filters));
+  const sorts = {
+    "popularity-desc": ["popularidadFuente", -1],
+    "popularity-asc": ["popularidadFuente", 1],
+    "price-asc": ["precioEfectivo", 1],
+    "price-desc": ["precioEfectivo", -1],
+    "rating-desc": ["ratingFuente", -1],
+    "ovr-desc": ["ovr", -1],
+    "ovr-asc": ["ovr", 1],
+    "pac-desc": ["pac", -1],
+    "skills-desc": ["skills", -1],
+    "weakfoot-desc": ["weakFoot", -1],
+    "updated-desc": ["ultimaActualizacion", -1]
+  };
+  return cards.sort((a, b) => {
+    let result = 0;
+    if (sort === "name-asc" || sort === "name-desc") {
+      result = a.nombre.localeCompare(b.nombre, "es") * (sort === "name-desc" ? -1 : 1);
+    } else {
+      const [key, direction] = sorts[sort] || sorts["popularity-desc"];
+      const value = card => key === "pac"
+        ? (card.posicionPrincipal === "GK" ? null : card.stats?.pac)
+        : key === "ultimaActualizacion"
+        ? (card[key] ? Date.parse(card[key]) : null) : card[key];
+      const av = value(a), bv = value(b);
+      const missingA = !Number.isFinite(av), missingB = !Number.isFinite(bv);
+      if (missingA !== missingB) return missingA ? 1 : -1;
+      if (!missingA) result = (av - bv) * direction;
+    }
+    return result || a.nombre.localeCompare(b.nombre, "es") || a.id.localeCompare(b.id);
+  });
+}
+
+function escapePopularHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[character]);
+}
+
+
+const expandedPopularCards = new Set();
+
+function renderPopularPlayerDetails(player) {
+  const e = escapePopularHtml;
+  const value = input => e(input ?? "—");
+  const field = (label, content) =>
+    `<div class="popular-detail-field"><dt>${e(label)}</dt><dd>${content}</dd></div>`;
+  const alternatives = (player.posiciones || []).filter(p => p !== player.posicionPrincipal);
+  const statKeys = player.posicionPrincipal === "GK"
+    ? ["div", "han", "kic", "ref", "spd", "pos"]
+    : ["pac", "sho", "pas", "dri", "def", "phy"];
+  const priceSource = player.precioUsuario !== null ? "Actualizado por ti"
+    : player.precioEfectivo !== null ? "Referencia" : "—";
+  const row = document.createElement("tr");
+  row.id = "popular-details-" + player.id;
+  row.className = "popular-detail-row";
+  row.innerHTML = `<td colspan="10">
+    <div class="popular-detail-panel" role="region" aria-label="Detalles de ${e(player.nombre)}">
+      <dl class="popular-detail-grid">
+        ${field("Nombre", value(player.nombre))}
+        ${field("OVR", value(player.ovr))}
+        ${field("Posición principal", value(player.posicionPrincipal))}
+        ${field("Posiciones alternativas", value(alternatives.length ? alternatives.join(", ") : null))}
+        ${field("Versión", e(player.version ?? "Sin identificar"))}
+        ${field("Tipo de carta", e(player.tipoCarta ?? "Sin identificar"))}
+        ${field("Fuente", value(player.fuente?.nombre ?? (typeof player.fuente === "string" ? player.fuente : null)))}
+        ${field("Página PDF", value(player.paginaFuente ?? player.fuente?.paginaPdf))}
+      </dl>
+      <div class="popular-detail-stats" aria-label="Estadísticas">
+        ${statKeys.map(key => `<div class="popular-stat"><span>${key.toUpperCase()}</span>
+          <strong>${value(player.stats?.[key])}</strong></div>`).join("")}
+      </div>
+      <dl class="popular-detail-grid">
+        ${field("Pie", value(player.pie))}
+        ${field("Skills", value(player.skills))}
+        ${field("Weak foot", value(player.weakFoot))}
+        ${field("Rating", value(player.ratingFuente))}
+        ${field("Popularidad", value(player.popularidadFuente))}
+      </dl>
+      <dl class="popular-detail-grid popular-detail-prices">
+        ${field("Precio de referencia", formatCoins(player.precioReferencia))}
+        ${field("Precio actualizado por usuario", formatCoins(player.precioUsuario))}
+        ${field("Precio efectivo", formatCoins(player.precioEfectivo) +
+          `<small class="popular-price-source">${priceSource}</small>`)}
+        ${field("Valor secundario fuente", formatCoins(player.valorSecundarioFuente))}
+      </dl>
+    </div>
+  </td>`;
+  return row;
+}
+
+function togglePopularPlayerDetails(cardId) {
+  const card = getPopularPlayers().find(card => card.id === cardId);
+  const button = Array.from(document.querySelectorAll('[data-meta-action="details"]'))
+    .find(button => button.dataset.playerId === cardId);
+  if (!card || !button) return;
+  const opening = !expandedPopularCards.has(cardId);
+  if (opening) {
+    expandedPopularCards.add(cardId);
+    button.closest("tr").after(renderPopularPlayerDetails(getPopularPlayerData(card)));
+  } else {
+    expandedPopularCards.delete(cardId);
+    document.getElementById("popular-details-" + cardId)?.remove();
+  }
+  button.setAttribute("aria-expanded", String(opening));
+  button.textContent = opening ? "▴ Detalles" : "▾ Detalles";
+}
+
+
+function renderPopularPlayers() {
+  updatePopularQuickPriceButtons();
+  const tbody = document.getElementById("metaPlayersBody");
+  if (!tbody) return;
+  const cards = getFilteredPopularPlayers();
+  const counter = document.getElementById("metaPlayersCount");
+  if (counter) counter.textContent = cards.length;
+  tbody.innerHTML = "";
+  if (!cards.length) {
+    tbody.innerHTML = '<tr><td colspan="10">No hay cartas que coincidan con los filtros.</td></tr>';
+    return;
+  }
+  cards.forEach(card => {
+    const e = escapePopularHtml;
+    const source = card.precioUsuario !== null ? "Actualizado por ti" : "Referencia";
+    const freshness = getPriceFreshness(card.ultimaActualizacion);
+    const alternatives = (card.posiciones || []).filter(p => p !== card.posicionPrincipal);
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td><div class="meta-player-name"><strong>${e(card.nombre)}</strong>
+        <span>${e(alternatives.join(" · "))}</span></div></td>
+      <td>${e(card.ovr ?? "—")}</td>
+      <td><span class="meta-position">${e(card.posicionPrincipal ?? "—")}</span></td>
+      <td>${e(card.popularidadFuente ?? "—")}</td>
+      <td>${e(card.ratingFuente ?? "—")}</td>
+      <td><div class="popular-price-editor">
+        <input type="number" class="meta-price-input" data-player-id="${e(card.id)}"
+          value="${e(card.precioEfectivo ?? "")}" min="0" placeholder="Precio"
+          aria-label="Precio de ${e(card.nombre)}" title="${source}">
+        <button class="meta-action-btn" data-meta-action="save-price"
+          data-player-id="${e(card.id)}" type="button" title="Guardar precio">💾</button>
+        </div><small class="popular-price-source">${source}</small></td>
+      <td>${card.compraIdealMin === null ? "—" :
+        formatCoins(card.compraIdealMin) + " - " + formatCoins(card.compraIdealMax)}</td>
+      <td>${formatCoins(card.compraMaxima)}</td>
+      <td><span class="price-freshness ${card.precioUsuario !== null ? freshness.className : "unknown"}">
+        ${card.precioUsuario !== null ? freshness.text : "Referencia"}</span></td>
+      <td><div class="popular-actions">
+        <button class="copy-player-button" data-meta-action="copy-name"
+          data-player-id="${e(card.id)}" type="button" title="Copiar nombre" aria-label="Copiar nombre de ${e(card.nombre)}">📋</button>
+        <button class="meta-action-btn" data-meta-action="calculator"
+          data-player-id="${e(card.id)}" type="button">🧮 Calcular</button>
+        <button class="meta-action-btn" data-meta-action="details"
+          data-player-id="${e(card.id)}" type="button"
+          aria-expanded="${expandedPopularCards.has(card.id)}"
+          aria-controls="popular-details-${e(card.id)}">
+          ${expandedPopularCards.has(card.id) ? "▴" : "▾"} Detalles</button>
+      </div></td>`;
+    tbody.appendChild(row);
+    if (expandedPopularCards.has(card.id)) {
+      tbody.appendChild(renderPopularPlayerDetails(card));
+    }
+  });
+  activarStepsMetaInputs();
+}
+
+function actualizarPrecioPopular(cardId) {
+  if (!getPopularPlayers().some(card => card.id === cardId)) return;
+  const input = Array.from(document.querySelectorAll(".meta-price-input"))
+    .find(input => input.dataset.playerId === cardId);
+  if (!input) return;
+  const next = { ...popularPriceOverrides };
+  if (input.value.trim() === "") {
+    delete next[cardId];
+  } else {
+    const price = Number(input.value);
+    if (!Number.isFinite(price) || price <= 0) {
+      alert("Ingresa un precio v\u00e1lido.");
+      return;
+    }
+    next[cardId] = { precioUsuario: price, ultimaActualizacion: new Date().toISOString() };
+  }
+  try {
+    localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(next));
+    popularPriceOverrides = next;
+  } catch (error) {
+    console.error("No se pudo guardar el precio:", error);
+    alert("No se pudo guardar el precio. Intenta de nuevo.");
+    return;
+  }
+  renderPopularPlayers();
+}
+
+function limpiarFiltrosPopular() {
+  popularQuickPriceLimit = null;
+  for (const id of ["metaSearch", "metaMaxPrice", "popularMinOvr",
+    "popularMaxOvr", "popularMinPac", "popularMinSkills", "popularMinWeakFoot",
+    "popularMinRating", "popularMinPopularity"]) {
+    const input = document.getElementById(id);
+    if (input) input.value = "";
+  }
+  const position = document.getElementById("metaCategory");
+  const sort = document.getElementById("metaSort");
+  const only = document.getElementById("metaOnlyWithPrice");
+  if (position) position.value = "ALL";
+  if (sort) sort.value = "popularity-desc";
+  if (only) only.checked = false;
+  for (const id of ["popularOnlyAffordable", "popularOnlyManual", "popularOnlyReference"]) {
+    const checkbox = document.getElementById(id);
+    if (checkbox) checkbox.checked = false;
+  }
+  renderPopularPlayers();
+}
+
+
+async function copiarNombrePopular(
+  playerId,
+  button
+) {
+  const player =
+    getPopularPlayers().find(
+      (item) =>
+        item.id === playerId
+    );
+
+
+  if (!player) {
+    return;
+  }
+
+
+  const nombre =
+    player.nombre;
+
+
+  let copiado = false;
+
+
+  /* CLIPBOARD API */
+
+  try {
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
+      await navigator.clipboard.writeText(
+        nombre
+      );
+
+      copiado = true;
+    }
+  } catch (error) {
+    console.warn(
+      "Clipboard API no disponible:",
+      error
+    );
+  }
+
+
+  /* FALLBACK */
+
+  if (!copiado) {
+    try {
+      const textarea =
+        document.createElement(
+          "textarea"
+        );
+
+
+      textarea.value =
+        nombre;
+
+
+      textarea.setAttribute(
+        "readonly",
+        ""
+      );
+
+
+      textarea.style.position =
+        "absolute";
+
+
+      textarea.style.left =
+        "-9999px";
+
+
+      document.body.appendChild(
+        textarea
+      );
+
+
+      textarea.select();
+
+
+      textarea.setSelectionRange(
+        0,
+        textarea.value.length
+      );
+
+
+      copiado =
+        document.execCommand(
+          "copy"
+        );
+
+
+      document.body.removeChild(
+        textarea
+      );
+    } catch (error) {
+      console.error(
+        "No se pudo copiar:",
+        error
+      );
+    }
+  }
+
+
+  /* CONFIRMACIÓN */
+
+  if (
+    copiado &&
+    button
+  ) {
+    const contenidoOriginal =
+      button.innerHTML;
+
+
+    button.innerHTML =
+      "✓ Copiado";
+
+
+    button.classList.add(
+      "copied"
+    );
+
+
+    button.disabled = true;
+
+
+    setTimeout(
+      () => {
+        button.innerHTML =
+          contenidoOriginal;
+
+        button.classList.remove(
+          "copied"
+        );
+
+        button.disabled = false;
+      },
+      1200
+    );
+  }
+
+
+  if (!copiado) {
+    alert(
+      `No se pudo copiar automáticamente.\n\nNombre: ${nombre}`
+    );
+  }
+}
+
+function usarPopularEnCalculadora(
+  playerId
+) {
+  const basePlayer =
+    getPopularPlayers().find(
+      (player) =>
+        player.id ===
+        playerId
+    );
+
+
+  if (!basePlayer) {
+    return;
+  }
+
+
+  const player =
+    getPopularPlayerData(
+      basePlayer
+    );
+
+
+  const dashboardTab =
+    document.querySelector(
+      '.nav-tab[data-section="dashboardSection"]'
+    );
+
+
+  if (dashboardTab) {
+    dashboardTab.click();
+  }
+
+
+  const jugadorInput =
+    document.getElementById(
+      "jugador"
+    );
+
+  const ventaInput =
+    document.getElementById(
+      "precioVenta"
+    );
+
+  const compraInput =
+    document.getElementById(
+      "precioCompra"
+    );
+
+  const beneficioInput =
+    document.getElementById(
+      "beneficioMinimo"
+    );
+
+
+  if (jugadorInput) {
+    jugadorInput.value =
+      player.nombre;
+  }
+
+
+  if (ventaInput) {
+    ventaInput.value =
+      player.precioEfectivo ||
+      "";
+  }
+
+
+  if (compraInput) {
+    compraInput.value = "";
+
+    compraInput.focus();
+  }
+
+
+  if (
+    beneficioInput &&
+    !beneficioInput.value
+  ) {
+    beneficioInput.value =
+      DEFAULT_META_PROFIT;
+  }
+
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function configurarEventosPopular() {
+  const search =
+    document.getElementById(
+      "metaSearch"
+    );
+
+  const category =
+    document.getElementById(
+      "metaCategory"
+    );
+
+  const priority =
+    document.getElementById(
+      "metaPriority"
+    );
+
+  const sort =
+    document.getElementById(
+      "metaSort"
+    );
+
+  const maxPrice =
+    document.getElementById(
+      "metaMaxPrice"
+    );
+
+  const onlyWithPrice =
+    document.getElementById(
+      "metaOnlyWithPrice"
+    );
+
+  const clear =
+    document.getElementById(
+      "btnClearMetaFilters"
+    );
+
+
+  search?.addEventListener(
+    "input",
+    renderPopularPlayers
+  );
+
+
+  category?.addEventListener(
+    "change",
+    renderPopularPlayers
+  );
+
+
+  priority?.addEventListener(
+    "change",
+    renderPopularPlayers
+  );
+
+
+  sort?.addEventListener(
+    "change",
+    renderPopularPlayers
+  );
+
+
+  maxPrice?.addEventListener("input", () => {
+    popularQuickPriceLimit = null;
+    renderPopularPlayers();
+  });
+
+
+  onlyWithPrice?.addEventListener(
+    "change",
+    renderPopularPlayers
+  );
+
+
+  clear?.addEventListener(
+    "click",
+    limpiarFiltrosPopular
+  );
+
+
+  const tbody =
+    document.getElementById(
+      "metaPlayersBody"
+    );
+
+
+  /* ACCIONES TABLA */
+
+  tbody?.addEventListener(
+    "click",
+    (event) => {
+      const button =
+        event.target.closest(
+          "[data-meta-action]"
+        );
+
+
+      if (!button) {
+        return;
+      }
+
+
+      const action =
+        button.dataset.metaAction;
+
+
+      const playerId =
+        button.dataset.playerId;
+
+
+      if (action === "details") {
+        togglePopularPlayerDetails(playerId);
+      }
+
+      if (
+        action ===
+        "save-price"
+      ) {
+        actualizarPrecioPopular(
+          playerId
+        );
+      }
+
+
+      if (
+        action ===
+        "copy-name"
+      ) {
+        copiarNombrePopular(
+          playerId,
+          button
+        );
+      }
+
+
+      if (
+        action ===
+        "calculator"
+      ) {
+        usarPopularEnCalculadora(
+          playerId
+        );
+      }
+    }
+  );
+
+
+  /* ENTER EN PRECIO = GUARDAR */
+
+  tbody?.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        event.key !== "Enter"
+      ) {
+        return;
+      }
+
+
+      const input =
+        event.target.closest(
+          ".meta-price-input"
+        );
+
+
+      if (!input) {
+        return;
+      }
+
+
+      actualizarPrecioPopular(
+        input.dataset.playerId
+      );
+    }
+  );
+}
+
 /* =========================================================
    INIT
 ========================================================= */
 
+function configurarBotonesLimpiarJugador() {
+  document.querySelectorAll("[data-clear-player]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const input = document.getElementById(button.dataset.clearPlayer);
+      if (input) {
+        input.value = "";
+        input.focus();
+      }
+    });
+  });
+}
+
+
 function init() {
+  validatePopularPlayersCatalog();
+
   /* CARGAR DATOS */
 
   loadState();
   loadMetaPrices();
+  loadPopularPrices();
 
 
   /* RENDER */
@@ -3468,7 +4309,7 @@ function init() {
   renderCapital();
   renderWatchlist();
   renderHistorial();
-  renderMetaPlayers();
+  renderPopularPlayers();
 
 
   /* STEPS */
@@ -3478,7 +4319,9 @@ function init() {
 
   /* EVENTOS */
 
-  configurarEventosMeta();
+  configurarEventosPopular();
+  configurarFiltrosPopularesAvanzados();
+  configurarBotonesLimpiarJugador();
   configurarEventosTablas();
   configurarEnterCalculadora();
   configurarEventosBackup();
