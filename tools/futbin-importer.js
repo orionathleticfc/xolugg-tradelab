@@ -171,6 +171,11 @@ async function processFile(file) {
       await analyzeCards(diagnostic);
       try {
         await compareCardsWithCatalog();
+        try {
+          await generateCatalogPreview();
+        } catch (error) {
+          generationUi["generation-status"].textContent = "Error de generación: " + error.message;
+        }
       } catch (error) {
         comparisonUi["comparison-status"].textContent = "Error en la comparación: " + error.message;
       }
@@ -200,6 +205,10 @@ function exportDiagnostic() {
 
 function downloadJson(value, fileName) {
   const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
+  downloadBlob(blob, fileName);
+}
+
+function downloadBlob(blob, fileName) {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
@@ -352,6 +361,7 @@ let comparisonResult = null;
 let comparisonOffset = 0;
 
 function resetComparison() {
+  resetGeneration();
   comparisonResult = null;
   renderSnapshotDuplicates();
   comparisonOffset = 0;
@@ -462,6 +472,81 @@ comparisonUi["comparison-next"].addEventListener("click", () => { comparisonOffs
 comparisonUi["comparison-export"].addEventListener("click", () => {
   if (comparisonResult) downloadJson(comparisonResult, diagnostic.fileName.replace(/\.pdf$/i, "") + "-comparacion.json");
 });
+
+const generationMetricKeys = ["currentCatalog", "updatedApplied", "newApplied", "unchanged",
+  "skippedSnapshotDuplicateGroups", "skippedSnapshotDuplicateOccurrences", "skippedNeedsReview",
+  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors"];
+const generationUi = Object.fromEntries([
+  "generation-status", "generation-errors", "generation-details", "generation-export", "generation-report",
+  ...generationMetricKeys.map(key => "generation-" + key)
+].map(id => [id, document.getElementById(id)]));
+let generationResult = null;
+
+function resetGeneration() {
+  generationResult = null;
+  generationUi["generation-status"].textContent = "Esperando comparación validada.";
+  generationUi["generation-errors"].replaceChildren();
+  generationUi["generation-details"].replaceChildren();
+  generationUi["generation-export"].disabled = true;
+  generationUi["generation-report"].disabled = true;
+  for (const key of generationMetricKeys) generationUi["generation-" + key].textContent = "—";
+}
+
+function generateCatalogPreview() {
+  generationUi["generation-status"].textContent = "Construyendo y validando catálogo candidato…";
+  return new Promise((resolve, reject) => {
+    const worker = new Worker("futbin-generator-worker.mjs", { type: "module" });
+    const fail = error => { worker.terminate(); reject(error); };
+    worker.onerror = event => fail(new Error(event.message || "No se pudo iniciar el generador."));
+    worker.onmessageerror = () => fail(new Error("No se pudo recibir el candidato."));
+    worker.onmessage = event => {
+      worker.terminate();
+      if (event.data.error) { reject(new Error(event.data.error)); return; }
+      generationResult = event.data.result;
+      for (const key of generationMetricKeys) generationUi["generation-" + key].textContent = String(generationResult.report.summary[key]);
+      generationUi["generation-export"].disabled = !generationResult.canExport;
+      generationUi["generation-report"].disabled = false;
+      generationUi["generation-status"].textContent = generationResult.canExport
+        ? "Candidato validado para revisión. La descarga no reemplaza el catálogo actual."
+        : "El candidato no supera la validación. Revisa los errores; puedes descargar el reporte.";
+      for (const error of generationResult.validation.errors) {
+        const li = document.createElement("li");
+        li.textContent = [error.id || "Registro " + error.index, error.code, error.field].filter(Boolean).join(" · ");
+        generationUi["generation-errors"].append(li);
+      }
+      for (const [key, title] of [
+        ["updatedApplied", "Updates aplicados: campos, valores anteriores y nuevos"],
+        ["newApplied", "Nuevas incorporadas: ID y datos de origen"],
+        ["unchanged", "Registros sin cambios"], ["preservedNotInSnapshot", "Conservadas fuera del snapshot"],
+        ["skippedSnapshotDuplicates", "Duplicados omitidos"], ["skippedNeedsReview", "Revisiones omitidas"],
+        ["generationNeedsReview", "Incidencias de generación"]
+      ]) {
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = title + " (" + generationResult.report[key].length + ")";
+        details.append(summary);
+        const value = generationResult.report[key];
+        details.addEventListener("toggle", () => {
+          if (details.open && details.children.length === 1) {
+            const pre = document.createElement("pre");pre.textContent = JSON.stringify(value, null, 2);details.append(pre);
+          }
+        });
+        generationUi["generation-details"].append(details);
+      }
+      resolve();
+    };
+    try { worker.postMessage({ catalog: window.PLAYERS_DATA, comparison: comparisonResult }); }
+    catch (error) { fail(error); }
+  });
+}
+generationUi["generation-export"].addEventListener("click", () => {
+  if (!generationResult?.canExport || !generationResult.candidateSource) return;
+  downloadBlob(new Blob([generationResult.candidateSource], { type: "text/javascript;charset=utf-8" }), "players-data.candidate.js");
+});
+generationUi["generation-report"].addEventListener("click", () => {
+  if (generationResult) downloadJson(generationResult.report, "catalog-generation-report.json");
+});
+
 resetComparison();
 
 

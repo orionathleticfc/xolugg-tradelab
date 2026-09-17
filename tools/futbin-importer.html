@@ -127,6 +127,32 @@
     <p id="snapshot-duplicates-status" role="status">Esperando comparación.</p>
     <div id="snapshot-duplicates"></div>
   </section>
+
+  <section class="panel" aria-labelledby="generation-title">
+    <h2 id="generation-title">Catálogo candidato</h2>
+    <p>Se conservan el orden, los IDs y la identidad de los registros existentes. Solo se aplican updates exactos y nuevas cartas seguras. Los duplicados y revisiones permanecen pendientes.</p>
+    <p id="generation-status" role="status" aria-live="polite">Esperando comparación validada.</p>
+    <dl class="comparison-metrics">
+      <div><dt>Catálogo actual</dt><dd id="generation-currentCatalog">—</dd></div>
+      <div><dt>Updates aplicados</dt><dd id="generation-updatedApplied">—</dd></div>
+      <div><dt>Nuevas aplicadas</dt><dd id="generation-newApplied">—</dd></div>
+      <div><dt>Sin cambios</dt><dd id="generation-unchanged">—</dd></div>
+      <div><dt>Grupos duplicados omitidos</dt><dd id="generation-skippedSnapshotDuplicateGroups">—</dd></div>
+      <div><dt>Apariciones duplicadas omitidas</dt><dd id="generation-skippedSnapshotDuplicateOccurrences">—</dd></div>
+      <div><dt>Revisiones omitidas</dt><dd id="generation-skippedNeedsReview">—</dd></div>
+      <div><dt>Conservadas fuera del snapshot</dt><dd id="generation-preservedNotInSnapshot">—</dd></div>
+      <div><dt>Tamaño del catálogo candidato</dt><dd id="generation-candidateCatalogSize">—</dd></div>
+      <div><dt>Incidencias de generación</dt><dd id="generation-generationNeedsReview">—</dd></div>
+      <div><dt>Colisiones de ID</dt><dd id="generation-idCollisions">—</dd></div>
+      <div><dt>Errores de validación</dt><dd id="generation-validationErrors">—</dd></div>
+    </dl>
+    <ul id="generation-errors" aria-label="Errores de validación del candidato"></ul>
+    <div class="generation-actions">
+      <button id="generation-export" type="button" disabled>Exportar catálogo candidato</button>
+      <button id="generation-report" type="button" disabled>Exportar reporte de generación</button>
+    </div>
+    <div id="generation-details"></div>
+  </section>
 </main>
 </body>
 </html>

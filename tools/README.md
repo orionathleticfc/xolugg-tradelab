@@ -190,3 +190,67 @@ node --test tools/futbin-parser.test.mjs tools/futbin-matcher.test.mjs tools/fut
 las tres exportaciones. Van de Ven conserva el precio actual y cambia su
 popularidad; los seis porteros sin rating siguen teniendo identidad exacta.
 
+
+## Catálogo candidato — Fase 4A
+
+Tras la comparación se genera automáticamente una propuesta **en memoria**.
+La sección «Catálogo candidato» permite revisar métricas y trazabilidad y descargar:
+
+- `players-data.candidate.js`: asignación compatible `window.PLAYERS_DATA = [...];`.
+- `catalog-generation-report.json`: metadata, summary, updatedApplied,
+  newApplied, unchanged, preservedNotInSnapshot, skippedSnapshotDuplicates,
+  skippedNeedsReview, generationNeedsReview y validation.
+
+No se reemplaza ningún archivo ni se escribe en localStorage. El reporte sigue
+disponible si el candidato no supera la validación; la descarga del JS queda
+deshabilitada. Los registros excluidos por colisión u otras incidencias no se
+añaden; quedan en generationNeedsReview y el resto de la propuesta se valida.
+
+### Módulos reutilizables
+
+- `futbin-generator.mjs`: generateCandidateCatalog, generateCardId,
+  validateCandidateCatalog y serializeCandidateCatalog; sin DOM, almacenamiento
+  ni red.
+- `futbin-generator-worker.mjs`: construcción y serialización en un worker.
+- `futbin-generator.test.mjs`: regresiones sintéticas y con fixtures locales.
+
+El generador clona catálogo y evidencia. Conserva todos los registros existentes
+en su orden original; las nuevas cartas se agregan al final. Las entradas que
+no reciben un update seguro se conservan íntegramente, incluido activo.
+
+Solo aplica UPDATED con exact_identity y confidence high, y comprueba que la
+identidad y el registro actual coincidan aún con los usados por el matcher.
+Los campos estructurales e IDs no cambian. Solo se actualizan los cuatro campos
+de mercado respaldados y los campos de fuente permitidos. Un valor ausente no
+borra el dato existente. Un precio raw "0" preserva el precio actual y se
+registra como "0" en fuente.precioPrincipalRaw.
+
+Los IDs nuevos se forman con nombre normalizado, OVR, posición, stats, pie,
+skills y weakFoot. No incluyen mercado, popularidad, página o fecha. Las
+colisiones contra el catálogo o entre propuestas quedan en revisión; no se
+resuelven agregando sufijos dependientes del orden.
+
+El reporte incluye los campos cambiados con old/new, los nuevos IDs, los
+índices de snapshot omitidos y su evidencia. Los 15 grupos y cuatro revisiones
+siguen pendientes sin seleccionar ninguna aparición.
+
+### Validación de la Fase 4A
+
+```text
+node --test tools/futbin-parser.test.mjs tools/futbin-matcher.test.mjs tools/futbin-matcher-sanitization.test.mjs tools/futbin-generator.test.mjs
+node --check tools/futbin-importer.js
+node --check tools/futbin-generator.mjs
+node --check tools/futbin-generator-worker.mjs
+```
+
+Resultado del fixture real: 250 registros iniciales, 188 updates aplicados,
+27 nuevas, 1 unchanged, 37 fuera del snapshot conservadas intactas,
+15 grupos / 30 apariciones omitidas y 4 revisiones omitidas.
+Candidato: **277 registros**, 0 colisiones, 0 incidencias de generación,
+0 errores de validación.
+
+Pasaron 37 pruebas. Se ejecutó también el PDF real en Edge: extracción, parser,
+matcher, generador, detalles, filtros y las cinco descargas. El JS candidato
+se ejecutó en un objeto window aislado y produjo 277 registros con IDs únicos,
+sin precios operativos cero; catálogo original y localStorage no cambiaron.
+

@@ -56,3 +56,9 @@ td:nth-child(2) { min-width: 160px; max-width: 480px; overflow-wrap: anywhere; w
 .duplicate-group { border-top: 1px solid var(--border); padding: 16px 0; }
 .duplicate-group pre { max-height: 400px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
 .duplicate-group summary { cursor: pointer; padding: 12px 0; color: var(--green); }
+
+.generation-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+#generation-errors { color: #ff8787; }
+#generation-details { margin-top: 20px; }
+#generation-details summary { cursor: pointer; color: var(--green); padding: 10px 0; }
+#generation-details pre { max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
