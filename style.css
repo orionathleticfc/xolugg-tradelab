@@ -1612,3 +1612,59 @@ footer {
   outline: 2px solid var(--green);
   outline-offset: 1px;
 }
+
+/* Detalle de carta: limitado al ancho visible, sin ensanchar la tabla. */
+.popular-actions { flex-wrap: wrap; }
+.meta-table .popular-detail-row > td {
+  padding: 0;
+  white-space: normal;
+  background: var(--panel-3);
+  border-bottom: 1px solid var(--border);
+}
+.popular-detail-panel {
+  box-sizing: border-box;
+  width: min(100%, calc(100vw - 80px));
+  padding: 14px;
+  border-left: 3px solid var(--green);
+  overflow-wrap: anywhere;
+}
+.popular-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px 16px;
+  margin: 0;
+}
+.popular-detail-field dt,
+.popular-stat span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.popular-detail-field dd {
+  margin: 3px 0 0;
+  font-size: 12px;
+}
+.popular-detail-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0;
+}
+.popular-stat {
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.popular-detail-prices {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+@media (max-width: 700px) {
+  .popular-detail-panel { width: min(100%, calc(100vw - 48px)); padding: 10px; }
+  .popular-detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .popular-detail-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

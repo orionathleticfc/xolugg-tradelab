@@ -3607,6 +3607,76 @@ function escapePopularHtml(value) {
   })[character]);
 }
 
+
+const expandedPopularCards = new Set();
+
+function renderPopularPlayerDetails(player) {
+  const e = escapePopularHtml;
+  const value = input => e(input ?? "—");
+  const field = (label, content) =>
+    `<div class="popular-detail-field"><dt>${e(label)}</dt><dd>${content}</dd></div>`;
+  const alternatives = (player.posiciones || []).filter(p => p !== player.posicionPrincipal);
+  const statKeys = player.posicionPrincipal === "GK"
+    ? ["div", "han", "kic", "ref", "spd", "pos"]
+    : ["pac", "sho", "pas", "dri", "def", "phy"];
+  const priceSource = player.precioUsuario !== null ? "Actualizado por ti"
+    : player.precioEfectivo !== null ? "Referencia" : "—";
+  const row = document.createElement("tr");
+  row.id = "popular-details-" + player.id;
+  row.className = "popular-detail-row";
+  row.innerHTML = `<td colspan="10">
+    <div class="popular-detail-panel" role="region" aria-label="Detalles de ${e(player.nombre)}">
+      <dl class="popular-detail-grid">
+        ${field("Nombre", value(player.nombre))}
+        ${field("OVR", value(player.ovr))}
+        ${field("Posición principal", value(player.posicionPrincipal))}
+        ${field("Posiciones alternativas", value(alternatives.length ? alternatives.join(", ") : null))}
+        ${field("Versión", e(player.version ?? "Sin identificar"))}
+        ${field("Tipo de carta", e(player.tipoCarta ?? "Sin identificar"))}
+        ${field("Fuente", value(player.fuente?.nombre ?? (typeof player.fuente === "string" ? player.fuente : null)))}
+        ${field("Página PDF", value(player.paginaFuente ?? player.fuente?.paginaPdf))}
+      </dl>
+      <div class="popular-detail-stats" aria-label="Estadísticas">
+        ${statKeys.map(key => `<div class="popular-stat"><span>${key.toUpperCase()}</span>
+          <strong>${value(player.stats?.[key])}</strong></div>`).join("")}
+      </div>
+      <dl class="popular-detail-grid">
+        ${field("Pie", value(player.pie))}
+        ${field("Skills", value(player.skills))}
+        ${field("Weak foot", value(player.weakFoot))}
+        ${field("Rating", value(player.ratingFuente))}
+        ${field("Popularidad", value(player.popularidadFuente))}
+      </dl>
+      <dl class="popular-detail-grid popular-detail-prices">
+        ${field("Precio de referencia", formatCoins(player.precioReferencia))}
+        ${field("Precio actualizado por usuario", formatCoins(player.precioUsuario))}
+        ${field("Precio efectivo", formatCoins(player.precioEfectivo) +
+          `<small class="popular-price-source">${priceSource}</small>`)}
+        ${field("Valor secundario fuente", formatCoins(player.valorSecundarioFuente))}
+      </dl>
+    </div>
+  </td>`;
+  return row;
+}
+
+function togglePopularPlayerDetails(cardId) {
+  const card = getPopularPlayers().find(card => card.id === cardId);
+  const button = Array.from(document.querySelectorAll('[data-meta-action="details"]'))
+    .find(button => button.dataset.playerId === cardId);
+  if (!card || !button) return;
+  const opening = !expandedPopularCards.has(cardId);
+  if (opening) {
+    expandedPopularCards.add(cardId);
+    button.closest("tr").after(renderPopularPlayerDetails(getPopularPlayerData(card)));
+  } else {
+    expandedPopularCards.delete(cardId);
+    document.getElementById("popular-details-" + cardId)?.remove();
+  }
+  button.setAttribute("aria-expanded", String(opening));
+  button.textContent = opening ? "▴ Detalles" : "▾ Detalles";
+}
+
+
 function renderPopularPlayers() {
   const tbody = document.getElementById("metaPlayersBody");
   if (!tbody) return;
@@ -3648,8 +3718,16 @@ function renderPopularPlayers() {
           data-player-id="${e(card.id)}" type="button" title="Copiar nombre" aria-label="Copiar nombre de ${e(card.nombre)}">📋</button>
         <button class="meta-action-btn" data-meta-action="calculator"
           data-player-id="${e(card.id)}" type="button">🧮 Calcular</button>
+        <button class="meta-action-btn" data-meta-action="details"
+          data-player-id="${e(card.id)}" type="button"
+          aria-expanded="${expandedPopularCards.has(card.id)}"
+          aria-controls="popular-details-${e(card.id)}">
+          ${expandedPopularCards.has(card.id) ? "▴" : "▾"} Detalles</button>
       </div></td>`;
     tbody.appendChild(row);
+    if (expandedPopularCards.has(card.id)) {
+      tbody.appendChild(renderPopularPlayerDetails(card));
+    }
   });
   activarStepsMetaInputs();
 }
@@ -4042,6 +4120,10 @@ function configurarEventosPopular() {
       const playerId =
         button.dataset.playerId;
 
+
+      if (action === "details") {
+        togglePopularPlayerDetails(playerId);
+      }
 
       if (
         action ===
