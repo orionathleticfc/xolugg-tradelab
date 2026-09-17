@@ -1,267 +1,1055 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
   <title>XoluGG TradeLab</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
 </head>
+
+
 <body>
+
   <div class="app">
 
-    <!-- HEADER COMPACTO -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
     <header class="topbar">
+
       <div class="brand">
-        <div class="brand-icon">📈</div>
-        <div>
-          <h1>XoluGG <span>TradeLab</span></h1>
-          <p>Asistente de tradeo EA SPORTS FC 27</p>
+
+        <div class="brand-icon">
+          📈
         </div>
+
+        <div>
+
+          <h1>
+            XoluGG
+            <span>TradeLab</span>
+          </h1>
+
+          <p>
+            Asistente de tradeo EA SPORTS FC 27
+          </p>
+
+        </div>
+
       </div>
+
 
       <div class="topbar-right">
 
-        <!-- GESTIÓN DE CAPITAL ARRIBA -->
+        <!-- CAPITAL RÁPIDO -->
+
         <div class="quick-capital-card">
-          <div class="quick-capital-title">💰 Capital</div>
+
+          <div class="quick-capital-title">
+            💰 Actualizar capital
+          </div>
+
+
           <div class="quick-capital-form">
+
             <input
               type="number"
               id="nuevoCapital"
               placeholder="22000"
               min="0"
             />
-            <button id="btnActualizarCapital" class="small-primary">
+
+            <button
+              id="btnActualizarCapital"
+              class="small-primary"
+            >
               Actualizar
             </button>
+
           </div>
+
         </div>
 
-        <!-- RESUMEN PRINCIPAL -->
+
+        <!-- RESUMEN DE CAPITAL -->
+
         <div class="capital-summary">
-          <div class="summary-card">
-            <span class="summary-label">Capital actual</span>
-            <strong id="capitalActual">22.000</strong>
-          </div>
 
           <div class="summary-card">
-            <span class="summary-label">Invertido</span>
-            <strong id="capitalInvertido">0</strong>
+
+            <span class="summary-label">
+              Capital actual
+            </span>
+
+            <strong id="capitalActual">
+              22.000
+            </strong>
+
           </div>
 
+
           <div class="summary-card">
-            <span class="summary-label">Capital libre</span>
-            <strong id="capitalLibre">22.000</strong>
+
+            <span class="summary-label">
+              Invertido
+            </span>
+
+            <strong id="capitalInvertido">
+              0
+            </strong>
+
           </div>
+
+
+          <div class="summary-card">
+
+            <span class="summary-label">
+              Capital libre
+            </span>
+
+            <strong id="capitalLibre">
+              22.000
+            </strong>
+
+          </div>
+
 
           <div class="summary-card profit">
-            <span class="summary-label">Beneficio del día</span>
-            <strong id="beneficioDia">+0</strong>
+
+            <span class="summary-label">
+              Beneficio del día
+            </span>
+
+            <strong id="beneficioDia">
+              +0
+            </strong>
+
           </div>
+
         </div>
+
       </div>
+
     </header>
 
-    <!-- DASHBOARD -->
-    <main class="dashboard">
 
-      <!-- COLUMNA IZQUIERDA -->
-      <section class="column left-column">
+    <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
 
-        <!-- CALCULADORA -->
-        <section class="panel calculator-panel">
-          <div class="panel-title">
-            <h2>🧮 Calculadora de tradeo</h2>
-            <span>Calcula si una compra merece la pena</span>
-          </div>
+    <nav class="main-navigation">
 
-          <div class="form-grid">
-            <div class="field">
-              <label for="jugador">Jugador</label>
-              <input type="text" id="jugador" placeholder="Ej: Rațiu" />
+      <button
+        class="nav-tab active"
+        data-section="dashboardSection"
+      >
+        📊 Dashboard
+      </button>
+
+
+      <button
+        class="nav-tab"
+        data-section="metaPlayersSection"
+      >
+        🔥 Jugadores Meta
+      </button>
+
+    </nav>
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <main
+      id="dashboardSection"
+      class="app-section active-section"
+    >
+
+      <div class="dashboard">
+
+
+        <!-- =================================================
+             COLUMNA IZQUIERDA
+        ================================================== -->
+
+        <section class="column left-column">
+
+
+          <!-- CALCULADORA -->
+
+          <section class="panel calculator-panel">
+
+            <div class="panel-title">
+
+              <h2>
+                🧮 Calculadora de tradeo
+              </h2>
+
+              <span>
+                Calcula si una compra merece la pena
+              </span>
+
             </div>
 
-            <div class="field">
-              <label for="precioVenta">Precio de venta</label>
-              <input type="number" id="precioVenta" placeholder="2200" min="0" />
+
+            <div class="form-grid">
+
+
+              <div class="field">
+
+                <label for="jugador">
+                  Jugador
+                </label>
+
+                <input
+                  type="text"
+                  id="jugador"
+                  placeholder="Ej: Rațiu"
+                />
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="precioVenta">
+                  Precio de venta
+                </label>
+
+                <input
+                  type="number"
+                  id="precioVenta"
+                  placeholder="2200"
+                  min="0"
+                />
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="precioCompra">
+                  Precio de compra / puja
+                </label>
+
+                <input
+                  type="number"
+                  id="precioCompra"
+                  placeholder="1600"
+                  min="0"
+                />
+
+              </div>
+
+
+              <div class="field">
+
+                <label for="beneficioMinimo">
+                  Beneficio mínimo deseado
+                </label>
+
+                <input
+                  type="number"
+                  id="beneficioMinimo"
+                  value="300"
+                  min="0"
+                />
+
+              </div>
+
             </div>
 
-            <div class="field">
-              <label for="precioCompra">Precio de compra / puja</label>
-              <input type="number" id="precioCompra" placeholder="1600" min="0" />
+
+            <div class="calc-actions">
+
+              <button
+                id="btnCalcular"
+                class="primary-button"
+              >
+                Calcular trade
+              </button>
+
+
+              <button
+                id="btnAgregarWatchlist"
+                class="secondary-button"
+              >
+                + Añadir a watchlist
+              </button>
+
             </div>
 
-            <div class="field">
-              <label for="beneficioMinimo">Beneficio mínimo deseado</label>
-              <input type="number" id="beneficioMinimo" value="300" min="0" />
+
+            <!-- RESULTADOS -->
+
+            <div class="results compact-results">
+
+
+              <div class="result-row">
+
+                <span>
+                  Neto después del 5%
+                </span>
+
+                <strong id="resultadoNeto">
+                  0
+                </strong>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Beneficio
+                </span>
+
+                <strong id="resultadoBeneficio">
+                  0
+                </strong>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  ROI
+                </span>
+
+                <strong id="resultadoROI">
+                  0%
+                </strong>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Compra ideal
+                </span>
+
+                <strong id="resultadoIdeal">
+                  0 - 0
+                </strong>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Compra máxima
+                </span>
+
+                <strong id="resultadoMaximo">
+                  0
+                </strong>
+
+              </div>
+
             </div>
-          </div>
 
-          <div class="calc-actions">
-            <button id="btnCalcular" class="primary-button">
-              Calcular trade
-            </button>
 
-            <button id="btnAgregarWatchlist" class="secondary-button">
-              + Añadir a watchlist
-            </button>
-          </div>
-
-          <div class="results compact-results">
-            <div class="result-row">
-              <span>Neto después del 5%</span>
-              <strong id="resultadoNeto">0</strong>
+            <div
+              id="estadoTrade"
+              class="trade-status neutral"
+            >
+              Esperando datos
             </div>
 
-            <div class="result-row">
-              <span>Beneficio</span>
-              <strong id="resultadoBeneficio">0</strong>
+          </section>
+
+
+          <!-- HISTORIAL -->
+
+          <section class="panel history-panel">
+
+            <div class="panel-title horizontal">
+
+
+              <div>
+
+                <h2>
+                  📋 Trades realizados
+                </h2>
+
+                <span>
+                  Historial de operaciones
+                </span>
+
+              </div>
+
+
+              <button
+                id="btnLimpiarHistorial"
+                class="small-button"
+              >
+                Limpiar
+              </button>
+
             </div>
 
-            <div class="result-row">
-              <span>ROI</span>
-              <strong id="resultadoROI">0%</strong>
+
+            <div class="trade-form compact-trade-form">
+
+
+              <input
+                type="text"
+                id="tradeJugador"
+                placeholder="Jugador"
+              />
+
+
+              <input
+                type="number"
+                id="tradeCompra"
+                placeholder="Compra"
+              />
+
+
+              <input
+                type="number"
+                id="tradeVenta"
+                placeholder="Venta"
+              />
+
+
+              <button
+                id="btnRegistrarTrade"
+                class="primary-button"
+              >
+                Registrar
+              </button>
+
             </div>
 
-            <div class="result-row">
-              <span>Compra ideal</span>
-              <strong id="resultadoIdeal">0 - 0</strong>
+
+            <div class="table-wrapper compact-table">
+
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Jugador
+                    </th>
+
+                    <th>
+                      Compra
+                    </th>
+
+                    <th>
+                      Venta
+                    </th>
+
+                    <th>
+                      Beneficio
+                    </th>
+
+                    <th>
+                      ROI
+                    </th>
+
+                    <th></th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody id="historialBody">
+                </tbody>
+
+              </table>
+
             </div>
 
-            <div class="result-row">
-              <span>Compra máxima</span>
-              <strong id="resultadoMaximo">0</strong>
-            </div>
-          </div>
+          </section>
 
-          <div id="estadoTrade" class="trade-status neutral">
-            Esperando datos
-          </div>
         </section>
 
-        <!-- TRADES REALIZADOS -->
-        <section class="panel history-panel">
-          <div class="panel-title horizontal">
-            <div>
-              <h2>📋 Trades realizados</h2>
-              <span>Historial de operaciones</span>
+
+        <!-- =================================================
+             COLUMNA DERECHA
+        ================================================== -->
+
+        <section class="column right-column">
+
+
+          <!-- WATCHLIST -->
+
+          <section class="panel watchlist-panel">
+
+            <div class="panel-title horizontal">
+
+
+              <div>
+
+                <h2>
+                  👀 Watchlist
+                </h2>
+
+                <span>
+                  Jugadores que estamos siguiendo
+                </span>
+
+              </div>
+
+
+              <button
+                id="btnLimpiarWatchlist"
+                class="small-button"
+              >
+                Limpiar
+              </button>
+
             </div>
 
-            <button id="btnLimpiarHistorial" class="small-button">
-              Limpiar
-            </button>
-          </div>
 
-          <div class="trade-form compact-trade-form">
-            <input type="text" id="tradeJugador" placeholder="Jugador" />
-            <input type="number" id="tradeCompra" placeholder="Compra" />
-            <input type="number" id="tradeVenta" placeholder="Venta" />
-            <button id="btnRegistrarTrade" class="primary-button">
-              Registrar
-            </button>
-          </div>
+            <div class="table-wrapper compact-table">
 
-          <div class="table-wrapper compact-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Jugador</th>
-                  <th>Compra</th>
-                  <th>Venta</th>
-                  <th>Beneficio</th>
-                  <th>ROI</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="historialBody"></tbody>
-            </table>
-          </div>
+              <table>
+
+                <thead>
+
+                  <tr>
+
+                    <th>
+                      Jugador
+                    </th>
+
+                    <th>
+                      Venta
+                    </th>
+
+                    <th>
+                      Ideal
+                    </th>
+
+                    <th>
+                      Máximo
+                    </th>
+
+                    <th>
+                      Estado
+                    </th>
+
+                    <th></th>
+
+                  </tr>
+
+                </thead>
+
+
+                <tbody id="watchlistBody">
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </section>
+
+
+          <!-- LEYENDA -->
+
+          <section class="panel legend-panel">
+
+            <div class="panel-title">
+
+              <h2>
+                🚦 Estados
+              </h2>
+
+              <span>
+                Interpretación rápida
+              </span>
+
+            </div>
+
+
+            <div class="legend-grid">
+
+
+              <div class="legend-item">
+
+                <span class="legend-icon excellent">
+                  🔥
+                </span>
+
+                <div>
+
+                  <strong>
+                    Excelente
+                  </strong>
+
+                  <p>
+                    Muy buen margen y ROI.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="legend-item">
+
+                <span class="legend-icon good">
+                  ✅
+                </span>
+
+                <div>
+
+                  <strong>
+                    Buena
+                  </strong>
+
+                  <p>
+                    Cumple el beneficio mínimo.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="legend-item">
+
+                <span class="legend-icon fair">
+                  🟡
+                </span>
+
+                <div>
+
+                  <strong>
+                    Justa
+                  </strong>
+
+                  <p>
+                    Margen bajo. Mejor esperar.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="legend-item">
+
+                <span class="legend-icon bad">
+                  ❌
+                </span>
+
+                <div>
+
+                  <strong>
+                    No comprar
+                  </strong>
+
+                  <p>
+                    No compensa el riesgo.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
         </section>
-      </section>
 
-      <!-- COLUMNA DERECHA -->
-      <section class="column right-column">
+      </div>
 
-        <!-- WATCHLIST -->
-        <section class="panel watchlist-panel">
-          <div class="panel-title horizontal">
-            <div>
-              <h2>👀 Watchlist</h2>
-              <span>Jugadores que estamos siguiendo</span>
-            </div>
-
-            <button id="btnLimpiarWatchlist" class="small-button">
-              Limpiar
-            </button>
-          </div>
-
-          <div class="table-wrapper compact-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Jugador</th>
-                  <th>Venta</th>
-                  <th>Ideal</th>
-                  <th>Máximo</th>
-                  <th>Estado</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="watchlistBody"></tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- LEYENDA -->
-        <section class="panel legend-panel">
-          <div class="panel-title">
-            <h2>🚦 Estados</h2>
-            <span>Interpretación rápida</span>
-          </div>
-
-          <div class="legend-grid">
-            <div class="legend-item">
-              <span class="legend-icon excellent">🔥</span>
-              <div>
-                <strong>Excelente</strong>
-                <p>Muy buen margen y ROI.</p>
-              </div>
-            </div>
-
-            <div class="legend-item">
-              <span class="legend-icon good">✅</span>
-              <div>
-                <strong>Buena</strong>
-                <p>Cumple el beneficio mínimo.</p>
-              </div>
-            </div>
-
-            <div class="legend-item">
-              <span class="legend-icon fair">🟡</span>
-              <div>
-                <strong>Justa</strong>
-                <p>Margen bajo. Mejor esperar.</p>
-              </div>
-            </div>
-
-            <div class="legend-item">
-              <span class="legend-icon bad">❌</span>
-              <div>
-                <strong>No comprar</strong>
-                <p>No compensa el riesgo.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </section>
     </main>
 
+
+    <!-- =====================================================
+         JUGADORES META
+    ====================================================== -->
+
+    <main
+      id="metaPlayersSection"
+      class="app-section hidden-section"
+    >
+
+      <section class="panel meta-players-panel">
+
+
+        <!-- TÍTULO -->
+
+        <div class="meta-header">
+
+
+          <div>
+
+            <h2>
+              🔥 Jugadores Meta FC27
+            </h2>
+
+            <p>
+              Base de jugadores interesantes para gameplay y tradeo.
+            </p>
+
+          </div>
+
+
+          <div class="meta-counter">
+
+            <span>
+              Jugadores
+            </span>
+
+            <strong id="metaPlayersCount">
+              0
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FILTROS
+        ================================================== -->
+
+        <div class="meta-filters">
+
+
+          <!-- BUSCADOR -->
+
+          <div class="meta-search">
+
+            <label for="metaSearch">
+              Buscar jugador
+            </label>
+
+            <input
+              type="text"
+              id="metaSearch"
+              placeholder="Ej: Openda, Elanga, Rațiu..."
+            />
+
+          </div>
+
+
+          <!-- CATEGORÍA -->
+
+          <div class="meta-filter">
+
+            <label for="metaCategory">
+              Posición
+            </label>
+
+            <select id="metaCategory">
+
+              <option value="ALL">
+                Todas
+              </option>
+
+              <option value="DEL">
+                Delanteros
+              </option>
+
+              <option value="EXT">
+                Extremos
+              </option>
+
+              <option value="MED">
+                Mediocampistas
+              </option>
+
+              <option value="DEF">
+                Defensas
+              </option>
+
+              <option value="POR">
+                Porteros
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- PRIORIDAD -->
+
+          <div class="meta-filter">
+
+            <label for="metaPriority">
+              Prioridad Meta
+            </label>
+
+            <select id="metaPriority">
+
+              <option value="ALL">
+                Todas
+              </option>
+
+              <option value="3">
+                🔥🔥🔥
+              </option>
+
+              <option value="2">
+                🔥🔥
+              </option>
+
+              <option value="1">
+                🔥
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- PRECIO MÁXIMO -->
+
+          <div class="meta-filter">
+
+            <label for="metaMaxPrice">
+              Precio máximo
+            </label>
+
+            <input
+              type="number"
+              id="metaMaxPrice"
+              placeholder="Ej: 5000"
+              min="0"
+            />
+
+          </div>
+
+
+          <!-- SOLO CON PRECIO -->
+
+          <div class="meta-checkbox-filter">
+
+            <label>
+
+              <input
+                type="checkbox"
+                id="metaOnlyWithPrice"
+              />
+
+              Solo con precio
+
+            </label>
+
+          </div>
+
+
+          <button
+            id="btnClearMetaFilters"
+            class="small-button"
+          >
+            Limpiar filtros
+          </button>
+
+        </div>
+
+
+        <!-- =================================================
+             TABLA META
+        ================================================== -->
+
+        <div class="table-wrapper meta-table-wrapper">
+
+          <table class="meta-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Jugador
+                </th>
+
+                <th>
+                  Pos.
+                </th>
+
+                <th>
+                  OVR
+                </th>
+
+                <th>
+                  Meta
+                </th>
+
+                <th>
+                  Precio
+                </th>
+
+                <th>
+                  Compra ideal
+                </th>
+
+                <th>
+                  Máximo
+                </th>
+
+                <th>
+                  Actualizado
+                </th>
+
+                <th>
+                  Acción
+                </th>
+
+              </tr>
+
+            </thead>
+
+
+            <tbody id="metaPlayersBody">
+
+              <tr>
+
+                <td
+                  colspan="9"
+                  style="text-align:center;color:#8fa8b3;"
+                >
+                  Cargando jugadores meta...
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
-      XoluGG TradeLab · EA SPORTS FC 27
+
+      XoluGG TradeLab
+      ·
+      EA SPORTS FC 27
+
     </footer>
+
   </div>
 
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <!--
+      Primero cargamos la base de jugadores.
+      Después app.js puede utilizar window.META_PLAYERS
+  -->
+
+  <script src="meta-players.js"></script>
+
   <script src="app.js"></script>
+
+
+  <!-- =====================================================
+       NAVEGACIÓN ENTRE PESTAÑAS
+  ====================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      () => {
+
+        const tabs =
+          document.querySelectorAll(".nav-tab");
+
+        const sections =
+          document.querySelectorAll(".app-section");
+
+
+        tabs.forEach((tab) => {
+
+          tab.addEventListener(
+            "click",
+            () => {
+
+              const targetId =
+                tab.dataset.section;
+
+
+              tabs.forEach((item) => {
+                item.classList.remove("active");
+              });
+
+
+              sections.forEach((section) => {
+
+                section.classList.remove(
+                  "active-section"
+                );
+
+                section.classList.add(
+                  "hidden-section"
+                );
+
+              });
+
+
+              tab.classList.add(
+                "active"
+              );
+
+
+              const target =
+                document.getElementById(
+                  targetId
+                );
+
+
+              if (target) {
+
+                target.classList.remove(
+                  "hidden-section"
+                );
+
+                target.classList.add(
+                  "active-section"
+                );
+
+              }
+
+            }
+          );
+
+        });
+
+      }
+    );
+
+  </script>
+
 </body>
+
 </html>
