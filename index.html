@@ -17,7 +17,6 @@
   />
 </head>
 
-
 <body>
 
   <div class="app">
@@ -60,7 +59,6 @@
             💰 Actualizar capital
           </div>
 
-
           <div class="quick-capital-form">
 
             <input
@@ -73,6 +71,7 @@
             <button
               id="btnActualizarCapital"
               class="small-primary"
+              type="button"
             >
               Actualizar
             </button>
@@ -153,6 +152,7 @@
       <button
         class="nav-tab active"
         data-section="dashboardSection"
+        type="button"
       >
         📊 Dashboard
       </button>
@@ -161,9 +161,42 @@
       <button
         class="nav-tab"
         data-section="metaPlayersSection"
+        type="button"
       >
         🔥 Jugadores Meta
       </button>
+
+
+      <!-- BACKUP -->
+
+      <div class="backup-actions">
+
+        <button
+          id="btnExportBackup"
+          class="small-button"
+          type="button"
+        >
+          ⬇ Exportar datos
+        </button>
+
+
+        <button
+          id="btnImportBackup"
+          class="small-button"
+          type="button"
+        >
+          ⬆ Importar datos
+        </button>
+
+
+        <input
+          type="file"
+          id="backupFileInput"
+          accept=".json,application/json"
+          hidden
+        />
+
+      </div>
 
     </nav>
 
@@ -277,6 +310,7 @@
               <button
                 id="btnCalcular"
                 class="primary-button"
+                type="button"
               >
                 Calcular trade
               </button>
@@ -285,6 +319,7 @@
               <button
                 id="btnAgregarWatchlist"
                 class="secondary-button"
+                type="button"
               >
                 + Añadir a watchlist
               </button>
@@ -397,6 +432,7 @@
               <button
                 id="btnLimpiarHistorial"
                 class="small-button"
+                type="button"
               >
                 Limpiar
               </button>
@@ -418,6 +454,7 @@
                 type="number"
                 id="tradeCompra"
                 placeholder="Compra"
+                min="0"
               />
 
 
@@ -425,12 +462,14 @@
                 type="number"
                 id="tradeVenta"
                 placeholder="Venta"
+                min="0"
               />
 
 
               <button
                 id="btnRegistrarTrade"
                 class="primary-button"
+                type="button"
               >
                 Registrar
               </button>
@@ -515,6 +554,7 @@
               <button
                 id="btnLimpiarWatchlist"
                 class="small-button"
+                type="button"
               >
                 Limpiar
               </button>
@@ -693,7 +733,7 @@
       <section class="panel meta-players-panel">
 
 
-        <!-- TÍTULO -->
+        <!-- HEADER META -->
 
         <div class="meta-header">
 
@@ -856,9 +896,12 @@
           </div>
 
 
+          <!-- LIMPIAR -->
+
           <button
             id="btnClearMetaFilters"
             class="small-button"
+            type="button"
           >
             Limpiar filtros
           </button>
@@ -925,7 +968,10 @@
 
                 <td
                   colspan="9"
-                  style="text-align:center;color:#8fa8b3;"
+                  style="
+                    text-align:center;
+                    color:#8fa8b3;
+                  "
                 >
                   Cargando jugadores meta...
                 </td>
@@ -962,14 +1008,14 @@
        SCRIPTS
   ====================================================== -->
 
-  <!--
-      Primero cargamos la base de jugadores.
-      Después app.js puede utilizar window.META_PLAYERS
-  -->
+  <!-- BASE DE JUGADORES META -->
 
-  <script src="meta-players.js"></script>
+  <script src="meta-players.js?v=3"></script>
 
-  <script src="app.js"></script>
+
+  <!-- LÓGICA PRINCIPAL -->
+
+  <script src="app.js?v=3"></script>
 
 
   <!-- =====================================================
@@ -983,67 +1029,82 @@
       () => {
 
         const tabs =
-          document.querySelectorAll(".nav-tab");
-
-        const sections =
-          document.querySelectorAll(".app-section");
-
-
-        tabs.forEach((tab) => {
-
-          tab.addEventListener(
-            "click",
-            () => {
-
-              const targetId =
-                tab.dataset.section;
-
-
-              tabs.forEach((item) => {
-                item.classList.remove("active");
-              });
-
-
-              sections.forEach((section) => {
-
-                section.classList.remove(
-                  "active-section"
-                );
-
-                section.classList.add(
-                  "hidden-section"
-                );
-
-              });
-
-
-              tab.classList.add(
-                "active"
-              );
-
-
-              const target =
-                document.getElementById(
-                  targetId
-                );
-
-
-              if (target) {
-
-                target.classList.remove(
-                  "hidden-section"
-                );
-
-                target.classList.add(
-                  "active-section"
-                );
-
-              }
-
-            }
+          document.querySelectorAll(
+            ".nav-tab"
           );
 
-        });
+
+        const sections =
+          document.querySelectorAll(
+            ".app-section"
+          );
+
+
+        tabs.forEach(
+          (tab) => {
+
+            tab.addEventListener(
+              "click",
+              () => {
+
+                const targetId =
+                  tab.dataset.section;
+
+
+                tabs.forEach(
+                  (item) => {
+
+                    item.classList.remove(
+                      "active"
+                    );
+
+                  }
+                );
+
+
+                sections.forEach(
+                  (section) => {
+
+                    section.classList.remove(
+                      "active-section"
+                    );
+
+                    section.classList.add(
+                      "hidden-section"
+                    );
+
+                  }
+                );
+
+
+                tab.classList.add(
+                  "active"
+                );
+
+
+                const target =
+                  document.getElementById(
+                    targetId
+                  );
+
+
+                if (target) {
+
+                  target.classList.remove(
+                    "hidden-section"
+                  );
+
+                  target.classList.add(
+                    "active-section"
+                  );
+
+                }
+
+              }
+            );
+
+          }
+        );
 
       }
     );
