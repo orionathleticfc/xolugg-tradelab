@@ -9,7 +9,7 @@ const DEFAULT_META_PROFIT = 300;
 const STORAGE_STATE = "xoluggTradeLab";
 const STORAGE_META_PRICES = "xoluggMetaPrices";
 
-const APP_VERSION = "1.1.0";
+const APP_VERSION = "1.2.0";
 
 
 /* =========================================================
@@ -244,7 +244,7 @@ function getTradeMetrics(
     Number(beneficioMinimo) || 0;
 
 
-  /* 5% DE IMPUESTO */
+  /* 5 % DE IMPUESTO */
 
   const neto =
     Math.floor(
@@ -1240,8 +1240,8 @@ function limpiarHistorial() {
 
 
   /*
-    Limpiar historial NO modifica
-    el capital actual.
+     Limpiar historial NO modifica
+     el capital actual.
   */
 
   state.historial = [];
@@ -1519,11 +1519,7 @@ async function copiarNombreJugador(
   let copiado = false;
 
 
-  /*
-     MÉTODO PRINCIPAL
-     GitHub Pages usa HTTPS, por lo que
-     normalmente navigator.clipboard funciona.
-  */
+  /* CLIPBOARD API */
 
   try {
     if (
@@ -1544,9 +1540,7 @@ async function copiarNombreJugador(
   }
 
 
-  /*
-     MÉTODO ALTERNATIVO
-  */
+  /* FALLBACK */
 
   if (!copiado) {
     try {
@@ -1555,16 +1549,20 @@ async function copiarNombreJugador(
           "textarea"
         );
 
+
       textarea.value =
         nombre;
+
 
       textarea.setAttribute(
         "readonly",
         ""
       );
 
+
       textarea.style.position =
         "absolute";
+
 
       textarea.style.left =
         "-9999px";
@@ -1574,7 +1572,9 @@ async function copiarNombreJugador(
         textarea
       );
 
+
       textarea.select();
+
 
       textarea.setSelectionRange(
         0,
@@ -1600,9 +1600,7 @@ async function copiarNombreJugador(
   }
 
 
-  /*
-     CONFIRMACIÓN VISUAL
-  */
+  /* CONFIRMACIÓN */
 
   if (
     copiado &&
@@ -1649,7 +1647,7 @@ async function copiarNombreJugador(
 
 
 /* =========================================================
-   FILTROS META
+   FILTROS + ORDENAMIENTO META
 ========================================================= */
 
 function getFilteredMetaPlayers() {
@@ -1694,6 +1692,15 @@ function getFilteredMetaPlayers() {
     "ALL";
 
 
+  const sort =
+    document
+      .getElementById(
+        "metaSort"
+      )
+      ?.value ||
+    "meta-desc";
+
+
   const maxPriceValue =
     document
       .getElementById(
@@ -1719,7 +1726,9 @@ function getFilteredMetaPlayers() {
     false;
 
 
-  /* BUSCADOR */
+  /* =====================================================
+     BUSCADOR
+  ===================================================== */
 
   if (search) {
     players =
@@ -1755,7 +1764,9 @@ function getFilteredMetaPlayers() {
   }
 
 
-  /* CATEGORÍA */
+  /* =====================================================
+     CATEGORÍA
+  ===================================================== */
 
   if (
     category !== "ALL"
@@ -1769,7 +1780,9 @@ function getFilteredMetaPlayers() {
   }
 
 
-  /* PRIORIDAD */
+  /* =====================================================
+     PRIORIDAD
+  ===================================================== */
 
   if (
     priority !== "ALL"
@@ -1785,7 +1798,9 @@ function getFilteredMetaPlayers() {
   }
 
 
-  /* SOLO CON PRECIO */
+  /* =====================================================
+     SOLO CON PRECIO
+  ===================================================== */
 
   if (
     onlyWithPrice
@@ -1800,7 +1815,9 @@ function getFilteredMetaPlayers() {
   }
 
 
-  /* PRECIO MÁXIMO */
+  /* =====================================================
+     PRECIO MÁXIMO
+  ===================================================== */
 
   if (
     maxPrice !== null &&
@@ -1826,30 +1843,328 @@ function getFilteredMetaPlayers() {
   }
 
 
-  /* ORDEN */
+  /* =====================================================
+     ORDENAMIENTO
+  ===================================================== */
 
   players.sort(
     (a, b) => {
-      const diferencia =
-        Number(
-          b.prioridadMeta
-        ) -
-        Number(
-          a.prioridadMeta
-        );
+
+      let result = 0;
 
 
-      if (
-        diferencia !== 0
-      ) {
-        return diferencia;
+      switch (sort) {
+
+        /* -----------------------------------------
+           NOMBRE A-Z
+        ----------------------------------------- */
+
+        case "name-asc":
+
+          result =
+            a.nombre.localeCompare(
+              b.nombre,
+              "es"
+            );
+
+          break;
+
+
+        /* -----------------------------------------
+           NOMBRE Z-A
+        ----------------------------------------- */
+
+        case "name-desc":
+
+          result =
+            b.nombre.localeCompare(
+              a.nombre,
+              "es"
+            );
+
+          break;
+
+
+        /* -----------------------------------------
+           PRECIO MENOR -> MAYOR
+           Sin precio se van al final
+        ----------------------------------------- */
+
+        case "price-asc": {
+
+          const priceA =
+            Number(
+              a.precioMercado
+            ) > 0
+              ? Number(
+                  a.precioMercado
+                )
+              : Infinity;
+
+
+          const priceB =
+            Number(
+              b.precioMercado
+            ) > 0
+              ? Number(
+                  b.precioMercado
+                )
+              : Infinity;
+
+
+          result =
+            priceA - priceB;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           PRECIO MAYOR -> MENOR
+           Sin precio se van al final
+        ----------------------------------------- */
+
+        case "price-desc": {
+
+          const priceA =
+            Number(
+              a.precioMercado
+            ) > 0
+              ? Number(
+                  a.precioMercado
+                )
+              : -Infinity;
+
+
+          const priceB =
+            Number(
+              b.precioMercado
+            ) > 0
+              ? Number(
+                  b.precioMercado
+                )
+              : -Infinity;
+
+
+          result =
+            priceB - priceA;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           OVR MAYOR -> MENOR
+        ----------------------------------------- */
+
+        case "ovr-desc": {
+
+          const ovrA =
+            a.ovr !== null &&
+            a.ovr !== undefined
+              ? Number(a.ovr)
+              : -Infinity;
+
+
+          const ovrB =
+            b.ovr !== null &&
+            b.ovr !== undefined
+              ? Number(b.ovr)
+              : -Infinity;
+
+
+          result =
+            ovrB - ovrA;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           OVR MENOR -> MAYOR
+        ----------------------------------------- */
+
+        case "ovr-asc": {
+
+          const ovrA =
+            a.ovr !== null &&
+            a.ovr !== undefined
+              ? Number(a.ovr)
+              : Infinity;
+
+
+          const ovrB =
+            b.ovr !== null &&
+            b.ovr !== undefined
+              ? Number(b.ovr)
+              : Infinity;
+
+
+          result =
+            ovrA - ovrB;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           META MENOR -> MAYOR
+        ----------------------------------------- */
+
+        case "meta-asc":
+
+          result =
+            Number(
+              a.prioridadMeta
+            ) -
+            Number(
+              b.prioridadMeta
+            );
+
+          break;
+
+
+        /* -----------------------------------------
+           META MAYOR -> MENOR
+        ----------------------------------------- */
+
+        case "meta-desc":
+
+          result =
+            Number(
+              b.prioridadMeta
+            ) -
+            Number(
+              a.prioridadMeta
+            );
+
+          break;
+
+
+        /* -----------------------------------------
+           COMPRA MÁXIMA MENOR -> MAYOR
+        ----------------------------------------- */
+
+        case "maxbuy-asc": {
+
+          const maxA =
+            a.compraMaxima !== null &&
+            a.compraMaxima !== undefined
+              ? Number(
+                  a.compraMaxima
+                )
+              : Infinity;
+
+
+          const maxB =
+            b.compraMaxima !== null &&
+            b.compraMaxima !== undefined
+              ? Number(
+                  b.compraMaxima
+                )
+              : Infinity;
+
+
+          result =
+            maxA - maxB;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           COMPRA MÁXIMA MAYOR -> MENOR
+        ----------------------------------------- */
+
+        case "maxbuy-desc": {
+
+          const maxA =
+            a.compraMaxima !== null &&
+            a.compraMaxima !== undefined
+              ? Number(
+                  a.compraMaxima
+                )
+              : -Infinity;
+
+
+          const maxB =
+            b.compraMaxima !== null &&
+            b.compraMaxima !== undefined
+              ? Number(
+                  b.compraMaxima
+                )
+              : -Infinity;
+
+
+          result =
+            maxB - maxA;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           MÁS RECIENTEMENTE ACTUALIZADO
+        ----------------------------------------- */
+
+        case "updated-desc": {
+
+          const dateA =
+            a.ultimaActualizacion
+              ? new Date(
+                  a.ultimaActualizacion
+                ).getTime()
+              : 0;
+
+
+          const dateB =
+            b.ultimaActualizacion
+              ? new Date(
+                  b.ultimaActualizacion
+                ).getTime()
+              : 0;
+
+
+          result =
+            dateB - dateA;
+
+          break;
+        }
+
+
+        /* -----------------------------------------
+           DEFAULT
+        ----------------------------------------- */
+
+        default:
+
+          result =
+            Number(
+              b.prioridadMeta
+            ) -
+            Number(
+              a.prioridadMeta
+            );
+
+          break;
       }
 
 
-      return a.nombre.localeCompare(
-        b.nombre,
-        "es"
-      );
+      /*
+         Si dos jugadores tienen el mismo valor
+         los ordenamos por nombre para que la tabla
+         sea estable y predecible.
+      */
+
+      if (result === 0) {
+        return a.nombre.localeCompare(
+          b.nombre,
+          "es"
+        );
+      }
+
+
+      return result;
     }
   );
 
@@ -2151,7 +2466,7 @@ function renderMetaPlayers() {
         </td>
 
 
-        <!-- ACCIONES -->
+        <!-- ACCIÓN -->
 
         <td>
 
@@ -2221,8 +2536,8 @@ function actualizarPrecioMeta(
 
 
   /*
-     SI QUEDA VACÍO,
-     ELIMINAMOS PRECIO MANUAL
+     CAMPO VACÍO =
+     BORRAR PRECIO MANUAL
   */
 
   if (
@@ -2279,7 +2594,7 @@ function actualizarPrecioMeta(
 
 
 /* =========================================================
-   USAR JUGADOR META EN CALCULADORA
+   USAR META EN CALCULADORA
 ========================================================= */
 
 function usarMetaEnCalculadora(
@@ -2303,8 +2618,6 @@ function usarMetaEnCalculadora(
       basePlayer
     );
 
-
-  /* IR AL DASHBOARD */
 
   const dashboardTab =
     document.querySelector(
@@ -2394,6 +2707,11 @@ function limpiarFiltrosMeta() {
       "metaPriority"
     );
 
+  const sort =
+    document.getElementById(
+      "metaSort"
+    );
+
   const maxPrice =
     document.getElementById(
       "metaMaxPrice"
@@ -2419,6 +2737,12 @@ function limpiarFiltrosMeta() {
   if (priority) {
     priority.value =
       "ALL";
+  }
+
+
+  if (sort) {
+    sort.value =
+      "meta-desc";
   }
 
 
@@ -2457,6 +2781,11 @@ function configurarEventosMeta() {
       "metaPriority"
     );
 
+  const sort =
+    document.getElementById(
+      "metaSort"
+    );
+
   const maxPrice =
     document.getElementById(
       "metaMaxPrice"
@@ -2491,6 +2820,12 @@ function configurarEventosMeta() {
   );
 
 
+  sort?.addEventListener(
+    "change",
+    renderMetaPlayers
+  );
+
+
   maxPrice?.addEventListener(
     "input",
     renderMetaPlayers
@@ -2515,9 +2850,7 @@ function configurarEventosMeta() {
     );
 
 
-  /*
-     ACCIONES DE LA TABLA META
-  */
+  /* ACCIONES TABLA */
 
   tbody?.addEventListener(
     "click",
@@ -2574,10 +2907,7 @@ function configurarEventosMeta() {
   );
 
 
-  /*
-     ENTER EN PRECIO =
-     GUARDAR PRECIO
-  */
+  /* ENTER EN PRECIO = GUARDAR */
 
   tbody?.addEventListener(
     "keydown",
@@ -3188,7 +3518,7 @@ function init() {
 
 
   console.log(
-    "XoluGG TradeLab v1.1 cargado ✅"
+    `XoluGG TradeLab v${APP_VERSION} cargado ✅`
   );
 
 
