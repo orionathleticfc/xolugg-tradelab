@@ -153,6 +153,24 @@
     </div>
     <div id="generation-details"></div>
   </section>
+  <section class="panel" aria-labelledby="links-title">
+    <h2 id="links-title">Enlaces FUTBIN</h2>
+    <p>Diagnóstico espacial por aparición del PDF. No modifica el catálogo. Los enlaces se muestran como texto.</p>
+    <p id="links-status" role="status" aria-live="polite">Esperando PDF.</p>
+    <p id="links-summary"></p>
+    <p id="links-domains"></p>
+    <p>Sin enlace exacto incluye NON_FUTBIN_LINK. MATCHED + sin enlace exacto + AMBIGUOUS_LINK = cartas.
+      Una misma URL repetida en fragmentos de una carta cuenta como una candidata.</p>
+    <button id="links-export" type="button" disabled>Exportar diagnóstico de enlaces</button>
+    <div class="table-scroll cards-scroll" tabindex="0" aria-label="Enlaces por carta">
+      <table class="links-table"><thead><tr><th>Página</th><th>Jugador</th><th>OVR</th><th>Posición</th><th>URL encontrada</th><th>Estado de asociación</th></tr></thead><tbody id="links-body"></tbody></table>
+    </div>
+    <details><summary>Inspeccionar todas las URLs y sus rectángulos</summary>
+      <div class="table-scroll cards-scroll" tabindex="0" aria-label="Anotaciones con URL">
+        <table class="links-table"><thead><tr><th>Página</th><th>Dominio</th><th>Rectángulo PDF</th><th>URL</th><th>Juego</th><th>Player ID</th><th>Slug</th><th>Candidatas</th><th>Estado</th></tr></thead><tbody id="links-annotations"></tbody></table>
+      </div>
+    </details>
+  </section>
 </main>
 </body>
 </html>

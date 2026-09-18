@@ -254,3 +254,37 @@ matcher, generador, detalles, filtros y las cinco descargas. El JS candidato
 se ejecutó en un objeto window aislado y produjo 277 registros con IDs únicos,
 sin precios operativos cero; catálogo original y localStorage no cambiaron.
 
+
+## Fase 6A: enlaces del PDF (solo diagnóstico)
+
+Abrir `tools/futbin-importer.html` con Live Server y seleccionar el PDF local.
+La sección **Enlaces FUTBIN** muestra asociaciones por aparición, todos los dominios,
+las URLs y sus rectángulos. **Exportar diagnóstico de enlaces** descarga
+`futbin-links-diagnostic.json`: metadata, summary, cards, links y annotations.
+Los IDs `snapshot-card-N` son referencias locales al índice del snapshot (base cero),
+no IDs del catálogo. `playerId` se conserva como cadena.
+
+PDF.js 5.4.624 lee `page.getAnnotations()` antes de liberar cada página. No visita
+las URLs extraídas. El diagnóstico no se incorpora al matcher ni al generator.
+Las coordenadas son las originales del PDF, sin viewport, con Y creciente hacia arriba.
+Se reutiliza la geometría del parser: columna de 132 unidades y banda vertical
+anchorY - 66 a anchorY + 86, limitada a la página. En fragmentos de otra página
+se utiliza únicamente la evidencia económica que ya identificó el parser.
+Se exige una intersección de al menos el 50% del área del rectángulo o de la región
+para descartar pequeños solapamientos con la columna vecina. Se conservan todas las
+candidatas; varias URLs distintas, áreas compartidas o rutas FUTBIN no reconocidas
+producen AMBIGUOUS_LINK. Fragmentos con la misma URL en una carta no se duplican.
+Un fallo al leer anotaciones marca el diagnóstico incompleto y las cartas afectadas
+como ambiguas, sin interrumpir el comparador. NO_LINK y NON_FUTBIN_LINK cuentan en
+`summary.noLink`; este último también tiene contador informativo separado.
+
+Validación local del PDF FUTBIN2: 279 anotaciones, 278 URLs, 268 de FUTBIN,
+17 páginas con enlaces y 250/250 apariciones asociadas, 0 sin enlace y 0 ambiguas.
+Hay 254 anotaciones de cartas (cuatro cartas tienen fragmentos entre páginas 1 y 2),
+14 enlaces genéricos FUTBIN y 10 externos. La forma de carta observada es
+`https://www.futbin.com/27/player/{playerId}/{slug}`. Los enlaces genéricos quedan
+como evidencia sin asociar. Esto comprueba el vínculo conservado en el PDF, no la
+vigencia del destino ni otros diseños/versiones de PDF; no se consulta FUTBIN.
+
+Pruebas sintéticas, sin red: `node --test tools/futbin-links.test.mjs`.
+La validación con el PDF y JSON reales usa fixtures locales ignorados por Git.
