@@ -495,7 +495,9 @@ comparisonUi["comparison-export"].addEventListener("click", () => {
 
 const generationMetricKeys = ["currentCatalog", "updatedApplied", "newApplied", "unchanged",
   "skippedSnapshotDuplicateGroups", "skippedSnapshotDuplicateOccurrences", "skippedNeedsReview",
-  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors"];
+  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors",
+  "futbinLinksApplied", "futbinLinksPreserved", "futbinLinksSkippedDuplicates",
+  "futbinLinksSkippedNeedsReview", "futbinLinksMissing"];
 const generationUi = Object.fromEntries([
   "generation-status", "generation-errors", "generation-details", "generation-export", "generation-report",
   ...generationMetricKeys.map(key => "generation-" + key)
@@ -539,7 +541,9 @@ function generateCatalogPreview() {
         ["newApplied", "Nuevas incorporadas: ID y datos de origen"],
         ["unchanged", "Registros sin cambios"], ["preservedNotInSnapshot", "Conservadas fuera del snapshot"],
         ["skippedSnapshotDuplicates", "Duplicados omitidos"], ["skippedNeedsReview", "Revisiones omitidas"],
-        ["generationNeedsReview", "Incidencias de generación"]
+        ["generationNeedsReview", "Incidencias de generación"],
+        ["futbinLinks", "Enlaces FUTBIN: decisiones y conflictos"],
+        ["futbinPreserved", "Metadata FUTBIN preservada"]
       ]) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
@@ -555,7 +559,7 @@ function generateCatalogPreview() {
       }
       resolve();
     };
-    try { worker.postMessage({ catalog: window.PLAYERS_DATA, comparison: comparisonResult }); }
+    try { worker.postMessage({ catalog: window.PLAYERS_DATA, comparison: comparisonResult, linksDiagnostic }); }
     catch (error) { fail(error); }
   });
 }
@@ -626,7 +630,7 @@ function renderSnapshotDuplicates() {
   }
 }
 
-// Diagnostic only: never visits URLs or passes link associations to the catalog pipeline.
+// Local evidence for candidate generation; never visits extracted URLs.
 let linksDiagnostic = null;
 function resetLinks() {
   linksDiagnostic = null;

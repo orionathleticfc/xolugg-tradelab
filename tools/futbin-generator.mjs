@@ -1,4 +1,5 @@
-﻿import { normalizeIdentity, normalizeSnapshotPrice } from "./futbin-matcher.mjs";
+import { applyCatalogLinks, validFutbin } from "./futbin-catalog-links.mjs";
+import { normalizeIdentity, normalizeSnapshotPrice } from "./futbin-matcher.mjs";
 
 const MARKET_FIELDS = ["ratingFuente", "popularidadFuente", "precioReferencia", "valorSecundarioFuente"];
 const SOURCE_FIELDS = ["paginaPdf", "precioPrincipalRaw", "valorSecundarioRaw", "importedAt", "snapshotFile"];
@@ -27,6 +28,7 @@ export function generateCardId(card) {
 
 function structural(record) {
   const value = clone(record);
+  delete value.futbin;
   for (const field of MARKET_FIELDS) delete value[field];
   if (value.fuente) for (const field of SOURCE_FIELDS) delete value.fuente[field];
   return value;
@@ -43,6 +45,7 @@ export function validateCandidateCatalog(candidate, current = []) {
     if (typeof record.id !== "string" || !record.id.trim()) error(index, "missing_id", "id");
     else if (ids.has(record.id)) error(index, "duplicate_id", "id");
     ids.add(record.id);
+    if ("futbin" in record && !validFutbin(record.futbin)) error(index, "invalid_futbin", "futbin");
     if (typeof record.nombre !== "string" || !record.nombre.trim()) error(index, "missing_name", "nombre");
     if (!Number.isInteger(record.ovr) || record.ovr < 1 || record.ovr > 99) error(index, "invalid_ovr", "ovr");
     if (!POSITIONS.has(record.posicionPrincipal)) error(index, "invalid_position", "posicionPrincipal");
@@ -65,6 +68,7 @@ export function validateCandidateCatalog(candidate, current = []) {
   });
   current.forEach((record, index) => {
     if (!candidate[index] || candidate[index].id !== record.id) error(index, "existing_id_or_order_changed", "id");
+    else if (record.futbin && (!candidate[index].futbin || candidate[index].futbin.playerId !== record.futbin.playerId)) error(index, "existing_futbin_identity_changed", "futbin");
     else if (!same(structural(record), structural(candidate[index]))) error(index, "existing_structure_changed");
   });
   return { valid: errors.length === 0, errors };
@@ -96,7 +100,7 @@ export function generateCandidateCatalog(current, comparison, options = {}) {
     if (!Array.isArray(comparison?.[key])) throw new TypeError("Comparación incompleta: " + key);
   }
   const metadata = {
-    generatorVersion: "0.4.0", generatedAt: options.generatedAt ?? new Date().toISOString(),
+    generatorVersion: "0.6.0", generatedAt: options.generatedAt ?? new Date().toISOString(),
     snapshotFile: comparison.metadata?.fileName ?? null,
     matcherVersion: comparison.metadata?.matcherVersion ?? null,
     policy: "Candidate only. Existing records retain order, IDs and structure; missing prices never replace current prices."
@@ -156,6 +160,9 @@ export function generateCandidateCatalog(current, comparison, options = {}) {
     }
     if (pdf.precioDisponible) next.precioReferencia = pdf.precioReferencia;
     next.fuente = sourceValues(pdf, next.fuente, metadata);
+    const effectiveChanges = changesBetween(existing, next);
+    delete effectiveChanges["fuente.importedAt"];
+    if (!Object.keys(effectiveChanges).length) next.fuente = clone(existing.fuente);
     candidateCatalog[row.catalogIndex] = next;
     report.updatedApplied.push({ id: existing.id, nombre: existing.nombre,
       catalogIndex: row.catalogIndex, snapshotIndex: row.snapshotIndex,
@@ -198,10 +205,13 @@ export function generateCandidateCatalog(current, comparison, options = {}) {
       posicionPrincipal: record.posicionPrincipal, precioReferencia: record.precioReferencia,
       popularidadFuente: record.popularidadFuente, sourcePage: pdf.sourcePage ?? null, snapshotIndex: row.snapshotIndex });
   }
+  const links = applyCatalogLinks(current, candidateCatalog, comparison, options.linksDiagnostic, same);
+  report.futbinLinks = links.audit;
+  report.futbinPreserved = links.preserved;
   const validation = validateCandidateCatalog(candidateCatalog, current);
   report.validation = clone(validation);
   report.summary = {
-    currentCatalog: current.length, updatedApplied: report.updatedApplied.length,
+    ...links.summary, currentCatalog: current.length, updatedApplied: report.updatedApplied.length,
     newApplied: report.newApplied.length, unchanged: report.unchanged.length,
     preservedNotInSnapshot: report.preservedNotInSnapshot.length,
     skippedSnapshotDuplicateGroups: report.skippedSnapshotDuplicates.length,

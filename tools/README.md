@@ -288,3 +288,51 @@ vigencia del destino ni otros diseños/versiones de PDF; no se consulta FUTBIN.
 
 Pruebas sintéticas, sin red: `node --test tools/futbin-links.test.mjs`.
 La validación con el PDF y JSON reales usa fixtures locales ignorados por Git.
+
+## Fase 6B: metadata FUTBIN en el candidato
+
+El worker recibe `linksDiagnostic`. El generador usa `futbin-catalog-links.mjs`
+para recalcular con `buildLinksDiagnostic` la asociación geométrica contra las
+cartas de esta comparación. Conserva `pageInfo` para reproducir el recorte de
+regiones. Solo aplica MATCHED + exact_identity + high sobre un registro existente
+no ambiguo ni reclamado por otra aparición; NEW requiere una comparación posterior
+contra el catálogo incorporado. Nunca construye enlaces por nombre ni visita URLs.
+
+Cada registro recibe únicamente `futbin: { game, playerId, slug, url }`.
+Se exige game 27, playerId entero positivo representable exactamente como number,
+slug no vacío y URL canónica HTTPS de www.futbin.com, sin query ni fragmento.
+Un playerId diferente al existente se omite como conflicto. Un cambio de slug del
+mismo playerId puede aplicarse con evidencia válida. Ausencia, ambigüedad, duplicados,
+revisiones o cartas fuera del snapshot preservan la metadata anterior.
+La validación completa también rechaza metadata preexistente inválida.
+
+El reporte contiene `futbinLinks` (decisión por aparición, índices, candidatos,
+URLs y old/proposed cuando corresponde) y `futbinPreserved` (por registro).
+Los contadores `futbinLinksApplied` y `futbinLinksPreserved` cuentan registros;
+`futbinLinksSkippedDuplicates` cuenta apariciones, no grupos;
+`futbinLinksSkippedNeedsReview` cuenta apariciones en revisión;
+`futbinLinksMissing` cuenta matches seguros sin enlace geométrico MATCHED.
+URLs inválidas, conflictos de ID y matches inseguros tienen contadores separados.
+La UI muestra los cinco contadores solicitados y detalles auditables.
+
+Validación offline reproducible con los fixtures locales de Fase 6A:
+
+```powershell
+$tests = @(Get-ChildItem tools -Filter '*.test.mjs' | ForEach-Object FullName)
+node --test @tests
+node tools/futbin-phase6b-local.mjs --export
+Get-ChildItem tools -File | Where-Object Extension -In '.js','.mjs' | ForEach-Object { node --check $_.FullName }
+```
+
+`futbin-phase6b-local.mjs` es un lector de anotaciones exclusivo del fixture Skia
+local con diccionarios sin comprimir; verifica el árbol de páginas y rechaza sintaxis
+no soportada. Lee el PDF original de nuevo, sin reutilizar resultados parciales.
+El importador continúa usando PDF.js. El script usa el diagnóstico de texto local
+para el parser, ejecuta dos veces matcher/generator, comprueba igualdad completa
+(incluido importedAt) y exporta `tools/players-data.candidate.js` y
+`tools/catalog-generation-report.json`. Los fixtures privados siguen ignorados.
+
+Resultado real: 277 registros, 216 enlaces aplicados, 0 preservados inicialmente,
+30 apariciones / 15 grupos duplicados omitidos, 4 NEEDS_REVIEW, 0 faltantes,
+0 conflictos y 0 errores. Segunda ejecución: 0 aplicados, 216 preservados,
+catálogo idéntico. No se reemplaza el catálogo de producción ni se usa localStorage.

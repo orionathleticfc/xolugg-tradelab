@@ -69,6 +69,6 @@ export function buildLinksDiagnostic({fileName,pages,extractedAt = new Date().to
   return {
     metadata:{fileName,extractedAt,pages,totalAnnotations:annotations.length,totalUrls:links.length,totalFutbinUrls:links.filter(l=>l.isFutbin).length,pagesWithLinks:[...new Set(links.map(l=>l.page))].sort((a,b)=>a-b),domains,complete:errors.length===0,errors,coordinates:'Unrotated PDF coordinates, Y increases upwards. Same space as parser tokens.',associationRule:'At least 50% of annotation or card region area overlaps; all candidates retained. Identical URLs within one card deduplicated.'},
     summary:{cards:rows.length,matched:rows.filter(c=>c.status==='MATCHED').length,noLink:rows.filter(c=>['NO_LINK','NON_FUTBIN_LINK'].includes(c.status)).length,ambiguous:rows.filter(c=>c.status==='AMBIGUOUS_LINK').length,nonFutbin:rows.filter(c=>c.status==='NON_FUTBIN_LINK').length},
-    cards:rows,links,annotations
+    cards:rows,links,annotations,pageInfo
   };
 }
