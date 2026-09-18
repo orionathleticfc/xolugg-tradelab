@@ -60,16 +60,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 83.5,
-    "popularidadFuente": 136,
-    "precioReferencia": 5600,
+    "popularidadFuente": 124,
+    "precioReferencia": 4600,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "5.6K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "4.6K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -104,16 +104,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 91.8,
-    "popularidadFuente": 160,
-    "precioReferencia": 83500,
+    "popularidadFuente": 184,
+    "precioReferencia": 72500,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "83.5K",
+      "precioPrincipalRaw": "72.5K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -146,16 +146,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.1,
-    "popularidadFuente": 139,
-    "precioReferencia": 57000,
+    "popularidadFuente": 114,
+    "precioReferencia": 59500,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "57K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "59.5K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -189,16 +189,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 81.4,
-    "popularidadFuente": 220,
-    "precioReferencia": 3700,
+    "popularidadFuente": 146,
+    "precioReferencia": 2600,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "3.7K",
+      "precioPrincipalRaw": "2.6K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -235,16 +235,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.2,
-    "popularidadFuente": 149,
-    "precioReferencia": 19250,
+    "popularidadFuente": 165,
+    "precioReferencia": 16250,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "19.25K",
+      "precioPrincipalRaw": "16.25K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -314,16 +314,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 3,
     "ratingFuente": 82.4,
-    "popularidadFuente": 220,
+    "popularidadFuente": 256,
     "precioReferencia": 30000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "30K",
+      "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -360,16 +360,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.8,
-    "popularidadFuente": 294,
-    "precioReferencia": 26750,
+    "popularidadFuente": 414,
+    "precioReferencia": 39500,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "0",
+      "precioPrincipalRaw": "39.5K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -404,16 +404,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.1,
-    "popularidadFuente": 117,
-    "precioReferencia": 4200,
+    "popularidadFuente": 68,
+    "precioReferencia": 3100,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "4.2K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "3.1K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -446,16 +446,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 81.2,
-    "popularidadFuente": 106,
-    "precioReferencia": 4600,
+    "popularidadFuente": 70,
+    "precioReferencia": 3500,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "4.6K",
+      "precioPrincipalRaw": "3.5K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -489,16 +489,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 91.5,
-    "popularidadFuente": 38,
-    "precioReferencia": 1480000,
+    "popularidadFuente": 53,
+    "precioReferencia": 1500000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "1.48M",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "1.5M",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -567,16 +567,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 79.7,
-    "popularidadFuente": 40,
-    "precioReferencia": 1600,
+    "popularidadFuente": 31,
+    "precioReferencia": 1100,
     "valorSecundarioFuente": 160,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "1.6K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "1.1K",
       "valorSecundarioRaw": "160",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -612,16 +612,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 151,
-    "precioReferencia": 56500,
+    "popularidadFuente": 77,
+    "precioReferencia": 54000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "56.5K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "54K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -655,16 +655,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.2,
-    "popularidadFuente": 26,
+    "popularidadFuente": 19,
     "precioReferencia": 9400,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
+      "paginaPdf": 11,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -698,16 +698,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.1,
-    "popularidadFuente": 46,
+    "popularidadFuente": 66,
     "precioReferencia": 9800,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
+      "paginaPdf": 3,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -777,16 +777,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 89.1,
-    "popularidadFuente": 52,
-    "precioReferencia": 39500,
+    "popularidadFuente": 156,
+    "precioReferencia": 37000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "39.5K",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "37K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -820,16 +820,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.2,
-    "popularidadFuente": 49,
-    "precioReferencia": 6900,
+    "popularidadFuente": 47,
+    "precioReferencia": 5900,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "6.9K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "5.9K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -861,7 +861,7 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.1,
-    "popularidadFuente": 165,
+    "popularidadFuente": 195,
     "precioReferencia": 9100,
     "valorSecundarioFuente": 830,
     "fuente": {
@@ -869,8 +869,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 1,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -903,16 +903,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.6,
-    "popularidadFuente": 61,
-    "precioReferencia": 4900,
+    "popularidadFuente": 46,
+    "precioReferencia": 3900,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "4.9K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "3.9K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -947,16 +947,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.6,
-    "popularidadFuente": 61,
-    "precioReferencia": 37500,
+    "popularidadFuente": 80,
+    "precioReferencia": 33750,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "37.5K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "33.75K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -988,16 +988,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 84.9,
-    "popularidadFuente": 35,
+    "popularidadFuente": 33,
     "precioReferencia": null,
     "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
+      "paginaPdf": 6,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "513",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1030,16 +1030,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 82.8,
-    "popularidadFuente": 50,
-    "precioReferencia": 5900,
+    "popularidadFuente": 27,
+    "precioReferencia": 4700,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "5.9K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "4.7K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1108,16 +1108,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 88.4,
-    "popularidadFuente": 85,
-    "precioReferencia": 63500,
+    "popularidadFuente": 119,
+    "precioReferencia": 79000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "63.5K",
+      "precioPrincipalRaw": "79K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1186,16 +1186,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 80.5,
-    "popularidadFuente": 42,
-    "precioReferencia": 1000,
+    "popularidadFuente": 24,
+    "precioReferencia": 850,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "1K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "850",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1228,16 +1228,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 80.5,
-    "popularidadFuente": 183,
-    "precioReferencia": 56500,
+    "popularidadFuente": 127,
+    "precioReferencia": 63500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "56.5K",
+      "precioPrincipalRaw": "63.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1270,16 +1270,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 2,
     "ratingFuente": 82.7,
-    "popularidadFuente": 37,
-    "precioReferencia": 17000,
+    "popularidadFuente": 41,
+    "precioReferencia": 15500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "17K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "15.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1314,16 +1314,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.9,
-    "popularidadFuente": 64,
-    "precioReferencia": 23750,
+    "popularidadFuente": 75,
+    "precioReferencia": 20000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "23.75K",
+      "precioPrincipalRaw": "20K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1357,16 +1357,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 81.4,
-    "popularidadFuente": 98,
-    "precioReferencia": 7100,
+    "popularidadFuente": 67,
+    "precioReferencia": 5600,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "7.1K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "5.6K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1403,16 +1403,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83.4,
-    "popularidadFuente": 34,
-    "precioReferencia": 43750,
+    "popularidadFuente": 56,
+    "precioReferencia": 42000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "43.75K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "42K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1447,16 +1447,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 88.9,
-    "popularidadFuente": 68,
-    "precioReferencia": 20000,
+    "popularidadFuente": 53,
+    "precioReferencia": 17500,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "20K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "17.5K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1491,16 +1491,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 83.9,
-    "popularidadFuente": 47,
-    "precioReferencia": 16500,
+    "popularidadFuente": 25,
+    "precioReferencia": 11750,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "16.5K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "11.75K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1532,16 +1532,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 83.7,
-    "popularidadFuente": 40,
-    "precioReferencia": 29500,
+    "popularidadFuente": 52,
+    "precioReferencia": 26500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "29.5K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "26.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1573,16 +1573,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 85.4,
-    "popularidadFuente": 74,
-    "precioReferencia": 13500,
+    "popularidadFuente": 81,
+    "precioReferencia": 22000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "0",
+      "precioPrincipalRaw": "22K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1657,16 +1657,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.2,
-    "popularidadFuente": 56,
-    "precioReferencia": 53000,
+    "popularidadFuente": 47,
+    "precioReferencia": 47250,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "53K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "47.25K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1700,16 +1700,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 80.7,
-    "popularidadFuente": 35,
-    "precioReferencia": 1900,
+    "popularidadFuente": 19,
+    "precioReferencia": 1500,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "1.9K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "1.5K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1743,16 +1743,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.4,
-    "popularidadFuente": 70,
-    "precioReferencia": 7800,
+    "popularidadFuente": 40,
+    "precioReferencia": 7500,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "7.8K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "7.5K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1787,16 +1787,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 90.4,
-    "popularidadFuente": 62,
-    "precioReferencia": 98000,
+    "popularidadFuente": 60,
+    "precioReferencia": 106000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 3,
-      "precioPrincipalRaw": "98K",
+      "precioPrincipalRaw": "106K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1831,7 +1831,7 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 85.1,
-    "popularidadFuente": 63,
+    "popularidadFuente": 75,
     "precioReferencia": 23000,
     "valorSecundarioFuente": 2100,
     "fuente": {
@@ -1839,8 +1839,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 2,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1873,16 +1873,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 90.2,
-    "popularidadFuente": 42,
-    "precioReferencia": 47500,
+    "popularidadFuente": 58,
+    "precioReferencia": 43000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "47.5K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "43K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -1983,16 +1983,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.4,
-    "popularidadFuente": 80,
+    "popularidadFuente": 48,
     "precioReferencia": 10000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
+      "paginaPdf": 4,
       "precioPrincipalRaw": "10K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2028,15 +2028,15 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 83.8,
     "popularidadFuente": 48,
-    "precioReferencia": 2700,
+    "precioReferencia": 1400,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "2.7K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "1.4K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2068,16 +2068,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 86.2,
-    "popularidadFuente": 35,
-    "precioReferencia": 80000,
+    "popularidadFuente": 63,
+    "precioReferencia": 74000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "80K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "74K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2109,7 +2109,7 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 2,
     "ratingFuente": 81.9,
-    "popularidadFuente": 60,
+    "popularidadFuente": 62,
     "precioReferencia": 20000,
     "valorSecundarioFuente": 340,
     "fuente": {
@@ -2117,8 +2117,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 3,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2150,16 +2150,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 83.6,
-    "popularidadFuente": 43,
-    "precioReferencia": 39250,
+    "popularidadFuente": 34,
+    "precioReferencia": 42000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "39.25K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "42K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2192,16 +2192,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 82.6,
-    "popularidadFuente": 33,
-    "precioReferencia": 5000,
+    "popularidadFuente": 37,
+    "precioReferencia": 4000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "5K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "4K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2233,16 +2233,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 4,
     "ratingFuente": 80.9,
-    "popularidadFuente": 33,
-    "precioReferencia": 1300,
+    "popularidadFuente": 20,
+    "precioReferencia": 900,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "1.3K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "900",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2275,16 +2275,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 77.8,
-    "popularidadFuente": 31,
-    "precioReferencia": 2400,
+    "popularidadFuente": 23,
+    "precioReferencia": 1600,
     "valorSecundarioFuente": 140,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "2.4K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "1.6K",
       "valorSecundarioRaw": "140",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2318,16 +2318,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 88.8,
-    "popularidadFuente": 59,
-    "precioReferencia": 15750,
+    "popularidadFuente": 34,
+    "precioReferencia": 12000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "15.75K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "12K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2363,16 +2363,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 90.3,
-    "popularidadFuente": 36,
-    "precioReferencia": 45000,
+    "popularidadFuente": 27,
+    "precioReferencia": 43500,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "45K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "43.5K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2405,16 +2405,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 82.3,
-    "popularidadFuente": 29,
-    "precioReferencia": 1000,
+    "popularidadFuente": 21,
+    "precioReferencia": 900,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "1K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "900",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2446,16 +2446,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.7,
-    "popularidadFuente": 40,
-    "precioReferencia": 19000,
+    "popularidadFuente": 75,
+    "precioReferencia": 26500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "26.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2490,16 +2490,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 86.8,
-    "popularidadFuente": 36,
-    "precioReferencia": 19750,
+    "popularidadFuente": 35,
+    "precioReferencia": 17500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 6,
-      "precioPrincipalRaw": "19.75K",
+      "precioPrincipalRaw": "17.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2533,16 +2533,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 93.1,
-    "popularidadFuente": 37,
-    "precioReferencia": 208000,
+    "popularidadFuente": 45,
+    "precioReferencia": 199000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "208K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "199K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2575,16 +2575,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.9,
-    "popularidadFuente": 65,
-    "precioReferencia": 26000,
+    "popularidadFuente": 93,
+    "precioReferencia": 38750,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "0",
+      "precioPrincipalRaw": "38.75K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2697,16 +2697,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 80.8,
-    "popularidadFuente": 40,
-    "precioReferencia": 6000,
+    "popularidadFuente": 24,
+    "precioReferencia": 4600,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "6K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "4.6K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2740,16 +2740,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 85.9,
-    "popularidadFuente": 42,
-    "precioReferencia": 25500,
+    "popularidadFuente": 41,
+    "precioReferencia": 20750,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "25.5K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "20.75K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2781,16 +2781,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 87.3,
-    "popularidadFuente": 40,
-    "precioReferencia": 86500,
+    "popularidadFuente": 41,
+    "precioReferencia": 88500,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 5,
-      "precioPrincipalRaw": "86.5K",
+      "precioPrincipalRaw": "88.5K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2822,16 +2822,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 4,
     "ratingFuente": 81,
-    "popularidadFuente": 51,
-    "precioReferencia": 3900,
+    "popularidadFuente": 42,
+    "precioReferencia": 2800,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "3.9K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "2.8K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2864,16 +2864,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.5,
-    "popularidadFuente": 43,
-    "precioReferencia": 35000,
+    "popularidadFuente": 44,
+    "precioReferencia": 30000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 4,
-      "precioPrincipalRaw": "35K",
+      "precioPrincipalRaw": "30K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2906,16 +2906,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 82.6,
-    "popularidadFuente": 38,
-    "precioReferencia": 30000,
+    "popularidadFuente": 30,
+    "precioReferencia": 28000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "30K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "28K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2949,16 +2949,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.9,
-    "popularidadFuente": 36,
-    "precioReferencia": 45000,
+    "popularidadFuente": 33,
+    "precioReferencia": 44750,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 6,
-      "precioPrincipalRaw": "45K",
+      "precioPrincipalRaw": "44.75K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -2991,16 +2991,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 83.6,
-    "popularidadFuente": 31,
-    "precioReferencia": 17500,
+    "popularidadFuente": 26,
+    "precioReferencia": 15750,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 8,
-      "precioPrincipalRaw": "17.5K",
+      "precioPrincipalRaw": "15.75K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3032,16 +3032,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 2,
     "ratingFuente": 86.4,
-    "popularidadFuente": 17,
-    "precioReferencia": 48500,
+    "popularidadFuente": 23,
+    "precioReferencia": 42500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "48.5K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "42.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3075,16 +3075,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83.2,
-    "popularidadFuente": 35,
-    "precioReferencia": 29000,
+    "popularidadFuente": 44,
+    "precioReferencia": 24750,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "29K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "24.75K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3119,16 +3119,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 85.1,
-    "popularidadFuente": 25,
-    "precioReferencia": 4800,
+    "popularidadFuente": 18,
+    "precioReferencia": 3500,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "4.8K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "3.5K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3162,16 +3162,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 3,
     "ratingFuente": 92,
-    "popularidadFuente": 29,
-    "precioReferencia": 399000,
+    "popularidadFuente": 113,
+    "precioReferencia": 449000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "399K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "449K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3204,16 +3204,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 86.8,
-    "popularidadFuente": 43,
-    "precioReferencia": 14000,
+    "popularidadFuente": 41,
+    "precioReferencia": 9900,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "14K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "9.9K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3248,7 +3248,7 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83,
-    "popularidadFuente": 64,
+    "popularidadFuente": 74,
     "precioReferencia": 9300,
     "valorSecundarioFuente": 410,
     "fuente": {
@@ -3256,8 +3256,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 2,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3290,16 +3290,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 84.5,
-    "popularidadFuente": 49,
-    "precioReferencia": 16250,
+    "popularidadFuente": 59,
+    "precioReferencia": 13750,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 3,
-      "precioPrincipalRaw": "16.25K",
+      "precioPrincipalRaw": "13.75K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3331,16 +3331,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 4,
     "ratingFuente": 82,
-    "popularidadFuente": 53,
-    "precioReferencia": 26750,
+    "popularidadFuente": 55,
+    "precioReferencia": 27000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 3,
-      "precioPrincipalRaw": "26.75K",
+      "precioPrincipalRaw": "27K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3376,16 +3376,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 84.7,
-    "popularidadFuente": 22,
-    "precioReferencia": 2300,
+    "popularidadFuente": 25,
+    "precioReferencia": 1500,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "2.3K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "1.5K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3418,16 +3418,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 90,
-    "popularidadFuente": 33,
-    "precioReferencia": 170000,
+    "popularidadFuente": 22,
+    "precioReferencia": 160000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "170K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "160K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3461,16 +3461,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 85.8,
-    "popularidadFuente": 64,
-    "precioReferencia": 22750,
+    "popularidadFuente": 67,
+    "precioReferencia": 37000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "37K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3505,16 +3505,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.9,
-    "popularidadFuente": 34,
-    "precioReferencia": 19500,
+    "popularidadFuente": 15,
+    "precioReferencia": 15250,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "19.5K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "15.25K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3549,16 +3549,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 87.5,
-    "popularidadFuente": 24,
-    "precioReferencia": 29500,
+    "popularidadFuente": 23,
+    "precioReferencia": 25750,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "29.5K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "25.75K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3592,16 +3592,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.3,
-    "popularidadFuente": 38,
-    "precioReferencia": 3400,
+    "popularidadFuente": 20,
+    "precioReferencia": 1700,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "3.4K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "1.7K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3634,16 +3634,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.6,
-    "popularidadFuente": 39,
-    "precioReferencia": 11000,
+    "popularidadFuente": 32,
+    "precioReferencia": 9800,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "11K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "9.8K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3678,16 +3678,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.5,
-    "popularidadFuente": 29,
-    "precioReferencia": 29500,
+    "popularidadFuente": 21,
+    "precioReferencia": 21000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "29.5K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "21K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3720,7 +3720,7 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.6,
-    "popularidadFuente": 35,
+    "popularidadFuente": 32,
     "precioReferencia": 126000,
     "valorSecundarioFuente": 4100,
     "fuente": {
@@ -3728,8 +3728,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 6,
       "precioPrincipalRaw": "126K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3763,16 +3763,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 2,
     "ratingFuente": 77.7,
-    "popularidadFuente": 39,
-    "precioReferencia": 9500,
+    "popularidadFuente": 35,
+    "precioReferencia": 8800,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "9.5K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "8.8K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3809,16 +3809,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.1,
-    "popularidadFuente": 116,
-    "precioReferencia": 99000,
+    "popularidadFuente": 145,
+    "precioReferencia": 164000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "164K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3851,16 +3851,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 86.5,
-    "popularidadFuente": 44,
-    "precioReferencia": 82000,
+    "popularidadFuente": 48,
+    "precioReferencia": 79500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 4,
-      "precioPrincipalRaw": "82K",
+      "precioPrincipalRaw": "79.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3894,16 +3894,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.4,
-    "popularidadFuente": 33,
-    "precioReferencia": 4700,
+    "popularidadFuente": 24,
+    "precioReferencia": 3300,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "4.7K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "3.3K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3935,16 +3935,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 81.1,
-    "popularidadFuente": 29,
-    "precioReferencia": 2000,
+    "popularidadFuente": 18,
+    "precioReferencia": 1400,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "2K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.4K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -3977,16 +3977,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 95.4,
-    "popularidadFuente": 24,
-    "precioReferencia": 3800000,
+    "popularidadFuente": 34,
+    "precioReferencia": 3790000,
     "valorSecundarioFuente": 19000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "3.8M",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "3.79M",
       "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4019,16 +4019,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 81.2,
-    "popularidadFuente": 22,
-    "precioReferencia": 6800,
+    "popularidadFuente": 21,
+    "precioReferencia": 4700,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "6.8K",
+      "precioPrincipalRaw": "4.7K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4063,16 +4063,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83.5,
-    "popularidadFuente": 34,
-    "precioReferencia": 4600,
+    "popularidadFuente": 31,
+    "precioReferencia": 3400,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 7,
-      "precioPrincipalRaw": "4.6K",
+      "precioPrincipalRaw": "3.4K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4107,16 +4107,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 89.4,
-    "popularidadFuente": 44,
-    "precioReferencia": null,
+    "popularidadFuente": 88,
+    "precioReferencia": 118000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "118K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4150,16 +4150,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 88.1,
-    "popularidadFuente": 44,
-    "precioReferencia": 79500,
+    "popularidadFuente": 43,
+    "precioReferencia": 81500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 4,
-      "precioPrincipalRaw": "79.5K",
+      "precioPrincipalRaw": "81.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4196,16 +4196,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 91.7,
-    "popularidadFuente": 33,
-    "precioReferencia": 622000,
+    "popularidadFuente": 34,
+    "precioReferencia": 600000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "622K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "600K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4273,16 +4273,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 2,
     "ratingFuente": 84.7,
-    "popularidadFuente": 33,
-    "precioReferencia": 28000,
+    "popularidadFuente": 28,
+    "precioReferencia": 25750,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 7,
-      "precioPrincipalRaw": "0",
+      "precioPrincipalRaw": "25.75K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4315,16 +4315,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 79.2,
-    "popularidadFuente": 35,
-    "precioReferencia": 1400,
+    "popularidadFuente": 22,
+    "precioReferencia": 1200,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "1.4K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "1.2K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4357,16 +4357,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.8,
-    "popularidadFuente": 39,
-    "precioReferencia": 2800,
+    "popularidadFuente": 26,
+    "precioReferencia": 1400,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "2.8K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "1.4K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4403,16 +4403,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 85.5,
-    "popularidadFuente": 28,
+    "popularidadFuente": 38,
     "precioReferencia": null,
     "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
+      "paginaPdf": 5,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "513",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4446,16 +4446,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 85.8,
-    "popularidadFuente": 33,
+    "popularidadFuente": 24,
     "precioReferencia": null,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
+      "paginaPdf": 9,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4490,16 +4490,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 79.9,
-    "popularidadFuente": 21,
-    "precioReferencia": 1200,
+    "popularidadFuente": 16,
+    "precioReferencia": 950,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "1.2K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "950",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4533,16 +4533,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 81,
-    "popularidadFuente": 23,
-    "precioReferencia": 7800,
+    "popularidadFuente": 26,
+    "precioReferencia": 5500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "7.8K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "5.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4577,16 +4577,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 2,
     "ratingFuente": 84,
-    "popularidadFuente": 29,
-    "precioReferencia": 3000,
+    "popularidadFuente": 25,
+    "precioReferencia": 2200,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 8,
-      "precioPrincipalRaw": "3K",
+      "precioPrincipalRaw": "2.2K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4623,16 +4623,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.1,
-    "popularidadFuente": 28,
+    "popularidadFuente": 20,
     "precioReferencia": null,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
+      "paginaPdf": 11,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4664,16 +4664,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 83.7,
-    "popularidadFuente": 37,
-    "precioReferencia": 7000,
+    "popularidadFuente": 36,
+    "precioReferencia": 5500,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "7K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "5.5K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4754,16 +4754,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.6,
-    "popularidadFuente": 27,
-    "precioReferencia": 8200,
+    "popularidadFuente": 16,
+    "precioReferencia": 5300,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "8.2K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "5.3K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4795,16 +4795,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 81.4,
-    "popularidadFuente": 17,
+    "popularidadFuente": 10,
     "precioReferencia": 1000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
+      "paginaPdf": 16,
       "precioPrincipalRaw": "1K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4839,16 +4839,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.9,
-    "popularidadFuente": 36,
-    "precioReferencia": 9900,
+    "popularidadFuente": 40,
+    "precioReferencia": 6800,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "9.9K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "6.8K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4883,16 +4883,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.2,
-    "popularidadFuente": 17,
+    "popularidadFuente": 12,
     "precioReferencia": 700,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
+      "paginaPdf": 15,
       "precioPrincipalRaw": "700",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4926,16 +4926,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 2,
     "ratingFuente": 86.1,
-    "popularidadFuente": 42,
-    "precioReferencia": 37000,
+    "popularidadFuente": 49,
+    "precioReferencia": 39250,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 4,
-      "precioPrincipalRaw": "37K",
+      "precioPrincipalRaw": "39.25K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -4968,16 +4968,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 3,
     "ratingFuente": 87.1,
-    "popularidadFuente": 37,
-    "precioReferencia": 28750,
+    "popularidadFuente": 33,
+    "precioReferencia": 21000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 6,
-      "precioPrincipalRaw": "28.75K",
+      "precioPrincipalRaw": "21K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5009,16 +5009,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 2,
     "ratingFuente": 87.1,
-    "popularidadFuente": 28,
-    "precioReferencia": 41000,
+    "popularidadFuente": 27,
+    "precioReferencia": 33000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "41K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "33K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5050,16 +5050,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 17,
-    "precioReferencia": 61500,
+    "popularidadFuente": 25,
+    "precioReferencia": 67000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "61.5K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "67K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5095,16 +5095,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 36,
-    "precioReferencia": 64000,
+    "popularidadFuente": 47,
+    "precioReferencia": 61000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "64K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "61K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5137,16 +5137,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 78.9,
-    "popularidadFuente": 28,
-    "precioReferencia": 1700,
+    "popularidadFuente": 32,
+    "precioReferencia": 1100,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "1.7K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "1.1K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5178,16 +5178,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 86.8,
-    "popularidadFuente": 34,
-    "precioReferencia": 157000,
+    "popularidadFuente": 40,
+    "precioReferencia": 153000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "157K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "153K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5219,16 +5219,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 87.2,
-    "popularidadFuente": 19,
-    "precioReferencia": 45000,
+    "popularidadFuente": 23,
+    "precioReferencia": 70500,
     "valorSecundarioFuente": 5120,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "45K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "70.5K",
       "valorSecundarioRaw": "5.12K",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5262,16 +5262,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 77.9,
-    "popularidadFuente": 17,
-    "precioReferencia": 1100,
+    "popularidadFuente": 13,
+    "precioReferencia": 950,
     "valorSecundarioFuente": 140,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "1.1K",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "950",
       "valorSecundarioRaw": "140",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5304,16 +5304,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 80.9,
-    "popularidadFuente": 20,
-    "precioReferencia": 1100,
+    "popularidadFuente": 14,
+    "precioReferencia": 950,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "1.1K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "950",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5346,16 +5346,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 89.2,
-    "popularidadFuente": 24,
-    "precioReferencia": 8200,
+    "popularidadFuente": 15,
+    "precioReferencia": 7900,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "8.2K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "7.9K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5389,16 +5389,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.1,
-    "popularidadFuente": 61,
-    "precioReferencia": 10000,
+    "popularidadFuente": 88,
+    "precioReferencia": 17000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "17K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5431,16 +5431,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 91.1,
-    "popularidadFuente": 29,
-    "precioReferencia": 277000,
+    "popularidadFuente": 46,
+    "precioReferencia": 274000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "277K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "274K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5473,15 +5473,15 @@ window.PLAYERS_DATA = [
     "weakFoot": 3,
     "ratingFuente": 88.7,
     "popularidadFuente": 36,
-    "precioReferencia": 249000,
+    "precioReferencia": 260000,
     "valorSecundarioFuente": 19000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "249K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "260K",
       "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5556,16 +5556,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 88.4,
-    "popularidadFuente": 18,
-    "precioReferencia": 25000,
+    "popularidadFuente": 17,
+    "precioReferencia": 17250,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "25K",
+      "precioPrincipalRaw": "17.25K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5598,16 +5598,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.9,
-    "popularidadFuente": 47,
-    "precioReferencia": 69000,
+    "popularidadFuente": 32,
+    "precioReferencia": 69500,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "69K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "69.5K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5640,16 +5640,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.8,
-    "popularidadFuente": 34,
-    "precioReferencia": 72000,
+    "popularidadFuente": 43,
+    "precioReferencia": 66000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "72K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "66K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5684,16 +5684,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.5,
-    "popularidadFuente": 21,
-    "precioReferencia": 14750,
+    "popularidadFuente": 25,
+    "precioReferencia": 15750,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "14.75K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "15.75K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5725,16 +5725,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 47,
+    "popularidadFuente": 61,
     "precioReferencia": 10000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
+      "paginaPdf": 3,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5767,16 +5767,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 91.1,
-    "popularidadFuente": 39,
-    "precioReferencia": 140000,
+    "popularidadFuente": 55,
+    "precioReferencia": 128000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "140K",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "128K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5810,16 +5810,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 82.2,
-    "popularidadFuente": 15,
-    "precioReferencia": 1700,
+    "popularidadFuente": 19,
+    "precioReferencia": 1200,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "1.7K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "1.2K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5851,16 +5851,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 84.2,
-    "popularidadFuente": 24,
-    "precioReferencia": 12000,
+    "popularidadFuente": 20,
+    "precioReferencia": 10000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "12K",
+      "precioPrincipalRaw": "10K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5894,16 +5894,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 85.7,
-    "popularidadFuente": 47,
-    "precioReferencia": 135000,
+    "popularidadFuente": 34,
+    "precioReferencia": 120000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "135K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "120K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5936,15 +5936,15 @@ window.PLAYERS_DATA = [
     "weakFoot": 3,
     "ratingFuente": 83.6,
     "popularidadFuente": 30,
-    "precioReferencia": 7000,
+    "precioReferencia": 6300,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "7K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "6.3K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -5977,16 +5977,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 80.9,
-    "popularidadFuente": 23,
-    "precioReferencia": 1600,
+    "popularidadFuente": 17,
+    "precioReferencia": 1300,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "1.6K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.3K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6018,16 +6018,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 84.1,
-    "popularidadFuente": 17,
-    "precioReferencia": 24750,
+    "popularidadFuente": 26,
+    "precioReferencia": 24000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "24.75K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "24K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6062,16 +6062,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 86.1,
-    "popularidadFuente": 18,
-    "precioReferencia": 17250,
+    "popularidadFuente": 23,
+    "precioReferencia": 14000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "17.25K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "14K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6217,16 +6217,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 80.9,
-    "popularidadFuente": 18,
+    "popularidadFuente": 19,
     "precioReferencia": 700,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
+      "paginaPdf": 11,
       "precioPrincipalRaw": "700",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6301,16 +6301,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 87.4,
-    "popularidadFuente": 39,
+    "popularidadFuente": 32,
     "precioReferencia": 263000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
+      "paginaPdf": 6,
       "precioPrincipalRaw": "263K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6343,16 +6343,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 86.5,
-    "popularidadFuente": 15,
-    "precioReferencia": 8100,
+    "popularidadFuente": 18,
+    "precioReferencia": 7400,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "8.1K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "7.4K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6384,16 +6384,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 18,
-    "precioReferencia": 48750,
+    "popularidadFuente": 17,
+    "precioReferencia": 55000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "48.75K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "55K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6470,16 +6470,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 3,
     "ratingFuente": 83,
-    "popularidadFuente": 18,
-    "precioReferencia": 800,
+    "popularidadFuente": 13,
+    "precioReferencia": 750,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "800",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "750",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6512,16 +6512,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 5,
     "ratingFuente": 83.4,
-    "popularidadFuente": 29,
-    "precioReferencia": 23250,
+    "popularidadFuente": 21,
+    "precioReferencia": 24000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "23.25K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "24K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6554,16 +6554,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 85.9,
-    "popularidadFuente": 21,
+    "popularidadFuente": 25,
     "precioReferencia": 6800,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
+      "paginaPdf": 8,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6598,16 +6598,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 87.5,
-    "popularidadFuente": 17,
-    "precioReferencia": 6000,
+    "popularidadFuente": 21,
+    "precioReferencia": 5900,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "6K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "5.9K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6640,16 +6640,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 89.4,
-    "popularidadFuente": 34,
-    "precioReferencia": 13500,
+    "popularidadFuente": 22,
+    "precioReferencia": 12250,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "13.5K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "12.25K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6681,16 +6681,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 81.6,
-    "popularidadFuente": 41,
-    "precioReferencia": 5600,
+    "popularidadFuente": 30,
+    "precioReferencia": 4500,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "5.6K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "4.5K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6725,16 +6725,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.4,
-    "popularidadFuente": 41,
+    "popularidadFuente": 25,
     "precioReferencia": 2000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
+      "paginaPdf": 8,
       "precioPrincipalRaw": "2K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6768,16 +6768,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.7,
-    "popularidadFuente": 17,
-    "precioReferencia": 28750,
+    "popularidadFuente": 18,
+    "precioReferencia": 21500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "28.75K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "21.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6810,16 +6810,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 82,
-    "popularidadFuente": 29,
+    "popularidadFuente": 16,
     "precioReferencia": 1000,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
+      "paginaPdf": 12,
       "precioPrincipalRaw": "1K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6892,16 +6892,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 87.8,
-    "popularidadFuente": 31,
-    "precioReferencia": 36750,
+    "popularidadFuente": 23,
+    "precioReferencia": 37750,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "36.75K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "37.75K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -6937,16 +6937,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 89.3,
-    "popularidadFuente": 20,
-    "precioReferencia": 317000,
+    "popularidadFuente": 22,
+    "precioReferencia": 304000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "317K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "304K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7026,16 +7026,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 81.3,
-    "popularidadFuente": 16,
+    "popularidadFuente": 15,
     "precioReferencia": 750,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
+      "paginaPdf": 13,
       "precioPrincipalRaw": "750",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7070,16 +7070,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 84.4,
-    "popularidadFuente": 20,
-    "precioReferencia": 15250,
+    "popularidadFuente": 16,
+    "precioReferencia": 14750,
     "valorSecundarioFuente": 425,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "15.25K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "14.75K",
       "valorSecundarioRaw": "425",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7152,16 +7152,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 2,
     "ratingFuente": 85.3,
-    "popularidadFuente": 24,
-    "precioReferencia": 18500,
+    "popularidadFuente": 23,
+    "precioReferencia": 19500,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "18.5K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "19.5K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7193,16 +7193,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 2,
     "ratingFuente": 81.7,
-    "popularidadFuente": 20,
-    "precioReferencia": 5000,
+    "popularidadFuente": 16,
+    "precioReferencia": 4600,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "5K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "4.6K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7237,16 +7237,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 88.2,
-    "popularidadFuente": 48,
-    "precioReferencia": 49250,
+    "popularidadFuente": 40,
+    "precioReferencia": 51000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "49.25K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "51K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7278,16 +7278,24 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 2,
     "ratingFuente": null,
-    "popularidadFuente": 20,
-    "precioReferencia": 17000,
+    "popularidadFuente": 15,
+    "precioReferencia": 21500,
     "valorSecundarioFuente": 1040,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "17K",
-      "valorSecundarioRaw": "1.04K"
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "21.5K",
+      "valorSecundarioRaw": "1.04K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22773,
+      "slug": "matvey-safonov",
+      "url": "https://www.futbin.com/27/player/22773/matvey-safonov"
+    }
   },
   {
     "id": "gabriel-jesus-79-st-78-79-74-84-39-68",
@@ -7355,16 +7363,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 89.6,
-    "popularidadFuente": 16,
-    "precioReferencia": 4300,
+    "popularidadFuente": 20,
+    "precioReferencia": 4200,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "4.3K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "4.2K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7397,7 +7405,7 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.9,
-    "popularidadFuente": 36,
+    "popularidadFuente": 33,
     "precioReferencia": 9900,
     "valorSecundarioFuente": 2100,
     "fuente": {
@@ -7405,8 +7413,8 @@ window.PLAYERS_DATA = [
       "paginaPdf": 6,
       "precioPrincipalRaw": "9.9K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7443,16 +7451,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.6,
-    "popularidadFuente": 27,
-    "precioReferencia": 289000,
+    "popularidadFuente": 32,
+    "precioReferencia": 270000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "289K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "270K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7484,16 +7492,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.9,
-    "popularidadFuente": 19,
-    "precioReferencia": 11000,
+    "popularidadFuente": 18,
+    "precioReferencia": 9200,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "11K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "9.2K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7528,16 +7536,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.6,
-    "popularidadFuente": 30,
-    "precioReferencia": 3900,
+    "popularidadFuente": 18,
+    "precioReferencia": 3200,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "3.9K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "3.2K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7572,16 +7580,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 5,
     "ratingFuente": 82.6,
-    "popularidadFuente": 37,
-    "precioReferencia": 13250,
+    "popularidadFuente": 30,
+    "precioReferencia": 13000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "13.25K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "13K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7693,16 +7701,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 87,
-    "popularidadFuente": 27,
-    "precioReferencia": 24500,
+    "popularidadFuente": 24,
+    "precioReferencia": 22250,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "24.5K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "22.25K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7735,16 +7743,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 2,
     "ratingFuente": 83.3,
-    "popularidadFuente": 14,
+    "popularidadFuente": 16,
     "precioReferencia": null,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
+      "paginaPdf": 13,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7777,16 +7785,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 76.1,
-    "popularidadFuente": 19,
-    "precioReferencia": 850,
+    "popularidadFuente": 11,
+    "precioReferencia": 800,
     "valorSecundarioFuente": 160,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "850",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "800",
       "valorSecundarioRaw": "160",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7821,16 +7829,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 83.7,
-    "popularidadFuente": 18,
-    "precioReferencia": 6000,
+    "popularidadFuente": 16,
+    "precioReferencia": 5500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "6K",
+      "precioPrincipalRaw": "5.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7865,16 +7873,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 83.8,
-    "popularidadFuente": 24,
-    "precioReferencia": 6700,
+    "popularidadFuente": 27,
+    "precioReferencia": 8500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "8.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -7975,15 +7983,15 @@ window.PLAYERS_DATA = [
     "weakFoot": 5,
     "ratingFuente": 84.2,
     "popularidadFuente": 13,
-    "precioReferencia": 7200,
+    "precioReferencia": 6700,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "7.2K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "6.7K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8018,16 +8026,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 87.5,
-    "popularidadFuente": 22,
-    "precioReferencia": 67500,
+    "popularidadFuente": 18,
+    "precioReferencia": 59000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 11,
-      "precioPrincipalRaw": "67.5K",
+      "precioPrincipalRaw": "59K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8096,16 +8104,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 2,
     "ratingFuente": 84.3,
-    "popularidadFuente": 24,
+    "popularidadFuente": 29,
     "precioReferencia": null,
     "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
+      "paginaPdf": 7,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "513",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8138,16 +8146,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 88.3,
-    "popularidadFuente": 16,
-    "precioReferencia": 8000,
+    "popularidadFuente": 28,
+    "precioReferencia": 6600,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "8K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "6.6K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8180,16 +8188,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 80.9,
-    "popularidadFuente": 21,
-    "precioReferencia": 750,
+    "popularidadFuente": 14,
+    "precioReferencia": 650,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "750",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "650",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8221,16 +8229,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 23,
-    "precioReferencia": 60000,
+    "popularidadFuente": 14,
+    "precioReferencia": 92000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "60K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "92K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8263,16 +8271,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.6,
-    "popularidadFuente": 17,
-    "precioReferencia": 1600,
+    "popularidadFuente": 18,
+    "precioReferencia": 1400,
     "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "1.6K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "1.4K",
       "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8390,16 +8398,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 81.3,
-    "popularidadFuente": 25,
-    "precioReferencia": 1000,
+    "popularidadFuente": 11,
+    "precioReferencia": 900,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "1K",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "900",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8434,16 +8442,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 81.1,
-    "popularidadFuente": 15,
-    "precioReferencia": 3700,
+    "popularidadFuente": 12,
+    "precioReferencia": 2800,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 15,
-      "precioPrincipalRaw": "3.7K",
+      "precioPrincipalRaw": "2.8K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8476,16 +8484,24 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 92.7,
-    "popularidadFuente": 16,
-    "precioReferencia": 289000,
+    "popularidadFuente": 12,
+    "precioReferencia": 360000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "289K",
-      "valorSecundarioRaw": "11K"
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "360K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 39,
+      "slug": "nuno-alexandre-tavares-mendes",
+      "url": "https://www.futbin.com/27/player/39/nuno-alexandre-tavares-mendes"
+    }
   },
   {
     "id": "sangare-81-cm-80-67-76-81-78-72",
@@ -8667,16 +8683,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.1,
-    "popularidadFuente": 27,
+    "popularidadFuente": 25,
     "precioReferencia": 3800,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
+      "paginaPdf": 8,
       "precioPrincipalRaw": "3.8K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8828,16 +8844,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 27,
-    "precioReferencia": 39000,
+    "popularidadFuente": 20,
+    "precioReferencia": 34000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "39K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "34K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8870,16 +8886,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.8,
-    "popularidadFuente": 18,
-    "precioReferencia": 3500,
+    "popularidadFuente": 16,
+    "precioReferencia": 3800,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "3.5K",
+      "precioPrincipalRaw": "3.8K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8914,16 +8930,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 91.7,
-    "popularidadFuente": 27,
-    "precioReferencia": 293000,
+    "popularidadFuente": 26,
+    "precioReferencia": 264000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "293K",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "264K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -8989,16 +9005,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 34,
-    "precioReferencia": 7500,
+    "popularidadFuente": 30,
+    "precioReferencia": 6400,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 7,
-      "precioPrincipalRaw": "7.5K",
+      "precioPrincipalRaw": "6.4K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9068,16 +9084,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 93,
-    "popularidadFuente": 14,
-    "precioReferencia": 1140000,
+    "popularidadFuente": 16,
+    "precioReferencia": 1190000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "1.14M",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.19M",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9182,16 +9198,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.8,
-    "popularidadFuente": 14,
+    "popularidadFuente": 15,
     "precioReferencia": null,
     "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
+      "paginaPdf": 13,
       "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "513"
+      "valorSecundarioRaw": "513",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21749,
+      "slug": "djed-spence",
+      "url": "https://www.futbin.com/27/player/21749/djed-spence"
+    }
   },
   {
     "id": "safonov-83-gk-82-76-80-86-50-83",
@@ -9248,16 +9272,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 83,
-    "popularidadFuente": 23,
-    "precioReferencia": 4900,
+    "popularidadFuente": 16,
+    "precioReferencia": 3800,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "4.9K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "3.8K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9361,16 +9385,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.3,
-    "popularidadFuente": 18,
-    "precioReferencia": 5100,
+    "popularidadFuente": 21,
+    "precioReferencia": 5200,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "5.1K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "5.2K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9480,16 +9504,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 81,
-    "popularidadFuente": 27,
-    "precioReferencia": 4100,
+    "popularidadFuente": 17,
+    "precioReferencia": 2700,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "4.1K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "2.7K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9521,16 +9545,16 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 13,
+    "popularidadFuente": 17,
     "precioReferencia": 19750,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "19.75K",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9682,16 +9706,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 2,
     "ratingFuente": 83.8,
-    "popularidadFuente": 14,
+    "popularidadFuente": 13,
     "precioReferencia": 3900,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
+      "paginaPdf": 14,
       "precioPrincipalRaw": "3.9K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9768,16 +9792,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.1,
-    "popularidadFuente": 20,
-    "precioReferencia": 2900,
+    "popularidadFuente": 14,
+    "precioReferencia": 2800,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "2.9K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "2.8K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9812,16 +9836,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 91.1,
-    "popularidadFuente": 15,
-    "precioReferencia": 250000,
+    "popularidadFuente": 21,
+    "precioReferencia": 719000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "719K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9899,16 +9923,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 2,
     "ratingFuente": 84.2,
-    "popularidadFuente": 20,
-    "precioReferencia": 4300,
+    "popularidadFuente": 14,
+    "precioReferencia": 8000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "4.3K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "8K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -9976,16 +10000,24 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 83.8,
-    "popularidadFuente": 12,
-    "precioReferencia": 6100,
+    "popularidadFuente": 11,
+    "precioReferencia": 8000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "6.1K",
-      "valorSecundarioRaw": "8.3K"
+      "precioPrincipalRaw": "8K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21,
+      "slug": "maria-pilar-leon-cebrian",
+      "url": "https://www.futbin.com/27/player/21/maria-pilar-leon-cebrian"
+    }
   },
   {
     "id": "kante-83-cdm-74-65-73-80-83-79",
@@ -10175,16 +10207,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 88.9,
-    "popularidadFuente": 17,
-    "precioReferencia": 13000,
+    "popularidadFuente": 14,
+    "precioReferencia": 12500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "13K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "12.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -10297,16 +10329,24 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 12,
-    "precioReferencia": 199000,
+    "popularidadFuente": 14,
+    "precioReferencia": 203000,
     "valorSecundarioFuente": 13750,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "199K",
-      "valorSecundarioRaw": "13.75K"
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "203K",
+      "valorSecundarioRaw": "13.75K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22762,
+      "slug": "david-raya-martin",
+      "url": "https://www.futbin.com/27/player/22762/david-raya-martin"
+    }
   },
   {
     "id": "harder-87-cam-82-81-80-88-28-79",
@@ -10539,16 +10579,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 80.7,
-    "popularidadFuente": 20,
-    "precioReferencia": 850,
+    "popularidadFuente": 14,
+    "precioReferencia": 750,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "850",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "750",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -10832,16 +10872,16 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 89.2,
-    "popularidadFuente": 15,
-    "precioReferencia": 210000,
+    "popularidadFuente": 24,
+    "precioReferencia": 239000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "210K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "239K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -11048,16 +11088,16 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 79.5,
-    "popularidadFuente": 22,
-    "precioReferencia": 800,
+    "popularidadFuente": 14,
+    "precioReferencia": 750,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "800",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "750",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -11216,16 +11256,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 95.8,
-    "popularidadFuente": 20,
-    "precioReferencia": 806000,
+    "popularidadFuente": 16,
+    "precioReferencia": 810000,
     "valorSecundarioFuente": 19000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "806K",
+      "precioPrincipalRaw": "810K",
       "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -11302,16 +11342,16 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 95.5,
-    "popularidadFuente": 15,
-    "precioReferencia": 1700000,
+    "popularidadFuente": 14,
+    "precioReferencia": 1870000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "1.7M",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "1.87M",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -11387,16 +11427,16 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 79.5,
-    "popularidadFuente": 15,
-    "precioReferencia": 650,
+    "popularidadFuente": 12,
+    "precioReferencia": 700,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "650",
+      "precioPrincipalRaw": "700",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-17T23:35:36.691Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true,
     "futbin": {
@@ -11558,18 +11598,24 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 79.8,
-    "popularidadFuente": 26,
-    "precioReferencia": 2700,
+    "popularidadFuente": 14,
+    "precioReferencia": 2300,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "2.7K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "2.3K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 294,
+      "slug": "ezri-konsa",
+      "url": "https://www.futbin.com/27/player/294/ezri-konsa"
+    }
   },
   {
     "id": "boey-75-rb-70-55-66-74-75-76-r-3-3",
@@ -11594,18 +11640,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 71.8,
-    "popularidadFuente": 23,
+    "popularidadFuente": 28,
     "precioReferencia": 10000,
     "valorSecundarioFuente": 90,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "10K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "90",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 4955,
+      "slug": "sacha-boey",
+      "url": "https://www.futbin.com/27/player/4955/sacha-boey"
+    }
   },
   {
     "id": "fernando-torres-85-st-86-85-71-82-38-70-r-4-4",
@@ -11629,18 +11681,24 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.8,
-    "popularidadFuente": 22,
+    "popularidadFuente": 13,
     "precioReferencia": null,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
+      "paginaPdf": 15,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21965,
+      "slug": "torres-sanz",
+      "url": "https://www.futbin.com/27/player/21965/torres-sanz"
+    }
   },
   {
     "id": "degaard-86-cm-65-78-88-87-66-63-l-5-2",
@@ -11665,18 +11723,24 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 2,
     "ratingFuente": 85.9,
-    "popularidadFuente": 20,
-    "precioReferencia": 10000,
+    "popularidadFuente": 21,
+    "precioReferencia": 8000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "10K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "8K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 243,
+      "slug": "martin-odegaard",
+      "url": "https://www.futbin.com/27/player/243/martin-odegaard"
+    }
   },
   {
     "id": "miley-81-cm-72-70-81-80-80-73-r-3-4",
@@ -11703,16 +11767,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 80.8,
-    "popularidadFuente": 20,
+    "popularidadFuente": 19,
     "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "paginaPdf": 11,
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf",
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "280"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21777,
+      "slug": "lewis-miley",
+      "url": "https://www.futbin.com/27/player/21777/lewis-miley"
+    }
   },
   {
     "id": "pato-85-st-90-85-71-86-33-73-r-1-1",
@@ -11736,16 +11808,22 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 1,
     "ratingFuente": null,
-    "popularidadFuente": 19,
+    "popularidadFuente": 25,
     "precioReferencia": null,
     "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "paginaPdf": 8,
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20948,
+      "slug": "alexandre-pato",
+      "url": "https://www.futbin.com/27/player/20948/alexandre-pato"
+    }
   },
   {
     "id": "fernandez-86-cm-68-78-86-83-74-76-r-3-4",
@@ -11771,18 +11849,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.4,
-    "popularidadFuente": 18,
-    "precioReferencia": 6100,
+    "popularidadFuente": 15,
+    "precioReferencia": 4700,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "6.1K",
+      "precioPrincipalRaw": "4.7K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21975,
+      "slug": "enzo-fernandez",
+      "url": "https://www.futbin.com/27/player/21975/enzo-fernandez"
+    }
   },
   {
     "id": "eze-84-cam-74-80-82-87-57-68-r-4-4",
@@ -11809,18 +11893,24 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.6,
-    "popularidadFuente": 17,
-    "precioReferencia": 2700,
+    "popularidadFuente": 20,
+    "precioReferencia": 2000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "2.7K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "2K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 757,
+      "slug": "eberechi-eze",
+      "url": "https://www.futbin.com/27/player/757/eberechi-eze"
+    }
   },
   {
     "id": "bruno-guimaraes-86-cm-59-75-85-84-80-80-r-3-3",
@@ -11845,18 +11935,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 83.7,
-    "popularidadFuente": 17,
-    "precioReferencia": 4000,
+    "popularidadFuente": 13,
+    "precioReferencia": 3900,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "4K",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "3.9K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 247,
+      "slug": "bruno-guimaraes-moura",
+      "url": "https://www.futbin.com/27/player/247/bruno-guimaraes-moura"
+    }
   },
   {
     "id": "gavi-83-cm-76-66-78-85-68-70-r-3-3",
@@ -11884,18 +11980,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 80.4,
-    "popularidadFuente": 17,
-    "precioReferencia": 900,
+    "popularidadFuente": 13,
+    "precioReferencia": 750,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "900",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "750",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 782,
+      "slug": "pablo-martin-paez-gavira",
+      "url": "https://www.futbin.com/27/player/782/pablo-martin-paez-gavira"
+    }
   },
   {
     "id": "savona-75-rb-68-53-69-69-74-71-r-2-4",
@@ -11920,18 +12022,24 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 4,
     "ratingFuente": 68.3,
-    "popularidadFuente": 16,
+    "popularidadFuente": 20,
     "precioReferencia": null,
     "valorSecundarioFuente": 90,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
+      "paginaPdf": 10,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "90",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 3955,
+      "slug": "nicolo-savona",
+      "url": "https://www.futbin.com/27/player/3955/nicolo-savona"
+    }
   },
   {
     "id": "griezmann-84-st-72-85-85-87-59-72-l-4-3",
@@ -11995,18 +12103,24 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 16,
-    "precioReferencia": null,
+    "popularidadFuente": 13,
+    "precioReferencia": 8100,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "0",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "8.1K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 627,
+      "slug": "clara-mateo",
+      "url": "https://www.futbin.com/27/player/627/clara-mateo"
+    }
   },
   {
     "id": "kim-min-jae-83-cb-73-32-58-63-84-82-r-2-3",
@@ -12067,17 +12181,23 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 90.9,
     "popularidadFuente": 15,
-    "precioReferencia": 206000,
+    "precioReferencia": 196000,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "206K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "196K",
       "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 102,
+      "slug": "achraf-hakimi",
+      "url": "https://www.futbin.com/27/player/102/achraf-hakimi"
+    }
   },
   {
     "id": "alexander-arnold-84-rb-75-72-89-80-77-72-r-3-4",
@@ -12102,18 +12222,24 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 84,
-    "popularidadFuente": 15,
-    "precioReferencia": 1200,
+    "popularidadFuente": 12,
+    "precioReferencia": 1000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 15,
-      "precioPrincipalRaw": "1.2K",
+      "precioPrincipalRaw": "1K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 681,
+      "slug": "trent-alexander-arnold",
+      "url": "https://www.futbin.com/27/player/681/trent-alexander-arnold"
+    }
   },
   {
     "id": "pepe-85-cb-77-44-60-63-86-83-r-2-3",
@@ -12244,17 +12370,23 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 89.4,
     "popularidadFuente": 14,
-    "precioReferencia": 20250,
+    "precioReferencia": 19500,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "20.25K",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "19.5K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 7,
+      "slug": "khadija-shaw",
+      "url": "https://www.futbin.com/27/player/7/khadija-shaw"
+    }
   },
   {
     "id": "pickford-85-gk-84-80-89-87-57-82-l-1-4",
@@ -12313,18 +12445,24 @@ window.PLAYERS_DATA = [
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
-    "popularidadFuente": 14,
+    "popularidadFuente": 15,
     "precioReferencia": null,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
+      "paginaPdf": 13,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 350,
+      "slug": "gregor-kobel",
+      "url": "https://www.futbin.com/27/player/350/gregor-kobel"
+    }
   },
   {
     "id": "tah-87-cb-62-38-60-63-87-86-r-2-3",
@@ -12349,17 +12487,23 @@ window.PLAYERS_DATA = [
     "weakFoot": 3,
     "ratingFuente": 80.2,
     "popularidadFuente": 14,
-    "precioReferencia": 5000,
+    "precioReferencia": 5400,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "5K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "5.4K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 337,
+      "slug": "jonathan-tah",
+      "url": "https://www.futbin.com/27/player/337/jonathan-tah"
+    }
   },
   {
     "id": "graham-hansen-89-rw-88-87-88-90-47-76-r-5-5",
@@ -12384,18 +12528,24 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 92.5,
-    "popularidadFuente": 14,
-    "precioReferencia": 540000,
+    "popularidadFuente": 20,
+    "precioReferencia": 543000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "540K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "543K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-18T13:38:08.131Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 12,
+      "slug": "caroline-graham-hansen",
+      "url": "https://www.futbin.com/27/player/12/caroline-graham-hansen"
+    }
   },
   {
     "id": "david-luiz-85-cb-79-69-78-75-84-83-r-3-3",
@@ -12431,7 +12581,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-18T13:38:08.131Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20945,
+      "slug": "david-luiz",
+      "url": "https://www.futbin.com/27/player/20945/david-luiz"
+    }
   },
   {
     "id": "simons-81-cam-75-76-79-84-61-66-r-4-3",
@@ -12580,6 +12736,372 @@ window.PLAYERS_DATA = [
       "valorSecundarioRaw": "830",
       "importedAt": "2026-09-18T13:38:08.131Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN4.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "bouaddi-83-cdm-78-60-77-83-78-80-r-3-3",
+    "nombre": "Bouaddi",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 83,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 78,
+      "sho": 60,
+      "pas": 77,
+      "dri": 83,
+      "def": 78,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 82.6,
+    "popularidadFuente": 367,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 513,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "513",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "bouaddi-80-cdm-75-56-74-79-75-76-r-3-3",
+    "nombre": "Bouaddi",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 80,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 75,
+      "sho": 56,
+      "pas": 74,
+      "dri": 79,
+      "def": 75,
+      "phy": 76
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 78.3,
+    "popularidadFuente": 17,
+    "precioReferencia": 700,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "700",
+      "valorSecundarioRaw": "180",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "unai-simon-85-gk-84-81-76-85-49-82-r-1-3",
+    "nombre": "Unai Simón",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 85,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 84,
+      "han": 81,
+      "kic": 76,
+      "ref": 85,
+      "spd": 49,
+      "pos": 82
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 13,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "costinha-75-rb-78-65-72-74-70-77-r-3-3",
+    "nombre": "Costinha",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 75,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RM"
+    ],
+    "stats": {
+      "pac": 78,
+      "sho": 65,
+      "pas": 72,
+      "dri": 74,
+      "def": 70,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 73.5,
+    "popularidadFuente": 13,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 90,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "90",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "ruben-dias-87-cb-58-44-69-69-87-83-r-2-4",
+    "nombre": "Rúben Dias",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 87,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 58,
+      "sho": 44,
+      "pas": 69,
+      "dri": 69,
+      "def": 87,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 4,
+    "ratingFuente": 82.7,
+    "popularidadFuente": 12,
+    "precioReferencia": 5300,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "5.3K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "dumornay-89-lw-93-86-81-91-62-75-r-4-5",
+    "nombre": "Dumornay",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 89,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "CAM",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 93,
+      "sho": 86,
+      "pas": 81,
+      "dri": 91,
+      "def": 62,
+      "phy": 75
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 93,
+    "popularidadFuente": 11,
+    "precioReferencia": 971000,
+    "valorSecundarioFuente": 13750,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "971K",
+      "valorSecundarioRaw": "13.75K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "de-paul-83-cm-75-77-83-83-75-83-r-4-3",
+    "nombre": "De Paul",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 83,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM",
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 75,
+      "sho": 77,
+      "pas": 83,
+      "dri": 83,
+      "def": 75,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 82.3,
+    "popularidadFuente": 11,
+    "precioReferencia": 850,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "850",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "alex-baena-83-lm-78-75-83-82-66-68-r-3-4",
+    "nombre": "Álex Baena",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 83,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "CAM",
+      "CM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 78,
+      "sho": 75,
+      "pas": 83,
+      "dri": 82,
+      "def": 66,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 83.7,
+    "popularidadFuente": 11,
+    "precioReferencia": 850,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "850",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "heaps-86-cm-76-84-86-84-64-80-r-4-3",
+    "nombre": "Heaps",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 76,
+      "sho": 84,
+      "pas": 86,
+      "dri": 84,
+      "def": 64,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.1,
+    "popularidadFuente": 11,
+    "precioReferencia": 3900,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "3.9K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
+    },
+    "activo": true
+  },
+  {
+    "id": "lammens-82-gk-80-83-77-83-45-82-r-1-4",
+    "nombre": "Lammens",
+    "version": null,
+    "tipoCarta": null,
+    "ovr": 82,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 80,
+      "han": 83,
+      "kic": 77,
+      "ref": 83,
+      "spd": 45,
+      "pos": 82
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 4,
+    "ratingFuente": null,
+    "popularidadFuente": 11,
+    "precioReferencia": 2100,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "2.1K",
+      "valorSecundarioRaw": "340",
+      "importedAt": "2026-09-18T20:20:33.362Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN5.pdf"
     },
     "activo": true
   }
