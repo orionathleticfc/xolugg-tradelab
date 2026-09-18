@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XoluGG · Diagnóstico PDF FUTBIN</title>
+  <link rel="stylesheet" href="futbin-importer.css">
+  <script src="../players-data.js"></script>
+  <script type="module" src="futbin-importer.js"></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">XoluGG · Laboratorio</p>
+    <h1>Diagnóstico PDF FUTBIN</h1>
+    <p>EA FC 27 Popular Players · Extracción de texto y coordenadas</p>
+  </header>
+  <section class="panel" aria-label="Lectura del PDF">
+    <label for="pdf-file">Seleccionar PDF</label>
+    <input id="pdf-file" type="file" accept="application/pdf" aria-describedby="privacy">
+    <p id="privacy">El archivo se procesa localmente en tu navegador. Solo se descarga la librería PDF.js; el PDF no se envía a ningún servidor.</p>
+    <p id="status" role="status" aria-live="polite" data-state="idle">Esperando PDF</p>
+    <progress id="progress" hidden aria-label="Páginas procesadas"></progress>
+    <p id="error" role="alert" hidden></p>
+    <ul id="warnings" aria-label="Advertencias"></ul>
+    <dl><div><dt>Archivo</dt><dd id="file-name">—</dd></div>
+      <div><dt>Páginas</dt><dd id="page-count">—</dd></div>
+      <div><dt>Elementos de texto</dt><dd id="item-count">—</dd></div></dl>
+    <button id="export" type="button" disabled>Exportar diagnóstico JSON</button>
+  </section>
+  <section class="panel" aria-label="Texto extraído">
+    <div class="filters">
+      <div><label for="page-filter">Página</label><select id="page-filter" disabled><option value="">Todas las páginas</option></select></div>
+      <div><label for="search">Buscar texto</label><input id="search" type="search" placeholder="Gordon, Frimpong, PAC, 294, 3.5K" disabled></div>
+    </div>
+    <p>Coordenadas originales del PDF: X/Y indican el origen del texto, no la esquina de una caja. No se aplica rotación ni conversión a píxeles de pantalla.</p>
+    <p id="results" role="status">Selecciona un PDF para inspeccionar sus elementos.</p>
+    <div class="table-scroll" tabindex="0" aria-label="Tabla de diagnóstico">
+      <table><thead><tr><th scope="col">Página</th><th scope="col">Texto</th><th scope="col">X</th><th scope="col">Y</th><th scope="col">Width</th><th scope="col">Height</th></tr></thead>
+      <tbody id="tokens"></tbody></table>
+    </div>
+    <div class="pagination"><button id="previous" disabled>Anterior</button><span id="range"></span><button id="next" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="cards-title">
+    <h2 id="cards-title">Cartas detectadas</h2>
+    <p>Solo análisis y preview. Los valores ausentes se muestran como —; no se actualiza ningún catálogo.</p>
+    <p id="cards-status" role="status" aria-live="polite">Esperando análisis.</p>
+    <dl class="card-metrics">
+      <div><dt>Celdas</dt><dd id="metric-slots">—</dd></div>
+      <div><dt>Total detectadas</dt><dd id="metric-cards">—</dd></div>
+      <div><dt>Complete</dt><dd id="metric-complete">—</dd></div>
+      <div><dt>Partial</dt><dd id="metric-partial">—</dd></div>
+      <div><dt>Ambiguous</dt><dd id="metric-ambiguous">—</dd></div>
+      <div><dt>Errores</dt><dd id="metric-errors">—</dd></div>
+    </dl>
+    <ul id="parser-errors" aria-label="Errores del parser"></ul>
+    <div class="filters">
+      <div><label for="card-status-filter">Estado de carta</label>
+        <select id="card-status-filter" disabled>
+          <option value="">Todas</option><option value="complete">Complete</option>
+          <option value="partial">Partial</option><option value="ambiguous">Ambiguous</option>
+        </select>
+      </div>
+      <div class="export-cards"><button id="export-cards" type="button" disabled>Exportar cartas detectadas JSON</button></div>
+    </div>
+    <div class="table-scroll cards-scroll" tabindex="0" aria-label="Cartas detectadas">
+      <table class="cards-table">
+        <thead><tr><th scope="col">Nombre</th><th scope="col">OVR</th><th scope="col">Pos</th>
+          <th scope="col">Stats</th><th scope="col">Rating</th><th scope="col">Popularidad</th>
+          <th scope="col">Precio</th><th scope="col">Valor secundario</th><th scope="col">Página</th>
+          <th scope="col">Estado</th><th scope="col">Detalles</th></tr></thead>
+        <tbody id="cards-body"></tbody>
+      </table>
+    </div>
+    <div class="pagination"><button id="cards-previous" type="button" disabled>Anterior</button>
+      <span id="cards-range"></span><button id="cards-next" type="button" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="comparison-title">
+    <h2 id="comparison-title">Comparación con catálogo actual</h2>
+    <p>Solo comparación y preview. «Not in current snapshot» significa que una carta no aparece en este PDF; no indica eliminación. Los candidatos pendientes de revisión no se cuentan como ausentes.</p>
+    <p id="comparison-status" role="status" aria-live="polite">Esperando cartas detectadas.</p>
+    <dl class="comparison-metrics">
+      <div><dt>Apariciones duplicadas</dt><dd id="comparison-snapshotDuplicates">—</dd></div>
+      <div><dt>Grupos duplicados</dt><dd id="comparison-snapshotDuplicateGroups">—</dd></div>
+      <div><dt>Precios fuente 0 no disponibles</dt><dd id="comparison-unavailableZeroPrices">—</dd></div>
+      <div><dt>Catálogo actual</dt><dd id="comparison-catalog">—</dd></div>
+      <div><dt>Snapshot PDF</dt><dd id="comparison-snapshot">—</dd></div>
+      <div><dt>Exact matches</dt><dd id="comparison-exactMatches">—</dd></div>
+      <div><dt>Partial matches</dt><dd id="comparison-partialMatches">—</dd></div>
+      <div><dt>Unchanged</dt><dd id="comparison-unchanged">—</dd></div>
+      <div><dt>Updated</dt><dd id="comparison-updated">—</dd></div>
+      <div><dt>New</dt><dd id="comparison-new">—</dd></div>
+      <div><dt>Not in current snapshot</dt><dd id="comparison-notInCurrentSnapshot">—</dd></div>
+      <div><dt>Needs review</dt><dd id="comparison-needsReview">—</dd></div>
+    </dl>
+    <div class="filters">
+      <div><label for="comparison-filter">Estado de comparación</label>
+        <select id="comparison-filter" disabled>
+          <option value="">Todas</option><option value="updated">Updated</option>
+          <option value="new">New</option><option value="notInCurrentSnapshot">Not in snapshot</option>
+          <option value="needsReview">Needs review</option><option value="unchanged">Unchanged</option>
+        </select>
+      </div>
+      <div class="export-cards"><button id="comparison-export" type="button" disabled>Exportar comparación JSON</button></div>
+    </div>
+    <div class="table-scroll cards-scroll" tabindex="0" aria-label="Comparación con catálogo actual">
+      <table class="comparison-table">
+        <thead><tr><th scope="col">Jugador</th><th scope="col">OVR</th><th scope="col">Pos</th>
+          <th scope="col">Estado</th><th scope="col">Precio anterior</th><th scope="col">Precio nuevo</th>
+          <th scope="col">Popularidad anterior</th><th scope="col">Popularidad nueva</th>
+          <th scope="col">Confidence</th><th scope="col">Detalles</th></tr></thead>
+        <tbody id="comparison-body"></tbody>
+      </table>
+    </div>
+    <div class="pagination"><button id="comparison-previous" type="button" disabled>Anterior</button>
+      <span id="comparison-range"></span><button id="comparison-next" type="button" disabled>Siguiente</button></div>
+  </section>
+
+  <section class="panel" aria-labelledby="snapshot-duplicates-title">
+    <h2 id="snapshot-duplicates-title">Duplicados del snapshot</h2>
+    <p>Estos grupos no están resueltos ni fusionados. Cada aparición conserva sus datos y tokens originales.</p>
+    <p>Balance del PDF: Unchanged + Updated + New + Needs review + apariciones duplicadas = Snapshot PDF.
+    Not in current snapshot corresponde al catálogo anterior y se contabiliza por separado.</p>
+    <p>En la comparación, precio fuente «0» significa sin precio disponible; un precio actual existente se conserva.
+    El diagnóstico y la exportación del parser mantienen el valor original.</p>
+    <p id="snapshot-duplicates-status" role="status">Esperando comparación.</p>
+    <div id="snapshot-duplicates"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="generation-title">
+    <h2 id="generation-title">Catálogo candidato</h2>
+    <p>Se conservan el orden, los IDs y la identidad de los registros existentes. Solo se aplican updates exactos y nuevas cartas seguras. Los duplicados y revisiones permanecen pendientes.</p>
+    <p id="generation-status" role="status" aria-live="polite">Esperando comparación validada.</p>
+    <dl class="comparison-metrics">
+      <div><dt>Catálogo actual</dt><dd id="generation-currentCatalog">—</dd></div>
+      <div><dt>Updates aplicados</dt><dd id="generation-updatedApplied">—</dd></div>
+      <div><dt>Nuevas aplicadas</dt><dd id="generation-newApplied">—</dd></div>
+      <div><dt>Sin cambios</dt><dd id="generation-unchanged">—</dd></div>
+      <div><dt>Grupos duplicados omitidos</dt><dd id="generation-skippedSnapshotDuplicateGroups">—</dd></div>
+      <div><dt>Apariciones duplicadas omitidas</dt><dd id="generation-skippedSnapshotDuplicateOccurrences">—</dd></div>
+      <div><dt>Revisiones omitidas</dt><dd id="generation-skippedNeedsReview">—</dd></div>
+      <div><dt>Conservadas fuera del snapshot</dt><dd id="generation-preservedNotInSnapshot">—</dd></div>
+      <div><dt>Tamaño del catálogo candidato</dt><dd id="generation-candidateCatalogSize">—</dd></div>
+      <div><dt>Incidencias de generación</dt><dd id="generation-generationNeedsReview">—</dd></div>
+      <div><dt>Colisiones de ID</dt><dd id="generation-idCollisions">—</dd></div>
+      <div><dt>Errores de validación</dt><dd id="generation-validationErrors">—</dd></div>
+    </dl>
+    <ul id="generation-errors" aria-label="Errores de validación del candidato"></ul>
+    <div class="generation-actions">
+      <button id="generation-export" type="button" disabled>Exportar catálogo candidato</button>
+      <button id="generation-report" type="button" disabled>Exportar reporte de generación</button>
+    </div>
+    <div id="generation-details"></div>
+  </section>
+</main>
+</body>
+</html>
