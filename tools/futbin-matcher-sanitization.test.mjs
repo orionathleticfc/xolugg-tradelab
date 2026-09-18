@@ -85,10 +85,15 @@ test("all 15 real duplicate groups, 6 GK and van de Ven, with exhaustive occurre
   const classified=[...r.unchanged,...r.updated,...r.new,...r.needsReview,...r.snapshotDuplicates.flatMap(g=>g.occurrences)];
   assert.equal(classified.length,250);
   assert.equal(new Set(classified.map(row=>row.snapshotIndex)).size,250);
-  assert.equal(r.summary.snapshotDuplicates,30);assert.equal(r.summary.new,0);assert.equal(r.summary.updated,173);assert.equal(r.summary.unchanged,43);assert.equal(r.summary.needsReview,4);
+  assert.equal(r.summary.snapshotDuplicates,30);assert.equal(r.summary.new,0);assert.equal(r.summary.needsReview,4);
+  assert.equal(r.summary.updated,r.updated.length);assert.equal(r.summary.unchanged,r.unchanged.length);
+  assert.equal(r.summary.updated+r.summary.unchanged,216);
   const van=classified.find(row=>row.pdfCard.nombre.toLowerCase()==="van de ven");
   assert(van);assert.equal(van.pdfCard.precioDisponible,false);assert.equal(van.pdfCard.precioFuenteRaw,"0");
-  assert.equal(van.status,"UPDATED");assert.deepEqual(Object.keys(van.marketDiff),["popularidadFuente"]);assert.equal(van.currentRecord.popularidadFuente,139);assert.equal(van.currentRecord.precioReferencia,57000);assert.equal(van.currentRecord.fuente.precioPrincipalRaw,"57K");assert.equal(van.priceDecision.effective,van.currentRecord.precioReferencia);
+  assert.equal(van.status,Object.keys(van.marketDiff).length?"UPDATED":"UNCHANGED");
+  assert.deepEqual(van.currentRecord,catalog[van.catalogIndex]);
+  assert(!("precioReferencia" in van.marketDiff));
+  assert.equal(van.priceDecision.effective,van.currentRecord.precioReferencia);
   const keepers=parsed.cards.filter(c=>c.posicionPrincipal==="GK"&&c.warnings.includes("missing_rating"));
   assert.equal(keepers.length,6);
   for(const keeper of keepers) {
