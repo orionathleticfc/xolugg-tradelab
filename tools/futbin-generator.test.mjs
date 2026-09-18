@@ -138,7 +138,7 @@ test("no original references mutate, and serialized JS round-trips in an isolate
 });
 
 const fixture = new URL("./fixtures-local/EA FC 27 Popular Players _ FUTBIN2-diagnostico.json", import.meta.url);
-test("real snapshot reapplied to production is idempotent and preserves all 277 records", { skip: !fs.existsSync(fixture) }, () => {
+test("real snapshot updates 173 safe matches and is idempotent on its 306-record candidate", { skip: !fs.existsSync(fixture) }, () => {
   const context = vm.createContext({ window: {} });
   vm.runInContext(fs.readFileSync(new URL("../players-data.js", import.meta.url), "utf8"), context);
   const current = structuredClone(context.window.PLAYERS_DATA);
@@ -149,22 +149,22 @@ test("real snapshot reapplied to production is idempotent and preserves all 277 
   freeze(current); freeze(comparison);
   const result = generateCandidateCatalog(current, comparison, stamp);
   assert.deepEqual(result.report.summary, {
-    futbinLinksApplied: 0, futbinLinksPreserved: 0, futbinLinksSkippedDuplicates: 30,
+    futbinLinksApplied: 0, futbinLinksPreserved: 240, futbinLinksSkippedDuplicates: 30,
     futbinLinksSkippedNeedsReview: 4, futbinLinksMissing: 216, futbinLinksInvalid: 0,
     futbinLinksConflicts: 0, futbinLinksUnsafe: 0,
-    currentCatalog: 277, updatedApplied: 0, newApplied: 0, unchanged: 216,
-    preservedNotInSnapshot: 37, skippedSnapshotDuplicateGroups: 15, skippedSnapshotDuplicateOccurrences: 30,
-    skippedNeedsReview: 4, generationNeedsReview: 0, idCollisions: 0, candidateCatalogSize: 277, validationErrors: 0
+    currentCatalog: 306, updatedApplied: 173, newApplied: 0, unchanged: 43,
+    preservedNotInSnapshot: 64, skippedSnapshotDuplicateGroups: 15, skippedSnapshotDuplicateOccurrences: 30,
+    skippedNeedsReview: 4, generationNeedsReview: 0, idCollisions: 0, candidateCatalogSize: 306, validationErrors: 0
   });
   for (const name of ["Gordon", "Frimpong", "Pedro Neto"]) {
-    const row = comparison.unchanged.find(row => row.pdfCard.nombre === name);
+    const row = comparison.updated.find(row => row.pdfCard.nombre === name);
     const candidate = result.candidateCatalog[row.catalogIndex];
     assert.equal(candidate.id, current[row.catalogIndex].id);
     assert.deepEqual(candidate.stats, current[row.catalogIndex].stats);
     assert.equal(candidate.precioReferencia, row.pdfCard.precioReferencia);
     assert.equal(candidate.popularidadFuente, row.pdfCard.popularidadFuente);
   }
-  const van = comparison.unchanged.find(row => row.pdfCard.nombre.toLowerCase() === "van de ven");
+  const van = comparison.updated.find(row => row.pdfCard.nombre.toLowerCase() === "van de ven");
   assert.equal(result.candidateCatalog[van.catalogIndex].precioReferencia, current[van.catalogIndex].precioReferencia);
   assert.equal(result.candidateCatalog[van.catalogIndex].fuente.precioPrincipalRaw, "0");
   const safeIndices = new Set(result.report.updatedApplied.map(row => row.catalogIndex));
@@ -173,51 +173,53 @@ test("real snapshot reapplied to production is idempotent and preserves all 277 
     if (!safeIndices.has(index)) assert.deepEqual(result.candidateCatalog[index], record);
   });
   for (const name of ["Diomande", "Endrick", "Álvaro Carreras", "Nmecha"]) assert(result.report.skippedNeedsReview.some(row => row.nombre === name));
-  const incorporated = comparison.unchanged.filter(row => row.catalogIndex >= 250);
+  const matched = [...comparison.unchanged, ...comparison.updated];
+  assert.equal(matched.length, 216);
+  assert.equal(comparison.new.length, 0);
+  const incorporated = matched.filter(row => row.catalogIndex >= 250 && row.catalogIndex < 277);
   assert.equal(incorporated.length, 27);
   for (const row of incorporated) {
-    const candidate = result.candidateCatalog.find(record => record.id === generateCardId(row.pdfCard));
-    assert(candidate);
-    assert.equal(candidate.precioReferencia, row.pdfCard.precioDisponible ? row.pdfCard.precioReferencia : null);
+    const candidate = result.candidateCatalog[row.catalogIndex];
+    assert.equal(candidate.id, current[row.catalogIndex].id);
+    assert.equal(candidate.precioReferencia, row.pdfCard.precioDisponible ? row.pdfCard.precioReferencia : current[row.catalogIndex].precioReferencia);
   }
   assert(incorporated.some(row => !row.pdfCard.precioDisponible));
   assert(incorporated.some(row => row.pdfCard.precioDisponible));
   assert.equal(JSON.stringify({ current, parsed, comparison }), before);
   const sandbox = vm.createContext({ window: {} });
   vm.runInContext(serializeCandidateCatalog(result.candidateCatalog, current), sandbox);
-  assert.equal(sandbox.window.PLAYERS_DATA.length, 277);
+  assert.equal(sandbox.window.PLAYERS_DATA.length, 306);
   assert.equal(JSON.stringify(sandbox.window.PLAYERS_DATA), JSON.stringify(result.candidateCatalog));
-  // Full equality deliberately includes fuente.importedAt: an unchanged replay
-  // must not rewrite even temporal metadata or existing ordering.
-  assert.deepEqual(result.candidateCatalog,current);
-  assert.equal(new Set(result.candidateCatalog.map(c=>c.id)).size,277);
+  assert.equal(new Set(result.candidateCatalog.map(c=>c.id)).size,306);
   assert.equal(result.candidateCatalog.filter(c=>c.precioReferencia===0).length,0);
   const rerunComparison=compareFutbinSnapshot(parsed.cards,result.candidateCatalog,{fileName:diagnostic.fileName});
   const rerun=generateCandidateCatalog(result.candidateCatalog,rerunComparison,{generatedAt:"2099-01-01T00:00:00.000Z"});
-  assert.deepEqual(rerun.candidateCatalog,current);
+  // Full equality includes fuente.importedAt: replaying the generated candidate
+  // must not rewrite temporal metadata or existing ordering.
+  assert.deepEqual(rerun.candidateCatalog,result.candidateCatalog);
   assert.equal(rerun.report.summary.newApplied,0);
   assert.equal(rerun.report.summary.updatedApplied,0);
-  assert.equal(rerun.report.summary.candidateCatalogSize,277);
+  assert.equal(rerun.report.summary.candidateCatalogSize,306);
   assert.deepEqual(result.report.skippedSnapshotDuplicates.map(g=>g.snapshotIndices),comparison.snapshotDuplicates.map(g=>g.snapshotIndices));
-  assert.equal(result.report.preservedNotInSnapshot.length,37);
+  assert.equal(result.report.preservedNotInSnapshot.length,64);
   console.log("Real generation:", result.report.summary);
 });
 
 
-test("production baseline keeps historical ID order and appends 27 unique compatible cards", () => {
+test("production baseline keeps the audited ID prefix and 56 unique compatible appended cards", () => {
   const context=vm.createContext({window:{}});
   vm.runInContext(fs.readFileSync(new URL("../players-data.js",import.meta.url),"utf8"),context);
   const catalog=structuredClone(context.window.PLAYERS_DATA);
-  assert.equal(catalog.length,277);
-  assert.equal(new Set(catalog.map(c=>c.id)).size,277);
+  assert.equal(catalog.length,306);
+  assert.equal(new Set(catalog.map(c=>c.id)).size,306);
   assert.equal(catalog.filter(c=>c.precioReferencia===0).length,0);
-  assert.equal(catalog.filter(c=>c.precioReferencia===null).length,36);
+  assert.equal(catalog.filter(c=>c.precioReferencia===null).length,44);
   assert.equal(validateCandidateCatalog(catalog).valid,true);
   // Fixed fingerprint of the ordered IDs of the audited pre-4B 250-card catalog.
   // Unlike reading Git HEAD at test time, this remains stable after future commits.
   assert.equal(createHash("sha256").update(JSON.stringify(catalog.slice(0,250).map(c=>c.id))).digest("hex"),"096f10f3fd1de0deee75b5580f242074af9572a47a8029b91097320e4b61634a");
   const added=catalog.slice(250);
-  assert.equal(added.length,27);
+  assert.equal(added.length,56);
   for(const card of added) assert.equal(card.id,generateCardId(card));
   const varane=added.find(c=>c.nombre==="Varane"&&c.ovr===86&&c.posicionPrincipal==="CB");
   assert(varane);
