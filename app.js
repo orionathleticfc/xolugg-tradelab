@@ -3321,6 +3321,18 @@ function validarBackup(data) {
   }
 
 
+  if (
+    "popularPriceOverrides" in data &&
+    (
+      !data.popularPriceOverrides ||
+      typeof data.popularPriceOverrides !== "object" ||
+      Array.isArray(data.popularPriceOverrides)
+    )
+  ) {
+    return false;
+  }
+
+
   return true;
 }
 
@@ -3509,24 +3521,44 @@ function configurarEventosBackup() {
 const STORAGE_POPULAR_PRICES = "xoluggPopularPrices";
 let popularPriceOverrides = {};
 
+function normalizePopularPriceEntry(entry) {
+  let price;
+  let rawUpdatedAt = null;
+
+  if (typeof entry === "number") {
+    price = entry;
+  } else if (entry && typeof entry === "object" && !Array.isArray(entry)) {
+    price = Object.prototype.hasOwnProperty.call(entry, "price")
+      ? entry.price : entry.precioUsuario;
+    rawUpdatedAt = typeof entry.updatedAt === "string"
+      ? entry.updatedAt
+      : typeof entry.ultimaActualizacion === "string"
+      ? entry.ultimaActualizacion
+      : null;
+  }
+
+  if (!Number.isFinite(price) || price <= 0) return null;
+  if (rawUpdatedAt === null) return { price, updatedAt: null };
+
+  const timestamp = Date.parse(rawUpdatedAt);
+  if (!Number.isFinite(timestamp)) return null;
+  return { price, updatedAt: new Date(timestamp).toISOString() };
+}
+
 function normalizePopularPrices(value) {
   if (!value || typeof value !== "object" || Array.isArray(value)) return {};
-  return Object.fromEntries(Object.entries(value).filter(([id, entry]) =>
-    id.trim() && entry && typeof entry === "object" &&
-    Number.isFinite(entry.precioUsuario) && entry.precioUsuario > 0 &&
-    typeof entry.ultimaActualizacion === "string" &&
-    Number.isFinite(Date.parse(entry.ultimaActualizacion))
-  ).map(([id, entry]) => [id, {
-    precioUsuario: entry.precioUsuario,
-    ultimaActualizacion: entry.ultimaActualizacion
-  }]));
+  return Object.fromEntries(Object.entries(value).flatMap(([id, entry]) => {
+    const normalized = normalizePopularPriceEntry(entry);
+    return id.trim() && normalized ? [[id, normalized]] : [];
+  }));
 }
 
 function loadPopularPrices() {
   try {
-    popularPriceOverrides = normalizePopularPrices(
-      JSON.parse(localStorage.getItem(STORAGE_POPULAR_PRICES) || "{}")
-    );
+    const stored = localStorage.getItem(STORAGE_POPULAR_PRICES) || "{}";
+    popularPriceOverrides = normalizePopularPrices(JSON.parse(stored));
+    const migrated = JSON.stringify(popularPriceOverrides);
+    if (stored !== migrated) localStorage.setItem(STORAGE_POPULAR_PRICES, migrated);
   } catch (error) {
     console.warn("No se pudieron cargar los precios populares:", error);
     popularPriceOverrides = {};
@@ -3534,23 +3566,49 @@ function loadPopularPrices() {
 }
 
 function savePopularPrices() {
+  popularPriceOverrides = normalizePopularPrices(popularPriceOverrides);
   localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(popularPriceOverrides));
+}
+
+function resolvePopularPrice(card, manualEntry) {
+  const referencePrice = Number.isFinite(card?.precioReferencia) &&
+    card.precioReferencia > 0 ? card.precioReferencia : null;
+  const manual = normalizePopularPriceEntry(manualEntry);
+  const importedAt = typeof card?.fuente?.importedAt === "string"
+    ? Date.parse(card.fuente.importedAt) : NaN;
+  const manualUpdatedAt = manual?.updatedAt ? Date.parse(manual.updatedAt) : NaN;
+  const manualWins = !!manual && (
+    !Number.isFinite(importedAt) ||
+    (Number.isFinite(manualUpdatedAt) && manualUpdatedAt > importedAt)
+  );
+  const manualPrice = manualWins ? manual.price : null;
+  const effectivePrice = manualPrice ?? referencePrice;
+
+  return {
+    referencePrice,
+    manualPrice,
+    effectivePrice,
+    manualUpdatedAt: manualWins ? manual.updatedAt : null,
+    manualExpired: !!manual && !manualWins,
+    source: manualWins ? "Manual" : referencePrice !== null ? "Referencia" : "Sin precio"
+  };
 }
 
 function getPopularPlayerData(card) {
   const manual = Object.prototype.hasOwnProperty.call(popularPriceOverrides, card.id)
     ? popularPriceOverrides[card.id] : null;
-  const precioUsuario = manual?.precioUsuario ?? null;
-  const referencia = Number.isFinite(card.precioReferencia) && card.precioReferencia > 0
-    ? card.precioReferencia : null;
-  const precioEfectivo = precioUsuario ?? referencia;
+  const price = resolvePopularPrice(card, manual);
+  const precioUsuario = price.manualPrice;
+  const precioEfectivo = price.effectivePrice;
   const metrics = precioEfectivo !== null
     ? getTradeMetrics(precioEfectivo, 0, DEFAULT_META_PROFIT) : null;
   return {
     ...card,
     precioUsuario,
     precioEfectivo,
-    ultimaActualizacion: manual?.ultimaActualizacion ?? null,
+    ultimaActualizacion: price.manualUpdatedAt,
+    fuentePrecio: price.source,
+    precioManualCaducado: price.manualExpired,
     compraIdealMin: metrics?.compraIdealMin ?? null,
     compraIdealMax: metrics?.compraIdealMax ?? null,
     compraMaxima: metrics?.compraMaxima ?? null
@@ -3700,8 +3758,7 @@ function renderPopularPlayerDetails(player) {
   const statKeys = player.posicionPrincipal === "GK"
     ? ["div", "han", "kic", "ref", "spd", "pos"]
     : ["pac", "sho", "pas", "dri", "def", "phy"];
-  const priceSource = player.precioUsuario !== null ? "Actualizado por ti"
-    : player.precioEfectivo !== null ? "Referencia" : "—";
+  const priceSource = player.fuentePrecio;
   const row = document.createElement("tr");
   row.id = "popular-details-" + player.id;
   row.className = "popular-detail-row";
@@ -3772,7 +3829,7 @@ function renderPopularPlayers() {
   }
   cards.forEach(card => {
     const e = escapePopularHtml;
-    const source = card.precioUsuario !== null ? "Actualizado por ti" : "Referencia";
+    const source = card.fuentePrecio;
     const freshness = getPriceFreshness(card.ultimaActualizacion);
     const alternatives = (card.posiciones || []).filter(p => p !== card.posicionPrincipal);
     const futbinAction = card.futbin?.url ? `
@@ -3798,7 +3855,7 @@ function renderPopularPlayers() {
         formatCoins(card.compraIdealMin) + " - " + formatCoins(card.compraIdealMax)}</td>
       <td>${formatCoins(card.compraMaxima)}</td>
       <td><span class="price-freshness ${card.precioUsuario !== null ? freshness.className : "unknown"}">
-        ${card.precioUsuario !== null ? freshness.text : "Referencia"}</span></td>
+        ${card.precioUsuario !== null ? freshness.text : e(source)}</span></td>
       <td><div class="popular-actions">
         <button class="copy-player-button" data-meta-action="copy-name"
           data-player-id="${e(card.id)}" type="button" title="Copiar nombre" aria-label="Copiar nombre de ${e(card.nombre)}">📋</button>
@@ -3836,7 +3893,7 @@ function actualizarPrecioPopular(cardId) {
       alert("Ingresa un precio v\u00e1lido.");
       return;
     }
-    next[cardId] = { precioUsuario: price, ultimaActualizacion: new Date().toISOString() };
+    next[cardId] = { price, updatedAt: new Date().toISOString() };
   }
   try {
     localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(next));

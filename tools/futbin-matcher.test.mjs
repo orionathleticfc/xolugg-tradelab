@@ -88,13 +88,12 @@ test("real fixture: named players, partial collisions, multiple versions and no 
   const parsed=parseFutbinDiagnostic(JSON.parse(fs.readFileSync(fixture,"utf8").replace(/^\uFEFF/,"")));
   const before=JSON.stringify({catalog,parsed});
   const r=compareFutbinSnapshot(parsed.cards,catalog);
-  assert.deepEqual(r.summary,{catalog:277,snapshot:250,exactMatches:216,partialMatches:0,unchanged:216,updated:0,new:0,notInCurrentSnapshot:37,needsReview:4,snapshotDuplicates:30,snapshotDuplicateGroups:15,unavailableZeroPrices:49});
+  assert.deepEqual(r.summary,{catalog:306,snapshot:250,exactMatches:216,partialMatches:0,unchanged:43,updated:173,new:0,notInCurrentSnapshot:64,needsReview:4,snapshotDuplicates:30,snapshotDuplicateGroups:15,unavailableZeroPrices:49});
+  const matched=[...r.unchanged,...r.updated];
   for(const name of ["Gordon","Frimpong","Pedro Neto","Mamardashvili"]) {
-    const match=r.unchanged.find(row=>row.pdfCard.nombre===name);
+    const match=matched.find(row=>row.pdfCard.nombre===name);
     assert(match,name);assert.equal(match.confidence,"high");assert.equal(match.matchReason,"exact_identity");
-    assert.deepEqual(match.marketDiff,{});
-    assert.equal(match.currentRecord.precioReferencia,match.pdfCard.precioReferencia);
-    assert.equal(match.currentRecord.popularidadFuente,match.pdfCard.popularidadFuente);
+    assert.equal(match.status,"UPDATED");assert(Object.keys(match.marketDiff).length>0);
   }
   const partial=parsed.cards.find(card=>card.nombre==="Rummenigge"&&card.parseStatus==="partial");
   assert.equal(compareFutbinSnapshot([partial],catalog).summary.needsReview,1);
@@ -107,13 +106,18 @@ test("real fixture: named players, partial collisions, multiple versions and no 
   assert.equal(r.unchanged.length+r.updated.length+r.new.length+r.needsReview.length+
     r.snapshotDuplicates.reduce((n,g)=>n+g.occurrences.length,0),parsed.cards.length);
   // Every card incorporated at 250–276 now has a unique unchanged match.
-  for(const added of catalog.slice(250)) {
-    const matches=r.unchanged.filter(row=>row.currentRecord.id===added.id);
+  for(const added of catalog.slice(250,277)) {
+    const matches=matched.filter(row=>row.currentRecord.id===added.id);
     assert.equal(matches.length,1,added.nombre);
     assert.equal(matches[0].matchReason,"exact_identity");
   }
-  for(const [name,price,popularity] of [["Gordon",3500,294],["Frimpong",5800,221],["Pedro Neto",4000,151]]) {
-    const row=r.unchanged.find(row=>row.pdfCard.nombre===name);
+  const reviewCandidateIndices=new Set([...r.needsReview,...r.snapshotDuplicates.flatMap(group=>group.occurrences)]
+    .flatMap(row=>row.candidates.map(candidate=>candidate.catalogIndex)));
+  const absentIndices=new Set(r.notInCurrentSnapshot.map(row=>row.catalogIndex));
+  for(let index=277;index<catalog.length;index++) assert(absentIndices.has(index)||reviewCandidateIndices.has(index),catalog[index].nombre);
+  assert.equal(r.new.length,0);
+  for(const [name,price,popularity] of [["Gordon",3700,220],["Frimpong",5600,136],["Pedro Neto",4200,117]]) {
+    const row=matched.find(row=>row.pdfCard.nombre===name);
     assert.equal(row.currentRecord.precioReferencia,price);
     assert.equal(row.currentRecord.popularidadFuente,popularity);
   }
