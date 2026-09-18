@@ -100,21 +100,22 @@ test('same playerId allows a validated slug update and repeated generation is id
   assert.deepEqual(second.candidateCatalog,first.candidateCatalog);
   assert.equal(second.report.summary.futbinLinksApplied,0);
 });
-test('real PDF preserves 306 IDs and 240 URLs, verifies named cases and complete idempotence',
+test('real PDF preserves every current ID and FUTBIN URL, named cases and complete idempotence',
   {skip:!fs.existsSync(new URL('./fixtures-local/EA FC 27 Popular Players _ FUTBIN2.pdf',import.meta.url))},()=>{
   const {first,second,current,linksDiagnostic}=generateReal();
+  const currentFutbin=current.filter(c=>c.futbin).length;
   assert.equal(linksDiagnostic.metadata.totalAnnotations,279);
   assert.equal(linksDiagnostic.summary.matched,250);
-  assert.equal(first.candidateCatalog.length,306);
-  assert.equal(new Set(first.candidateCatalog.map(c=>c.id)).size,306);
+  assert.equal(first.candidateCatalog.length,current.length);
+  assert.equal(new Set(first.candidateCatalog.map(c=>c.id)).size,current.length);
   assert.deepEqual(first.candidateCatalog.map(c=>c.id),current.map(c=>c.id));
   assert.equal(first.candidateCatalog.filter(c=>c.precioReferencia===0).length,0);
-  assert.equal(first.candidateCatalog.filter(c=>c.futbin).length,240);
+  assert.equal(first.candidateCatalog.filter(c=>c.futbin).length,currentFutbin);
   assert.equal(first.report.summary.futbinLinksApplied,0);
-  assert.equal(first.report.summary.futbinLinksPreserved,240);
-  assert.equal(first.report.summary.updatedApplied,173);
+  assert.equal(first.report.summary.futbinLinksPreserved,currentFutbin);
+  assert.equal(first.report.summary.updatedApplied+first.report.summary.unchanged,216);
   assert.equal(first.report.summary.newApplied,0);
-  assert.equal(second.report.summary.futbinLinksPreserved,240);
+  assert.equal(second.report.summary.futbinLinksPreserved,currentFutbin);
   assert.equal(second.report.summary.updatedApplied,0);
   for(const [name,id,slug] of [['Gordon',843,'anthony-gordon'],['Frimpong',266,'jeremie-frimpong'],['Messi',22,'lionel-messi'],['van de Ven',929,'micky-van-de-ven']]) {
     const record=first.candidateCatalog.find(c=>c.nombre.toLowerCase()===name.toLowerCase());

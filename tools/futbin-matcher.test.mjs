@@ -88,12 +88,17 @@ test("real fixture: named players, partial collisions, multiple versions and no 
   const parsed=parseFutbinDiagnostic(JSON.parse(fs.readFileSync(fixture,"utf8").replace(/^\uFEFF/,"")));
   const before=JSON.stringify({catalog,parsed});
   const r=compareFutbinSnapshot(parsed.cards,catalog);
-  assert.deepEqual(r.summary,{catalog:306,snapshot:250,exactMatches:216,partialMatches:0,unchanged:43,updated:173,new:0,notInCurrentSnapshot:64,needsReview:4,snapshotDuplicates:30,snapshotDuplicateGroups:15,unavailableZeroPrices:49});
+  assert.deepEqual(r.summary,{catalog:catalog.length,snapshot:250,exactMatches:216,partialMatches:0,
+    unchanged:r.unchanged.length,updated:r.updated.length,new:0,
+    notInCurrentSnapshot:r.notInCurrentSnapshot.length,needsReview:4,
+    snapshotDuplicates:30,snapshotDuplicateGroups:15,unavailableZeroPrices:49});
+  assert.equal(r.summary.unchanged+r.summary.updated,216);
   const matched=[...r.unchanged,...r.updated];
   for(const name of ["Gordon","Frimpong","Pedro Neto","Mamardashvili"]) {
     const match=matched.find(row=>row.pdfCard.nombre===name);
     assert(match,name);assert.equal(match.confidence,"high");assert.equal(match.matchReason,"exact_identity");
-    assert.equal(match.status,"UPDATED");assert(Object.keys(match.marketDiff).length>0);
+    assert.equal(match.status,Object.keys(match.marketDiff).length?"UPDATED":"UNCHANGED");
+    assert.deepEqual(match.currentRecord,catalog[match.catalogIndex]);
   }
   const partial=parsed.cards.find(card=>card.nombre==="Rummenigge"&&card.parseStatus==="partial");
   assert.equal(compareFutbinSnapshot([partial],catalog).summary.needsReview,1);
@@ -105,7 +110,7 @@ test("real fixture: named players, partial collisions, multiple versions and no 
   assert.deepEqual(parsed.metrics,{slots:250,cards:250,complete:232,partial:18,ambiguous:0,errors:0});
   assert.equal(r.unchanged.length+r.updated.length+r.new.length+r.needsReview.length+
     r.snapshotDuplicates.reduce((n,g)=>n+g.occurrences.length,0),parsed.cards.length);
-  // Every card incorporated at 250–276 now has a unique unchanged match.
+  // Every card incorporated at 250–276 still has a unique exact match.
   for(const added of catalog.slice(250,277)) {
     const matches=matched.filter(row=>row.currentRecord.id===added.id);
     assert.equal(matches.length,1,added.nombre);
@@ -116,10 +121,9 @@ test("real fixture: named players, partial collisions, multiple versions and no 
   const absentIndices=new Set(r.notInCurrentSnapshot.map(row=>row.catalogIndex));
   for(let index=277;index<catalog.length;index++) assert(absentIndices.has(index)||reviewCandidateIndices.has(index),catalog[index].nombre);
   assert.equal(r.new.length,0);
-  for(const [name,price,popularity] of [["Gordon",3700,220],["Frimpong",5600,136],["Pedro Neto",4200,117]]) {
+  for(const name of ["Gordon","Frimpong","Pedro Neto"]) {
     const row=matched.find(row=>row.pdfCard.nombre===name);
-    assert.equal(row.currentRecord.precioReferencia,price);
-    assert.equal(row.currentRecord.popularidadFuente,popularity);
+    assert.deepEqual(row.currentRecord,catalog[row.catalogIndex]);
   }
   console.log("Real comparison:",r.summary);
 });

@@ -336,3 +336,64 @@ Resultado real: 277 registros, 216 enlaces aplicados, 0 preservados inicialmente
 30 apariciones / 15 grupos duplicados omitidos, 4 NEEDS_REVIEW, 0 faltantes,
 0 conflictos y 0 errores. Segunda ejecución: 0 aplicados, 216 preservados,
 catálogo idéntico. No se reemplaza el catálogo de producción ni se usa localStorage.
+
+## Publicar actualización FUTBIN
+
+`update-futbin.ps1` publica en `main` un catálogo candidato descargado desde el
+importador. El flujo normal busca el archivo `players-data.candidate*.js` más
+reciente en `Downloads`:
+
+~~~powershell
+.\tools\update-futbin.ps1
+~~~
+
+También se puede indicar el candidato de forma explícita:
+
+~~~powershell
+.\tools\update-futbin.ps1 -Candidate "C:\...\players-data.candidate.js"
+~~~
+
+Para comprobar la selección, Git, sintaxis, validación semántica y tests sin
+modificar el catálogo, crear commits ni hacer push:
+
+~~~powershell
+.\tools\update-futbin.ps1 -DryRun
+.\tools\update-futbin.ps1 -Candidate "C:\...\players-data.candidate.js" -DryRun
+~~~
+
+Si la política local bloquea scripts, se puede iniciar un único proceso de prueba
+sin cambiar la política del sistema:
+
+~~~powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\tools\update-futbin.ps1 -DryRun
+~~~
+
+El flujo rutinario es:
+
+1. Cargar el PDF en el importador.
+2. Revisar que existan 0 colisiones y 0 errores.
+3. Descargar `players-data.candidate.js`.
+4. Ejecutar `update-futbin.ps1`.
+5. Revisar la ruta, fecha, tamaño, SHA-256 y resumen calculado.
+6. Escribir `PUBLICAR` cuando el script lo solicite.
+7. Esperar la confirmación del commit y del push.
+
+El resumen indica `CAMBIOS DETECTADOS` o `SIN CAMBIOS` después de comparar los
+catálogos ya analizados y validados, por lo que diferencias de formato no cuentan
+como una actualización. Si son semánticamente idénticos, la ejecución real muestra
+`SIN CAMBIOS PARA PUBLICAR` y termina correctamente sin copiar, hacer staging,
+crear un commit ni hacer push. `-DryRun` muestra el mismo estado sin modificar nada.
+
+La publicación real exige un repositorio `xolugg-tradelab` limpio, sin operaciones
+Git pendientes y con `origin` configurado. Cambia de forma segura a `main` y ejecuta
+`git pull --ff-only origin main`; nunca usa reset, clean ni force push. El validador
+rechaza IDs eliminados o duplicados, cambios de identidad, alteraciones del orden,
+precios cero, esquemas inválidos y enlaces FUTBIN no canónicos. No fija un tamaño
+histórico del catálogo.
+
+Antes de copiar se conserva `players-data.js` en un archivo temporal. Si falla una
+validación antes del commit, el archivo original se restaura automáticamente. Solo
+se permite incluir `players-data.js` en el commit. Si el push directo es rechazado,
+el commit queda local y el script informa el fallo sin reintentar ni usar force.
+La suite histórica del importador no se reescribe: el publicador ejecuta las
+pruebas genéricas del validador como barrera estable para catálogos futuros.
