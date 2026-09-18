@@ -1615,6 +1615,17 @@ footer {
 
 /* Detalle de carta: limitado al ancho visible, sin ensanchar la tabla. */
 .popular-actions { flex-wrap: wrap; }
+.popular-futbin-link {
+  color: var(--muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.popular-futbin-link:hover,
+.popular-futbin-link:focus-visible {
+  color: var(--green);
+  border-color: var(--green);
+  background: rgba(39, 241, 163, 0.08);
+}
 .meta-table .popular-detail-row > td {
   padding: 0;
   white-space: normal;

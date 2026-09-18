@@ -3775,6 +3775,10 @@ function renderPopularPlayers() {
     const source = card.precioUsuario !== null ? "Actualizado por ti" : "Referencia";
     const freshness = getPriceFreshness(card.ultimaActualizacion);
     const alternatives = (card.posiciones || []).filter(p => p !== card.posicionPrincipal);
+    const futbinAction = card.futbin?.url ? `
+        <a class="meta-action-btn popular-futbin-link" data-meta-action="futbin"
+          href="${e(card.futbin.url)}" target="_blank" rel="noopener noreferrer"
+          aria-label="Abrir carta de ${e(card.nombre)} en FUTBIN">FUTBIN ↗</a>` : "";
     const row = document.createElement("tr");
     row.innerHTML = `
       <td><div class="meta-player-name"><strong>${e(card.nombre)}</strong>
@@ -3805,7 +3809,11 @@ function renderPopularPlayers() {
           aria-expanded="${expandedPopularCards.has(card.id)}"
           aria-controls="popular-details-${e(card.id)}">
           ${expandedPopularCards.has(card.id) ? "▴" : "▾"} Detalles</button>
+        ${futbinAction}
       </div></td>`;
+    row.querySelector('[data-meta-action="futbin"]')?.addEventListener("click", event => {
+      event.stopPropagation();
+    });
     tbody.appendChild(row);
     if (expandedPopularCards.has(card.id)) {
       tbody.appendChild(renderPopularPlayerDetails(card));

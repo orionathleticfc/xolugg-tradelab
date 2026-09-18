@@ -1,8 +1,8 @@
 import { generateCandidateCatalog, serializeCandidateCatalog } from "./futbin-generator.mjs";
 self.onmessage = event => {
   try {
-    const { catalog, comparison } = event.data;
-    const result = generateCandidateCatalog(catalog, comparison);
+    const { catalog, comparison, linksDiagnostic } = event.data;
+    const result = generateCandidateCatalog(catalog, comparison, { linksDiagnostic });
     const candidateSource = result.canExport ? serializeCandidateCatalog(result.candidateCatalog, catalog) : null;
     self.postMessage({ result: { ...result, candidateSource } });
   } catch (error) {

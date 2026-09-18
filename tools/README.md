@@ -254,3 +254,85 @@ matcher, generador, detalles, filtros y las cinco descargas. El JS candidato
 se ejecutó en un objeto window aislado y produjo 277 registros con IDs únicos,
 sin precios operativos cero; catálogo original y localStorage no cambiaron.
 
+
+## Fase 6A: enlaces del PDF (solo diagnóstico)
+
+Abrir `tools/futbin-importer.html` con Live Server y seleccionar el PDF local.
+La sección **Enlaces FUTBIN** muestra asociaciones por aparición, todos los dominios,
+las URLs y sus rectángulos. **Exportar diagnóstico de enlaces** descarga
+`futbin-links-diagnostic.json`: metadata, summary, cards, links y annotations.
+Los IDs `snapshot-card-N` son referencias locales al índice del snapshot (base cero),
+no IDs del catálogo. `playerId` se conserva como cadena.
+
+PDF.js 5.4.624 lee `page.getAnnotations()` antes de liberar cada página. No visita
+las URLs extraídas. El diagnóstico no se incorpora al matcher ni al generator.
+Las coordenadas son las originales del PDF, sin viewport, con Y creciente hacia arriba.
+Se reutiliza la geometría del parser: columna de 132 unidades y banda vertical
+anchorY - 66 a anchorY + 86, limitada a la página. En fragmentos de otra página
+se utiliza únicamente la evidencia económica que ya identificó el parser.
+Se exige una intersección de al menos el 50% del área del rectángulo o de la región
+para descartar pequeños solapamientos con la columna vecina. Se conservan todas las
+candidatas; varias URLs distintas, áreas compartidas o rutas FUTBIN no reconocidas
+producen AMBIGUOUS_LINK. Fragmentos con la misma URL en una carta no se duplican.
+Un fallo al leer anotaciones marca el diagnóstico incompleto y las cartas afectadas
+como ambiguas, sin interrumpir el comparador. NO_LINK y NON_FUTBIN_LINK cuentan en
+`summary.noLink`; este último también tiene contador informativo separado.
+
+Validación local del PDF FUTBIN2: 279 anotaciones, 278 URLs, 268 de FUTBIN,
+17 páginas con enlaces y 250/250 apariciones asociadas, 0 sin enlace y 0 ambiguas.
+Hay 254 anotaciones de cartas (cuatro cartas tienen fragmentos entre páginas 1 y 2),
+14 enlaces genéricos FUTBIN y 10 externos. La forma de carta observada es
+`https://www.futbin.com/27/player/{playerId}/{slug}`. Los enlaces genéricos quedan
+como evidencia sin asociar. Esto comprueba el vínculo conservado en el PDF, no la
+vigencia del destino ni otros diseños/versiones de PDF; no se consulta FUTBIN.
+
+Pruebas sintéticas, sin red: `node --test tools/futbin-links.test.mjs`.
+La validación con el PDF y JSON reales usa fixtures locales ignorados por Git.
+
+## Fase 6B: metadata FUTBIN en el candidato
+
+El worker recibe `linksDiagnostic`. El generador usa `futbin-catalog-links.mjs`
+para recalcular con `buildLinksDiagnostic` la asociación geométrica contra las
+cartas de esta comparación. Conserva `pageInfo` para reproducir el recorte de
+regiones. Solo aplica MATCHED + exact_identity + high sobre un registro existente
+no ambiguo ni reclamado por otra aparición; NEW requiere una comparación posterior
+contra el catálogo incorporado. Nunca construye enlaces por nombre ni visita URLs.
+
+Cada registro recibe únicamente `futbin: { game, playerId, slug, url }`.
+Se exige game 27, playerId entero positivo representable exactamente como number,
+slug no vacío y URL canónica HTTPS de www.futbin.com, sin query ni fragmento.
+Un playerId diferente al existente se omite como conflicto. Un cambio de slug del
+mismo playerId puede aplicarse con evidencia válida. Ausencia, ambigüedad, duplicados,
+revisiones o cartas fuera del snapshot preservan la metadata anterior.
+La validación completa también rechaza metadata preexistente inválida.
+
+El reporte contiene `futbinLinks` (decisión por aparición, índices, candidatos,
+URLs y old/proposed cuando corresponde) y `futbinPreserved` (por registro).
+Los contadores `futbinLinksApplied` y `futbinLinksPreserved` cuentan registros;
+`futbinLinksSkippedDuplicates` cuenta apariciones, no grupos;
+`futbinLinksSkippedNeedsReview` cuenta apariciones en revisión;
+`futbinLinksMissing` cuenta matches seguros sin enlace geométrico MATCHED.
+URLs inválidas, conflictos de ID y matches inseguros tienen contadores separados.
+La UI muestra los cinco contadores solicitados y detalles auditables.
+
+Validación offline reproducible con los fixtures locales de Fase 6A:
+
+```powershell
+$tests = @(Get-ChildItem tools -Filter '*.test.mjs' | ForEach-Object FullName)
+node --test @tests
+node tools/futbin-phase6b-local.mjs --export
+Get-ChildItem tools -File | Where-Object Extension -In '.js','.mjs' | ForEach-Object { node --check $_.FullName }
+```
+
+`futbin-phase6b-local.mjs` es un lector de anotaciones exclusivo del fixture Skia
+local con diccionarios sin comprimir; verifica el árbol de páginas y rechaza sintaxis
+no soportada. Lee el PDF original de nuevo, sin reutilizar resultados parciales.
+El importador continúa usando PDF.js. El script usa el diagnóstico de texto local
+para el parser, ejecuta dos veces matcher/generator, comprueba igualdad completa
+(incluido importedAt) y exporta `tools/players-data.candidate.js` y
+`tools/catalog-generation-report.json`. Los fixtures privados siguen ignorados.
+
+Resultado real: 277 registros, 216 enlaces aplicados, 0 preservados inicialmente,
+30 apariciones / 15 grupos duplicados omitidos, 4 NEEDS_REVIEW, 0 faltantes,
+0 conflictos y 0 errores. Segunda ejecución: 0 aplicados, 216 preservados,
+catálogo idéntico. No se reemplaza el catálogo de producción ni se usa localStorage.

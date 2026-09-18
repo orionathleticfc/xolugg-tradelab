@@ -84,6 +84,7 @@ function filterItems() {
 async function processFile(file) {
   diagnostic = null;
   resetCards();
+  resetLinks();
   filtered = [];
   offset = 0;
   ui.tokens.replaceChildren();
@@ -128,11 +129,22 @@ async function processFile(file) {
     ui.progress.value = 0;
     const items = [];
     const pageInfo = [];
+    const annotations = [];
+    const annotationErrors = [];
     const warnings = [];
     for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
       setStatus("Leyendo… página " + pageNumber + " de " + pdf.numPages, "loading");
       const page = await pdf.getPage(pageNumber);
       try {
+        try {
+          for (const annotation of await page.getAnnotations()) {
+            annotations.push({ page: pageNumber, id: annotation.id, subtype: annotation.subtype,
+              url: annotation.url ?? null, unsafeUrl: annotation.unsafeUrl ?? null,
+              rect: annotation.rect ? Array.from(annotation.rect) : null, dest: annotation.dest ?? null });
+          }
+        } catch (error) {
+          annotationErrors.push({ page: pageNumber, message: error.message || String(error) });
+        }
         const content = await page.getTextContent();
         const start = items.length;
         for (const item of content.items) {
@@ -169,6 +181,14 @@ async function processFile(file) {
     setStatus("PDF procesado", "success");
     try {
       await analyzeCards(diagnostic);
+      try {
+        const { buildLinksDiagnostic } = await import('./futbin-links.mjs');
+        linksDiagnostic = buildLinksDiagnostic({ fileName: file.name, pages: pdf.numPages,
+          extractedAt: diagnostic.extractedAt, pageInfo, annotations, errors: annotationErrors }, parsedCards.cards);
+        renderLinks();
+      } catch (error) {
+        document.getElementById('links-status').textContent = 'Error de diagnóstico de enlaces: ' + error.message;
+      }
       try {
         await compareCardsWithCatalog();
         try {
@@ -475,7 +495,9 @@ comparisonUi["comparison-export"].addEventListener("click", () => {
 
 const generationMetricKeys = ["currentCatalog", "updatedApplied", "newApplied", "unchanged",
   "skippedSnapshotDuplicateGroups", "skippedSnapshotDuplicateOccurrences", "skippedNeedsReview",
-  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors"];
+  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors",
+  "futbinLinksApplied", "futbinLinksPreserved", "futbinLinksSkippedDuplicates",
+  "futbinLinksSkippedNeedsReview", "futbinLinksMissing"];
 const generationUi = Object.fromEntries([
   "generation-status", "generation-errors", "generation-details", "generation-export", "generation-report",
   ...generationMetricKeys.map(key => "generation-" + key)
@@ -519,7 +541,9 @@ function generateCatalogPreview() {
         ["newApplied", "Nuevas incorporadas: ID y datos de origen"],
         ["unchanged", "Registros sin cambios"], ["preservedNotInSnapshot", "Conservadas fuera del snapshot"],
         ["skippedSnapshotDuplicates", "Duplicados omitidos"], ["skippedNeedsReview", "Revisiones omitidas"],
-        ["generationNeedsReview", "Incidencias de generación"]
+        ["generationNeedsReview", "Incidencias de generación"],
+        ["futbinLinks", "Enlaces FUTBIN: decisiones y conflictos"],
+        ["futbinPreserved", "Metadata FUTBIN preservada"]
       ]) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
@@ -535,7 +559,7 @@ function generateCatalogPreview() {
       }
       resolve();
     };
-    try { worker.postMessage({ catalog: window.PLAYERS_DATA, comparison: comparisonResult }); }
+    try { worker.postMessage({ catalog: window.PLAYERS_DATA, comparison: comparisonResult, linksDiagnostic }); }
     catch (error) { fail(error); }
   });
 }
@@ -605,3 +629,44 @@ function renderSnapshotDuplicates() {
     panel.append(heading, reason, scroll, details);container.append(panel);
   }
 }
+
+// Local evidence for candidate generation; never visits extracted URLs.
+let linksDiagnostic = null;
+function resetLinks() {
+  linksDiagnostic = null;
+  document.getElementById('links-status').textContent = 'Esperando PDF.';
+  document.getElementById('links-summary').textContent = '';
+  document.getElementById('links-domains').textContent = '';
+  document.getElementById('links-body').replaceChildren();
+  document.getElementById('links-annotations').replaceChildren();
+  document.getElementById('links-export').disabled = true;
+}
+function appendLinkRow(body, values) {
+  const row = document.createElement('tr');
+  for (const value of values) {
+    const cell = document.createElement('td');
+    cell.textContent = value == null ? '—' : String(value);
+    row.append(cell);
+  }
+  body.append(row);
+}
+function renderLinks() {
+  const { metadata: m, summary: s, cards, links } = linksDiagnostic;
+  document.getElementById('links-status').textContent = m.complete
+    ? 'Diagnóstico completo. Las URLs son evidencia del PDF; no se ha visitado FUTBIN.'
+    : 'Diagnóstico incompleto: ' + m.errors.map(e => 'Página ' + e.page + ': ' + e.message).join('; ');
+  document.getElementById('links-summary').textContent = 'Anotaciones: ' + m.totalAnnotations +
+    ' · URLs: ' + m.totalUrls + ' · URLs FUTBIN: ' + m.totalFutbinUrls +
+    ' · Páginas con enlaces (' + m.pagesWithLinks.length + '): ' + m.pagesWithLinks.join(', ') +
+    ' · Cartas: ' + s.cards + ' · MATCHED: ' + s.matched + ' · Sin enlace exacto: ' + s.noLink +
+    ' · AMBIGUOUS_LINK: ' + s.ambiguous + ' · NON_FUTBIN_LINK: ' + s.nonFutbin;
+  document.getElementById('links-domains').textContent = Object.entries(m.domains).map(([domain,count]) => domain + ': ' + count).join(' · ');
+  const body = document.getElementById('links-body'); body.replaceChildren();
+  for (const card of cards) appendLinkRow(body, [card.page, card.playerName, card.ovr, card.position, card.urls.join('\n'), card.status]);
+  const annotations = document.getElementById('links-annotations'); annotations.replaceChildren();
+  for (const link of links) appendLinkRow(annotations, [link.page, link.domain, JSON.stringify(link.rect), link.url, link.game, link.playerId, link.slug, link.candidateCardIds.join(', '), link.status]);
+  document.getElementById('links-export').disabled = false;
+}
+document.getElementById('links-export').addEventListener('click', () => {
+  if (linksDiagnostic) downloadJson(linksDiagnostic, 'futbin-links-diagnostic.json');
+});

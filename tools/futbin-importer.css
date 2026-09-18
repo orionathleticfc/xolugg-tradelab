@@ -62,3 +62,7 @@ td:nth-child(2) { min-width: 160px; max-width: 480px; overflow-wrap: anywhere; w
 #generation-details { margin-top: 20px; }
 #generation-details summary { cursor: pointer; color: var(--green); padding: 10px 0; }
 #generation-details pre { max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.links-table td { white-space: pre-wrap; overflow-wrap: anywhere; min-width: 6rem; }
+.links-table td:nth-child(5) { max-width: 30rem; }
+#links-summary, #links-domains { line-height: 1.7; overflow-wrap: anywhere; }

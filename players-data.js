@@ -71,7 +71,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 266,
+      "slug": "jeremie-frimpong",
+      "url": "https://www.futbin.com/27/player/266/jeremie-frimpong"
+    }
   },
   {
     "id": "messi-89-cam-76-87-89-90-33-63",
@@ -109,7 +115,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22,
+      "slug": "lionel-messi",
+      "url": "https://www.futbin.com/27/player/22/lionel-messi"
+    }
   },
   {
     "id": "van-de-ven-81-cb-90-60-65-72-80-81",
@@ -145,7 +157,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 929,
+      "slug": "micky-van-de-ven",
+      "url": "https://www.futbin.com/27/player/929/micky-van-de-ven"
+    }
   },
   {
     "id": "gordon-82-lw-91-78-77-82-50-71",
@@ -182,7 +200,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 843,
+      "slug": "anthony-gordon",
+      "url": "https://www.futbin.com/27/player/843/anthony-gordon"
+    }
   },
   {
     "id": "vicky-lopez-84-rw-85-80-81-86-47-60",
@@ -222,7 +246,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 514,
+      "slug": "victoria-lopez-serrano-felix",
+      "url": "https://www.futbin.com/27/player/514/victoria-lopez-serrano-felix"
+    }
   },
   {
     "id": "marmoush-82-lw-87-83-76-83-34-69",
@@ -295,7 +325,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 810,
+      "slug": "marcus-rashford",
+      "url": "https://www.futbin.com/27/player/810/marcus-rashford"
+    }
   },
   {
     "id": "adeyemi-82-rm-95-80-72-82-36-69",
@@ -335,7 +371,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 846,
+      "slug": "karim-adeyemi",
+      "url": "https://www.futbin.com/27/player/846/karim-adeyemi"
+    }
   },
   {
     "id": "pedro-neto-81-rm-91-76-77-82-40-70",
@@ -373,7 +415,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 423,
+      "slug": "pedro-lomba-neto",
+      "url": "https://www.futbin.com/27/player/423/pedro-lomba-neto"
+    }
   },
   {
     "id": "balde-82-lb-90-52-75-79-77-69",
@@ -409,7 +457,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 848,
+      "slug": "alejandro-balde-martinez",
+      "url": "https://www.futbin.com/27/player/848/alejandro-balde-martinez"
+    }
   },
   {
     "id": "claudia-pina-89-lw-91-89-84-88-45-73",
@@ -446,7 +500,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 19,
+      "slug": "claudia-pina-medina",
+      "url": "https://www.futbin.com/27/player/19/claudia-pina-medina"
+    }
   },
   {
     "id": "lamine-yamal-91-rw-x-x-x-x-x-x",
@@ -518,7 +578,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1186,
+      "slug": "victor-munoz-villanueva",
+      "url": "https://www.futbin.com/27/player/1186/victor-munoz-villanueva"
+    }
   },
   {
     "id": "szoboszlai-86-cam-82-83-86-84-74-77",
@@ -557,7 +623,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 233,
+      "slug": "dominik-szoboszlai",
+      "url": "https://www.futbin.com/27/player/233/dominik-szoboszlai"
+    }
   },
   {
     "id": "alvaro-carreras-81-lb-86-66-77-80-75-81",
@@ -594,7 +666,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 684,
+      "slug": "alvaro-fernandez-carreras",
+      "url": "https://www.futbin.com/27/player/684/alvaro-fernandez-carreras"
+    }
   },
   {
     "id": "kika-nazareth-83-cm-85-82-82-84-60-80",
@@ -631,7 +709,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 506,
+      "slug": "francisca-ramos-nazareth-sousa",
+      "url": "https://www.futbin.com/27/player/506/francisca-ramos-nazareth-sousa"
+    }
   },
   {
     "id": "diomande-84-rw-93-77-75-87-47-70",
@@ -704,7 +788,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 346,
+      "slug": "jamal-musiala",
+      "url": "https://www.futbin.com/27/player/346/jamal-musiala"
+    }
   },
   {
     "id": "lavelle-87-cam-85-79-84-87-60-65",
@@ -741,7 +831,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 54,
+      "slug": "rose-lavelle",
+      "url": "https://www.futbin.com/27/player/54/rose-lavelle"
+    }
   },
   {
     "id": "konate-84-cb-77-34-65-68-84-85",
@@ -776,7 +872,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 562,
+      "slug": "ibrahima-konate",
+      "url": "https://www.futbin.com/27/player/562/ibrahima-konate"
+    }
   },
   {
     "id": "matheus-nunes-83-rb-87-70-80-79-78-75",
@@ -812,7 +914,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 719,
+      "slug": "matheus-luiz-nunes",
+      "url": "https://www.futbin.com/27/player/719/matheus-luiz-nunes"
+    }
   },
   {
     "id": "wirtz-86-cam-77-79-86-88-54-61",
@@ -850,7 +958,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 257,
+      "slug": "florian-wirtz",
+      "url": "https://www.futbin.com/27/player/257/florian-wirtz"
+    }
   },
   {
     "id": "lacroix-83-cb-86-46-63-69-84-83",
@@ -885,7 +999,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21755,
+      "slug": "maxence-lacroix",
+      "url": "https://www.futbin.com/27/player/21755/maxence-lacroix"
+    }
   },
   {
     "id": "openda-80-st-94-79-69-78-30-75",
@@ -921,7 +1041,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1058,
+      "slug": "lois-openda",
+      "url": "https://www.futbin.com/27/player/1058/lois-openda"
+    }
   },
   {
     "id": "lamine-yamal-91-rw-87-85-88-94-40-63",
@@ -993,7 +1119,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 256,
+      "slug": "rayan-cherki",
+      "url": "https://www.futbin.com/27/player/256/rayan-cherki"
+    }
   },
   {
     "id": "diaby-82-rm-94-69-76-85-44-59",
@@ -1065,7 +1197,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22757,
+      "slug": "goretzka",
+      "url": "https://www.futbin.com/27/player/22757/goretzka"
+    }
   },
   {
     "id": "ekitike-85-st-86-83-72-84-33-73",
@@ -1101,7 +1239,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 299,
+      "slug": "hugo-ekitike",
+      "url": "https://www.futbin.com/27/player/299/hugo-ekitike"
+    }
   },
   {
     "id": "hincapie-84-lb-83-48-71-72-84-81",
@@ -1137,7 +1281,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 763,
+      "slug": "piero-hincapie",
+      "url": "https://www.futbin.com/27/player/763/piero-hincapie"
+    }
   },
   {
     "id": "rodman-87-lm-91-82-81-83-55-82",
@@ -1175,7 +1325,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 695,
+      "slug": "trinity-rodman",
+      "url": "https://www.futbin.com/27/player/695/trinity-rodman"
+    }
   },
   {
     "id": "camavinga-81-cm-79-67-80-82-78-80",
@@ -1212,7 +1368,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 677,
+      "slug": "eduardo-camavinga",
+      "url": "https://www.futbin.com/27/player/677/eduardo-camavinga"
+    }
   },
   {
     "id": "rodrygo-84-lw-87-77-79-87-33-63",
@@ -1252,7 +1414,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 559,
+      "slug": "rodrygo-silva-de-goes",
+      "url": "https://www.futbin.com/27/player/559/rodrygo-silva-de-goes"
+    }
   },
   {
     "id": "salah-87-rm-84-83-83-86-45-72",
@@ -1290,7 +1458,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 738,
+      "slug": "mohamed-salah",
+      "url": "https://www.futbin.com/27/player/738/mohamed-salah"
+    }
   },
   {
     "id": "yldz-84-cam-85-81-79-85-59-70",
@@ -1328,7 +1502,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 469,
+      "slug": "kenan-yldz",
+      "url": "https://www.futbin.com/27/player/469/kenan-yldz"
+    }
   },
   {
     "id": "eder-militao-84-cb-79-54-71-72-85-82",
@@ -1363,7 +1543,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 680,
+      "slug": "eder-gabriel-militao",
+      "url": "https://www.futbin.com/27/player/680/eder-gabriel-militao"
+    }
   },
   {
     "id": "marquinhos-87-cb-74-56-75-73-89-78",
@@ -1398,7 +1584,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 651,
+      "slug": "marcos-aoas-correa",
+      "url": "https://www.futbin.com/27/player/651/marcos-aoas-correa"
+    }
   },
   {
     "id": "lamine-yamal-90-rw-86-84-87-93-38-61",
@@ -1434,7 +1626,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 81,
+      "slug": "lamine-yamal-nasraoui-ebana",
+      "url": "https://www.futbin.com/27/player/81/lamine-yamal-nasraoui-ebana"
+    }
   },
   {
     "id": "gravenberch-85-cdm-79-76-81-83-80-80",
@@ -1470,7 +1668,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 298,
+      "slug": "ryan-gravenberch",
+      "url": "https://www.futbin.com/27/player/298/ryan-gravenberch"
+    }
   },
   {
     "id": "inaki-williams-80-rw-92-79-74-77-47-83",
@@ -1507,7 +1711,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1095,
+      "slug": "inaki-williams-arthuer",
+      "url": "https://www.futbin.com/27/player/1095/inaki-williams-arthuer"
+    }
   },
   {
     "id": "hasegawa-88-cdm-77-71-86-88-81-68",
@@ -1544,7 +1754,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 24,
+      "slug": "yui-hasegawa",
+      "url": "https://www.futbin.com/27/player/24/yui-hasegawa"
+    }
   },
   {
     "id": "doku-84-lw-91-75-78-88-40-72",
@@ -1580,7 +1796,13 @@ window.PLAYERS_DATA = [
       "precioPrincipalRaw": "45K",
       "valorSecundarioRaw": "830"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 436,
+      "slug": "jeremy-doku",
+      "url": "https://www.futbin.com/27/player/436/jeremy-doku"
+    }
   },
   {
     "id": "eric-garcia-85-cb-79-58-77-76-86-82",
@@ -1618,7 +1840,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 554,
+      "slug": "eric-garcia-martret",
+      "url": "https://www.futbin.com/27/player/554/eric-garcia-martret"
+    }
   },
   {
     "id": "joao-neves-88-cm-72-75-84-87-86-82",
@@ -1654,7 +1882,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 97,
+      "slug": "joao-pedro-goncalves-neves",
+      "url": "https://www.futbin.com/27/player/97/joao-pedro-goncalves-neves"
+    }
   },
   {
     "id": "endrick-79-st-87-81-66-80-30-73",
@@ -1758,7 +1992,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 478,
+      "slug": "donyell-malen",
+      "url": "https://www.futbin.com/27/player/478/donyell-malen"
+    }
   },
   {
     "id": "joao-cancelo-83-lb-84-72-84-85-77-72",
@@ -1796,7 +2036,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 787,
+      "slug": "joao-pedro-cavaco-cancelo",
+      "url": "https://www.futbin.com/27/player/787/joao-pedro-cavaco-cancelo"
+    }
   },
   {
     "id": "upamecano-87-cb-80-45-65-75-86-83",
@@ -1831,7 +2077,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 320,
+      "slug": "dayot-upamecano",
+      "url": "https://www.futbin.com/27/player/320/dayot-upamecano"
+    }
   },
   {
     "id": "lacroix-82-cb-86-45-61-67-83-82",
@@ -1866,7 +2118,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 422,
+      "slug": "maxence-lacroix",
+      "url": "https://www.futbin.com/27/player/422/maxence-lacroix"
+    }
   },
   {
     "id": "khusanov-82-cb-88-39-64-68-83-80",
@@ -1901,7 +2159,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 594,
+      "slug": "abdukodir-khusanov",
+      "url": "https://www.futbin.com/27/player/594/abdukodir-khusanov"
+    }
   },
   {
     "id": "davies-82-lb-93-66-78-84-74-76",
@@ -1937,7 +2201,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 827,
+      "slug": "alphonso-davies",
+      "url": "https://www.futbin.com/27/player/827/alphonso-davies"
+    }
   },
   {
     "id": "mario-gila-81-cb-85-53-68-75-81-79",
@@ -1972,7 +2242,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 947,
+      "slug": "mario-gila-fuentes",
+      "url": "https://www.futbin.com/27/player/947/mario-gila-fuentes"
+    }
   },
   {
     "id": "palestra-78-rb-90-65-69-80-70-81",
@@ -2008,7 +2284,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1442,
+      "slug": "marco-palestra",
+      "url": "https://www.futbin.com/27/player/1442/marco-palestra"
+    }
   },
   {
     "id": "kimmich-88-cdm-71-73-90-84-81-79",
@@ -2045,7 +2327,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 85,
+      "slug": "joshua-kimmich",
+      "url": "https://www.futbin.com/27/player/85/joshua-kimmich"
+    }
   },
   {
     "id": "karchaoui-87-cm-89-76-87-88-79-72",
@@ -2084,7 +2372,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 59,
+      "slug": "sakina-karchaoui",
+      "url": "https://www.futbin.com/27/player/59/sakina-karchaoui"
+    }
   },
   {
     "id": "estevao-80-rm-89-76-75-84-33-57",
@@ -2120,7 +2414,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 424,
+      "slug": "estevao-willian-almeida",
+      "url": "https://www.futbin.com/27/player/424/estevao-willian-almeida"
+    }
   },
   {
     "id": "isak-86-st-81-87-72-82-39-72",
@@ -2155,7 +2455,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 238,
+      "slug": "alexander-isak",
+      "url": "https://www.futbin.com/27/player/238/alexander-isak"
+    }
   },
   {
     "id": "palmer-85-cam-75-83-85-85-50-64",
@@ -2193,7 +2499,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 103,
+      "slug": "cole-palmer",
+      "url": "https://www.futbin.com/27/player/103/cole-palmer"
+    }
   },
   {
     "id": "pedri-90-cm-76-75-89-91-77-75",
@@ -2230,7 +2542,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 69,
+      "slug": "pedro-gonzalez-lopez",
+      "url": "https://www.futbin.com/27/player/69/pedro-gonzalez-lopez"
+    }
   },
   {
     "id": "bruno-fernandes-89-cam-67-85-92-85-68-75",
@@ -2266,7 +2584,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 53,
+      "slug": "bruno-miguel-borges-fernandes",
+      "url": "https://www.futbin.com/27/player/53/bruno-miguel-borges-fernandes"
+    }
   },
   {
     "id": "rafael-leao-83-lw-93-79-79-83-30-73",
@@ -2304,7 +2628,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21981,
+      "slug": "rafael-da-conceicao-leao",
+      "url": "https://www.futbin.com/27/player/21981/rafael-da-conceicao-leao"
+    }
   },
   {
     "id": "marmoush-82-lw-87-83-76-83-34-69-2",
@@ -2376,7 +2706,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 413,
+      "slug": "ronald-araujo",
+      "url": "https://www.futbin.com/27/player/413/ronald-araujo"
+    }
   },
   {
     "id": "diaz-88-lm-82-82-83-87-44-74",
@@ -2413,7 +2749,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 74,
+      "slug": "luis-diaz",
+      "url": "https://www.futbin.com/27/player/74/luis-diaz"
+    }
   },
   {
     "id": "van-dijk-88-cb-70-60-72-70-89-85",
@@ -2448,7 +2790,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 96,
+      "slug": "virgil-van-dijk",
+      "url": "https://www.futbin.com/27/player/96/virgil-van-dijk"
+    }
   },
   {
     "id": "tomori-80-cb-85-40-63-68-80-80",
@@ -2483,7 +2831,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1078,
+      "slug": "fikayo-tomori",
+      "url": "https://www.futbin.com/27/player/1078/fikayo-tomori"
+    }
   },
   {
     "id": "chawinga-89-lm-91-83-81-86-46-84",
@@ -2519,7 +2873,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20,
+      "slug": "temwa-chawinga",
+      "url": "https://www.futbin.com/27/player/20/temwa-chawinga"
+    }
   },
   {
     "id": "tonali-85-cdm-79-74-82-80-81-84",
@@ -2555,7 +2915,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 237,
+      "slug": "sandro-tonali",
+      "url": "https://www.futbin.com/27/player/237/sandro-tonali"
+    }
   },
   {
     "id": "kounde-85-rb-82-53-74-78-83-83",
@@ -2592,7 +2958,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 746,
+      "slug": "jules-kounde",
+      "url": "https://www.futbin.com/27/player/746/jules-kounde"
+    }
   },
   {
     "id": "hernandez-82-lb-89-78-78-82-76-83",
@@ -2628,7 +3000,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 579,
+      "slug": "theo-hernandez",
+      "url": "https://www.futbin.com/27/player/579/theo-hernandez"
+    }
   },
   {
     "id": "bremer-86-cb-85-52-59-68-87-85",
@@ -2663,7 +3041,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 459,
+      "slug": "gleison-bremer-silva-nascimento",
+      "url": "https://www.futbin.com/27/player/459/gleison-bremer-silva-nascimento"
+    }
   },
   {
     "id": "ferran-torres-84-st-88-84-78-82-40-74",
@@ -2700,7 +3084,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 654,
+      "slug": "ferran-torres-garcia",
+      "url": "https://www.futbin.com/27/player/654/ferran-torres-garcia"
+    }
   },
   {
     "id": "greenwood-83-rm-83-85-78-84-37-63",
@@ -2738,7 +3128,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 786,
+      "slug": "mason-greenwood",
+      "url": "https://www.futbin.com/27/player/786/mason-greenwood"
+    }
   },
   {
     "id": "olise-90-rm-83-82-89-91-47-69",
@@ -2775,7 +3171,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 62,
+      "slug": "michael-olise",
+      "url": "https://www.futbin.com/27/player/62/michael-olise"
+    }
   },
   {
     "id": "barella-87-cm-77-78-84-86-81-72",
@@ -2811,7 +3213,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 456,
+      "slug": "nicolo-barella",
+      "url": "https://www.futbin.com/27/player/456/nicolo-barella"
+    }
   },
   {
     "id": "lookman-83-st-86-83-73-84-32-68",
@@ -2849,7 +3257,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 778,
+      "slug": "ademola-lookman",
+      "url": "https://www.futbin.com/27/player/778/ademola-lookman"
+    }
   },
   {
     "id": "rice-88-cdm-72-75-86-81-85-84",
@@ -2885,7 +3299,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 91,
+      "slug": "declan-rice",
+      "url": "https://www.futbin.com/27/player/91/declan-rice"
+    }
   },
   {
     "id": "pau-cubarsi-86-cb-78-44-69-77-85-81",
@@ -2920,7 +3340,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 549,
+      "slug": "pau-cubarsi-paredes",
+      "url": "https://www.futbin.com/27/player/549/pau-cubarsi-paredes"
+    }
   },
   {
     "id": "guler-83-rm-77-79-85-84-55-57",
@@ -2959,7 +3385,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 678,
+      "slug": "arda-guler",
+      "url": "https://www.futbin.com/27/player/678/arda-guler"
+    }
   },
   {
     "id": "patri-guijarro-88-cdm-78-82-83-88-84-88",
@@ -2995,7 +3427,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 23,
+      "slug": "patricia-guijarro-gutierrez",
+      "url": "https://www.futbin.com/27/player/23/patricia-guijarro-gutierrez"
+    }
   },
   {
     "id": "tchouameni-84-cdm-74-70-79-77-83-82",
@@ -3032,7 +3470,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 558,
+      "slug": "aurelien-tchouameni",
+      "url": "https://www.futbin.com/27/player/558/aurelien-tchouameni"
+    }
   },
   {
     "id": "laimer-85-rb-86-69-78-77-81-77",
@@ -3070,7 +3514,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 312,
+      "slug": "konrad-laimer",
+      "url": "https://www.futbin.com/27/player/312/konrad-laimer"
+    }
   },
   {
     "id": "pulisic-83-cam-87-83-81-84-47-60",
@@ -3108,7 +3558,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 475,
+      "slug": "christian-pulisic",
+      "url": "https://www.futbin.com/27/player/475/christian-pulisic"
+    }
   },
   {
     "id": "reijnders-84-cm-75-78-81-83-71-76",
@@ -3145,7 +3601,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 759,
+      "slug": "tijjani-reijnders",
+      "url": "https://www.futbin.com/27/player/759/tijjani-reijnders"
+    }
   },
   {
     "id": "banda-88-st-92-84-64-80-33-82",
@@ -3181,7 +3643,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 48,
+      "slug": "barbra-banda",
+      "url": "https://www.futbin.com/27/player/48/barbra-banda"
+    }
   },
   {
     "id": "caicedo-85-lw-93-75-78-89-37-68",
@@ -3219,7 +3687,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 517,
+      "slug": "linda-caicedo",
+      "url": "https://www.futbin.com/27/player/517/linda-caicedo"
+    }
   },
   {
     "id": "alvarez-86-st-86-86-82-87-58-77",
@@ -3255,7 +3729,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 548,
+      "slug": "julian-alvarez",
+      "url": "https://www.futbin.com/27/player/548/julian-alvarez"
+    }
   },
   {
     "id": "o-reilly-83-lb-83-70-78-79-81-81",
@@ -3292,7 +3772,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 435,
+      "slug": "nico-oreilly",
+      "url": "https://www.futbin.com/27/player/435/nico-oreilly"
+    }
   },
   {
     "id": "salma-paralluelo-87-lw-93-84-79-85-46-78",
@@ -3332,7 +3818,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 621,
+      "slug": "salma-celeste-paralluelo-ayingono",
+      "url": "https://www.futbin.com/27/player/621/salma-celeste-paralluelo-ayingono"
+    }
   },
   {
     "id": "nico-williams-84-lw-93-77-79-86-37-67",
@@ -3368,7 +3860,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 557,
+      "slug": "nicholas-williams-arthuer",
+      "url": "https://www.futbin.com/27/player/557/nicholas-williams-arthuer"
+    }
   },
   {
     "id": "chiesa-80-rm-87-79-75-83-44-68",
@@ -3405,7 +3903,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1037,
+      "slug": "federico-chiesa",
+      "url": "https://www.futbin.com/27/player/1037/federico-chiesa"
+    }
   },
   {
     "id": "cristiano-ronaldo-84-st-67-88-75-78-33-75",
@@ -3440,7 +3944,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 565,
+      "slug": "c-ronaldo-dos-santos-aveiro",
+      "url": "https://www.futbin.com/27/player/565/c-ronaldo-dos-santos-aveiro"
+    }
   },
   {
     "id": "mbappe-91-st-96-91-80-92-29-76",
@@ -3476,7 +3986,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 8,
+      "slug": "kylian-mbappe",
+      "url": "https://www.futbin.com/27/player/8/kylian-mbappe"
+    }
   },
   {
     "id": "thuram-81-cm-79-74-78-79-81-85",
@@ -3512,7 +4028,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 944,
+      "slug": "khephren-thuram",
+      "url": "https://www.futbin.com/27/player/944/khephren-thuram"
+    }
   },
   {
     "id": "rogers-84-cam-76-82-82-84-67-78",
@@ -3550,7 +4072,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 406,
+      "slug": "morgan-rogers",
+      "url": "https://www.futbin.com/27/player/406/morgan-rogers"
+    }
   },
   {
     "id": "pajor-89-st-93-91-65-89-22-72",
@@ -3588,7 +4116,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 18,
+      "slug": "ewa-pajor",
+      "url": "https://www.futbin.com/27/player/18/ewa-pajor"
+    }
   },
   {
     "id": "marcos-llorente-85-rb-91-79-80-82-79-83",
@@ -3625,7 +4159,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 715,
+      "slug": "marcos-llorente-moreno",
+      "url": "https://www.futbin.com/27/player/715/marcos-llorente-moreno"
+    }
   },
   {
     "id": "raphinha-88-lw-91-86-85-87-54-76",
@@ -3665,7 +4205,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 546,
+      "slug": "raphael-dias-belloli",
+      "url": "https://www.futbin.com/27/player/546/raphael-dias-belloli"
+    }
   },
   {
     "id": "alvaro-carreras-83-lb-88-69-80-82-78-83",
@@ -3736,7 +4282,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 572,
+      "slug": "roger-ibanez-da-silva",
+      "url": "https://www.futbin.com/27/player/572/roger-ibanez-da-silva"
+    }
   },
   {
     "id": "spence-80-lb-89-54-71-79-76-75",
@@ -3772,7 +4324,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1046,
+      "slug": "djed-spence",
+      "url": "https://www.futbin.com/27/player/1046/djed-spence"
+    }
   },
   {
     "id": "pablo-barrios-83-cm-80-71-78-83-75-78",
@@ -3808,7 +4366,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 783,
+      "slug": "pablo-barrios-rivas",
+      "url": "https://www.futbin.com/27/player/783/pablo-barrios-rivas"
+    }
   },
   {
     "id": "adeyemi-83-rm-95-82-75-83-38-70",
@@ -3848,7 +4412,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21758,
+      "slug": "karim-adeyemi",
+      "url": "https://www.futbin.com/27/player/21758/karim-adeyemi"
+    }
   },
   {
     "id": "remy-84-st-91-84-70-78-37-72",
@@ -3885,7 +4455,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20950,
+      "slug": "loic-remy",
+      "url": "https://www.futbin.com/27/player/20950/loic-remy"
+    }
   },
   {
     "id": "wesley-80-lb-90-63-75-81-75-77",
@@ -3923,7 +4499,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 531,
+      "slug": "wesley-vinicius-franca-lima",
+      "url": "https://www.futbin.com/27/player/531/wesley-vinicius-franca-lima"
+    }
   },
   {
     "id": "mctominay-86-cm-80-83-77-82-80-86",
@@ -3960,7 +4542,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 457,
+      "slug": "scott-mctominay",
+      "url": "https://www.futbin.com/27/player/457/scott-mctominay"
+    }
   },
   {
     "id": "foden-84-cam-77-82-82-88-57-53",
@@ -3998,7 +4586,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 437,
+      "slug": "phil-foden",
+      "url": "https://www.futbin.com/27/player/437/phil-foden"
+    }
   },
   {
     "id": "dos-santos-84-st-87-83-75-88-32-58",
@@ -4038,7 +4632,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20955,
+      "slug": "giovani-dos-santos",
+      "url": "https://www.futbin.com/27/player/20955/giovani-dos-santos"
+    }
   },
   {
     "id": "rudiger-83-cb-75-54-71-69-83-85",
@@ -4073,7 +4673,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 683,
+      "slug": "antonio-rudiger",
+      "url": "https://www.futbin.com/27/player/683/antonio-rudiger"
+    }
   },
   {
     "id": "brugts-85-lb-88-75-80-82-82-76",
@@ -4113,7 +4719,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22770,
+      "slug": "esmee-brugts",
+      "url": "https://www.futbin.com/27/player/22770/esmee-brugts"
+    }
   },
   {
     "id": "quinones-84-st-91-83-70-81-37-82",
@@ -4151,7 +4763,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 568,
+      "slug": "julian-quinones",
+      "url": "https://www.futbin.com/27/player/568/julian-quinones"
+    }
   },
   {
     "id": "sesko-82-st-85-82-67-78-46-77",
@@ -4186,7 +4804,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 821,
+      "slug": "benjamin-sesko",
+      "url": "https://www.futbin.com/27/player/821/benjamin-sesko"
+    }
   },
   {
     "id": "zaire-emery-83-cm-79-71-78-81-79-85",
@@ -4224,7 +4848,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 774,
+      "slug": "warren-zaire-emery",
+      "url": "https://www.futbin.com/27/player/774/warren-zaire-emery"
+    }
   },
   {
     "id": "moleiro-82-lm-86-76-77-84-51-68",
@@ -4262,7 +4892,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 849,
+      "slug": "alberto-moleiro-gonzalez",
+      "url": "https://www.futbin.com/27/player/849/alberto-moleiro-gonzalez"
+    }
   },
   {
     "id": "mbeumo-84-rm-89-83-78-86-49-75",
@@ -4299,7 +4935,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 760,
+      "slug": "bryan-mbeumo",
+      "url": "https://www.futbin.com/27/player/760/bryan-mbeumo"
+    }
   },
   {
     "id": "dybala-85-cam-77-84-85-86-42-62",
@@ -4335,7 +4977,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 466,
+      "slug": "paulo-dybala",
+      "url": "https://www.futbin.com/27/player/466/paulo-dybala"
+    }
   },
   {
     "id": "schlotterbeck-87-cb-81-60-76-74-86-84",
@@ -4370,7 +5018,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 739,
+      "slug": "nico-schlotterbeck",
+      "url": "https://www.futbin.com/27/player/739/nico-schlotterbeck"
+    }
   },
   {
     "id": "donnarumma-89-gk-90-83-72-90-46-88",
@@ -4405,7 +5059,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 67,
+      "slug": "gianluigi-donnarumma",
+      "url": "https://www.futbin.com/27/player/67/gianluigi-donnarumma"
+    }
   },
   {
     "id": "doue-86-rw-83-81-79-90-55-80",
@@ -4444,7 +5104,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 653,
+      "slug": "desire-doue",
+      "url": "https://www.futbin.com/27/player/653/desire-doue"
+    }
   },
   {
     "id": "dumfries-83-rb-82-70-74-79-78-87",
@@ -4480,7 +5146,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 682,
+      "slug": "denzel-dumfries",
+      "url": "https://www.futbin.com/27/player/682/denzel-dumfries"
+    }
   },
   {
     "id": "saliba-88-cb-77-41-68-73-90-82",
@@ -4515,7 +5187,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 92,
+      "slug": "william-saliba",
+      "url": "https://www.futbin.com/27/player/92/william-saliba"
+    }
   },
   {
     "id": "thuram-86-st-87-84-77-83-51-83",
@@ -4550,7 +5228,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22769,
+      "slug": "marcus-thuram",
+      "url": "https://www.futbin.com/27/player/22769/marcus-thuram"
+    }
   },
   {
     "id": "hato-78-lb-85-42-70-74-76-74",
@@ -4587,7 +5271,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 609,
+      "slug": "jorrel-hato",
+      "url": "https://www.futbin.com/27/player/609/jorrel-hato"
+    }
   },
   {
     "id": "nico-paz-84-cam-81-78-79-84-54-68",
@@ -4623,7 +5313,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 470,
+      "slug": "nicolas-paz-martinez",
+      "url": "https://www.futbin.com/27/player/470/nicolas-paz-martinez"
+    }
   },
   {
     "id": "buhl-88-lm-84-85-85-86-37-74",
@@ -4659,7 +5355,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 29,
+      "slug": "klara-buhl",
+      "url": "https://www.futbin.com/27/player/29/klara-buhl"
+    }
   },
   {
     "id": "fermin-85-cam-81-84-80-84-63-72",
@@ -4696,7 +5398,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 556,
+      "slug": "fermin-lopez-marin",
+      "url": "https://www.futbin.com/27/player/556/fermin-lopez-marin"
+    }
   },
   {
     "id": "aitana-bonmati-90-cm-80-85-86-88-75-72",
@@ -4732,7 +5440,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 6,
+      "slug": "aitana-bonmati-conca",
+      "url": "https://www.futbin.com/27/player/6/aitana-bonmati-conca"
+    }
   },
   {
     "id": "haaland-91-st-87-92-71-80-47-89",
@@ -4767,7 +5481,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1,
+      "slug": "erling-haaland",
+      "url": "https://www.futbin.com/27/player/1/erling-haaland"
+    }
   },
   {
     "id": "asencio-78-cb-84-43-61-72-77-79",
@@ -4803,7 +5523,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1526,
+      "slug": "raul-asencio-del-rosario",
+      "url": "https://www.futbin.com/27/player/1526/raul-asencio-del-rosario"
+    }
   },
   {
     "id": "caicedo-86-cdm-69-68-77-81-84-82",
@@ -4873,7 +5599,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 52,
+      "slug": "kadidiatou-diani",
+      "url": "https://www.futbin.com/27/player/52/kadidiatou-diani"
+    }
   },
   {
     "id": "mariona-89-cm-79-85-86-90-78-82",
@@ -4909,7 +5641,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 17,
+      "slug": "maria-francesca-caldentey-oliver",
+      "url": "https://www.futbin.com/27/player/17/maria-francesca-caldentey-oliver"
+    }
   },
   {
     "id": "kelly-86-rm-89-85-85-84-43-69",
@@ -4947,7 +5685,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 117,
+      "slug": "chloe-kelly",
+      "url": "https://www.futbin.com/27/player/117/chloe-kelly"
+    }
   },
   {
     "id": "joan-garcia-86-gk-85-85-80-88-46-84",
@@ -4982,7 +5726,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 551,
+      "slug": "joan-garcia-pons",
+      "url": "https://www.futbin.com/27/player/551/joan-garcia-pons"
+    }
   },
   {
     "id": "vitinha-90-cm-72-81-88-91-75-70",
@@ -5018,7 +5768,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 44,
+      "slug": "vitor-machado-ferreira",
+      "url": "https://www.futbin.com/27/player/44/vitor-machado-ferreira"
+    }
   },
   {
     "id": "ratiu-80-rb-94-67-74-81-74-71",
@@ -5055,7 +5811,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1105,
+      "slug": "andrei-ratiu",
+      "url": "https://www.futbin.com/27/player/1105/andrei-ratiu"
+    }
   },
   {
     "id": "osimhen-85-st-89-84-65-78-51-86",
@@ -5090,7 +5852,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 747,
+      "slug": "victor-osimhen",
+      "url": "https://www.futbin.com/27/player/747/victor-osimhen"
+    }
   },
   {
     "id": "de-jong-86-cm-77-70-85-84-77-77",
@@ -5127,7 +5895,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 552,
+      "slug": "frenkie-de-jong",
+      "url": "https://www.futbin.com/27/player/552/frenkie-de-jong"
+    }
   },
   {
     "id": "diomande-81-cb-80-26-52-70-80-88",
@@ -5162,7 +5936,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 411,
+      "slug": "ousmane-diomande",
+      "url": "https://www.futbin.com/27/player/411/ousmane-diomande"
+    }
   },
   {
     "id": "joao-pedro-83-st-77-83-74-84-38-74",
@@ -5198,7 +5978,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 421,
+      "slug": "joao-pedro-junqueira-de-jesus",
+      "url": "https://www.futbin.com/27/player/421/joao-pedro-junqueira-de-jesus"
+    }
   },
   {
     "id": "gyokeres-86-st-81-87-72-78-44-87",
@@ -5269,7 +6055,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 570,
+      "slug": "joao-felix-sequeira",
+      "url": "https://www.futbin.com/27/player/570/joao-felix-sequeira"
+    }
   },
   {
     "id": "endrick-79-st-87-81-66-80-30-73-2",
@@ -5374,7 +6166,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 686,
+      "slug": "ferland-mendy",
+      "url": "https://www.futbin.com/27/player/686/ferland-mendy"
+    }
   },
   {
     "id": "kudus-81-rm-88-76-74-86-60-74",
@@ -5412,7 +6210,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 916,
+      "slug": "mohammed-kudus",
+      "url": "https://www.futbin.com/27/player/916/mohammed-kudus"
+    }
   },
   {
     "id": "oosterwolde-76-cb-88-42-64-72-75-81",
@@ -5448,7 +6252,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 2280,
+      "slug": "jayden-oosterwolde",
+      "url": "https://www.futbin.com/27/player/2280/jayden-oosterwolde"
+    }
   },
   {
     "id": "wilson-88-st-91-87-79-88-45-78",
@@ -5484,7 +6294,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 38,
+      "slug": "sophia-wilson",
+      "url": "https://www.futbin.com/27/player/38/sophia-wilson"
+    }
   },
   {
     "id": "saka-87-rw-79-82-85-87-60-73",
@@ -5553,7 +6369,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 218,
+      "slug": "alisson-ramses-becker",
+      "url": "https://www.futbin.com/27/player/218/alisson-ramses-becker"
+    }
   },
   {
     "id": "elanga-79-rw-94-70-74-80-39-65",
@@ -5589,7 +6411,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1215,
+      "slug": "anthony-elanga",
+      "url": "https://www.futbin.com/27/player/1215/anthony-elanga"
+    }
   },
   {
     "id": "coman-83-rm-87-75-79-87-30-64",
@@ -5627,7 +6455,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 573,
+      "slug": "kingsley-coman",
+      "url": "https://www.futbin.com/27/player/573/kingsley-coman"
+    }
   },
   {
     "id": "gvardiol-85-cb-78-70-76-77-85-82",
@@ -5663,7 +6497,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 438,
+      "slug": "josko-gvardiol",
+      "url": "https://www.futbin.com/27/player/438/josko-gvardiol"
+    }
   },
   {
     "id": "stanway-86-cdm-82-79-80-86-78-78",
@@ -5699,7 +6539,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 115,
+      "slug": "georgia-stanway",
+      "url": "https://www.futbin.com/27/player/115/georgia-stanway"
+    }
   },
   {
     "id": "ona-batlle-87-rb-88-62-80-82-82-72",
@@ -5771,7 +6617,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 50,
+      "slug": "debora-c-de-oliveira",
+      "url": "https://www.futbin.com/27/player/50/debora-c-de-oliveira"
+    }
   },
   {
     "id": "murillo-82-cb-79-55-67-71-82-83",
@@ -5806,7 +6658,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 824,
+      "slug": "murillo-costa-dos-santos",
+      "url": "https://www.futbin.com/27/player/824/murillo-costa-dos-santos"
+    }
   },
   {
     "id": "dani-olmo-84-cam-74-79-82-85-51-59",
@@ -5844,7 +6702,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 764,
+      "slug": "daniel-olmo-carvajal",
+      "url": "https://www.futbin.com/27/player/764/daniel-olmo-carvajal"
+    }
   },
   {
     "id": "geyoro-84-cm-89-72-80-82-82-78",
@@ -5915,7 +6779,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 960,
+      "slug": "marc-pubill-pages",
+      "url": "https://www.futbin.com/27/player/960/marc-pubill-pages"
+    }
   },
   {
     "id": "martinez-85-gk-83-81-82-85-50-85",
@@ -5950,7 +6820,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21976,
+      "slug": "emiliano-martinez",
+      "url": "https://www.futbin.com/27/player/21976/emiliano-martinez"
+    }
   },
   {
     "id": "kane-90-st-62-94-83-82-49-83",
@@ -6022,7 +6898,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 547,
+      "slug": "federico-valverde",
+      "url": "https://www.futbin.com/27/player/547/federico-valverde"
+    }
   },
   {
     "id": "gullit-86-cam-80-82-82-81-80-86",
@@ -6061,7 +6943,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21957,
+      "slug": "gullit",
+      "url": "https://www.futbin.com/27/player/21957/gullit"
+    }
   },
   {
     "id": "ndiaye-82-lm-86-77-74-86-44-65",
@@ -6099,7 +6987,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21982,
+      "slug": "iliman-ndiaye",
+      "url": "https://www.futbin.com/27/player/21982/iliman-ndiaye"
+    }
   },
   {
     "id": "gabriel-martinelli-82-rw-90-80-77-84-48-72",
@@ -6137,7 +7031,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22782,
+      "slug": "gabriel-teodoro-martinelli-silva",
+      "url": "https://www.futbin.com/27/player/22782/gabriel-teodoro-martinelli-silva"
+    }
   },
   {
     "id": "thuram-85-st-86-83-75-81-50-81",
@@ -6205,7 +7105,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 78,
+      "slug": "gabriel-dos-s-magalhaes",
+      "url": "https://www.futbin.com/27/player/78/gabriel-dos-s-magalhaes"
+    }
   },
   {
     "id": "bastoni-86-cb-74-47-76-78-86-82",
@@ -6240,7 +7146,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 461,
+      "slug": "alessandro-bastoni",
+      "url": "https://www.futbin.com/27/player/461/alessandro-bastoni"
+    }
   },
   {
     "id": "james-85-lm-90-81-78-87-40-82",
@@ -6278,7 +7190,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 144,
+      "slug": "lauren-james",
+      "url": "https://www.futbin.com/27/player/144/lauren-james"
+    }
   },
   {
     "id": "safonov-84-gk-83-78-81-87-52-85",
@@ -6347,7 +7265,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22014,
+      "slug": "gabriel-fernando-de-jesus",
+      "url": "https://www.futbin.com/27/player/22014/gabriel-fernando-de-jesus"
+    }
   },
   {
     "id": "reiten-86-lb-86-80-85-85-79-69",
@@ -6418,7 +7342,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 465,
+      "slug": "adrien-rabiot",
+      "url": "https://www.futbin.com/27/player/465/adrien-rabiot"
+    }
   },
   {
     "id": "bellingham-90-cam-79-86-83-88-79-85",
@@ -6491,7 +7421,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 454,
+      "slug": "lautaro-martinez",
+      "url": "https://www.futbin.com/27/player/454/lautaro-martinez"
+    }
   },
   {
     "id": "matheus-cunha-84-lm-77-86-79-84-44-73",
@@ -6529,7 +7465,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 758,
+      "slug": "matheus-santos-carneiro-da-cunha",
+      "url": "https://www.futbin.com/27/player/758/matheus-santos-carneiro-da-cunha"
+    }
   },
   {
     "id": "semenyo-85-rw-82-85-79-84-46-80",
@@ -6567,7 +7509,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 223,
+      "slug": "antoine-semenyo",
+      "url": "https://www.futbin.com/27/player/223/antoine-semenyo"
+    }
   },
   {
     "id": "rummenigge-86-st-85-83-72-86-50-72",
@@ -6708,7 +7656,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 324,
+      "slug": "felix-nmecha",
+      "url": "https://www.futbin.com/27/player/324/felix-nmecha"
+    }
   },
   {
     "id": "udogie-79-lb-88-64-73-77-75-75",
@@ -6744,7 +7698,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1218,
+      "slug": "destiny-udogie",
+      "url": "https://www.futbin.com/27/player/1218/destiny-udogie"
+    }
   },
   {
     "id": "thompson-85-lm-93-81-78-83-47-67",
@@ -6818,7 +7778,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 516,
+      "slug": "athenea-del-castillo",
+      "url": "https://www.futbin.com/27/player/516/athenea-del-castillo"
+    }
   },
   {
     "id": "david-raya-88-gk-87-86-88-88-58-86",
@@ -6957,7 +7923,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 622,
+      "slug": "tabitha-chawinga",
+      "url": "https://www.futbin.com/27/player/622/tabitha-chawinga"
+    }
   },
   {
     "id": "formiga-85-cdm-77-75-80-80-85-81",
@@ -7063,7 +8035,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 66,
+      "slug": "lauren-hemp",
+      "url": "https://www.futbin.com/27/player/66/lauren-hemp"
+    }
   },
   {
     "id": "brown-81-lb-90-60-76-83-73-59",
@@ -7099,7 +8077,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 937,
+      "slug": "nathaniel-brown",
+      "url": "https://www.futbin.com/27/player/937/nathaniel-brown"
+    }
   },
   {
     "id": "courtois-90-gk-87-89-78-90-46-90",
@@ -7134,7 +8118,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 98,
+      "slug": "thibaut-courtois",
+      "url": "https://www.futbin.com/27/player/98/thibaut-courtois"
+    }
   },
   {
     "id": "robinson-80-lb-88-57-74-76-76-76",
@@ -7170,7 +8160,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 736,
+      "slug": "antonee-robinson",
+      "url": "https://www.futbin.com/27/player/736/antonee-robinson"
+    }
   },
   {
     "id": "aguero-89-st-88-90-78-89-33-74",
@@ -7205,7 +8201,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21803,
+      "slug": "aguero",
+      "url": "https://www.futbin.com/27/player/21803/aguero"
+    }
   },
   {
     "id": "minteh-80-rm-93-72-73-84-57-57",
@@ -7243,7 +8245,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 601,
+      "slug": "yankuba-minteh",
+      "url": "https://www.futbin.com/27/player/601/yankuba-minteh"
+    }
   },
   {
     "id": "hancko-83-cb-77-67-74-75-83-84",
@@ -7279,7 +8287,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 780,
+      "slug": "david-hancko",
+      "url": "https://www.futbin.com/27/player/780/david-hancko"
+    }
   },
   {
     "id": "giuliano-82-rm-92-76-75-80-57-83",
@@ -7317,7 +8331,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 847,
+      "slug": "giuliano-simeone",
+      "url": "https://www.futbin.com/27/player/847/giuliano-simeone"
+    }
   },
   {
     "id": "nuno-mendes-89-lb-94-77-80-86-84-80",
@@ -7387,7 +8407,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 409,
+      "slug": "mamadou-sangare",
+      "url": "https://www.futbin.com/27/player/409/mamadou-sangare"
+    }
   },
   {
     "id": "aguero-86-st-x-x-x-x-x-x",
@@ -7455,7 +8481,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1110,
+      "slug": "davinson-sanchez",
+      "url": "https://www.futbin.com/27/player/1110/davinson-sanchez"
+    }
   },
   {
     "id": "brugts-84-lb-87-73-79-81-80-74",
@@ -7532,7 +8564,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 762,
+      "slug": "jurrien-timber",
+      "url": "https://www.futbin.com/27/player/762/jurrien-timber"
+    }
   },
   {
     "id": "maignan-87-gk-83-86-81-89-64-84",
@@ -7603,7 +8641,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20949,
+      "slug": "marouane-fellaini",
+      "url": "https://www.futbin.com/27/player/20949/marouane-fellaini"
+    }
   },
   {
     "id": "madueke-80-rw-88-75-74-83-45-69",
@@ -7639,7 +8683,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1051,
+      "slug": "noni-madueke",
+      "url": "https://www.futbin.com/27/player/1051/noni-madueke"
+    }
   },
   {
     "id": "rodri-90-cdm-62-78-86-81-85-81",
@@ -7745,7 +8795,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 49,
+      "slug": "khvicha-kvaratskhelia",
+      "url": "https://www.futbin.com/27/player/49/khvicha-kvaratskhelia"
+    }
   },
   {
     "id": "nmecha-86-cm-x-x-x-x-x-x",
@@ -7814,7 +8870,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 280,
+      "slug": "giorgi-mamardashvili",
+      "url": "https://www.futbin.com/27/player/280/giorgi-mamardashvili"
+    }
   },
   {
     "id": "diomande-84-rw-93-77-75-87-47-70-2",
@@ -7887,7 +8949,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 80,
+      "slug": "vinicius-jose-de-oliveira-junior",
+      "url": "https://www.futbin.com/27/player/80/vinicius-jose-de-oliveira-junior"
+    }
   },
   {
     "id": "heath-86-rw-84-80-83-86-51-73",
@@ -8061,7 +9129,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 550,
+      "slug": "marc-cucurella-saseta",
+      "url": "https://www.futbin.com/27/player/550/marc-cucurella-saseta"
+    }
   },
   {
     "id": "diaby-82-rm-94-69-76-85-44-59-2",
@@ -8202,7 +9276,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 946,
+      "slug": "pierre-kalulu",
+      "url": "https://www.futbin.com/27/player/946/pierre-kalulu"
+    }
   },
   {
     "id": "maradona-95-cam-90-91-91-96-40-77",
@@ -8273,7 +9353,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 420,
+      "slug": "reece-james",
+      "url": "https://www.futbin.com/27/player/420/reece-james"
+    }
   },
   {
     "id": "oblak-88-gk-85-90-79-87-46-86",
@@ -8342,7 +9428,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 925,
+      "slug": "milos-kerkez",
+      "url": "https://www.futbin.com/27/player/925/milos-kerkez"
+    }
   },
   {
     "id": "alvaro-carreras-83-lb-x-x-x-x-x-x",
@@ -8413,7 +9505,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20952,
+      "slug": "eljero-elia",
+      "url": "https://www.futbin.com/27/player/20952/eljero-elia"
+    }
   },
   {
     "id": "dimarco-86-lb-81-78-85-81-80-74",
@@ -8483,7 +9581,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 581,
+      "slug": "mohamed-simakan",
+      "url": "https://www.futbin.com/27/player/581/mohamed-simakan"
+    }
   },
   {
     "id": "kerolin-nicoli-85-rm-85-78-81-84-43-77",
@@ -8521,7 +9625,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 519,
+      "slug": "kerolin-nicoli-israel-ferraz",
+      "url": "https://www.futbin.com/27/player/519/kerolin-nicoli-israel-ferraz"
+    }
   },
   {
     "id": "dumornay-88-st-92-85-79-90-60-73",
@@ -8593,7 +9703,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 111,
+      "slug": "rio-ngumoha",
+      "url": "https://www.futbin.com/27/player/111/rio-ngumoha"
+    }
   },
   {
     "id": "beerensteyn-83-st-90-82-73-86-50-76",
@@ -8771,7 +9887,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 953,
+      "slug": "nicolas-pepe",
+      "url": "https://www.futbin.com/27/player/953/nicolas-pepe"
+    }
   },
   {
     "id": "kolo-muani-77-st-88-77-68-77-38-63",
@@ -8878,7 +10000,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 623,
+      "slug": "selma-bacha",
+      "url": "https://www.futbin.com/27/player/623/selma-bacha"
+    }
   },
   {
     "id": "ylmaz-80-lm-93-75-72-80-69-86",
@@ -8918,7 +10046,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1114,
+      "slug": "bars-alper-ylmaz",
+      "url": "https://www.futbin.com/27/player/1114/bars-alper-ylmaz"
+    }
   },
   {
     "id": "rolfo-84-lm-81-81-81-82-81-81",
@@ -9093,7 +10227,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20939,
+      "slug": "raphael-varane",
+      "url": "https://www.futbin.com/27/player/20939/raphael-varane"
+    }
   },
   {
     "id": "lucio-85-cb-78-68-70-74-84-86-r-3-3",
@@ -9128,7 +10268,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21967,
+      "slug": "da-silva-ferreira",
+      "url": "https://www.futbin.com/27/player/21967/da-silva-ferreira"
+    }
   },
   {
     "id": "zambrotta-85-rb-84-65-77-79-82-81-r-4-5",
@@ -9166,7 +10312,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21970,
+      "slug": "zambrotta",
+      "url": "https://www.futbin.com/27/player/21970/zambrotta"
+    }
   },
   {
     "id": "saibari-83-cam-83-78-77-83-55-82-r-4-4",
@@ -9204,7 +10356,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 355,
+      "slug": "ismael-saibari",
+      "url": "https://www.futbin.com/27/player/355/ismael-saibari"
+    }
   },
   {
     "id": "antony-81-rw-85-81-79-82-48-71-l-5-2",
@@ -9240,7 +10398,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 958,
+      "slug": "antony-matheus-dos-santos",
+      "url": "https://www.futbin.com/27/player/958/antony-matheus-dos-santos"
+    }
   },
   {
     "id": "sinclair-86-st-82-86-80-83-50-84-r-4-5",
@@ -9276,7 +10440,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20930,
+      "slug": "christine-sinclair",
+      "url": "https://www.futbin.com/27/player/20930/christine-sinclair"
+    }
   },
   {
     "id": "zidane-86-cam-79-81-87-86-68-79-r-5-5",
@@ -9312,7 +10482,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21959,
+      "slug": "zidane",
+      "url": "https://www.futbin.com/27/player/21959/zidane"
+    }
   },
   {
     "id": "lukeba-81-cb-79-43-70-74-82-76-l-2-2",
@@ -9348,7 +10524,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 448,
+      "slug": "castello-lukeba",
+      "url": "https://www.futbin.com/27/player/448/castello-lukeba"
+    }
   },
   {
     "id": "rummenigge-90-st-90-91-80-92-56-78-r-4-4",
@@ -9385,7 +10567,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22662,
+      "slug": "karl-heinz-rummenigge",
+      "url": "https://www.futbin.com/27/player/22662/karl-heinz-rummenigge"
+    }
   },
   {
     "id": "fofana-79-cb-77-41-62-71-80-77-r-2-3",
@@ -9420,7 +10608,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1210,
+      "slug": "wesley-fofana",
+      "url": "https://www.futbin.com/27/player/1210/wesley-fofana"
+    }
   },
   {
     "id": "pacho-89-cb-80-34-63-65-90-86-l-2-3",
@@ -9455,7 +10649,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 25,
+      "slug": "willian-pacho",
+      "url": "https://www.futbin.com/27/player/25/willian-pacho"
+    }
   },
   {
     "id": "brahim-81-rm-80-73-78-84-33-63-r-4-5",
@@ -9495,7 +10695,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 617,
+      "slug": "brahim-diaz",
+      "url": "https://www.futbin.com/27/player/617/brahim-diaz"
+    }
   },
   {
     "id": "fernandez-pardo-78-st-91-77-70-82-43-76-r-3-3",
@@ -9532,7 +10738,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22029,
+      "slug": "matias-fernandez-pardo",
+      "url": "https://www.futbin.com/27/player/22029/matias-fernandez-pardo"
+    }
   },
   {
     "id": "kroupi-80-st-83-83-71-81-48-65-r-3-3",
@@ -9568,7 +10780,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 599,
+      "slug": "eli-junior-kroupi",
+      "url": "https://www.futbin.com/27/player/599/eli-junior-kroupi"
+    }
   },
   {
     "id": "toure-86-cm-78-82-86-81-79-88-r-4-4",
@@ -9605,7 +10823,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21955,
+      "slug": "toure",
+      "url": "https://www.futbin.com/27/player/21955/toure"
+    }
   },
   {
     "id": "ederson-82-cm-81-73-78-80-80-81-r-3-3",
@@ -9641,7 +10865,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 839,
+      "slug": "ederson-jose-dos-santos",
+      "url": "https://www.futbin.com/27/player/839/ederson-jose-dos-santos"
+    }
   },
   {
     "id": "kone-81-cm-74-74-77-83-77-83-r-4-3",
@@ -9677,7 +10907,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 532,
+      "slug": "kouadio-manu-kone",
+      "url": "https://www.futbin.com/27/player/532/kouadio-manu-kone"
+    }
   },
   {
     "id": "sano-81-cdm-81-59-68-81-83-76-r-3-4",
@@ -9713,7 +10949,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 930,
+      "slug": "kaishu-sano",
+      "url": "https://www.futbin.com/27/player/930/kaishu-sano"
+    }
   },
   {
     "id": "varane-88-cb-84-49-66-74-88-83-r-2-3",
@@ -9748,7 +10990,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21875,
+      "slug": "varane",
+      "url": "https://www.futbin.com/27/player/21875/varane"
+    }
   },
   {
     "id": "alexia-putellas-91-cm-80-90-91-92-72-75-l-5-5",
@@ -9785,7 +11033,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 5,
+      "slug": "alexia-putellas-segura",
+      "url": "https://www.futbin.com/27/player/5/alexia-putellas-segura"
+    }
   },
   {
     "id": "pep-chavarria-79-lb-86-70-74-75-74-77-l-3-1",
@@ -9821,7 +11075,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1293,
+      "slug": "josep-maria-chavarria-perez",
+      "url": "https://www.futbin.com/27/player/1293/josep-maria-chavarria-perez"
+    }
   },
   {
     "id": "dembele-90-st-90-89-83-93-55-70-l-5-5",
@@ -9859,7 +11119,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 31,
+      "slug": "ousmane-dembele",
+      "url": "https://www.futbin.com/27/player/31/ousmane-dembele"
+    }
   },
   {
     "id": "tzolis-82-lw-82-80-79-83-38-71-r-4-4",
@@ -9895,7 +11161,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 819,
+      "slug": "christos-tzolis",
+      "url": "https://www.futbin.com/27/player/819/christos-tzolis"
+    }
   },
   {
     "id": "gakpo-82-lm-77-83-80-81-47-74-r-4-4",
@@ -9932,7 +11204,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 275,
+      "slug": "cody-gakpo",
+      "url": "https://www.futbin.com/27/player/275/cody-gakpo"
+    }
   },
   {
     "id": "el-mala-78-lm-89-78-68-84-41-67-r-4-3",
@@ -9970,7 +11248,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1465,
+      "slug": "said-el-mala",
+      "url": "https://www.futbin.com/27/player/1465/said-el-mala"
+    }
   },
   {
     "id": "calafiori-82-lb-71-68-76-77-80-78-l-3-5",
@@ -10007,7 +11291,13 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 820,
+      "slug": "riccardo-calafiori",
+      "url": "https://www.futbin.com/27/player/820/riccardo-calafiori"
+    }
   },
   {
     "id": "carrasco-82-lw-88-81-78-84-58-71-r-4-4",
@@ -10044,6 +11334,12 @@ window.PLAYERS_DATA = [
       "importedAt": "2026-09-17T23:35:36.691Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN2.pdf"
     },
-    "activo": true
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 583,
+      "slug": "yannick-carrasco",
+      "url": "https://www.futbin.com/27/player/583/yannick-carrasco"
+    }
   }
 ];

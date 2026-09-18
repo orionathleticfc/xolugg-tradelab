@@ -149,6 +149,9 @@ test("real snapshot reapplied to production is idempotent and preserves all 277 
   freeze(current); freeze(comparison);
   const result = generateCandidateCatalog(current, comparison, stamp);
   assert.deepEqual(result.report.summary, {
+    futbinLinksApplied: 0, futbinLinksPreserved: 0, futbinLinksSkippedDuplicates: 30,
+    futbinLinksSkippedNeedsReview: 4, futbinLinksMissing: 216, futbinLinksInvalid: 0,
+    futbinLinksConflicts: 0, futbinLinksUnsafe: 0,
     currentCatalog: 277, updatedApplied: 0, newApplied: 0, unchanged: 216,
     preservedNotInSnapshot: 37, skippedSnapshotDuplicateGroups: 15, skippedSnapshotDuplicateOccurrences: 30,
     skippedNeedsReview: 4, generationNeedsReview: 0, idCollisions: 0, candidateCatalogSize: 277, validationErrors: 0
