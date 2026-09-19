@@ -1627,6 +1627,28 @@ tbody tr:hover {
     9px;
 }
 
+.popular-card-type {
+  align-self: flex-start;
+  padding: 2px 6px;
+  border: 1px solid #52616a;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.popular-card-type.gold {
+  border-color: #b89a42;
+  color: #f2d67a;
+}
+
+.popular-card-type.special {
+  border-color: #8567cf;
+  color: #c7b4ff;
+}
+
 
 /* PRICE */
 

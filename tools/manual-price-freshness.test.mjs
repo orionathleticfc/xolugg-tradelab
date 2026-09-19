@@ -120,3 +120,27 @@ test("old and modern backups validate and normalize without losing supported ove
     newBackup.popularPriceOverrides);
   assert.equal(context.validarBackup({ ...base, popularPriceOverrides: [] }), false);
 });
+
+test("P/Q. a new observed snapshot expires an older manual while a later manual still wins", () => {
+  const { context } = loadApp();
+  const observedPlayer = player(10000, "2026-09-19T20:00:00.000Z");
+  assert.equal(context.resolvePopularPrice(observedPlayer, {
+    price: 9000, updatedAt: "2026-09-19T19:59:59.000Z"
+  }).effectivePrice, 10000);
+  assert.equal(context.resolvePopularPrice(observedPlayer, {
+    price: 9000, updatedAt: "2026-09-19T20:00:01.000Z"
+  }).effectivePrice, 9000);
+});
+
+test("X. autocomplete reads only the current catalog and labels legitimate versions", () => {
+  const { context } = loadApp();
+  context.window.PLAYERS_DATA = [
+    { id: "gold", nombre: "Variant", ovr: 85, tipoCarta: "gold" },
+    { id: "special", nombre: "Variant", ovr: 91, tipoCarta: "special" }
+  ];
+  const entries = plain(context.getUniquePopularPlayerNames());
+  assert.deepEqual(entries.map(entry => entry.id), ["gold", "special"]);
+  assert.deepEqual(entries.map(entry => entry.label), [
+    "Variant · 85 · Oro", "Variant · 91 · Especial"
+  ]);
+});

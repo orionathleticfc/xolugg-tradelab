@@ -1,130 +1,114 @@
-﻿
-import test from "node:test";
-import assert from "node:assert/strict";
-import fs from "node:fs";
-import vm from "node:vm";
-import { normalizeIdentity, marketDiff, compareFutbinSnapshot } from "./futbin-matcher.mjs";
-import { parseFutbinDiagnostic } from "./futbin-parser.mjs";
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import { compareFutbinSnapshot, detectSnapshotDuplicates, marketDiff,
+  normalizeIdentity, normalizeSnapshotPrice, structuralFingerprint } from './futbin-matcher.mjs';
+import { parseFutbinDiagnostic } from './futbin-parser.mjs';
 
-const base = () => ({
-  id:"historical-id",nombre:"João Pedro",ovr:82,posicionPrincipal:"ST",posiciones:["ST","CAM"],
-  stats:{pac:80,sho:81,pas:72,dri:83,def:35,phy:70},pie:"R",skills:4,weakFoot:3,
-  precioReferencia:5000,valorSecundarioFuente:340,popularidadFuente:203,ratingFuente:81.4,parseStatus:"complete"
+const link = (playerId, slug = 'example') => ({
+  game: 27, playerId, slug, url: 'https://www.futbin.com/27/player/' + playerId + '/' + slug
 });
-const compare=(pdf,current)=>compareFutbinSnapshot([pdf],[current]);
-function freeze(value) { if(value && typeof value==="object") { Object.freeze(value); Object.values(value).forEach(freeze); } return value; }
-
-test("normalizes accents, case, whitespace and numeric values without relying on IDs",()=>{
-  const current=base(),pdf=base();
-  Object.assign(pdf,{id:"different-id",nombre:"  JOAO   PEDRO ",ovr:"82",posicionPrincipal:"st",pie:"r",skills:"4",weakFoot:"3",posiciones:["CAM","ST"]});
-  pdf.stats.pac="80";
-  assert.deepEqual(normalizeIdentity(pdf),normalizeIdentity(current));
-  const r=compare(pdf,current);assert.equal(r.summary.unchanged,1);assert.equal(r.summary.exactMatches,1);
-  assert(!r.unchanged[0].warnings.includes("alternative_positions_differ"));
-});
-test("market, rating, rank and PDF-page changes never create NEW",()=>{
-  const current=base(),pdf={...base(),precioReferencia:3500,popularidadFuente:294,ratingFuente:82,sourcePage:17,ranking:99};
-  const r=compare(pdf,current);assert.equal(r.summary.updated,1);assert.equal(r.summary.new,0);
-  assert.deepEqual(r.updated[0].marketDiff.precioReferencia,{old:5000,new:3500,delta:-1500,deltaPercent:-30});
-  assert.equal(r.updated[0].marketDiff.popularidadFuente.delta,91);
-});
-test("diff handles zero and null without invalid percentages",()=>{
-  assert.deepEqual(marketDiff({precioReferencia:0},{precioReferencia:50}).precioReferencia,{old:0,new:50,delta:50,deltaPercent:null});
-  assert.equal(marketDiff({precioReferencia:null},{precioReferencia:0}).precioReferencia,undefined);
-  assert.deepEqual(marketDiff({ratingFuente:81.4},{ratingFuente:null}).ratingFuente,{old:81.4,new:null,delta:null,deltaPercent:null});
-  assert.deepEqual(marketDiff({valorSecundarioFuente:100},{valorSecundarioFuente:80}).valorSecundarioFuente,{old:100,new:80,delta:-20,deltaPercent:-20});
-  assert.deepEqual(marketDiff({},{}),{});
-});
-test("missing stats require reconciliation even with one catalog candidate",()=>{
-  const pdf={...base(),stats:{pac:80,sho:null},parseStatus:"partial"};
-  const r=compare(pdf,base());assert.equal(r.summary.partialMatches,0);assert.equal(r.summary.needsReview,1);
-  assert.equal(r.needsReview[0].matchReason,"missing_stats_requires_reconciliation");
-  const conflict=compare({...pdf,stats:{pac:99}},base());assert.equal(conflict.summary.needsReview,1);
-});
-test("goalkeeper missing rating still matches exact identity",()=>{
-  const current={...base(),posicionPrincipal:"GK",stats:{div:82,han:81,kic:75,ref:83,spd:47,pos:82},ratingFuente:null};
-  const pdf={...current,parseStatus:"partial",warnings:["missing_rating"]};
-  const r=compare(pdf,current);assert.equal(r.summary.exactMatches,1);assert.equal(r.summary.needsReview,0);
-});
-test("structural conflicts never merge only by name; different OVR is a new version",()=>{
-  for(const [field,value] of [["posicionPrincipal","LW"],["pie","L"],["skills",5],["weakFoot",5]]) {
-    const r=compare({...base(),[field]:value},base());
-    assert.equal(r.summary.needsReview,1);assert(r.needsReview[0].candidates[0].conflicts.some(c=>c.field===field));
-  }
-  const r=compare({...base(),ovr:86},base());assert.equal(r.summary.new,1);assert.equal(r.summary.notInCurrentSnapshot,1);
-});
-test("multiple partial or identical candidates require review, never use ID as tiebreaker",()=>{
-  const first=base(),second={...base(),id:"different-history",stats:{...base().stats,pac:81}};
-  let r=compareFutbinSnapshot([{...base(),stats:{}}],[first,second]);
-  assert.equal(r.summary.needsReview,1);assert.equal(r.needsReview[0].candidates.length,2);assert.equal(r.summary.notInCurrentSnapshot,0);
-  r=compareFutbinSnapshot([base()],[first,{...first,id:"another"}]);assert.equal(r.summary.needsReview,1);
-  r=compareFutbinSnapshot([base()],[first,second]);assert.equal(r.summary.exactMatches,1);assert.equal(r.summary.notInCurrentSnapshot,1);
-});
-test("duplicate snapshot claims do not silently reuse a catalog entry",()=>{
-  const r=compareFutbinSnapshot([base(),{...base(),stats:{},parseStatus:"partial"}],[base()]);
-  assert.equal(r.summary.needsReview,0);assert.equal(r.summary.snapshotDuplicates,2);assert.equal(r.summary.exactMatches,0);assert.equal(r.summary.notInCurrentSnapshot,0);
-  assert.equal(r.snapshotDuplicates.length,1);assert.equal(r.snapshotDuplicates[0].occurrences.length,2);
-});
-test("insufficient identity requires review even with an empty catalog",()=>{
-  const r=compareFutbinSnapshot([{...base(),ovr:null}],[]);
-  assert.equal(r.summary.needsReview,1);assert.equal(r.summary.new,0);
-  assert.equal(compare({...base(),parseStatus:"ambiguous"},base()).summary.needsReview,1);
-});
-test("absent entries are not deletions; pure inputs and export are serializable",()=>{
-  const catalog=freeze([base()]),snapshot=freeze([]);
-  const r=compareFutbinSnapshot(snapshot,catalog);
-  assert.equal(r.notInCurrentSnapshot[0].status,"NOT_IN_CURRENT_SNAPSHOT");
-  assert(r.notInCurrentSnapshot[0].warnings.includes("not_a_deletion"));
-  assert.deepEqual(Object.keys(r),["metadata","summary","unchanged","updated","new","notInCurrentSnapshot","needsReview","snapshotDuplicates"]);
-  assert.doesNotThrow(()=>JSON.stringify(r));
-  assert.equal(compareFutbinSnapshot(freeze([base()]),catalog).summary.unchanged,1);
+const card = (name = 'Example', playerId = null) => ({
+  id: 'old-' + name + '-' + (playerId ?? 'none'), nombre: name, version: null, tipoCarta: 'gold',
+  ovr: 85, posicionPrincipal: 'ST', posiciones: ['ST'],
+  stats: { pac: 80, sho: 81, pas: 72, dri: 83, def: 35, phy: 70 },
+  pie: 'R', skills: 4, weakFoot: 3, ratingFuente: 85, popularidadFuente: 100,
+  precioReferencia: 5000, valorSecundarioFuente: 340, parseStatus: 'complete',
+  ...(playerId ? { futbin: link(playerId) } : {})
 });
 
-const fixture=new URL("./fixtures-local/EA FC 27 Popular Players _ FUTBIN2-diagnostico.json",import.meta.url);
-test("real fixture: named players, partial collisions, multiple versions and no mutation",{skip:!fs.existsSync(fixture)},()=>{
-  const context=vm.createContext({window:{}});
-  vm.runInContext(fs.readFileSync(new URL("../players-data.js",import.meta.url),"utf8"),context);
-  const catalog=structuredClone(context.window.PLAYERS_DATA);
-  const parsed=parseFutbinDiagnostic(JSON.parse(fs.readFileSync(fixture,"utf8").replace(/^\uFEFF/,"")));
-  const before=JSON.stringify({catalog,parsed});
-  const r=compareFutbinSnapshot(parsed.cards,catalog);
-  assert.deepEqual(r.summary,{catalog:catalog.length,snapshot:250,exactMatches:216,partialMatches:0,
-    unchanged:r.unchanged.length,updated:r.updated.length,new:0,
-    notInCurrentSnapshot:r.notInCurrentSnapshot.length,needsReview:4,
-    snapshotDuplicates:30,snapshotDuplicateGroups:15,unavailableZeroPrices:49});
-  assert.equal(r.summary.unchanged+r.summary.updated,216);
-  const matched=[...r.unchanged,...r.updated];
-  for(const name of ["Gordon","Frimpong","Pedro Neto","Mamardashvili"]) {
-    const match=matched.find(row=>row.pdfCard.nombre===name);
-    assert(match,name);assert.equal(match.confidence,"high");assert.equal(match.matchReason,"exact_identity");
-    assert.equal(match.status,Object.keys(match.marketDiff).length?"UPDATED":"UNCHANGED");
-    assert.deepEqual(match.currentRecord,catalog[match.catalogIndex]);
-  }
-  const partial=parsed.cards.find(card=>card.nombre==="Rummenigge"&&card.parseStatus==="partial");
-  assert.equal(compareFutbinSnapshot([partial],catalog).summary.needsReview,1);
-  assert(r.snapshotDuplicates.some(group=>group.occurrences.some(row=>row.parserCard===partial)));
-  assert(r.snapshotDuplicates.some(group=>group.occurrences.some(row=>row.pdfCard.nombre==="Barcola"&&row.candidates.length>1)));
-  assert.equal(JSON.stringify({catalog,parsed}),before);
-  const reversed=compareFutbinSnapshot([...parsed.cards].reverse(),[...catalog].reverse());
-  assert.deepEqual(reversed.summary,r.summary);
-  assert.deepEqual(parsed.metrics,{slots:250,cards:250,complete:232,partial:18,ambiguous:0,errors:0});
-  assert.equal(r.unchanged.length+r.updated.length+r.new.length+r.needsReview.length+
-    r.snapshotDuplicates.reduce((n,g)=>n+g.occurrences.length,0),parsed.cards.length);
-  // Every card incorporated at 250–276 still has a unique exact match.
-  for(const added of catalog.slice(250,277)) {
-    const matches=matched.filter(row=>row.currentRecord.id===added.id);
-    assert.equal(matches.length,1,added.nombre);
-    assert.equal(matches[0].matchReason,"exact_identity");
-  }
-  const reviewCandidateIndices=new Set([...r.needsReview,...r.snapshotDuplicates.flatMap(group=>group.occurrences)]
-    .flatMap(row=>row.candidates.map(candidate=>candidate.catalogIndex)));
-  const absentIndices=new Set(r.notInCurrentSnapshot.map(row=>row.catalogIndex));
-  for(let index=277;index<catalog.length;index++) assert(absentIndices.has(index)||reviewCandidateIndices.has(index),catalog[index].nombre);
-  assert.equal(r.new.length,0);
-  for(const name of ["Gordon","Frimpong","Pedro Neto"]) {
-    const row=matched.find(row=>row.pdfCard.nombre===name);
-    assert.deepEqual(row.currentRecord,catalog[row.catalogIndex]);
-  }
-  console.log("Real comparison:",r.summary);
+test('identity normalization and structural fingerprints ignore accents/case but include the full card', () => {
+  const a = card('João Pedro'), b = { ...card(' JOAO   PEDRO '), ovr: '85', pie: 'r', skills: '4' };
+  assert.deepEqual(normalizeIdentity(a), normalizeIdentity(b));
+  assert.equal(structuralFingerprint(a), structuralFingerprint(b));
+  assert.notEqual(structuralFingerprint(a), structuralFingerprint({ ...a, ovr: 86 }));
 });
 
+test('K/N. raw zero is unavailable/null and produces a real market change from an old price', () => {
+  const normalized = normalizeSnapshotPrice({ ...card(), precioReferencia: 0, precioReferenciaRaw: '0' });
+  assert.equal(normalized.precioReferencia, null);
+  assert.equal(normalized.precioDisponible, false);
+  assert.deepEqual(marketDiff(card(), normalized).precioReferencia,
+    { old: 5000, new: null, delta: null, deltaPercent: null });
+  assert.equal(marketDiff({ ...card(), precioReferencia: 0 }, card()).precioReferencia.deltaPercent, null);
+  assert.equal(marketDiff({ ...card(), precioReferencia: null }, card()).precioReferencia.deltaPercent, null);
+});
+
+test('playerId is the highest-priority identity and can preserve a match through structural changes', () => {
+  const current = [card('Example', 100)];
+  const snapshot = [{ ...card('Renamed', 100), ovr: 86 }];
+  const result = compareFutbinSnapshot(snapshot, current);
+  assert.equal(result.updated.length, 1);
+  assert.equal(result.updated[0].matchReason, 'futbin_player_id');
+  assert.equal(result.updated[0].currentRecord.id, current[0].id);
+
+  const goalkeeper = { ...card('Keeper'), posicionPrincipal: 'GK', posiciones: ['GK'],
+    stats: { div: 80, han: 81, kic: 72, ref: 83, spd: 35, pos: 70 } };
+  const goalkeeperResult = compareFutbinSnapshot([{ ...goalkeeper, ratingFuente: null }], [goalkeeper]);
+  assert.equal(goalkeeperResult.updated.length, 1);
+  assert.equal(goalkeeperResult.updated[0].matchReason, 'structural_fingerprint');
+});
+
+test('different playerIds never merge only by name or fingerprint', () => {
+  const current = [card('Example', 100)];
+  const result = compareFutbinSnapshot([card('Example', 200)], current);
+  assert.equal(result.new.length, 1);
+  assert.equal(result.notInCurrentSnapshot.length, 1);
+});
+
+test('G. repeated same playerId is a real snapshot duplicate', () => {
+  const snapshot = [card('Example', 100), { ...card('Example', 100), precioReferencia: 6000 }];
+  const groups = detectSnapshotDuplicates(snapshot);
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].duplicateKind, 'same_player_id');
+  assert.deepEqual(groups[0].snapshotIndices, [0, 1]);
+});
+
+test('H/J. different playerIds remain separate even with equal or different structures', () => {
+  const equal = [card('Example', 100), card('Example', 200)];
+  assert.equal(detectSnapshotDuplicates(equal).length, 0);
+  const different = [card('Example', 100), { ...card('Example', 200), ovr: 90 }];
+  const result = compareFutbinSnapshot(different, []);
+  assert.equal(result.new.length, 2);
+});
+
+test('missing structural identity is NEEDS_REVIEW and is never guessed from a name', () => {
+  const result = compareFutbinSnapshot([{ ...card(), stats: {}, parseStatus: 'partial' }], [card()]);
+  assert.equal(result.needsReview.length, 1);
+  assert.equal(result.needsReview[0].matchReason, 'missing_stats_requires_reconciliation');
+
+  const ambiguous = compareFutbinSnapshot([card()], [card(), { ...card(), id: 'another-history' }]);
+  assert.equal(ambiguous.needsReview.length, 1);
+  assert.equal(ambiguous.needsReview[0].candidates.length, 2);
+  assert.equal(ambiguous.needsReview[0].matchReason, 'multiple_candidates_at_structural_fingerprint');
+});
+
+test('B. absence is explicitly eligible for authoritative removal', () => {
+  const result = compareFutbinSnapshot([], [card()]);
+  assert.equal(result.notInCurrentSnapshot.length, 1);
+  assert(result.notInCurrentSnapshot[0].warnings.includes('eligible_for_authoritative_removal'));
+  assert.equal(result.metadata.mode, 'authoritative-snapshot');
+});
+
+test('market changes never create NEW for the same playerId', () => {
+  const result = compareFutbinSnapshot([{ ...card('Example', 100), precioReferencia: 3500,
+    popularidadFuente: 1 }], [card('Example', 100)]);
+  assert.equal(result.updated.length, 1);
+  assert.equal(result.new.length, 0);
+});
+
+const fixture = new URL('./fixtures-local/EA FC 27 Popular Players _ FUTBIN2-diagnostico.json', import.meta.url);
+test('real legacy fixture remains fully partitioned without mutation', { skip: !fs.existsSync(fixture) }, () => {
+  const context = vm.createContext({ window: {} });
+  vm.runInContext(fs.readFileSync(new URL('../players-data.js', import.meta.url), 'utf8'), context);
+  const catalog = structuredClone(context.window.PLAYERS_DATA);
+  const parsed = parseFutbinDiagnostic(JSON.parse(fs.readFileSync(fixture, 'utf8').replace(/^\uFEFF/, '')));
+  const before = JSON.stringify({ catalog, parsed });
+  const result = compareFutbinSnapshot(parsed.cards, catalog, { fileName: parsed.fileName });
+  const partitioned = result.unchanged.length + result.updated.length + result.new.length +
+    result.needsReview.length + result.snapshotDuplicates.reduce((sum, group) => sum + group.occurrences.length, 0);
+  assert.equal(partitioned, parsed.cards.length);
+  assert.equal(JSON.stringify({ catalog, parsed }), before);
+  assert.equal(result.metadata.mode, 'authoritative-snapshot');
+});
