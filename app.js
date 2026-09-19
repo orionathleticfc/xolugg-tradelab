@@ -4,12 +4,12 @@
 ========================================================= */
 
 const TAX_RATE = 0.05;
-const DEFAULT_META_PROFIT = 300;
+const OPPORTUNITY_ROI_THRESHOLD = 8;
 
 const STORAGE_STATE = "xoluggTradeLab";
 const STORAGE_META_PRICES = "xoluggMetaPrices";
 
-const APP_VERSION = "1.2.0";
+const APP_VERSION = "0.9.0";
 
 
 /* =========================================================
@@ -23,6 +23,7 @@ let state = {
 };
 
 let metaPriceOverrides = {};
+let selectedCalculatorPlayerId = null;
 
 
 /* =========================================================
@@ -106,6 +107,70 @@ function roundDownMarketPrice(value) {
 }
 
 
+function normalizePositiveCoin(value) {
+  const number = Number(value);
+
+  if (!Number.isFinite(number) || number <= 0) {
+    return null;
+  }
+
+  return Math.floor(number);
+}
+
+
+function getWatchlistBid(item) {
+  return normalizePositiveCoin(
+    item?.miPuja ??
+    item?.compraActual
+  );
+}
+
+
+function normalizeWatchlistItem(item, index = 0) {
+  if (!item || typeof item !== "object") {
+    return null;
+  }
+
+  const jugador = String(item.jugador || "").trim();
+
+  if (!jugador) {
+    return null;
+  }
+
+  const id = item.id ??
+    ("legacy-" + index + "-" + normalizeText(jugador));
+  const playerId = item.playerId === undefined ||
+    item.playerId === null || item.playerId === ""
+    ? null
+    : item.playerId;
+
+  return {
+    id,
+    playerId,
+    jugador,
+    mercado: normalizePositiveCoin(
+      item.mercado ??
+      item.venta
+    ),
+    miPuja: getWatchlistBid(item),
+    fecha: typeof item.fecha === "string"
+      ? item.fecha
+      : null
+  };
+}
+
+
+function normalizeWatchlist(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map(normalizeWatchlistItem)
+    .filter(Boolean);
+}
+
+
 function aplicarStepDinamico(input) {
   if (!input) {
     return;
@@ -157,7 +222,6 @@ function activarStepsDinamicos() {
   const ids = [
     "precioVenta",
     "precioCompra",
-    "beneficioMinimo",
     "nuevoCapital",
     "tradeCompra",
     "tradeVenta",
@@ -206,11 +270,9 @@ function loadState() {
         Number(parsed.capital) || 0,
 
       watchlist:
-        Array.isArray(
+        normalizeWatchlist(
           parsed.watchlist
-        )
-          ? parsed.watchlist
-          : [],
+        ),
 
       historial:
         Array.isArray(
@@ -266,150 +328,239 @@ function loadMetaPrices() {
    CÁLCULOS DE TRADE
 ========================================================= */
 
-function getTradeMetrics(
-  precioVenta,
-  precioCompra,
-  beneficioMinimo
-) {
-  const venta =
-    Number(precioVenta) || 0;
+function calculateEaNet(salePrice) {
+  const sale = normalizePositiveCoin(salePrice);
 
-  const compra =
-    Number(precioCompra) || 0;
-
-  const objetivo =
-    Number(beneficioMinimo) || 0;
+  return sale === null
+    ? null
+    : Math.floor(sale * (1 - TAX_RATE));
+}
 
 
-  /* 5 % DE IMPUESTO */
+function calculateMarketScenario(marketPrice, dropRate) {
+  const market = normalizePositiveCoin(marketPrice);
+  const rate = Number(dropRate);
 
-  const neto =
-    Math.floor(
-      venta * (1 - TAX_RATE)
-    );
+  if (
+    market === null ||
+    !Number.isFinite(rate) ||
+    rate < 0 ||
+    rate >= 1
+  ) {
+    return null;
+  }
 
-
-  const beneficio =
-    neto - compra;
-
-
-  const roi =
-    compra > 0
-      ? (beneficio / compra) * 100
-      : 0;
-
-
-  /* COMPRA MÁXIMA */
-
-  const compraMaxima =
-    roundDownMarketPrice(
-      Math.max(
-        0,
-        neto - objetivo
-      )
-    );
-
-
-  /* RANGO IDEAL */
-
-  const compraIdealMin =
-    roundDownMarketPrice(
-      Math.max(
-        0,
-        compraMaxima - objetivo
-      )
-    );
-
-
-  const bufferSuperior =
-    Math.max(
-      50,
-      objetivo / 3
-    );
-
-
-  const compraIdealMax =
-    roundDownMarketPrice(
-      Math.max(
-        compraIdealMin,
-        compraMaxima -
-          bufferSuperior
-      )
-    );
-
+  const sale = roundDownMarketPrice(
+    market * (1 - rate)
+  );
+  const net = calculateEaNet(sale);
 
   return {
-    venta,
-    compra,
-    neto,
-    beneficio,
-    roi,
-    compraMaxima,
-    compraIdealMin,
-    compraIdealMax
+    dropRate: rate,
+    sale,
+    net
   };
 }
 
 
-/* =========================================================
-   ESTADO DEL TRADE
-========================================================= */
+function calculateMarketStress(marketPrice, purchasePrice, dropRate) {
+  const scenario = calculateMarketScenario(marketPrice, dropRate);
+  const purchase = normalizePositiveCoin(purchasePrice);
 
-function getTradeStatus(
-  metrics,
-  beneficioMinimo
-) {
-  const objetivo =
-    Number(beneficioMinimo) || 0;
+  if (!scenario || purchase === null) {
+    return null;
+  }
+
+  const profit = scenario.net - purchase;
+
+  return {
+    ...scenario,
+    profit,
+    profitable: profit >= 0
+  };
+}
 
 
-  if (metrics.beneficio <= 0) {
+function calculateMarketAnalysis(marketPrice) {
+  const market = normalizePositiveCoin(marketPrice);
+
+  if (market === null) {
+    return null;
+  }
+
+  const net = calculateEaNet(market);
+
+  return {
+    market,
+    tax: market - net,
+    net,
+    breakEven: net,
+    drop25: calculateMarketScenario(market, 0.025),
+    drop5: calculateMarketScenario(market, 0.05)
+  };
+}
+
+
+function calculateTradeOutcome(marketPrice, purchasePrice) {
+  const marketAnalysis = calculateMarketAnalysis(marketPrice);
+  const purchase = normalizePositiveCoin(purchasePrice);
+
+  if (!marketAnalysis || purchase === null) {
+    return null;
+  }
+
+  const profit = marketAnalysis.net - purchase;
+  const roi = (profit / purchase) * 100;
+
+  return {
+    ...marketAnalysis,
+    purchase,
+    profit,
+    roi: Number.isFinite(roi) ? roi : 0,
+    drop25: calculateMarketStress(marketAnalysis.market, purchase, 0.025),
+    drop5: calculateMarketStress(marketAnalysis.market, purchase, 0.05)
+  };
+}
+
+
+function classifyTradeOpportunity(outcome) {
+  if (!outcome) {
     return {
+      key: "neutral",
+      className: "neutral",
+      label: "SIN PUJA"
+    };
+  }
+
+  if (outcome.profit < 0) {
+    return {
+      key: "avoid",
       className: "bad",
       label: "❌ NO COMPRAR"
     };
   }
 
-
-  if (
-    metrics.beneficio >=
-      objetivo * 1.75 ||
-    metrics.roi >= 25
-  ) {
+  if (outcome.profit <= getMarketStep(outcome.purchase)) {
     return {
-      className: "excellent",
-      label: "🔥 EXCELENTE COMPRA"
+      key: "limit",
+      className: "limit",
+      label: "⚠️ LÍMITE"
     };
   }
 
-
-  if (
-    metrics.beneficio >= objetivo ||
-    metrics.roi >= 15
-  ) {
+  if (!outcome.drop25.profitable) {
     return {
+      key: "low",
+      className: "fair",
+      label: "🟡 MARGEN BAJO"
+    };
+  }
+
+  if (!outcome.drop5.profitable) {
+    return {
+      key: "good",
       className: "good",
       label: "✅ BUENA COMPRA"
     };
   }
 
-
-  if (
-    metrics.beneficio >=
-      objetivo * 0.5 ||
-    metrics.roi >= 8
-  ) {
+  // OPORTUNIDAD requiere protección real ante -5% y ROI actual de al menos 8%.
+  if (outcome.roi >= OPPORTUNITY_ROI_THRESHOLD) {
     return {
-      className: "fair",
-      label: "🟡 COMPRA JUSTA"
+      key: "opportunity",
+      className: "excellent",
+      label: "🔥 OPORTUNIDAD"
     };
   }
 
+  return {
+    key: "protected",
+    className: "protected",
+    label: "🛡️ COMPRA PROTEGIDA"
+  };
+}
+
+
+function calculateBuyThresholds(marketPrice) {
+  const market = normalizePositiveCoin(marketPrice);
+
+  if (market === null) {
+    return null;
+  }
+
+  const current = calculateMarketScenario(market, 0);
+  const drop25 = calculateMarketScenario(market, 0.025);
+  const drop5 = calculateMarketScenario(market, 0.05);
 
   return {
-    className: "bad",
-    label: "❌ NO COMPRAR"
+    breakEven: roundDownMarketPrice(current.net),
+    good: roundDownMarketPrice(drop25.net),
+    protected: roundDownMarketPrice(drop5.net),
+    opportunity: roundDownMarketPrice(
+      Math.min(
+        drop5.net,
+        current.net /
+          (1 + OPPORTUNITY_ROI_THRESHOLD / 100)
+      )
+    )
   };
+}
+
+
+function buildOpportunityTable(marketPrice) {
+  const market = normalizePositiveCoin(marketPrice);
+
+  if (market === null) {
+    return [];
+  }
+
+  const discounts = [0.05, 0.075, 0.10, 0.125, 0.15];
+  const rows = [];
+  const purchases = new Set();
+
+  discounts.forEach((discount) => {
+    const purchase = roundDownMarketPrice(
+      market * (1 - discount)
+    );
+
+    if (purchase <= 0 || purchases.has(purchase)) {
+      return;
+    }
+
+    purchases.add(purchase);
+    const outcome = calculateTradeOutcome(market, purchase);
+
+    rows.push({
+      purchase,
+      discount: ((market - purchase) / market) * 100,
+      reference: formatPercent(discount * 100) + " desc.",
+      outcome,
+      status: classifyTradeOpportunity(outcome)
+    });
+  });
+
+  const thresholds = calculateBuyThresholds(market);
+
+  if (
+    thresholds.breakEven > 0 &&
+    !purchases.has(thresholds.breakEven)
+  ) {
+    const purchase = thresholds.breakEven;
+    const outcome = calculateTradeOutcome(market, purchase);
+
+    rows.push({
+      purchase,
+      discount: ((market - purchase) / market) * 100,
+      reference: "Equilibrio",
+      outcome,
+      status: classifyTradeOpportunity(outcome)
+    });
+  }
+
+  return rows.sort(
+    (left, right) =>
+      right.purchase - left.purchase
+  );
 }
 
 
@@ -424,7 +575,7 @@ function renderCapital() {
         return (
           total +
           Number(
-            item.compraActual || 0
+            getWatchlistBid(item) || 0
           )
         );
       },
@@ -603,179 +754,238 @@ function actualizarCapital() {
    CALCULADORA
 ========================================================= */
 
+function formatSignedCoins(value) {
+  const number = Number(value);
+
+  if (!Number.isFinite(number)) {
+    return "—";
+  }
+
+  return number > 0
+    ? "+" + formatCoins(number)
+    : formatCoins(number);
+}
+
+
+function updateResultText(id, value, className = "") {
+  const element = document.getElementById(id);
+
+  if (element) {
+    element.textContent = value;
+    element.className = className;
+  }
+}
+
+
+function renderStressScenario(prefix, scenario) {
+  if (!scenario) {
+    ["Venta", "Neto", "Beneficio"].forEach(
+      (suffix) => updateResultText(prefix + suffix, "—")
+    );
+    updateResultText(prefix + "Estado", "Sin datos");
+    return;
+  }
+
+  const hasPurchase = Number.isFinite(scenario.profit);
+
+  updateResultText(prefix + "Venta", formatCoins(scenario.sale));
+  updateResultText(prefix + "Neto", formatCoins(scenario.net));
+  updateResultText(
+    prefix + "Beneficio",
+    hasPurchase ? formatSignedCoins(scenario.profit) : "Sin puja",
+    hasPurchase
+      ? scenario.profitable ? "positive" : "negative"
+      : ""
+  );
+  updateResultText(
+    prefix + "Estado",
+    hasPurchase
+      ? scenario.profitable ? "Sigue rentable" : "Produce pérdida"
+      : "Escenario calculado",
+    hasPurchase
+      ? scenario.profitable ? "positive" : "negative"
+      : ""
+  );
+}
+
+
+function renderTargetPrices(thresholds) {
+  updateResultText("targetBreakEven", formatCoins(thresholds?.breakEven));
+  updateResultText(
+    "targetGood",
+    thresholds ? "≤ " + formatCoins(thresholds.good) : "—"
+  );
+  updateResultText(
+    "targetProtected",
+    thresholds ? "≤ " + formatCoins(thresholds.protected) : "—"
+  );
+  updateResultText(
+    "targetOpportunity",
+    thresholds ? "≤ " + formatCoins(thresholds.opportunity) : "—"
+  );
+
+  const hint = document.getElementById("purchaseTargetsHint");
+
+  if (hint) {
+    hint.textContent = thresholds
+      ? "Buena compra: ≤ " + formatCoins(thresholds.good) +
+        " · Protegida: ≤ " + formatCoins(thresholds.protected)
+      : "La puja es opcional; primero puedes analizar el mercado.";
+  }
+}
+
+
+function setCalculatorMessage(message = "", isError = false) {
+  const element = document.getElementById("calculatorMessage");
+
+  if (!element) {
+    return;
+  }
+
+  element.textContent = message;
+  element.className = isError
+    ? "calculator-message error"
+    : "calculator-message";
+}
+
+
+function renderOpportunityTable(marketPrice) {
+  const tbody = document.getElementById("opportunityTableBody");
+
+  if (!tbody) {
+    return;
+  }
+
+  const rows = buildOpportunityTable(marketPrice);
+  tbody.innerHTML = "";
+
+  if (!rows.length) {
+    tbody.innerHTML =
+      '<tr><td colspan="7" class="empty-table-cell">Ingresa un mercado válido para generar oportunidades.</td></tr>';
+    return;
+  }
+
+  rows.forEach((row) => {
+    const tr = document.createElement("tr");
+    const drop25Class = row.outcome.drop25.profitable ? "positive" : "negative";
+    const drop5Class = row.outcome.drop5.profitable ? "positive" : "negative";
+
+    tr.innerHTML =
+      "<td><strong>" + formatCoins(row.purchase) + "</strong></td>" +
+      "<td title='" + row.reference + "'>" + formatPercent(row.discount) + "</td>" +
+      "<td class='" + (row.outcome.profit >= 0 ? "positive" : "negative") + "'>" +
+        formatSignedCoins(row.outcome.profit) + "</td>" +
+      "<td>" + formatPercent(row.outcome.roi) + "</td>" +
+      "<td class='" + drop25Class + "'>" +
+        formatSignedCoins(row.outcome.drop25.profit) + "</td>" +
+      "<td class='" + drop5Class + "'>" +
+        formatSignedCoins(row.outcome.drop5.profit) + "</td>" +
+      "<td><span class='opportunity-badge " + row.status.className + "'>" +
+        row.status.label + "</span></td>";
+
+    tbody.appendChild(tr);
+  });
+}
+
+
 function calcularTrade() {
-  const jugadorInput =
-    document.getElementById(
-      "jugador"
+  const jugador = document.getElementById("jugador")?.value.trim() || "";
+  const marketValue = document.getElementById("precioVenta")?.value ?? "";
+  const purchaseValue = document.getElementById("precioCompra")?.value ?? "";
+  const marketAnalysis = calculateMarketAnalysis(marketValue);
+
+  if (!marketAnalysis) {
+    setCalculatorMessage(
+      "Ingresa un precio de mercado válido para analizar oportunidades.",
+      true
     );
+    updateResultText("resultadoJugador", jugador || "Esperando jugador");
+    [
+      "resultadoMercado",
+      "resultadoNeto",
+      "resultadoEquilibrio",
+      "resultadoCompra",
+      "resultadoBeneficio",
+      "resultadoROI"
+    ].forEach((id) => updateResultText(id, "—"));
+    renderTargetPrices(null);
+    renderStressScenario("scenario25", null);
+    renderStressScenario("scenario5", null);
+    renderOpportunityTable(null);
 
-  const ventaInput =
-    document.getElementById(
-      "precioVenta"
-    );
+    const statusElement = document.getElementById("estadoTrade");
 
-  const compraInput =
-    document.getElementById(
-      "precioCompra"
-    );
-
-  const beneficioInput =
-    document.getElementById(
-      "beneficioMinimo"
-    );
-
-
-  const jugador =
-    jugadorInput
-      ? jugadorInput.value.trim()
-      : "";
-
-
-  const precioVenta =
-    ventaInput
-      ? ventaInput.value
-      : "";
-
-
-  const precioCompra =
-    compraInput
-      ? compraInput.value
-      : "";
-
-
-  const beneficioMinimo =
-    beneficioInput
-      ? beneficioInput.value
-      : DEFAULT_META_PROFIT;
-
-
-  if (
-    !precioVenta ||
-    !precioCompra
-  ) {
-    alert(
-      "Ingresa precio de venta y precio de compra."
-    );
+    if (statusElement) {
+      statusElement.className = "trade-status neutral";
+      statusElement.textContent = "MERCADO PENDIENTE";
+    }
 
     return null;
   }
 
+  const thresholds = calculateBuyThresholds(marketAnalysis.market);
+  const purchase = normalizePositiveCoin(purchaseValue);
+  const hasPurchase = purchase !== null;
+  const outcome = hasPurchase
+    ? calculateTradeOutcome(marketAnalysis.market, purchase)
+    : null;
+  const status = classifyTradeOpportunity(outcome);
 
-  const metrics =
-    getTradeMetrics(
-      precioVenta,
-      precioCompra,
-      beneficioMinimo
-    );
+  setCalculatorMessage(
+    purchaseValue !== "" && !hasPurchase
+      ? "La puja debe ser mayor que 0. El análisis de mercado sigue disponible."
+      : ""
+  );
+  updateResultText("resultadoJugador", jugador || "Jugador sin nombre");
+  updateResultText("resultadoMercado", formatCoins(marketAnalysis.market));
+  updateResultText("resultadoNeto", formatCoins(marketAnalysis.net));
+  updateResultText("resultadoEquilibrio", formatCoins(thresholds.breakEven));
+  updateResultText(
+    "resultadoCompra",
+    hasPurchase ? formatCoins(outcome.purchase) : "Sin precio todavía"
+  );
+  updateResultText(
+    "resultadoBeneficio",
+    hasPurchase ? formatSignedCoins(outcome.profit) : "—",
+    hasPurchase
+      ? outcome.profit >= 0 ? "positive" : "negative"
+      : ""
+  );
+  updateResultText(
+    "resultadoROI",
+    hasPurchase ? formatPercent(outcome.roi) : "—"
+  );
+  renderTargetPrices(thresholds);
+  renderStressScenario(
+    "scenario25",
+    hasPurchase ? outcome.drop25 : marketAnalysis.drop25
+  );
+  renderStressScenario(
+    "scenario5",
+    hasPurchase ? outcome.drop5 : marketAnalysis.drop5
+  );
+  renderOpportunityTable(marketAnalysis.market);
 
+  const statusElement = document.getElementById("estadoTrade");
 
-  const status =
-    getTradeStatus(
-      metrics,
-      beneficioMinimo
-    );
-
-
-  const netoEl =
-    document.getElementById(
-      "resultadoNeto"
-    );
-
-  const beneficioEl =
-    document.getElementById(
-      "resultadoBeneficio"
-    );
-
-  const roiEl =
-    document.getElementById(
-      "resultadoROI"
-    );
-
-  const idealEl =
-    document.getElementById(
-      "resultadoIdeal"
-    );
-
-  const maximoEl =
-    document.getElementById(
-      "resultadoMaximo"
-    );
-
-  const statusEl =
-    document.getElementById(
-      "estadoTrade"
-    );
-
-
-  if (netoEl) {
-    netoEl.textContent =
-      formatCoins(metrics.neto);
+  if (statusElement) {
+    statusElement.className = "trade-status " + status.className;
+    statusElement.textContent = hasPurchase
+      ? status.label
+      : "ANÁLISIS DE MERCADO · SIN PUJA";
   }
-
-
-  if (beneficioEl) {
-    beneficioEl.textContent =
-      metrics.beneficio >= 0
-        ? `+${formatCoins(
-            metrics.beneficio
-          )}`
-        : formatCoins(
-            metrics.beneficio
-          );
-
-    beneficioEl.className =
-      metrics.beneficio >= 0
-        ? "positive"
-        : "negative";
-  }
-
-
-  if (roiEl) {
-    roiEl.textContent =
-      formatPercent(
-        metrics.roi
-      );
-  }
-
-
-  if (idealEl) {
-    idealEl.textContent =
-      `${formatCoins(
-        metrics.compraIdealMin
-      )} - ${formatCoins(
-        metrics.compraIdealMax
-      )}`;
-  }
-
-
-  if (maximoEl) {
-    maximoEl.textContent =
-      formatCoins(
-        metrics.compraMaxima
-      );
-  }
-
-
-  if (statusEl) {
-    statusEl.className =
-      `trade-status ${status.className}`;
-
-    statusEl.textContent =
-      status.label;
-  }
-
 
   return {
     jugador,
-
-    beneficioMinimo:
-      Number(
-        beneficioMinimo
-      ),
-
-    ...metrics,
-
-    status
+    playerId: selectedCalculatorPlayerId,
+    ...marketAnalysis,
+    purchase: hasPurchase ? outcome.purchase : null,
+    profit: hasPurchase ? outcome.profit : null,
+    roi: hasPurchase ? outcome.roi : null,
+    drop25: hasPurchase ? outcome.drop25 : marketAnalysis.drop25,
+    drop5: hasPurchase ? outcome.drop5 : marketAnalysis.drop5,
+    status,
+    thresholds
   };
 }
 
@@ -784,175 +994,146 @@ function calcularTrade() {
    WATCHLIST
 ========================================================= */
 
-function addToWatchlist() {
-  const result =
-    calcularTrade();
+function createUniqueWatchlistId(
+  items = state.watchlist,
+  timestamp = Date.now()
+) {
+  const usedIds = new Set(
+    items.map((item) => String(item.id))
+  );
+  let id = Math.floor(timestamp);
 
+  while (usedIds.has(String(id))) {
+    id += 1;
+  }
+
+  return id;
+}
+
+
+function addToWatchlist() {
+  const result = calcularTrade();
 
   if (!result) {
     return;
   }
 
-
   if (!result.jugador) {
-    alert(
-      "Ingresa el nombre del jugador."
+    setCalculatorMessage(
+      "Escribe o selecciona un jugador antes de añadirlo a Watchlist.",
+      true
     );
-
     return;
   }
 
-
-  const item = {
-    id:
-      Date.now(),
-
-    jugador:
-      result.jugador,
-
-    venta:
-      result.venta,
-
-    compraIdealMin:
-      result.compraIdealMin,
-
-    compraIdealMax:
-      result.compraIdealMax,
-
-    compraMaxima:
-      result.compraMaxima,
-
-    compraActual:
-      result.compra,
-
-    estado:
-      result.status.label,
-
-    estadoClass:
-      result.status.className,
-
-    fecha:
-      new Date().toISOString()
-  };
-
-
-  state.watchlist.unshift(
-    item
-  );
-
+  state.watchlist.unshift({
+    id: createUniqueWatchlistId(),
+    playerId: result.playerId,
+    jugador: result.jugador,
+    mercado: result.market,
+    miPuja: result.purchase,
+    fecha: new Date().toISOString()
+  });
 
   saveState();
   renderWatchlist();
   renderCapital();
+  setCalculatorMessage("Jugador añadido a Watchlist.");
+}
+
+
+function getWatchlistMarket(item) {
+  const basePlayer = item.playerId === null || item.playerId === undefined
+    ? null
+    : getPopularPlayers().find(
+        (player) => String(player.id) === String(item.playerId)
+      );
+  const effectivePrice = basePlayer
+    ? getPopularPlayerData(basePlayer).precioEfectivo
+    : null;
+
+  return normalizePositiveCoin(effectivePrice) ??
+    normalizePositiveCoin(item.mercado);
+}
+
+
+function getWatchlistDisplayData(item) {
+  const market = getWatchlistMarket(item);
+  const bid = getWatchlistBid(item);
+  const thresholds = calculateBuyThresholds(market);
+  const outcome = calculateTradeOutcome(market, bid);
+
+  return {
+    market,
+    bid,
+    thresholds,
+    outcome,
+    status: classifyTradeOpportunity(outcome)
+  };
 }
 
 
 function renderWatchlist() {
-  const tbody =
-    document.getElementById(
-      "watchlistBody"
-    );
-
+  const tbody = document.getElementById("watchlistBody");
 
   if (!tbody) {
     return;
   }
 
-
   tbody.innerHTML = "";
 
-
-  if (
-    state.watchlist.length === 0
-  ) {
-    tbody.innerHTML = `
-      <tr>
-        <td
-          colspan="6"
-          style="
-            text-align:center;
-            color:#8fa8b3;
-          "
-        >
-          No hay jugadores en seguimiento
-        </td>
-      </tr>
-    `;
-
+  if (state.watchlist.length === 0) {
+    tbody.innerHTML =
+      '<tr><td colspan="7" class="empty-table-cell">No hay jugadores en seguimiento</td></tr>';
     return;
   }
 
+  state.watchlist.forEach((item) => {
+    const display = getWatchlistDisplayData(item);
+    const tr = document.createElement("tr");
+    const playerCell = document.createElement("td");
+    const playerName = document.createElement("strong");
+    playerName.textContent = item.jugador;
+    playerCell.appendChild(playerName);
+    tr.appendChild(playerCell);
 
-  state.watchlist.forEach(
-    (item) => {
-      const tr =
-        document.createElement(
-          "tr"
-        );
+    [
+      formatCoins(display.market),
+      display.thresholds
+        ? "≤ " + formatCoins(display.thresholds.good)
+        : "—",
+      display.thresholds
+        ? "≤ " + formatCoins(display.thresholds.protected)
+        : "—",
+      formatCoins(display.bid)
+    ].forEach((value) => {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+      tr.appendChild(cell);
+    });
 
+    const statusCell = document.createElement("td");
+    const badge = document.createElement("span");
+    badge.className = "opportunity-badge " + display.status.className;
+    badge.textContent = display.status.label;
+    statusCell.appendChild(badge);
+    tr.appendChild(statusCell);
 
-      tr.innerHTML = `
-        <td>
-          <strong>
-            ${item.jugador}
-          </strong>
-        </td>
-
-        <td>
-          ${formatCoins(
-            item.venta
-          )}
-        </td>
-
-        <td>
-          ${formatCoins(
-            item.compraIdealMin
-          )}
-          -
-          ${formatCoins(
-            item.compraIdealMax
-          )}
-        </td>
-
-        <td>
-          ${formatCoins(
-            item.compraMaxima
-          )}
-        </td>
-
-        <td>
-          ${item.estado}
-        </td>
-
-        <td>
-          <button
-            class="remove-button"
-            data-watch-delete="${item.id}"
-            type="button"
-            title="Eliminar"
-          >
-            ×
-          </button>
-        </td>
-      `;
-
-
-      tbody.appendChild(
-        tr
-      );
-    }
-  );
+    const actionCell = document.createElement("td");
+    actionCell.innerHTML =
+      '<button class="remove-button" data-watch-delete="' +
+      String(item.id) +
+      '" type="button" title="Eliminar">×</button>';
+    tr.appendChild(actionCell);
+    tbody.appendChild(tr);
+  });
 }
 
 
 function removeWatchlistItem(id) {
-  state.watchlist =
-    state.watchlist.filter(
-      (item) =>
-        Number(item.id) !==
-        Number(id)
-    );
-
+  state.watchlist = state.watchlist.filter(
+    (item) => String(item.id) !== String(id)
+  );
 
   saveState();
   renderWatchlist();
@@ -961,27 +1142,15 @@ function removeWatchlistItem(id) {
 
 
 function limpiarWatchlist() {
-  if (
-    state.watchlist.length === 0
-  ) {
+  if (state.watchlist.length === 0) {
     return;
   }
 
-
-  const confirmar =
-    confirm(
-      "¿Quieres limpiar toda la watchlist?"
-    );
-
-
-  if (!confirmar) {
+  if (!confirm("¿Quieres limpiar toda la watchlist?")) {
     return;
   }
-
 
   state.watchlist = [];
-
-
   saveState();
   renderWatchlist();
   renderCapital();
@@ -1045,10 +1214,7 @@ function registrarTrade() {
 
 
   const neto =
-    Math.floor(
-      venta *
-        (1 - TAX_RATE)
-    );
+    calculateEaNet(venta);
 
 
   const beneficio =
@@ -1410,22 +1576,20 @@ function getMetaPlayerData(player) {
     precioMercado !== undefined &&
     Number(precioMercado) > 0
   ) {
-    const metrics =
-      getTradeMetrics(
-        precioMercado,
-        0,
-        DEFAULT_META_PROFIT
+    const thresholds =
+      calculateBuyThresholds(
+        precioMercado
       );
 
 
     compraIdealMin =
-      metrics.compraIdealMin;
+      thresholds.protected;
 
     compraIdealMax =
-      metrics.compraIdealMax;
+      thresholds.good;
 
     compraMaxima =
-      metrics.compraMaxima;
+      thresholds.breakEven;
   }
 
 
@@ -2677,88 +2841,40 @@ function actualizarPrecioMeta(
    USAR META EN CALCULADORA
 ========================================================= */
 
-function usarMetaEnCalculadora(
-  playerId
-) {
-  const basePlayer =
-    getMetaPlayers().find(
-      (player) =>
-        player.id ===
-        playerId
-    );
-
+function usarMetaEnCalculadora(playerId) {
+  const basePlayer = getMetaPlayers().find(
+    (player) => player.id === playerId
+  );
 
   if (!basePlayer) {
     return;
   }
 
+  const player = getMetaPlayerData(basePlayer);
+  document.querySelector(
+    '.nav-tab[data-section="dashboardSection"]'
+  )?.click();
 
-  const player =
-    getMetaPlayerData(
-      basePlayer
-    );
-
-
-  const dashboardTab =
-    document.querySelector(
-      '.nav-tab[data-section="dashboardSection"]'
-    );
-
-
-  if (dashboardTab) {
-    dashboardTab.click();
-  }
-
-
-  const jugadorInput =
-    document.getElementById(
-      "jugador"
-    );
-
-  const ventaInput =
-    document.getElementById(
-      "precioVenta"
-    );
-
-  const compraInput =
-    document.getElementById(
-      "precioCompra"
-    );
-
-  const beneficioInput =
-    document.getElementById(
-      "beneficioMinimo"
-    );
-
+  const jugadorInput = document.getElementById("jugador");
+  const marketInput = document.getElementById("precioVenta");
+  const purchaseInput = document.getElementById("precioCompra");
 
   if (jugadorInput) {
-    jugadorInput.value =
-      player.nombre;
+    jugadorInput.value = player.nombre;
   }
 
+  selectedCalculatorPlayerId = null;
 
-  if (ventaInput) {
-    ventaInput.value =
-      player.precioMercado ||
-      "";
+  if (marketInput) {
+    marketInput.value = player.precioMercado ?? "";
   }
 
-
-  if (compraInput) {
-    compraInput.value = "";
-
-    compraInput.focus();
+  if (purchaseInput) {
+    purchaseInput.value = "";
+    purchaseInput.focus();
   }
 
-
-  if (
-    beneficioInput &&
-    !beneficioInput.value
-  ) {
-    beneficioInput.value =
-      DEFAULT_META_PROFIT;
-  }
-
+  calcularTrade();
 
   window.scrollTo({
     top: 0,
@@ -3088,8 +3204,7 @@ function configurarEnterCalculadora() {
   const ids = [
     "jugador",
     "precioVenta",
-    "precioCompra",
-    "beneficioMinimo"
+    "precioCompra"
   ];
 
 
@@ -3158,38 +3273,31 @@ function getLocalDateString() {
    EXPORTAR BACKUP
 ========================================================= */
 
+function buildBackupData() {
+  return {
+    app: "XoluGG TradeLab",
+    appVersion: APP_VERSION,
+    version: APP_VERSION,
+    exportedAt: new Date().toISOString(),
+    state: {
+      capital: state.capital,
+      watchlist: state.watchlist,
+      historial: state.historial
+    },
+    metaPriceOverrides,
+    popularPriceOverrides
+  };
+}
+
+
 function exportarBackup() {
   saveState();
   saveMetaPrices();
   savePopularPrices();
 
 
-  const backup = {
-    app:
-      "XoluGG TradeLab",
-
-    version:
-      APP_VERSION,
-
-    exportedAt:
-      new Date().toISOString(),
-
-    state: {
-      capital:
-        state.capital,
-
-      watchlist:
-        state.watchlist,
-
-      historial:
-        state.historial
-    },
-
-    metaPriceOverrides:
-      metaPriceOverrides,
-
-    popularPriceOverrides: popularPriceOverrides
-  };
+  const backup =
+    buildBackupData();
 
 
   const json =
@@ -3405,11 +3513,9 @@ function importarBackupArchivo(
             ) || 0,
 
           watchlist:
-            Array.isArray(
+            normalizeWatchlist(
               data.state.watchlist
-            )
-              ? data.state.watchlist
-              : [],
+            ),
 
           historial:
             Array.isArray(
@@ -3600,8 +3706,7 @@ function getPopularPlayerData(card) {
   const price = resolvePopularPrice(card, manual);
   const precioUsuario = price.manualPrice;
   const precioEfectivo = price.effectivePrice;
-  const metrics = precioEfectivo !== null
-    ? getTradeMetrics(precioEfectivo, 0, DEFAULT_META_PROFIT) : null;
+  const thresholds = calculateBuyThresholds(precioEfectivo);
   return {
     ...card,
     precioUsuario,
@@ -3609,9 +3714,9 @@ function getPopularPlayerData(card) {
     ultimaActualizacion: price.manualUpdatedAt,
     fuentePrecio: price.source,
     precioManualCaducado: price.manualExpired,
-    compraIdealMin: metrics?.compraIdealMin ?? null,
-    compraIdealMax: metrics?.compraIdealMax ?? null,
-    compraMaxima: metrics?.compraMaxima ?? null
+    compraIdealMin: thresholds?.protected ?? null,
+    compraIdealMax: thresholds?.good ?? null,
+    compraMaxima: thresholds?.breakEven ?? null
   };
 }
 
@@ -3620,7 +3725,7 @@ let popularQuickPriceLimit = null;
 
 function getPopularAvailableCapital() {
   const invested = state.watchlist.reduce(
-    (total, item) => total + Number(item.compraActual || 0), 0
+    (total, item) => total + Number(getWatchlistBid(item) || 0), 0
   );
   return Math.max(0, state.capital - invested);
 }
@@ -3904,6 +4009,7 @@ function actualizarPrecioPopular(cardId) {
     return;
   }
   renderPopularPlayers();
+  renderWatchlist();
 }
 
 function limpiarFiltrosPopular() {
@@ -4077,88 +4183,44 @@ async function copiarNombrePopular(
   }
 }
 
-function usarPopularEnCalculadora(
-  playerId
-) {
-  const basePlayer =
-    getPopularPlayers().find(
-      (player) =>
-        player.id ===
-        playerId
-    );
-
+function usarPopularEnCalculadora(playerId) {
+  const basePlayer = getPopularPlayers().find(
+    (player) => String(player.id) === String(playerId)
+  );
 
   if (!basePlayer) {
     return;
   }
 
+  const player = getPopularPlayerData(basePlayer);
+  document.querySelector(
+    '.nav-tab[data-section="dashboardSection"]'
+  )?.click();
 
-  const player =
-    getPopularPlayerData(
-      basePlayer
-    );
-
-
-  const dashboardTab =
-    document.querySelector(
-      '.nav-tab[data-section="dashboardSection"]'
-    );
-
-
-  if (dashboardTab) {
-    dashboardTab.click();
-  }
-
-
-  const jugadorInput =
-    document.getElementById(
-      "jugador"
-    );
-
-  const ventaInput =
-    document.getElementById(
-      "precioVenta"
-    );
-
-  const compraInput =
-    document.getElementById(
-      "precioCompra"
-    );
-
-  const beneficioInput =
-    document.getElementById(
-      "beneficioMinimo"
-    );
-
+  const jugadorInput = document.getElementById("jugador");
+  const marketInput = document.getElementById("precioVenta");
+  const purchaseInput = document.getElementById("precioCompra");
 
   if (jugadorInput) {
-    jugadorInput.value =
-      player.nombre;
+    jugadorInput.value = player.nombre;
   }
 
+  selectedCalculatorPlayerId = player.id;
 
-  if (ventaInput) {
-    ventaInput.value =
-      player.precioEfectivo ||
-      "";
+  if (marketInput) {
+    marketInput.value = player.precioEfectivo ?? "";
+
+    if (player.precioEfectivo) {
+      marketInput.step = getMarketStep(player.precioEfectivo);
+    }
   }
 
-
-  if (compraInput) {
-    compraInput.value = "";
-
-    compraInput.focus();
+  if (purchaseInput) {
+    purchaseInput.value = "";
+    purchaseInput.focus();
   }
 
-
-  if (
-    beneficioInput &&
-    !beneficioInput.value
-  ) {
-    beneficioInput.value =
-      DEFAULT_META_PROFIT;
-  }
-
+  calcularTrade();
 
   window.scrollTo({
     top: 0,
@@ -4346,23 +4408,6 @@ function configurarEventosPopular() {
    INIT
 ========================================================= */
 
-function updateAutomaticPurchasePrice() {
-  const saleInput = document.getElementById("precioVenta");
-  const profitInput = document.getElementById("beneficioMinimo");
-  const purchaseInput = document.getElementById("precioCompra");
-  const sale = Number(saleInput?.value);
-  const profit = Number(profitInput?.value || 0);
-  if (!purchaseInput || !Number.isFinite(sale) || sale <= 0 ||
-      !Number.isFinite(profit)) return;
-
-  const net = Math.floor(sale * (1 - TAX_RATE));
-  const suggested = roundDownMarketPrice(Math.max(0, net - profit));
-  purchaseInput.value = String(suggested);
-  purchaseInput.step = getMarketStep(suggested);
-}
-
-
-
 let uniquePopularPlayerNames;
 
 function getUniquePopularPlayerNames() {
@@ -4371,14 +4416,20 @@ function getUniquePopularPlayerNames() {
     for (const card of window.PLAYERS_DATA || []) {
       const name = String(card.nombre || "").trim();
       const normalized = normalizeText(name);
-      if (normalized && !names.has(normalized)) names.set(normalized, name);
+      if (normalized && !names.has(normalized)) {
+        names.set(normalized, {
+          id: card.id,
+          name,
+          normalized
+        });
+      }
     }
-    uniquePopularPlayerNames = Array.from(names, ([normalized, name]) => ({ name, normalized }));
+    uniquePopularPlayerNames = Array.from(names.values());
   }
   return uniquePopularPlayerNames;
 }
 
-function setupPlayerAutocomplete(inputId) {
+function setupPlayerAutocomplete(inputId, onSelect) {
   const input = document.getElementById(inputId);
   if (!input) return;
   const wrapper = input.closest(".player-input-wrapper");
@@ -4416,8 +4467,10 @@ function setupPlayerAutocomplete(inputId) {
   }
 
   function select(index) {
-    input.value = matches[index].name;
+    const player = matches[index];
+    input.value = player.name;
     close();
+    onSelect?.(player);
   }
 
   function renderPlayerSuggestions() {
@@ -4441,7 +4494,12 @@ function setupPlayerAutocomplete(inputId) {
     list.scrollTop = 0;
   }
 
-  input.addEventListener("input", renderPlayerSuggestions);
+  input.addEventListener("input", () => {
+    if (inputId === "jugador") {
+      selectedCalculatorPlayerId = null;
+    }
+    renderPlayerSuggestions();
+  });
   input.addEventListener("focus", renderPlayerSuggestions);
   input.addEventListener("keydown", (event) => {
     if (event.isComposing) return;
@@ -4483,8 +4541,51 @@ function configurarBotonesLimpiarJugador() {
 }
 
 
+function selectCalculatorPlayer(player) {
+  const basePlayer = getPopularPlayers().find(
+    (card) => String(card.id) === String(player.id)
+  );
+
+  selectedCalculatorPlayerId = player.id;
+
+  if (!basePlayer) {
+    return;
+  }
+
+  const effectivePrice = getPopularPlayerData(basePlayer).precioEfectivo;
+  const marketInput = document.getElementById("precioVenta");
+  const purchaseInput = document.getElementById("precioCompra");
+
+  if (marketInput) {
+    marketInput.value = effectivePrice ?? "";
+
+    if (effectivePrice) {
+      marketInput.step = getMarketStep(effectivePrice);
+    }
+  }
+
+  if (purchaseInput) {
+    purchaseInput.value = "";
+  }
+
+  calcularTrade();
+}
+
+
+function renderAppVersion() {
+  const versionElement =
+    document.getElementById("appVersion");
+
+  if (versionElement) {
+    versionElement.textContent =
+      "v" + APP_VERSION;
+  }
+}
+
+
 function init() {
   validatePopularPlayersCatalog();
+  renderAppVersion();
 
   /* CARGAR DATOS */
 
@@ -4504,9 +4605,6 @@ function init() {
   /* STEPS */
 
   activarStepsDinamicos();
-  for (const id of ["precioVenta", "beneficioMinimo"]) {
-    document.getElementById(id)?.addEventListener("input", updateAutomaticPurchasePrice);
-  }
 
 
   /* EVENTOS */
@@ -4514,7 +4612,7 @@ function init() {
   configurarEventosPopular();
   configurarFiltrosPopularesAvanzados();
   configurarBotonesLimpiarJugador();
-  setupPlayerAutocomplete("jugador");
+  setupPlayerAutocomplete("jugador", selectCalculatorPlayer);
   setupPlayerAutocomplete("tradeJugador");
   configurarEventosTablas();
   configurarEnterCalculadora();
