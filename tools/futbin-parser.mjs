@@ -16,6 +16,25 @@ const near = (a, b, tolerance = GEOMETRY.yTolerance) => Math.abs(a - b) <= toler
 const integer = text => /^\d{1,2}$/.test(clean(text)) ? Number(text) : null;
 const unique = list => [...new Set(list)];
 const byX = (a, b) => a.x - b.x || b.y - a.y;
+const CARD_TYPES = new Set(['gold', 'special', 'unknown']);
+
+/** Conservative visual classifier. Ambiguous evidence deliberately stays unknown. */
+export function classifyCardVisual(signal = {}) {
+  if (CARD_TYPES.has(signal.tipoCarta)) return signal.tipoCarta;
+  const samples = Number(signal.sampleCount);
+  const coverage = Number(signal.cardCoverage);
+  const gold = Number(signal.goldRatio);
+  const variance = Number(signal.colorVariance);
+  const dark = Number(signal.darkRatio);
+  const pale = Number(signal.paleRatio);
+  if (!Number.isFinite(samples) || samples < 64 || !Number.isFinite(coverage) || coverage < 0.35) return 'unknown';
+  if (Number.isFinite(gold) && gold >= 0.42) return 'gold';
+  if (Number.isFinite(gold) && (
+      (gold <= 0.22 && ((Number.isFinite(variance) && variance >= 0.035) ||
+       (Number.isFinite(dark) && dark >= 0.2) || (Number.isFinite(pale) && pale >= 0.35))) ||
+      (gold <= 0.32 && Number.isFinite(dark) && dark >= 0.35))) return 'special';
+  return 'unknown';
+}
 
 /** Strict market notation. Unknown values stay null; zero remains zero. */
 export function parseMarketValue(text) {
@@ -184,7 +203,7 @@ export function validateParsedCard(card, ambiguous = false) {
   return card;
 }
 
-export function parseCard(cell) {
+export function parseCard(cell, visual = null) {
   const tokens = [...cell.tokens].sort(byX), y = cell.anchorY;
   const used = new Set(cell.priceTokens);
   const warnings = [...cell.warnings];
@@ -244,6 +263,7 @@ export function parseCard(cell) {
   });
   const card = {
     nombre: name, ovr, posicionPrincipal: principal,
+    version: null, tipoCarta: classifyCardVisual(visual || {}),
     posiciones: unique([principal, ...alternatives.map(token => clean(token.text))].filter(Boolean)),
     stats, pie: foot, skills, weakFoot, ratingFuente: rating, popularidadFuente: popularity,
     precioReferencia: cell.pair?.[0].value ?? null,
@@ -263,13 +283,19 @@ export function parseFutbinDiagnostic(diagnostic) {
     typeof item.text !== "string" || ![item.x, item.y, item.width, item.height].every(Number.isFinite));
   if (invalid.length) throw new TypeError("Hay tokens con página o coordenadas inválidas.");
   const { cells, errors } = buildCardCells(diagnostic);
-  const cards = cells.map(cell => parseCard(cell));
+  const visuals = Array.isArray(diagnostic.cardVisuals) ? diagnostic.cardVisuals : [];
+  const cards = cells.map(cell => parseCard(cell, visuals.find(visual =>
+    visual?.page === cell.page && visual?.column === cell.column &&
+    (cell.anchorY === null || !Number.isFinite(visual.anchorY) || near(visual.anchorY, cell.anchorY, 4)))));
   return {
-    parserVersion: "0.2.0", fileName: diagnostic.fileName ?? null,
+    parserVersion: "0.3.0", fileName: diagnostic.fileName ?? null,
     metrics: { slots: cells.length, cards: cards.length,
       complete: cards.filter(card => card.parseStatus === "complete").length,
       partial: cards.filter(card => card.parseStatus === "partial").length,
       ambiguous: cards.filter(card => card.parseStatus === "ambiguous").length,
+      gold: cards.filter(card => card.tipoCarta === "gold").length,
+      special: cards.filter(card => card.tipoCarta === "special").length,
+      unknown: cards.filter(card => card.tipoCarta === "unknown").length,
       errors: errors.length },
     errors, cards
   };

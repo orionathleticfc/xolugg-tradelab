@@ -152,6 +152,23 @@ function Show-ValidationSummary {
   Write-Host ""
   if ($Result.summary) {
     $summary = $Result.summary
+    if ($summary.mode -eq "authoritative-snapshot") {
+      Write-Host ""
+      Write-Host "ACTUALIZACION SNAPSHOT"
+      Write-Host "======================"
+      Write-Host ("{0,-28} {1,8}" -f "Catalogo anterior:", $summary.currentCatalog)
+      Write-Host ("{0,-28} {1,8}" -f "Snapshot nuevo:", $summary.candidateCatalog)
+      Write-Host ("{0,-28} {1,8}" -f "Cartas eliminadas:", $summary.removedIds)
+      Write-Host ("{0,-28} {1,8}" -f "Cartas nuevas:", $summary.newCards)
+      Write-Host ("{0,-28} {1,8}" -f "Especiales:", $summary.specialCards)
+      Write-Host ("{0,-28} {1,8}" -f "Oro:", $summary.goldCards)
+      Write-Host ("{0,-28} {1,8}" -f "Unknown:", $summary.unknownCards)
+      Write-Host ("{0,-28} {1,8}" -f "Precio no disponible:", $summary.nullPrices)
+      Write-Host ("{0,-28} {1,8}" -f "Unavailable twins:", $summary.excludedUnavailableTwins)
+      Write-Host ("{0,-28} {1,8}" -f "Needs review:", $summary.needsReview)
+      Write-Host ("{0,-28} {1,8}" -f "Errores:", $summary.validationErrors)
+      Write-Host ""
+    }
     Write-Host ("{0,-28} {1,8}" -f "Catalogo actual:", $summary.currentCatalog)
     Write-Host ("{0,-28} {1,8}" -f "Catalogo candidato:", $summary.candidateCatalog)
     Write-Host ("{0,-28} {1,8}" -f "Cartas nuevas:", $summary.newCards)
@@ -166,10 +183,6 @@ function Show-ValidationSummary {
     $candidateState = if ($Result.hasChanges) { "CAMBIOS DETECTADOS" } else { "SIN CAMBIOS" }
     Write-Host ("{0,-28} {1,20}" -f "Estado del candidato:", $candidateState)
     Write-Host ""
-    Write-Host "Cambios permitidos en registros existentes:"
-    foreach ($field in @("precioReferencia", "popularidadFuente", "ratingFuente", "valorSecundarioFuente", "fuente", "futbin")) {
-      Write-Host ("  {0,-26} {1,8}" -f $field, $summary.marketChanges.$field)
-    }
   }
   if ($Result.missingIds.Count -gt 0) {
     Write-Host ""
@@ -180,6 +193,11 @@ function Show-ValidationSummary {
     Write-Host ""
     Write-Host "Errores:"
     $Result.errors | ForEach-Object { Write-Host "  [$($_.code)] $($_.message)" }
+  }
+  if ($Result.warnings.Count -gt 0) {
+    Write-Host ""
+    Write-Host "ADVERTENCIAS REFORZADAS:"
+    $Result.warnings | ForEach-Object { Write-Host "  [$($_.code)] $($_.message)" }
   }
 }
 
@@ -252,6 +270,18 @@ try {
   if ($DryRun) {
     Write-Host ""
     Write-Host "DRY RUN OK"
+    Write-Host "Modo: $($validation.summary.mode)"
+    Write-Host "Actual: $($validation.summary.currentCatalog)"
+    Write-Host "Candidato: $($validation.summary.candidateCatalog)"
+    Write-Host "Removals: $($validation.summary.removedIds)"
+    Write-Host "Additions: $($validation.summary.newCards)"
+    Write-Host "Gold: $($validation.summary.goldCards)"
+    Write-Host "Special: $($validation.summary.specialCards)"
+    Write-Host "Unknown: $($validation.summary.unknownCards)"
+    Write-Host "Null prices: $($validation.summary.nullPrices)"
+    Write-Host "Excluded unavailable twins: $($validation.summary.excludedUnavailableTwins)"
+    Write-Host "Needs review: $($validation.summary.needsReview)"
+    Write-Host "Validation errors: $($validation.summary.validationErrors)"
     Write-Host "players-data.js no fue modificado. No se creo commit ni se hizo push."
     exit 0
   }
@@ -263,10 +293,12 @@ try {
     exit 0
   }
 
+  $requiredConfirmation = if ($validation.summary.mode -eq "authoritative-snapshot" -and
+      $validation.summary.removedIds -gt 0) { "REEMPLAZAR" } else { "PUBLICAR" }
   Write-Host ""
-  Write-Host -NoNewline "Escribe PUBLICAR para continuar: "
+  Write-Host -NoNewline "Escribe $requiredConfirmation para continuar: "
   $confirmation = Read-Host
-  if ($confirmation -cne "PUBLICAR") {
+  if ($confirmation -cne $requiredConfirmation) {
     Write-Host "Publicacion cancelada."
     exit 0
   }

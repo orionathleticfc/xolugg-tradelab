@@ -3937,6 +3937,8 @@ function renderPopularPlayers() {
     const source = card.fuentePrecio;
     const freshness = getPriceFreshness(card.ultimaActualizacion);
     const alternatives = (card.posiciones || []).filter(p => p !== card.posicionPrincipal);
+    const cardType = card.tipoCarta === "gold" ? "Oro" :
+      card.tipoCarta === "special" ? "Especial" : "Unknown";
     const futbinAction = card.futbin?.url ? `
         <a class="meta-action-btn popular-futbin-link" data-meta-action="futbin"
           href="${e(card.futbin.url)}" target="_blank" rel="noopener noreferrer"
@@ -3944,7 +3946,8 @@ function renderPopularPlayers() {
     const row = document.createElement("tr");
     row.innerHTML = `
       <td><div class="meta-player-name"><strong>${e(card.nombre)}</strong>
-        <span>${e(alternatives.join(" · "))}</span></div></td>
+        <span>${e(alternatives.join(" · "))}</span>
+        <small class="popular-card-type ${e(card.tipoCarta || "unknown")}">${e(cardType)}</small></div></td>
       <td>${e(card.ovr ?? "—")}</td>
       <td><span class="meta-position">${e(card.posicionPrincipal ?? "—")}</span></td>
       <td>${e(card.popularidadFuente ?? "—")}</td>
@@ -4412,19 +4415,13 @@ let uniquePopularPlayerNames;
 
 function getUniquePopularPlayerNames() {
   if (!uniquePopularPlayerNames) {
-    const names = new Map();
-    for (const card of window.PLAYERS_DATA || []) {
+    uniquePopularPlayerNames = (window.PLAYERS_DATA || []).map(card => {
       const name = String(card.nombre || "").trim();
       const normalized = normalizeText(name);
-      if (normalized && !names.has(normalized)) {
-        names.set(normalized, {
-          id: card.id,
-          name,
-          normalized
-        });
-      }
-    }
-    uniquePopularPlayerNames = Array.from(names.values());
+      const type = card.tipoCarta === "gold" ? "Oro" :
+        card.tipoCarta === "special" ? "Especial" : "Tipo desconocido";
+      return { id: card.id, name, normalized, label: `${name} · ${card.ovr ?? "—"} · ${type}` };
+    }).filter(player => player.normalized);
   }
   return uniquePopularPlayerNames;
 }
@@ -4483,7 +4480,7 @@ function setupPlayerAutocomplete(inputId, onSelect) {
       option.id = list.id + "-" + index;
       option.setAttribute("role", "option");
       option.setAttribute("aria-selected", "false");
-      option.textContent = player.name;
+      option.textContent = player.label;
       option.addEventListener("mouseenter", () => activate(index));
       option.addEventListener("mousedown", (event) => event.preventDefault());
       option.addEventListener("click", () => select(index));

@@ -397,3 +397,76 @@ se permite incluir `players-data.js` en el commit. Si el push directo es rechaza
 el commit queda local y el script informa el fallo sin reintentar ni usar force.
 La suite histórica del importador no se reescribe: el publicador ejecuta las
 pruebas genéricas del validador como barrera estable para catálogos futuros.
++
+
+## Fase 10: snapshot Popular autoritativo (política vigente)
+
+Esta sección sustituye las políticas acumulativas descritas en las fases históricas
+anteriores. El PDF actual de Popular Players determina pertenencia, orden,
+popularidad y mercado del catálogo candidato. El catálogo anterior se consulta
+solo para reutilizar un ID inequívoco y metadata segura; una carta ausente no se
+copia al candidato.
+
+Flujo vigente:
+
+1. PDF.js extrae texto, anotaciones y una muestra raster local de cada carta.
+2. El parser conserva todas las cartas geométricamente válidas y clasifica
+   `tipoCarta` como `gold`, `special` o `unknown`. La clasificación usa
+   ratios de color del área de carta; una señal insuficiente queda `unknown` y
+   no se descarta.
+3. Las annotations se asocian por geometría. No se visita ni busca FUTBIN.
+4. La identidad prioriza `futbin.playerId`, luego URL exacta, fingerprint
+   estructural y fallback conservador. Un playerId nuevo nunca hereda el ID de
+   otra variante. Para una carta conocida se conserva su ID histórico; una
+   variante nueva enlazada usa `futbin-27-{playerId}`.
+5. El generator recorre el snapshot en su orden y construye el candidato desde
+   cero. Un playerId repetido se consolida si la estructura es coherente.
+   PlayerIds distintos se conservan como variantes diferentes.
+6. Si varios playerIds tienen fingerprint y tipo equivalentes, exactamente una
+   variante tiene precio y las demás traen raw `"0"`, se conserva la variante
+   comercial y se registran las demás en `excludedUnavailableTwins`. Si todas
+   son no disponibles, el grupo pasa a `NEEDS_REVIEW`.
+7. Raw `"0"` siempre produce `precioReferencia: null`. No recupera el precio
+   histórico.
+8. Cada carta aceptada recibe `fuente.snapshotObservedAt` e `importedAt` del
+   snapshot nuevo, aunque el mercado no cambie. `lastMarketChangedAt` se mueve
+   solo cuando cambia un valor de mercado. Así, un manual anterior expira y uno
+   posterior sigue ganando.
+
+El JS exportado mantiene `window.PLAYERS_DATA` y añade
+`window.PLAYERS_DATA_META` con modo, archivo, fechas, parsed/accepted, tipos,
+twins excluidos y revisiones. El reporte contiene removals (con IDs), nuevas,
+actualizadas, sin cambios, tipos, precios null, duplicados, revisiones,
+colisiones, enlaces y errores.
+
+### Validator y publicador
+
+En `authoritative-snapshot`, el validator permite removals y cambios de orden,
+pero exige metadata coherente, candidato no vacío, counts consistentes, cobertura
+mínima, IDs y playerIds únicos, precios positivos o null, tipos válidos y
+timestamps válidos. Una caída de al menos 40% frente al catálogo anterior emite
+una advertencia crítica reforzada; no fija tamaños históricos.
+
+`update-futbin.ps1 -DryRun` muestra modo, actual, candidato, removals, additions,
+gold/special/unknown, null prices, unavailable twins, needs review y errores.
+No copia, commitea ni hace push. Si hay removals, la publicación real exige escribir
+exactamente `REEMPLAZAR`; sin removals conserva `PUBLICAR`. Antes de copiar crea
+un backup temporal y restaura `players-data.js` si falla una barrera previa al
+commit. El script no toca localStorage.
+
+### Cambios deliberados de tests históricos
+
+Se actualizaron únicamente expectativas que codificaban la filosofía anterior:
+
+- “ausente se conserva” cambió a “ausente se elimina del candidato”;
+- “raw 0 conserva precio viejo” cambió a “raw 0 produce null”;
+- “registros actuales primero y nuevos al final” cambió a “orden del snapshot”;
+- “duplicados por fingerprint se bloquean todos” cambió a playerId exacto,
+  variantes separadas y regla unavailable twin;
+- “el validator rechaza removals” se mantiene solo en modo legacy; el modo
+  autoritativo los permite con metadata y barreras.
+
+La suite cubre los casos A–Z de Fase 10 entre parser, links, matcher, generator,
+validator, manual prices, autocomplete y publicador. El harness
+`futbin-phase10-browser.cjs` procesa un PDF local en Edge headless, no consulta
+FUTBIN y deja cualquier candidato de prueba únicamente en TEMP.

@@ -2,7 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { parseMarketValue, parseFutbinDiagnostic } from "./futbin-parser.mjs";
+import { classifyCardVisual, parseMarketValue, parseFutbinDiagnostic } from "./futbin-parser.mjs";
 
 const info = page => ({ page, view: [0, 0, 612, 792], rotation: 0, userUnit: 1 });
 const token = (page, text, x, y) => ({ page, text, x, y, width: 8, height: 8 });
@@ -73,6 +73,17 @@ test("parser never mutates its input and does not enforce a fixed card count",()
   assert.equal(parseFutbinDiagnostic(d).metrics.cards,2);assert.equal(JSON.stringify(d),before);
 });
 
+test("E/F. visual classification is conservative and unknown cards are retained",()=>{
+  assert.equal(classifyCardVisual({sampleCount:300,cardCoverage:.8,goldRatio:.6,colorVariance:.2}),"gold");
+  assert.equal(classifyCardVisual({sampleCount:300,cardCoverage:.8,goldRatio:.05,darkRatio:.5,colorVariance:.2}),"special");
+  assert.equal(classifyCardVisual({sampleCount:300,cardCoverage:.8,goldRatio:.28,darkRatio:.42,colorVariance:.1}),"special");
+  assert.equal(classifyCardVisual({sampleCount:20,cardCoverage:.1,goldRatio:.9}),"unknown");
+  const d=diagnostic(fixture());
+  d.cardVisuals=[{page:1,column:1,anchorY:498,sampleCount:20,cardCoverage:.1}];
+  const result=parseFutbinDiagnostic(d);
+  assert.equal(result.cards.length,1);assert.equal(result.cards[0].tipoCarta,"unknown");
+});
+
 const fixturePath=new URL("./fixtures-local/EA FC 27 Popular Players _ FUTBIN2-diagnostico.json",import.meta.url);
 test("real local diagnostic: named examples, goalkeeper, missing stats and page boundary", {skip:!fs.existsSync(fixturePath)},()=>{
   const raw=fs.readFileSync(fixturePath,"utf8");
@@ -100,7 +111,8 @@ test("real local diagnostic: named examples, goalkeeper, missing stats and page 
     assert.equal(card.sourcePage,2);assert.equal(card.priceSourcePage,1);
     assert.equal(card.precioReferencia,price);assert.equal(card.valorSecundarioFuente,secondary);
   }
-  assert.deepEqual(result.metrics,{slots:250,cards:250,complete:232,partial:18,ambiguous:0,errors:0});
+  assert.deepEqual(result.metrics,{slots:250,cards:250,complete:232,partial:18,ambiguous:0,
+    gold:0,special:0,unknown:250,errors:0});
   assert.deepEqual(parseFutbinDiagnostic({...d,items:[...d.items].reverse()}),result);
   assert.equal(fs.readFileSync(fixturePath,"utf8"),raw);
   console.log("Real fixture metrics:",result.metrics);

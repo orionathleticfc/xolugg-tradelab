@@ -10,6 +10,8 @@ const screenshotFlag = process.argv.indexOf("--screenshot");
 const screenshotPath = screenshotFlag >= 0
   ? process.argv[screenshotFlag + 1]
   : null;
+const catalogFlag = process.argv.indexOf("--catalog");
+const catalogPath = catalogFlag >= 0 ? process.argv[catalogFlag + 1] : null;
 let browser;
 let timer;
 const requests = [];
@@ -63,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     playerInput.value = "gordon";
     playerInput.dispatchEvent(new Event("input", { bubbles: true }));
     const option = [...document.querySelectorAll("#jugador-suggestions [role=option]")]
-      .find(item => item.textContent.trim() === "Gordon");
+      .find(item => item.textContent.trim().startsWith("Gordon · "));
     if (!option) fail("autocomplete option");
     option.click();
     if (document.getElementById("precioVenta").value !== "8999") {
@@ -168,6 +170,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       fail("manual price regression");
     }
     if (!gordonRow.querySelector(".popular-futbin-link")) fail("FUTBIN regression");
+    if (catalog.some(card => card.tipoCarta === "special") &&
+        !document.querySelector(".popular-card-type.special")) fail("special badge missing");
+    if (catalog.some(card => card.tipoCarta === "unknown") &&
+        !document.querySelector(".popular-card-type.unknown")) fail("unknown badge missing");
     const search = document.getElementById("metaSearch");
     search.value = "Gordon";
     search.dispatchEvent(new Event("input", { bubbles: true }));
@@ -321,7 +327,7 @@ const server = http.createServer((req, res) => {
     return;
   }
   const file = url.pathname === "/" ? "index.html" : url.pathname.slice(1);
-  const sourcePath = path.join(root, file);
+  const sourcePath = file === "players-data.js" && catalogPath ? catalogPath : path.join(root, file);
   if (!fs.existsSync(sourcePath) || !fs.statSync(sourcePath).isFile()) {
     res.statusCode = 404;
     res.end();

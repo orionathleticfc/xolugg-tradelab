@@ -8,6 +8,7 @@ const ui = Object.fromEntries([
   "tokens", "previous", "next", "range"
 ].map(id => [id, document.getElementById(id)]));
 let diagnostic = null;
+let linkedSnapshotCards = null;
 let filtered = [];
 let offset = 0;
 let libraryPromise;
@@ -37,6 +38,71 @@ function normalizeItem(item, page) {
     throw new Error("Coordenadas de texto inválidas en la página " + page + ".");
   }
   return { page, text: item.str, x, y, width: item.width, height: item.height };
+}
+
+function rgbToHsv(r, g, b) {
+  r /= 255; g /= 255; b /= 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), delta = max - min;
+  let hue = 0;
+  if (delta) {
+    if (max === r) hue = 60 * (((g - b) / delta) % 6);
+    else if (max === g) hue = 60 * ((b - r) / delta + 2);
+    else hue = 60 * ((r - g) / delta + 4);
+  }
+  if (hue < 0) hue += 360;
+  return { hue, saturation: max ? delta / max : 0, value: max, spread: delta };
+}
+
+function visualSignal(context, card, pageHeight) {
+  const left = Math.max(0, Math.floor(41.6 + 132 * (card.sourceColumn - 1) - 8));
+  const right = Math.min(context.canvas.width, Math.ceil(left + 124));
+  const top = Math.max(0, Math.floor(pageHeight - (card.evidence.anchorY + 88)));
+  const bottom = Math.min(context.canvas.height, Math.ceil(pageHeight - (card.evidence.anchorY + 13)));
+  const width = right - left, height = bottom - top;
+  if (width <= 0 || height <= 0) return { sampleCount: 0, cardCoverage: 0 };
+  const pixels = context.getImageData(left, top, width, height).data;
+  let sampleCount = 0, covered = 0, gold = 0, dark = 0, pale = 0, spread = 0;
+  for (let y = 1; y < height; y += 3) for (let x = 1; x < width; x += 3) {
+    const offset = (y * width + x) * 4;
+    if (pixels[offset + 3] < 240) continue;
+    sampleCount++;
+    const r = pixels[offset], g = pixels[offset + 1], b = pixels[offset + 2];
+    const hsv = rgbToHsv(r, g, b);
+    if (hsv.value > 0.985 && hsv.saturation < 0.02) continue;
+    covered++; spread += hsv.spread;
+    if (hsv.hue >= 28 && hsv.hue <= 68 && hsv.saturation >= 0.18 && hsv.value >= 0.32) gold++;
+    if (hsv.value <= 0.32) dark++;
+    if (hsv.value >= 0.72 && hsv.saturation <= 0.16) pale++;
+  }
+  return { sampleCount, cardCoverage: sampleCount ? covered / sampleCount : 0,
+    goldRatio: covered ? gold / covered : 0, darkRatio: covered ? dark / covered : 0,
+    paleRatio: covered ? pale / covered : 0, colorVariance: covered ? spread / covered : 0,
+    region: [left, top, right, bottom] };
+}
+
+async function extractCardVisuals(pdf, cards) {
+  const byPage = new Map();
+  for (const card of cards) {
+    const list = byPage.get(card.sourcePage) || [];
+    list.push(card); byPage.set(card.sourcePage, list);
+  }
+  const visuals = [];
+  for (const [pageNumber, pageCards] of byPage) {
+    setStatus('Clasificando cartas… página ' + pageNumber + ' de ' + pdf.numPages, 'loading');
+    const page = await pdf.getPage(pageNumber);
+    try {
+      const viewport = page.getViewport({ scale: 1 });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.ceil(viewport.width); canvas.height = Math.ceil(viewport.height);
+      const context = canvas.getContext('2d', { willReadFrequently: true });
+      await page.render({ canvasContext: context, viewport, background: 'rgb(255,255,255)' }).promise;
+      for (const card of pageCards) visuals.push({ page: card.sourcePage, column: card.sourceColumn,
+        anchorY: card.evidence.anchorY, ...visualSignal(context, card, viewport.height) });
+      canvas.width = 1; canvas.height = 1;
+    } finally { page.cleanup(); }
+    await new Promise(resolve => setTimeout(resolve, 0));
+  }
+  return visuals;
 }
 
 function setStatus(text, state) {
@@ -83,6 +149,7 @@ function filterItems() {
 
 async function processFile(file) {
   diagnostic = null;
+  linkedSnapshotCards = null;
   resetCards();
   resetLinks();
   filtered = [];
@@ -181,10 +248,13 @@ async function processFile(file) {
     setStatus("PDF procesado", "success");
     try {
       await analyzeCards(diagnostic);
+      diagnostic.cardVisuals = await extractCardVisuals(pdf, parsedCards.cards);
+      await analyzeCards(diagnostic);
       try {
-        const { buildLinksDiagnostic } = await import('./futbin-links.mjs');
+        const { buildLinksDiagnostic, attachExactFutbinLinks } = await import('./futbin-links.mjs');
         linksDiagnostic = buildLinksDiagnostic({ fileName: file.name, pages: pdf.numPages,
           extractedAt: diagnostic.extractedAt, pageInfo, annotations, errors: annotationErrors }, parsedCards.cards);
+        linkedSnapshotCards = attachExactFutbinLinks(parsedCards.cards, linksDiagnostic);
         renderLinks();
       } catch (error) {
         document.getElementById('links-status').textContent = 'Error de diagnóstico de enlaces: ' + error.message;
@@ -292,7 +362,8 @@ function analyzeCards(data) {
       if (event.data.error) { reject(new Error(event.data.error)); return; }
       parsedCards = event.data.result;
       for (const [key, value] of Object.entries(parsedCards.metrics)) {
-        cardUi["metric-" + key].textContent = String(value);
+        const metric = cardUi["metric-" + key];
+        if (metric) metric.textContent = String(value);
       }
       for (const error of parsedCards.errors) {
         const li = document.createElement("li");
@@ -418,7 +489,7 @@ function compareCardsWithCatalog() {
       resolve();
     };
     try {
-      worker.postMessage({ snapshot: parsedCards.cards, catalog: window.PLAYERS_DATA,
+      worker.postMessage({ snapshot: linkedSnapshotCards || parsedCards.cards, catalog: window.PLAYERS_DATA,
         metadata: { fileName: diagnostic.fileName, extractedAt: diagnostic.extractedAt,
           parserVersion: parsedCards.parserVersion, parserMetrics: parsedCards.metrics, parserErrors: parsedCards.errors } });
     } catch (error) { fail(error); }
@@ -493,11 +564,11 @@ comparisonUi["comparison-export"].addEventListener("click", () => {
   if (comparisonResult) downloadJson(comparisonResult, diagnostic.fileName.replace(/\.pdf$/i, "") + "-comparacion.json");
 });
 
-const generationMetricKeys = ["currentCatalog", "updatedApplied", "newApplied", "unchanged",
-  "skippedSnapshotDuplicateGroups", "skippedSnapshotDuplicateOccurrences", "skippedNeedsReview",
-  "preservedNotInSnapshot", "candidateCatalogSize", "generationNeedsReview", "idCollisions", "validationErrors",
-  "futbinLinksApplied", "futbinLinksPreserved", "futbinLinksSkippedDuplicates",
-  "futbinLinksSkippedNeedsReview", "futbinLinksMissing"];
+const generationMetricKeys = ["previousCatalogSize", "snapshotParsed", "candidateCatalogSize",
+  "removedFromPreviousCatalog", "newCards", "updatedCards", "unchangedCards",
+  "goldCards", "specialCards", "unknownCards", "nullPriceCards", "excludedUnavailableTwins",
+  "snapshotDuplicateGroups", "needsReview", "idCollisions", "validationErrors",
+  "futbinLinksApplied", "futbinLinksPreserved"];
 const generationUi = Object.fromEntries([
   "generation-status", "generation-errors", "generation-details", "generation-export", "generation-report",
   ...generationMetricKeys.map(key => "generation-" + key)
@@ -525,6 +596,9 @@ function generateCatalogPreview() {
       worker.terminate();
       if (event.data.error) { reject(new Error(event.data.error)); return; }
       generationResult = event.data.result;
+      window.__XOLUGG_FUTBIN_IMPORTER_RESULT__ = {
+        diagnostic, parsedCards, linkedSnapshotCards, linksDiagnostic, generationResult
+      };
       for (const key of generationMetricKeys) generationUi["generation-" + key].textContent = String(generationResult.report.summary[key]);
       generationUi["generation-export"].disabled = !generationResult.canExport;
       generationUi["generation-report"].disabled = false;
@@ -537,19 +611,17 @@ function generateCatalogPreview() {
         generationUi["generation-errors"].append(li);
       }
       for (const [key, title] of [
-        ["updatedApplied", "Updates aplicados: campos, valores anteriores y nuevos"],
-        ["newApplied", "Nuevas incorporadas: ID y datos de origen"],
-        ["unchanged", "Registros sin cambios"], ["preservedNotInSnapshot", "Conservadas fuera del snapshot"],
-        ["skippedSnapshotDuplicates", "Duplicados omitidos"], ["skippedNeedsReview", "Revisiones omitidas"],
-        ["generationNeedsReview", "Incidencias de generación"],
-        ["futbinLinks", "Enlaces FUTBIN: decisiones y conflictos"],
-        ["futbinPreserved", "Metadata FUTBIN preservada"]
+        ["newCards", "Nuevas incorporadas"], ["updatedCards", "Actualizadas"],
+        ["unchangedCards", "Sin cambios de mercado"],
+        ["excludedUnavailableTwins", "Unavailable twins excluidos"],
+        ["snapshotDuplicateGroups", "Duplicados consolidados"], ["needsReview", "Needs review"],
+        ["idCollisions", "Colisiones de ID"], ["safetyWarnings", "Advertencias de seguridad"]
       ]) {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
-        summary.textContent = title + " (" + generationResult.report[key].length + ")";
+        summary.textContent = title + " (" + (generationResult.report[key]?.length || 0) + ")";
         details.append(summary);
-        const value = generationResult.report[key];
+        const value = generationResult.report[key] || [];
         details.addEventListener("toggle", () => {
           if (details.open && details.children.length === 1) {
             const pre = document.createElement("pre");pre.textContent = JSON.stringify(value, null, 2);details.append(pre);

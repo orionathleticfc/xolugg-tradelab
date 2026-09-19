@@ -1,230 +1,202 @@
-import { createHash } from "node:crypto";
-﻿
-import test from "node:test";
-import assert from "node:assert/strict";
-import fs from "node:fs";
-import vm from "node:vm";
-import { generateCardId, generateCandidateCatalog, validateCandidateCatalog, serializeCandidateCatalog } from "./futbin-generator.mjs";
-import { compareFutbinSnapshot } from "./futbin-matcher.mjs";
-import { parseFutbinDiagnostic } from "./futbin-parser.mjs";
-const stamp = { generatedAt: "2026-09-17T00:00:00.000Z" };
-const card = (name = "Example") => ({
-  id: "historical-" + name, nombre: name, version: null, tipoCarta: null, ovr: 85,
-  posicionPrincipal: "ST", posiciones: ["ST", "CAM"], stats: { pac: 80, sho: 81, pas: 72, dri: 83, def: 35, phy: 70 },
-  pie: "R", skills: 4, weakFoot: 3, ratingFuente: 85, popularidadFuente: 100,
-  precioReferencia: 5000, valorSecundarioFuente: 340, fuente: { nombre: "FUTBIN", paginaPdf: 1, custom: "keep" },
-  activo: true, parseStatus: "complete", sourcePage: 2, precioReferenciaRaw: "5K", valorSecundarioFuenteRaw: "340"
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import { generateCandidateCatalog, generateCardId, serializeCandidateCatalog,
+  validateCandidateCatalog } from './futbin-generator.mjs';
+import { compareFutbinSnapshot } from './futbin-matcher.mjs';
+
+const observed = '2026-09-19T20:00:00.000Z';
+const generated = '2026-09-19T20:01:00.000Z';
+const link = (playerId, slug = 'p-' + playerId) => ({
+  game: 27, playerId, slug, url: 'https://www.futbin.com/27/player/' + playerId + '/' + slug
 });
-const compare = (snapshot, catalog) => compareFutbinSnapshot(snapshot, catalog, { fileName: "test.pdf" });
-function freeze(value) {
-  if (value && typeof value === "object" && !Object.isFrozen(value)) { Object.freeze(value); Object.values(value).forEach(freeze); }
-  return value;
+const card = (name, playerId, patch = {}) => ({
+  id: 'legacy-' + playerId, nombre: name, version: null, tipoCarta: 'gold', ovr: 85,
+  posicionPrincipal: 'ST', posiciones: ['ST', 'CAM'],
+  stats: { pac: 80, sho: 81, pas: 72, dri: 83, def: 35, phy: 70 },
+  pie: 'R', skills: 4, weakFoot: 3, ratingFuente: 85,
+  popularidadFuente: 100, precioReferencia: 5000, precioReferenciaRaw: '5K',
+  valorSecundarioFuente: 340, valorSecundarioFuenteRaw: '340',
+  fuente: { nombre: 'FUTBIN', importedAt: '2026-09-18T00:00:00.000Z' },
+  activo: true, parseStatus: 'complete', sourcePage: 1,
+  ...(playerId ? { futbin: link(playerId) } : {}), ...patch
+});
+function run(current, snapshot) {
+  const comparison = compareFutbinSnapshot(snapshot, current, {
+    fileName: 'snapshot.pdf', extractedAt: observed,
+    parserMetrics: { cards: snapshot.length, slots: snapshot.length }
+  });
+  return generateCandidateCatalog(current, comparison, { generatedAt: generated });
 }
 
-test("updates change only supported fields, preserving structure, IDs and ordering", () => {
-  const current = [card(), card("Absent")];
-  const pdf = { ...card(), precioReferencia: 3500, precioReferenciaRaw: "3.5K", popularidadFuente: 200, posiciones: ["CAM", "ST"] };
-  const result = generateCandidateCatalog(current, compare([pdf], current), stamp);
-  assert.equal(result.report.summary.updatedApplied, 1);
-  assert.equal(result.candidateCatalog[0].id, current[0].id);
-  assert.deepEqual(result.candidateCatalog[0].stats, current[0].stats);
-  assert.deepEqual(result.candidateCatalog[0].posiciones, current[0].posiciones);
-  assert.equal(result.candidateCatalog[0].fuente.custom, "keep");
-  assert.deepEqual(result.candidateCatalog[1], current[1]);
-  assert.deepEqual(result.report.updatedApplied[0].changes.precioReferencia, { old: 5000, new: 3500 });
+test('A/B/L. authoritative candidate contains only snapshot cards and follows snapshot order', () => {
+  const current = [1, 2, 3, 4, 5].map(id => card('Old ' + id, id));
+  const snapshot = [card('Old 3', 3), card('Old 1', 1), card('New 6', 6)];
+  const result = run(current, snapshot);
+  assert.deepEqual(result.candidateCatalog.map(item => item.nombre), ['Old 3', 'Old 1', 'New 6']);
+  assert.equal(result.candidateCatalog.length, 3);
+  assert.equal(result.report.removedFromPreviousCatalog.count, 3);
+  assert.equal(result.report.summary.newCards, 1);
+});
+
+test('C/D/F. new gold, special and unknown cards all enter the authoritative catalog', () => {
+  const result = run([], [
+    card('Gold', 1, { tipoCarta: 'gold' }),
+    card('Special', 2, { tipoCarta: 'special' }),
+    card('Unknown', 3, { tipoCarta: 'unknown' })
+  ]);
   assert.equal(result.canExport, true);
+  assert.deepEqual(result.candidateCatalog.map(item => item.tipoCarta), ['gold', 'special', 'unknown']);
+  assert.deepEqual([result.metadata.goldCards, result.metadata.specialCards, result.metadata.unknownCards], [1, 1, 1]);
 });
-test("raw zero retains current price or null and records original raw source", () => {
-  for (const price of [5000, null]) {
-    const current = [{ ...card(), precioReferencia: price }];
-    const pdf = { ...card(), precioReferencia: 0, precioReferenciaRaw: "0", popularidadFuente: 200 };
-    const result = generateCandidateCatalog(current, compare([pdf], current), stamp);
-    assert.equal(result.candidateCatalog[0].precioReferencia, price);
-    assert.equal(result.candidateCatalog[0].fuente.precioPrincipalRaw, "0");
-    assert.equal(result.report.updatedApplied[0].pricePreserved, true);
-  }
+
+test('G. repeated same playerId is consolidated and prefers its available occurrence', () => {
+  const zero = card('Same', 10, { precioReferencia: 0, precioReferenciaRaw: '0' });
+  const market = card('Same', 10, { precioReferencia: 7000, precioReferenciaRaw: '7K' });
+  const result = run([], [zero, market]);
+  assert.equal(result.candidateCatalog.length, 1);
+  assert.equal(result.candidateCatalog[0].precioReferencia, 7000);
+  assert.equal(result.report.snapshotDuplicateGroups.length, 1);
 });
-test("absent rating never erases an existing rating during an exact update", () => {
-  const current = [card()], pdf = { ...card(), ratingFuente: null, popularidadFuente: 201, parseStatus: "partial" };
-  const result = generateCandidateCatalog(current, compare([pdf], current), stamp);
-  assert.equal(result.candidateCatalog[0].ratingFuente, 85);
-  assert.equal(result.candidateCatalog[0].popularidadFuente, 201);
+
+test('H/J. distinct playerIds with real market coexist as separate versions', () => {
+  const result = run([], [
+    card('Variant', 10, { tipoCarta: 'gold' }),
+    card('Variant', 20, { tipoCarta: 'special', ovr: 90, precioReferencia: 90000 })
+  ]);
+  assert.equal(result.candidateCatalog.length, 2);
+  assert.deepEqual(result.candidateCatalog.map(item => item.id), ['futbin-27-10', 'futbin-27-20']);
 });
-test("new records have complete compatible schema, real or unavailable prices, and deterministic IDs", () => {
-  const available = card("João Pedro"), unavailable = { ...card("New Zero"), precioReferencia: 0, precioReferenciaRaw: "0" };
-  const result = generateCandidateCatalog([], compare([available, unavailable], []), stamp);
-  assert.equal(result.report.summary.newApplied, 2);
-  for (const record of result.candidateCatalog) {
-    assert.equal(record.version, null); assert.equal(record.tipoCarta, null); assert.equal(record.activo, true);
-    assert.equal(record.fuente.snapshotFile, "test.pdf");
-    assert(!("evidence" in record)); assert(!("parseStatus" in record)); assert(!("presentInCurrentSnapshot" in record));
-  }
-  assert.equal(result.candidateCatalog[0].precioReferencia, 5000);
-  assert.equal(result.candidateCatalog[1].precioReferencia, null);
-  assert.equal(result.candidateCatalog[1].fuente.precioPrincipalRaw, "0");
-  assert.equal(generateCardId(available), generateCardId({ ...available, nombre: " JOAO  PEDRO ", precioReferencia: 9000, popularidadFuente: 500, sourcePage: 99 }));
-  assert.match(generateCardId(available), /^[a-z0-9-]+$/);
+
+test('I. an equivalent raw-zero transfer twin is excluded in favor of the one market variant', () => {
+  const zero = card('Barcola', 10, { precioReferencia: 0, precioReferenciaRaw: '0' });
+  const market = card('Barcola', 20, { precioReferencia: 7500, precioReferenciaRaw: '7.5K' });
+  const result = run([], [zero, market]);
+  assert.equal(result.candidateCatalog.length, 1);
+  assert.equal(result.candidateCatalog[0].futbin.playerId, 20);
+  assert.equal(result.report.excludedUnavailableTwins.length, 1);
+  assert.equal(result.report.excludedUnavailableTwins[0].excludedPlayerId, 10);
 });
-test("ID collision with current catalog does not add the new record", () => {
-  const pdf = card("New");
-  const current = [{ ...card("Other"), id: generateCardId(pdf) }];
-  const result = generateCandidateCatalog(current, compare([pdf], current), stamp);
-  assert.equal(result.report.summary.idCollisions, 1);
-  assert.equal(result.report.summary.newApplied, 0);
-  assert.equal(result.report.generationNeedsReview[0].reason, "id_collision");
-  assert.deepEqual(result.candidateCatalog, current);
-});
-test("colliding generated IDs reject all competing new entries, regardless of order", () => {
-  const comparison = compare([card("New")], []);
-  comparison.new.push({ ...structuredClone(comparison.new[0]), snapshotIndex: 1 });
-  const result = generateCandidateCatalog([], comparison, stamp);
-  assert.equal(result.report.summary.idCollisions, 2); assert.equal(result.candidateCatalog.length, 0);
-  assert.equal(result.report.generationNeedsReview.length, 2);
-});
-test("unsafe updates and stale matcher records are not applied", () => {
-  const current = [card()], pdf = { ...card(), popularidadFuente: 200 };
-  let comparison = compare([pdf], current);
-  comparison.updated[0].confidence = "medium";
-  let result = generateCandidateCatalog(current, comparison, stamp);
-  assert.equal(result.report.summary.updatedApplied, 0);
-  assert.equal(result.report.generationNeedsReview[0].reason, "unsafe_update_identity");
-  comparison = compare([pdf], current);
-  result = generateCandidateCatalog([{ ...card(), precioReferencia: 6000 }], comparison, stamp);
-  assert.equal(result.report.generationNeedsReview[0].reason, "stale_catalog_record");
-  assert.equal(result.candidateCatalog[0].precioReferencia, 6000);
-});
-test("duplicates, review records, unchanged and absent entries remain untouched", () => {
-  const current = [card(), card("Review"), card("Unchanged"), card("Absent")];
-  const snapshot = [card(), { ...card(), stats: {}, parseStatus: "partial" },
-    { ...card("Review"), stats: { ...card().stats, pac: 99 } }, card("Unchanged")];
-  const result = generateCandidateCatalog(current, compare(snapshot, current), stamp);
-  assert.deepEqual(result.candidateCatalog, current);
-  assert.equal(result.report.summary.skippedSnapshotDuplicateOccurrences, 2);
-  assert.equal(result.report.skippedSnapshotDuplicates[0].status, "SKIPPED_SNAPSHOT_DUPLICATE");
-  assert.equal(result.report.summary.skippedNeedsReview, 1);
-  assert.equal(result.report.skippedNeedsReview[0].status, "SKIPPED_NEEDS_REVIEW");
-});
-test("validation gates source export for invalid schema, duplicate IDs or loss of existing records", () => {
-  for (const patch of [
-    { id: "" }, { nombre: "" }, { ovr: NaN }, { ovr: "85" }, { posicionPrincipal: "" },
-    { precioReferencia: 0 }, { precioReferencia: -1 }, { precioReferencia: Infinity },
-    { posiciones: ["ST", "ST"] }, { stats: { ...card().stats, pac: "80" } },
-    { skills: "4" }, { weakFoot: 10 }, { activo: null }
-  ]) {
-    const invalid = [{ ...card(), ...patch }];
-    assert.equal(validateCandidateCatalog(invalid).valid, false);
-    assert.throws(() => serializeCandidateCatalog(invalid), /validación/);
-  }
-  assert.equal(validateCandidateCatalog([card(), card()]).valid, false);
-  assert.equal(validateCandidateCatalog([], [card()]).valid, false);
-  assert.equal(validateCandidateCatalog([{ ...card(), id: "changed" }], [card()]).valid, false);
-  assert.equal(validateCandidateCatalog([{ ...card(), stats: { ...card().stats, pac: 90 } }], [card()]).valid, false);
-  const result = generateCandidateCatalog([{ ...card(), precioReferencia: 0 }], compare([], [{ ...card(), precioReferencia: 0 }]), stamp);
+
+test('all equivalent different-playerId variants with null prices go to NEEDS_REVIEW', () => {
+  const snapshot = [10, 20].map(id => card('Unavailable', id, {
+    precioReferencia: 0, precioReferenciaRaw: '0'
+  }));
+  const result = run([], snapshot);
+  assert.equal(result.candidateCatalog.length, 0);
+  assert(result.report.needsReview.some(item => item.reason === 'equivalent_variants_all_unavailable'));
   assert.equal(result.canExport, false);
-  assert(result.report.summary.validationErrors > 0);
 });
-test("no original references mutate, and serialized JS round-trips in an isolated window", () => {
-  const current = [card()], snapshot = [{ ...card(), popularidadFuente: 200 }, card("New")];
-  const comparison = compare(snapshot, current);
-  const before = JSON.stringify({ current, comparison });
-  freeze(current); freeze(comparison);
-  const result = generateCandidateCatalog(current, comparison, stamp);
+
+test('K/N. raw zero becomes null and never preserves an old price', () => {
+  const current = [card('Example', 10, { precioReferencia: 9999 })];
+  const result = run(current, [card('Example', 10, { precioReferencia: 0, precioReferenciaRaw: '0' })]);
+  assert.equal(result.candidateCatalog[0].precioReferencia, null);
+  assert.equal(result.candidateCatalog[0].fuente.precioPrincipalRaw, '0');
+});
+
+test('M. popularity always comes from the current snapshot', () => {
+  const result = run([card('Example', 10, { popularidadFuente: 999 })],
+    [card('Example', 10, { popularidadFuente: 3 })]);
+  assert.equal(result.candidateCatalog[0].popularidadFuente, 3);
+});
+
+test('O. every observed card receives the new snapshot timestamp even when market values did not change', () => {
+  const result = run([card('Example', 10)], [card('Example', 10)]);
+  assert.equal(result.candidateCatalog[0].fuente.importedAt, observed);
+  assert.equal(result.candidateCatalog[0].fuente.snapshotObservedAt, observed);
+  assert.equal(result.candidateCatalog[0].fuente.lastMarketChangedAt, '2026-09-18T00:00:00.000Z');
+});
+
+test('playerId controls stable-ID reuse and new variants derive IDs from playerId', () => {
+  const current = [card('Historical Name', 10, { futbin: link(10, 'old-slug') })];
+  const result = run(current, [
+    card('Renamed', 10, { ovr: 86, futbin: link(10, 'new-slug') }),
+    card('Historical Name', 20)
+  ]);
+  assert.equal(result.candidateCatalog[0].id, current[0].id);
+  assert.equal(result.candidateCatalog[0].futbin.slug, 'new-slug');
+  assert.equal(result.candidateCatalog[1].id, 'futbin-27-20');
+  assert.equal(generateCardId(card('Any', 99)), 'futbin-27-99');
+
+  const collisionCurrent = [card('Existing', 10, { id: 'futbin-27-20' })];
+  const collision = run(collisionCurrent, [card('Existing', 10), card('New', 20)]);
+  assert.equal(collision.report.idCollisions.length, 1);
+  assert.equal(collision.canExport, false);
+  assert.deepEqual(collision.candidateCatalog.map(item => item.id), ['futbin-27-20']);
+});
+
+test('metadata and report are authoritative, coherent and serialize without breaking PLAYERS_DATA', () => {
+  const result = run([], [card('Example', 10)]);
+  assert.equal(result.metadata.mode, 'authoritative-snapshot');
+  assert.equal(result.metadata.acceptedCards, 1);
+  assert.equal(result.report.mode, 'authoritative-snapshot');
+  const source = serializeCandidateCatalog(result.candidateCatalog, [], result.metadata);
   const context = vm.createContext({ window: {} });
-  vm.runInContext(serializeCandidateCatalog(result.candidateCatalog, current), context);
-  assert.equal(JSON.stringify(context.window.PLAYERS_DATA), JSON.stringify(result.candidateCatalog));
-  result.candidateCatalog[0].stats.pac = 1;
-  result.report.updatedApplied[0].nombre = "Changed output only";
-  assert.equal(JSON.stringify({ current, comparison }), before);
+  vm.runInContext(source, context);
+  assert.equal(context.window.PLAYERS_DATA.length, 1);
+  assert.equal(context.window.PLAYERS_DATA_META.mode, 'authoritative-snapshot');
 });
 
-const fixture = new URL("./fixtures-local/EA FC 27 Popular Players _ FUTBIN2-diagnostico.json", import.meta.url);
-test("real snapshot safely updates the current catalog and is idempotent", { skip: !fs.existsSync(fixture) }, () => {
-  const context = vm.createContext({ window: {} });
-  vm.runInContext(fs.readFileSync(new URL("../players-data.js", import.meta.url), "utf8"), context);
-  const current = structuredClone(context.window.PLAYERS_DATA);
-  const diagnostic = JSON.parse(fs.readFileSync(fixture, "utf8").replace(/^\uFEFF/, ""));
-  const parsed = parseFutbinDiagnostic(diagnostic);
-  const comparison = compareFutbinSnapshot(parsed.cards, current, { fileName: diagnostic.fileName });
-  const before = JSON.stringify({ current, parsed, comparison });
-  freeze(current); freeze(comparison);
-  const result = generateCandidateCatalog(current, comparison, stamp);
-  const currentFutbin=current.filter(record=>record.futbin).length;
-  assert.deepEqual(result.report.summary, {
-    futbinLinksApplied: 0, futbinLinksPreserved: currentFutbin, futbinLinksSkippedDuplicates: 30,
-    futbinLinksSkippedNeedsReview: 4, futbinLinksMissing: 216, futbinLinksInvalid: 0,
-    futbinLinksConflicts: 0, futbinLinksUnsafe: 0,
-    currentCatalog: current.length, updatedApplied: comparison.updated.length, newApplied: 0, unchanged: comparison.unchanged.length,
-    preservedNotInSnapshot: comparison.notInCurrentSnapshot.length, skippedSnapshotDuplicateGroups: 15, skippedSnapshotDuplicateOccurrences: 30,
-    skippedNeedsReview: 4, generationNeedsReview: 0, idCollisions: 0, candidateCatalogSize: current.length, validationErrors: 0
-  });
-  for (const name of ["Gordon", "Frimpong", "Pedro Neto"]) {
-    const row = comparison.updated.find(row => row.pdfCard.nombre === name);
-    const candidate = result.candidateCatalog[row.catalogIndex];
-    assert.equal(candidate.id, current[row.catalogIndex].id);
-    assert.deepEqual(candidate.stats, current[row.catalogIndex].stats);
-    assert.equal(candidate.precioReferencia, row.pdfCard.precioReferencia);
-    assert.equal(candidate.popularidadFuente, row.pdfCard.popularidadFuente);
+test('validation blocks schema, identity and metadata corruption before export', () => {
+  const base = run([], [card('Example', 10)]);
+  assert.equal(validateCandidateCatalog(base.candidateCatalog, [], base.metadata).valid, true);
+  assert.equal(validateCandidateCatalog([...base.candidateCatalog, { ...base.candidateCatalog[0], id: 'x' }],
+    [], { ...base.metadata, acceptedCards: 2 }).valid, false);
+  assert.equal(validateCandidateCatalog([{ ...base.candidateCatalog[0], precioReferencia: 0 }],
+    [], base.metadata).valid, false);
+  assert.equal(validateCandidateCatalog(base.candidateCatalog, [], { ...base.metadata, acceptedCards: 2 }).valid, false);
+
+  const record = base.candidateCatalog[0];
+  const invalidCases = [
+    [{ id: '' }, 'missing_id'],
+    [{ nombre: '' }, 'invalid_name'],
+    [{ ovr: NaN }, 'invalid_ovr'],
+    [{ posicionPrincipal: '' }, 'invalid_position'],
+    [{ posiciones: ['ST', 'ST'] }, 'invalid_positions'],
+    [{ stats: { ...record.stats, pac: '80' } }, 'invalid_stats'],
+    [{ pie: '?' }, 'invalid_foot'],
+    [{ skills: '4' }, 'invalid_skill'],
+    [{ weakFoot: 10 }, 'invalid_skill'],
+    [{ ratingFuente: -1 }, 'invalid_market_value'],
+    [{ popularidadFuente: Infinity }, 'invalid_market_value'],
+    [{ valorSecundarioFuente: -1 }, 'invalid_market_value'],
+    [{ version: 1 }, 'invalid_version'],
+    [{ tipoCarta: null }, 'invalid_card_type'],
+    [{ activo: false }, 'invalid_active_flag'],
+    [{ fuente: null }, 'invalid_source'],
+    [{ futbin: { ...record.futbin, game: 26 } }, 'invalid_futbin'],
+    [{ futbin: { ...record.futbin, playerId: '10' } }, 'invalid_futbin'],
+    [{ futbin: { ...record.futbin, playerId: 0 } }, 'invalid_futbin'],
+    [{ futbin: { ...record.futbin, playerId: 1.5 } }, 'invalid_futbin'],
+    [{ futbin: { ...record.futbin, slug: '' } }, 'invalid_futbin'],
+    [{ futbin: { ...record.futbin, url: record.futbin.url + '?x=1' } }, 'invalid_futbin']
+  ];
+  for (const [recordPatch, code] of invalidCases) {
+    const validation = validateCandidateCatalog([{ ...record, ...recordPatch }], [], base.metadata);
+    assert(validation.errors.some(error => error.code === code), code);
   }
-  const van = comparison.updated.find(row => row.pdfCard.nombre.toLowerCase() === "van de ven");
-  assert.equal(result.candidateCatalog[van.catalogIndex].precioReferencia, current[van.catalogIndex].precioReferencia);
-  assert.equal(result.candidateCatalog[van.catalogIndex].fuente.precioPrincipalRaw, "0");
-  const safeIndices = new Set(result.report.updatedApplied.map(row => row.catalogIndex));
-  current.forEach((record, index) => {
-    assert.equal(result.candidateCatalog[index].id, record.id);
-    if (!safeIndices.has(index)) assert.deepEqual(result.candidateCatalog[index], record);
-  });
-  for (const name of ["Diomande", "Endrick", "Álvaro Carreras", "Nmecha"]) assert(result.report.skippedNeedsReview.some(row => row.nombre === name));
-  const matched = [...comparison.unchanged, ...comparison.updated];
-  assert.equal(matched.length, 216);
-  assert.equal(comparison.new.length, 0);
-  const incorporated = matched.filter(row => row.catalogIndex >= 250 && row.catalogIndex < 277);
-  assert.equal(incorporated.length, 27);
-  for (const row of incorporated) {
-    const candidate = result.candidateCatalog[row.catalogIndex];
-    assert.equal(candidate.id, current[row.catalogIndex].id);
-    assert.equal(candidate.precioReferencia, row.pdfCard.precioDisponible ? row.pdfCard.precioReferencia : current[row.catalogIndex].precioReferencia);
-  }
-  assert(incorporated.some(row => !row.pdfCard.precioDisponible));
-  assert(incorporated.some(row => row.pdfCard.precioDisponible));
-  assert.equal(JSON.stringify({ current, parsed, comparison }), before);
-  const sandbox = vm.createContext({ window: {} });
-  vm.runInContext(serializeCandidateCatalog(result.candidateCatalog, current), sandbox);
-  assert.equal(sandbox.window.PLAYERS_DATA.length, current.length);
-  assert.equal(JSON.stringify(sandbox.window.PLAYERS_DATA), JSON.stringify(result.candidateCatalog));
-  assert.equal(new Set(result.candidateCatalog.map(c=>c.id)).size,current.length);
-  assert.equal(result.candidateCatalog.filter(c=>c.precioReferencia===0).length,0);
-  const rerunComparison=compareFutbinSnapshot(parsed.cards,result.candidateCatalog,{fileName:diagnostic.fileName});
-  const rerun=generateCandidateCatalog(result.candidateCatalog,rerunComparison,{generatedAt:"2099-01-01T00:00:00.000Z"});
-  // Full equality includes fuente.importedAt: replaying the generated candidate
-  // must not rewrite temporal metadata or existing ordering.
-  assert.deepEqual(rerun.candidateCatalog,result.candidateCatalog);
-  assert.equal(rerun.report.summary.newApplied,0);
-  assert.equal(rerun.report.summary.updatedApplied,0);
-  assert.equal(rerun.report.summary.candidateCatalogSize,result.candidateCatalog.length);
-  assert.deepEqual(result.report.skippedSnapshotDuplicates.map(g=>g.snapshotIndices),comparison.snapshotDuplicates.map(g=>g.snapshotIndices));
-  assert.equal(result.report.preservedNotInSnapshot.length,comparison.notInCurrentSnapshot.length);
-  console.log("Real generation:", result.report.summary);
+  assert.throws(() => serializeCandidateCatalog([{ ...record, nombre: '' }], [], base.metadata),
+    /no supera la validaci/);
 });
 
+test('inputs are never mutated', () => {
+  const current = [card('Old', 1)], snapshot = [card('New', 2)];
+  const before = JSON.stringify({ current, snapshot });
+  run(current, snapshot);
+  assert.equal(JSON.stringify({ current, snapshot }), before);
+});
 
-test("production baseline keeps the audited ID prefix and all appended cards compatible", () => {
-  const context=vm.createContext({window:{}});
-  vm.runInContext(fs.readFileSync(new URL("../players-data.js",import.meta.url),"utf8"),context);
-  const catalog=structuredClone(context.window.PLAYERS_DATA);
-  assert(catalog.length>=250);
-  assert.equal(new Set(catalog.map(c=>c.id)).size,catalog.length);
-  assert.equal(catalog.filter(c=>c.precioReferencia===0).length,0);
-  assert(catalog.every(c=>c.precioReferencia===null||
-    (typeof c.precioReferencia==="number"&&Number.isFinite(c.precioReferencia)&&c.precioReferencia>0)));
-  assert.equal(validateCandidateCatalog(catalog).valid,true);
-  // Fixed fingerprint of the ordered IDs of the audited pre-4B 250-card catalog.
-  // Unlike reading Git HEAD at test time, this remains stable after future commits.
-  assert.equal(createHash("sha256").update(JSON.stringify(catalog.slice(0,250).map(c=>c.id))).digest("hex"),"096f10f3fd1de0deee75b5580f242074af9572a47a8029b91097320e4b61634a");
-  const added=catalog.slice(250);
-  assert.equal(added.length,catalog.length-250);
-  for(const card of added) assert.equal(card.id,generateCardId(card));
-  const varane=added.find(c=>c.nombre==="Varane"&&c.ovr===86&&c.posicionPrincipal==="CB");
-  assert(varane);
-  assert.equal(varane.precioReferencia,null);
-  assert.equal(varane.fuente.precioPrincipalRaw,"0");
+test('replaying the same observed snapshot is catalog-idempotent', () => {
+  const snapshot = [card('Example', 10)];
+  const first = run([], snapshot);
+  const comparison = compareFutbinSnapshot(snapshot, first.candidateCatalog, {
+    fileName: 'snapshot.pdf', extractedAt: observed,
+    parserMetrics: { cards: 1, slots: 1 }
+  });
+  const second = generateCandidateCatalog(first.candidateCatalog, comparison, {
+    generatedAt: '2099-01-01T00:00:00.000Z'
+  });
+  assert.deepEqual(second.candidateCatalog, first.candidateCatalog);
+  assert.equal(second.report.summary.unchangedCards, 1);
 });

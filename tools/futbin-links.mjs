@@ -14,6 +14,29 @@ export function inspectUrl(raw) {
   return result;
 }
 
+function exactCardFutbin(card) {
+  if (card?.status !== 'MATCHED' || card.urls?.length !== 1) return null;
+  const inspected = inspectUrl(card.urls[0]);
+  const playerId = Number(inspected.playerId);
+  if (inspected.game !== 27 || !Number.isSafeInteger(playerId) || playerId <= 0 ||
+      !inspected.slug || inspected.url !== `https://www.futbin.com/27/player/${playerId}/${inspected.slug}`) return null;
+  return { game: 27, playerId, slug: inspected.slug, url: inspected.url };
+}
+
+/** Attach only exact, geometrically associated FUTBIN identities. Inputs stay untouched. */
+export function attachExactFutbinLinks(cards, diagnostic) {
+  if (!Array.isArray(cards)) throw new TypeError('Las cartas deben ser un array.');
+  if (!diagnostic) return structuredClone(cards);
+  const evidence = diagnostic.annotations && diagnostic.metadata
+    ? buildLinksDiagnostic({ ...diagnostic.metadata, annotations: diagnostic.annotations,
+      pageInfo: diagnostic.pageInfo || [], errors: diagnostic.metadata.errors || [] }, cards)
+    : diagnostic;
+  return cards.map((card, index) => {
+    const futbin = exactCardFutbin(evidence?.cards?.[index]);
+    return futbin ? { ...structuredClone(card), futbin } : structuredClone(card);
+  });
+}
+
 function rectOf(rect) {
   if (!Array.isArray(rect) || rect.length !== 4 || !rect.every(Number.isFinite)) return null;
   const [a,b,c,d] = rect;
@@ -64,6 +87,7 @@ export function buildLinksDiagnostic({fileName,pages,extractedAt = new Date().to
       link.status = card.status;
       if (card.status==='MATCHED') Object.assign(link,{matchedCardId:card.cardId,playerName:card.playerName,ovr:card.ovr,position:card.position});
     }
+    card.futbin = exactCardFutbin(card);
   }
   const domains={}; for(const link of links) domains[link.domain || '(unparsed)']=(domains[link.domain || '(unparsed)']||0)+1;
   return {

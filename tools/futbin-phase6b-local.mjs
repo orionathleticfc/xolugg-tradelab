@@ -1,7 +1,7 @@
 ﻿import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
-import { buildLinksDiagnostic } from './futbin-links.mjs';
+import { attachExactFutbinLinks, buildLinksDiagnostic } from './futbin-links.mjs';
 import { parseFutbinDiagnostic } from './futbin-parser.mjs';
 import { compareFutbinSnapshot } from './futbin-matcher.mjs';
 import { generateCandidateCatalog, serializeCandidateCatalog } from './futbin-generator.mjs';
@@ -44,19 +44,21 @@ export function realInputs() {
   linksDiagnostic.pageInfo = diagnostic.pageInfo;
   const context = vm.createContext({ window: {} });
   vm.runInContext(fs.readFileSync(new URL('../players-data.js', import.meta.url), 'utf8'), context);
-  return { current: structuredClone(context.window.PLAYERS_DATA), cards: parsed.cards, linksDiagnostic, fileName };
+  return { current: structuredClone(context.window.PLAYERS_DATA),
+    cards: attachExactFutbinLinks(parsed.cards, linksDiagnostic), linksDiagnostic,
+    fileName, extractedAt: diagnostic.extractedAt };
 }
 
 export function generateReal() {
-  const { current, cards, linksDiagnostic, fileName } = realInputs();
+  const { current, cards, linksDiagnostic, fileName, extractedAt } = realInputs();
   const run = (catalog, generatedAt) => generateCandidateCatalog(catalog,
-    compareFutbinSnapshot(cards, catalog, { fileName }), { linksDiagnostic, generatedAt });
+    compareFutbinSnapshot(cards, catalog, { fileName, extractedAt }), { linksDiagnostic, generatedAt });
   const first = run(current, '2026-09-18T00:00:00.000Z');
   assert(first.canExport);
   const second = run(first.candidateCatalog, '2099-01-01T00:00:00.000Z');
   assert.deepEqual(second.candidateCatalog, first.candidateCatalog);
   assert.equal(second.report.summary.futbinLinksApplied, 0);
-  assert.equal(second.report.summary.newApplied, 0);
+  assert.equal(second.report.summary.newCards, 0);
   const changed = field => first.candidateCatalog.filter((record, i) =>
     JSON.stringify(field(record)) !== JSON.stringify(field(second.candidateCatalog[i]))).length;
   const structure = record => Object.fromEntries(['id','nombre','ovr','posicionPrincipal','posiciones','stats','pie','skills','weakFoot'].map(k => [k,record[k]]));
@@ -72,7 +74,8 @@ export function generateReal() {
 
 if (process.argv.includes('--export')) {
   const { first, current } = generateReal();
-  fs.writeFileSync(new URL('./players-data.candidate.js', import.meta.url), serializeCandidateCatalog(first.candidateCatalog, current));
+  fs.writeFileSync(new URL('./players-data.candidate.js', import.meta.url),
+    serializeCandidateCatalog(first.candidateCatalog, current, first.metadata));
   fs.writeFileSync(new URL('./catalog-generation-report.json', import.meta.url), JSON.stringify(first.report, null, 2) + '\n');
   console.log(JSON.stringify({ summary: first.report.summary, cases: first.report.requiredCases, idempotence: first.report.idempotence }, null, 2));
 }
