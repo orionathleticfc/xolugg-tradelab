@@ -335,8 +335,8 @@ button {
   display: grid;
 
   grid-template-columns:
-    1fr
-    1.18fr;
+    minmax(0, 1.32fr)
+    minmax(0, 1fr);
 
   gap: 12px;
 }
@@ -347,6 +347,8 @@ button {
   gap: 12px;
 
   align-content: start;
+
+  min-width: 0;
 }
 
 
@@ -368,6 +370,8 @@ button {
 
   box-shadow:
     var(--shadow);
+
+  min-width: 0;
 }
 
 .panel-title {
@@ -605,6 +609,345 @@ select option {
   margin-top: 10px;
 }
 
+.calculator-form-grid {
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+}
+
+.trade-summary {
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    11px;
+
+  background:
+    var(--panel-3);
+}
+
+.calculator-message {
+  min-height: 15px;
+
+  margin: 5px 2px 0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+}
+
+.calculator-message.error {
+  color:
+    var(--red);
+}
+
+.target-prices {
+  margin-top: 8px;
+
+  padding: 9px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(39, 241, 163, 0.055),
+      rgba(11, 25, 33, 0.92)
+    );
+}
+
+.target-prices-heading {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 7px;
+}
+
+.target-prices-heading h3 {
+  margin: 0;
+
+  font-size:
+    13px;
+
+  text-transform:
+    uppercase;
+}
+
+.target-prices-heading span {
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+}
+
+.target-prices-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 6px;
+}
+
+.target-price-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  min-width: 0;
+
+  padding: 7px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.055);
+
+  border-radius:
+    8px;
+
+  background:
+    rgba(4, 17, 23, 0.52);
+}
+
+.target-price-item span {
+  overflow: hidden;
+
+  color:
+    var(--muted);
+
+  font-size:
+    9px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.target-price-item strong {
+  font-size:
+    13px;
+}
+
+.target-price-item.limit strong {
+  color:
+    #ffbd6b;
+}
+
+.target-price-item.good strong {
+  color:
+    #58e59e;
+}
+
+.target-price-item.protected strong {
+  color:
+    #78c9ff;
+}
+
+.target-price-item.excellent strong {
+  color:
+    var(--green);
+}
+
+.trade-summary h3,
+.opportunity-heading h3,
+.risk-card h3 {
+  margin: 0;
+}
+
+.trade-summary h3 {
+  margin-bottom: 8px;
+
+  color:
+    var(--green);
+
+  font-size:
+    14px;
+
+  text-transform:
+    uppercase;
+}
+
+.summary-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 6px;
+}
+
+.summary-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  min-width: 0;
+
+  padding: 7px 8px;
+
+  border-radius:
+    8px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+}
+
+.summary-item span {
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+}
+
+.summary-item strong {
+  overflow: hidden;
+
+  font-size:
+    13px;
+
+  text-overflow: ellipsis;
+}
+
+.risk-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-top: 8px;
+}
+
+.risk-card {
+  padding: 9px 10px;
+
+  border:
+    1px solid var(--border-soft);
+
+  border-radius:
+    10px;
+
+  background:
+    #0b1921;
+}
+
+.risk-card h3 {
+  margin-bottom: 6px;
+
+  font-size:
+    12px;
+}
+
+.risk-card dl {
+  display: grid;
+
+  gap: 3px;
+
+  margin: 0 0 6px;
+}
+
+.risk-card dl div {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  font-size:
+    11px;
+}
+
+.risk-card dt {
+  color:
+    var(--muted);
+}
+
+.risk-card dd {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.scenario-verdict {
+  font-size:
+    11px;
+}
+
+.opportunity-section {
+  margin-top: 10px;
+}
+
+.opportunity-heading {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 6px;
+}
+
+.opportunity-heading h3 {
+  font-size:
+    13px;
+
+  text-transform:
+    uppercase;
+}
+
+.opportunity-heading span {
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+}
+
+.opportunity-table-wrapper {
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    9px;
+}
+
+.opportunity-table {
+  min-width:
+    780px;
+}
+
+.empty-table-cell {
+  color:
+    var(--muted);
+
+  text-align:
+    center;
+}
+
 .results {
   margin-top: 10px;
 
@@ -704,6 +1047,17 @@ select option {
     1px solid rgba(72, 222, 147, 0.35);
 }
 
+.trade-status.protected {
+  background:
+    rgba(66, 176, 255, 0.1);
+
+  color:
+    #78c9ff;
+
+  border:
+    1px solid rgba(66, 176, 255, 0.35);
+}
+
 .trade-status.fair {
   background:
     rgba(241, 200, 75, 0.1);
@@ -715,6 +1069,17 @@ select option {
     1px solid rgba(241, 200, 75, 0.35);
 }
 
+.trade-status.limit {
+  background:
+    rgba(255, 174, 74, 0.1);
+
+  color:
+    #ffbd6b;
+
+  border:
+    1px solid rgba(255, 174, 74, 0.35);
+}
+
 .trade-status.bad {
   background:
     rgba(255, 101, 101, 0.1);
@@ -724,6 +1089,61 @@ select option {
 
   border:
     1px solid rgba(255, 101, 101, 0.35);
+}
+
+.opportunity-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  min-height: 24px;
+
+  padding: 3px 7px;
+
+  border-radius:
+    999px;
+
+  background:
+    #17303a;
+
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+}
+
+.opportunity-badge.excellent {
+  color:
+    var(--green);
+}
+
+.opportunity-badge.protected {
+  color:
+    #78c9ff;
+}
+
+.opportunity-badge.good {
+  color:
+    #58e59e;
+}
+
+.opportunity-badge.fair {
+  color:
+    var(--yellow);
+}
+
+.opportunity-badge.limit {
+  color:
+    #ffbd6b;
+}
+
+.opportunity-badge.bad {
+  color:
+    var(--red);
 }
 
 
@@ -1470,6 +1890,16 @@ footer {
       auto;
   }
 
+  .summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .target-prices-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
 }
 
 
@@ -1484,6 +1914,29 @@ footer {
   .brand h1 {
     font-size:
       20px;
+  }
+
+  .summary-grid,
+  .risk-grid,
+  .target-prices-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .opportunity-heading {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+  }
+
+  .target-prices-heading {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
   }
 
   .meta-header {

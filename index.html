@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=10"
+    href="style.css?v=11"
   />
 </head>
 
@@ -223,192 +223,161 @@
           <section class="panel calculator-panel">
 
             <div class="panel-title">
-
-              <h2>
-                🧮 Calculadora de tradeo
-              </h2>
-
-              <span>
-                Calcula si una compra merece la pena
-              </span>
-
+              <h2>🧮 Trade Opportunity Calculator</h2>
+              <span>Evalúa la compra frente al mercado actual y sus posibles caídas.</span>
             </div>
 
-
-            <div class="form-grid">
-
+            <div class="form-grid calculator-form-grid">
 
               <div class="field">
-
-                <label for="jugador">
-                  Jugador
-                </label>
-
+                <label for="jugador">Jugador</label>
                 <div class="player-input-wrapper">
-                  <input
-                  type="text"
-                  id="jugador"
-                  placeholder="Ej: Rațiu"
-                />
+                  <input type="text" id="jugador" placeholder="Ej: Lacroix" />
                   <button type="button" class="clear-player-button"
                     data-clear-player="jugador" title="Limpiar jugador"
                     aria-label="Limpiar jugador">×</button>
                 </div>
-
               </div>
 
-
               <div class="field">
-
-                <label for="precioVenta">
-                  Precio de venta
-                </label>
-
-                <input
-                  type="number"
-                  id="precioVenta"
-                  placeholder="0"
-                  min="0"
-                />
-
+                <label for="precioVenta">Precio actual de mercado</label>
+                <input type="number" id="precioVenta" placeholder="30000" min="0" />
               </div>
 
-
               <div class="field">
-
-                <label for="precioCompra">
-                  Precio de compra / puja
-                </label>
-
-                <input
-                  type="number"
-                  id="precioCompra"
-                  aria-describedby="purchasePriceHint"
-                  placeholder="0"
-                  min="0"
-                />
-                <small id="purchasePriceHint" class="field-hint">Máximo sugerido según tu beneficio objetivo</small>
-
-              </div>
-
-
-              <div class="field">
-
-                <label for="beneficioMinimo">
-                  Beneficio mínimo deseado
-                </label>
-
-                <input
-                  type="number"
-                  id="beneficioMinimo"
-                  value="0"
-                  placeholder="0"
-                  min="0"
-                />
-
+                <label for="precioCompra">Precio que conseguí / puja (opcional)</label>
+                <input type="number" id="precioCompra" placeholder="Sin precio todavía"
+                  min="0" aria-describedby="purchaseTargetsHint" />
+                <small id="purchaseTargetsHint" class="field-hint">
+                  La puja es opcional; primero puedes analizar el mercado.
+                </small>
               </div>
 
             </div>
 
+            <p id="calculatorMessage" class="calculator-message"
+              aria-live="polite"></p>
 
             <div class="calc-actions">
-
-              <button
-                id="btnCalcular"
-                class="primary-button"
-                type="button"
-              >
-                Calcular trade
+              <button id="btnCalcular" class="primary-button" type="button">
+                Analizar compra
               </button>
-
-
-              <button
-                id="btnAgregarWatchlist"
-                class="secondary-button"
-                type="button"
-              >
+              <button id="btnAgregarWatchlist" class="secondary-button" type="button">
                 + Añadir a watchlist
               </button>
-
             </div>
 
+            <div class="trade-summary">
+              <h3 id="resultadoJugador">Esperando jugador</h3>
 
-            <!-- RESULTADOS -->
-
-            <div class="results compact-results">
-
-              <div class="result-row">
-
-                <span>
-                  Neto después del 5%
-                </span>
-
-                <strong id="resultadoNeto">
-                  0
-                </strong>
-
+              <div class="summary-grid">
+                <div class="summary-item">
+                  <span>Mercado actual</span>
+                  <strong id="resultadoMercado">—</strong>
+                </div>
+                <div class="summary-item">
+                  <span>Neto después del 5%</span>
+                  <strong id="resultadoNeto">—</strong>
+                </div>
+                <div class="summary-item">
+                  <span>Máximo sin perder</span>
+                  <strong id="resultadoEquilibrio">—</strong>
+                </div>
+                <div class="summary-item">
+                  <span>Mi compra</span>
+                  <strong id="resultadoCompra">—</strong>
+                </div>
+                <div class="summary-item">
+                  <span>Ganancia vendiendo hoy</span>
+                  <strong id="resultadoBeneficio">—</strong>
+                </div>
+                <div class="summary-item">
+                  <span>ROI</span>
+                  <strong id="resultadoROI">—</strong>
+                </div>
               </div>
-
-
-              <div class="result-row">
-
-                <span>
-                  Beneficio
-                </span>
-
-                <strong id="resultadoBeneficio">
-                  0
-                </strong>
-
-              </div>
-
-
-              <div class="result-row">
-
-                <span>
-                  ROI
-                </span>
-
-                <strong id="resultadoROI">
-                  0%
-                </strong>
-
-              </div>
-
-
-              <div class="result-row">
-
-                <span>
-                  Compra ideal
-                </span>
-
-                <strong id="resultadoIdeal">
-                  0 - 0
-                </strong>
-
-              </div>
-
-
-              <div class="result-row">
-
-                <span>
-                  Compra máxima
-                </span>
-
-                <strong id="resultadoMaximo">
-                  0
-                </strong>
-
-              </div>
-
             </div>
 
+            <section class="target-prices" aria-labelledby="targetPricesTitle">
+              <div class="target-prices-heading">
+                <h3 id="targetPricesTitle">🎯 Precios objetivo</h3>
+                <span>Máximos recomendados según el riesgo</span>
+              </div>
 
-            <div
-              id="estadoTrade"
-              class="trade-status neutral"
-            >
+              <div class="target-prices-grid">
+                <div class="target-price-item limit">
+                  <span>⚠️ Máximo sin perder</span>
+                  <strong id="targetBreakEven">—</strong>
+                </div>
+                <div class="target-price-item good">
+                  <span>✅ Buena compra</span>
+                  <strong id="targetGood">—</strong>
+                </div>
+                <div class="target-price-item protected">
+                  <span>🛡️ Compra protegida</span>
+                  <strong id="targetProtected">—</strong>
+                </div>
+                <div class="target-price-item excellent">
+                  <span>🔥 Oportunidad</span>
+                  <strong id="targetOpportunity">—</strong>
+                </div>
+              </div>
+            </section>
+
+            <div class="risk-grid">
+              <article class="risk-card">
+                <h3>Mercado -2,5%</h3>
+                <dl>
+                  <div><dt>Venta aprox.</dt><dd id="scenario25Venta">—</dd></div>
+                  <div><dt>Neto aprox.</dt><dd id="scenario25Neto">—</dd></div>
+                  <div><dt>Ganancia / pérdida</dt><dd id="scenario25Beneficio">—</dd></div>
+                </dl>
+                <strong id="scenario25Estado" class="scenario-verdict">Sin analizar</strong>
+              </article>
+
+              <article class="risk-card">
+                <h3>Mercado -5%</h3>
+                <dl>
+                  <div><dt>Venta aprox.</dt><dd id="scenario5Venta">—</dd></div>
+                  <div><dt>Neto aprox.</dt><dd id="scenario5Neto">—</dd></div>
+                  <div><dt>Ganancia / pérdida</dt><dd id="scenario5Beneficio">—</dd></div>
+                </dl>
+                <strong id="scenario5Estado" class="scenario-verdict">Sin analizar</strong>
+              </article>
+            </div>
+
+            <div id="estadoTrade" class="trade-status neutral">
               Esperando datos
+            </div>
+
+            <div class="opportunity-section">
+              <div class="opportunity-heading">
+                <h3>Oportunidades de compra</h3>
+                <span>Escalera calculada desde el mercado actual</span>
+              </div>
+
+              <div class="table-wrapper opportunity-table-wrapper">
+                <table class="opportunity-table">
+                  <thead>
+                    <tr>
+                      <th>Compra</th>
+                      <th>Descuento</th>
+                      <th>Ganancia hoy</th>
+                      <th>ROI</th>
+                      <th>Si mercado -2,5%</th>
+                      <th>Si mercado -5%</th>
+                      <th>Evaluación</th>
+                    </tr>
+                  </thead>
+                  <tbody id="opportunityTableBody">
+                    <tr>
+                      <td colspan="7" class="empty-table-cell">
+                        Analiza una compra para generar oportunidades.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
           </section>
@@ -593,15 +562,19 @@
                     </th>
 
                     <th>
-                      Venta
+                      Mercado
                     </th>
 
                     <th>
-                      Ideal
+                      Compra buena
                     </th>
 
                     <th>
-                      Máximo
+                      Compra protegida
+                    </th>
+
+                    <th>
+                      Mi puja
                     </th>
 
                     <th>
@@ -630,102 +603,58 @@
           <section class="panel legend-panel">
 
             <div class="panel-title">
-
-              <h2>
-                🚦 Estados
-              </h2>
-
-              <span>
-                Interpretación rápida
-              </span>
-
+              <h2>🚦 Estados</h2>
+              <span>Lectura rápida del riesgo de compra</span>
             </div>
-
 
             <div class="legend-grid">
 
-
               <div class="legend-item">
-
-                <span class="legend-icon excellent">
-                  🔥
-                </span>
-
+                <span class="legend-icon excellent">🔥</span>
                 <div>
-
-                  <strong>
-                    Excelente
-                  </strong>
-
-                  <p>
-                    Muy buen margen y ROI.
-                  </p>
-
+                  <strong>Oportunidad</strong>
+                  <p>Gran margen y protección ante una caída del 5%.</p>
                 </div>
-
               </div>
 
-
               <div class="legend-item">
-
-                <span class="legend-icon good">
-                  ✅
-                </span>
-
+                <span class="legend-icon protected">🛡️</span>
                 <div>
-
-                  <strong>
-                    Buena
-                  </strong>
-
-                  <p>
-                    Cumple el beneficio mínimo.
-                  </p>
-
+                  <strong>Protegida</strong>
+                  <p>Tolera aproximadamente una caída del 5%.</p>
                 </div>
-
               </div>
 
-
               <div class="legend-item">
-
-                <span class="legend-icon fair">
-                  🟡
-                </span>
-
+                <span class="legend-icon good">✅</span>
                 <div>
-
-                  <strong>
-                    Justa
-                  </strong>
-
-                  <p>
-                    Margen bajo. Mejor esperar.
-                  </p>
-
+                  <strong>Buena</strong>
+                  <p>Tolera aproximadamente una caída del 2,5%.</p>
                 </div>
-
               </div>
 
+              <div class="legend-item">
+                <span class="legend-icon fair">🟡</span>
+                <div>
+                  <strong>Margen bajo</strong>
+                  <p>Rentable ahora, pero sensible a una pequeña caída.</p>
+                </div>
+              </div>
 
               <div class="legend-item">
-
-                <span class="legend-icon bad">
-                  ❌
-                </span>
-
+                <span class="legend-icon limit">⚠️</span>
                 <div>
-
-                  <strong>
-                    No comprar
-                  </strong>
-
-                  <p>
-                    No compensa el riesgo.
-                  </p>
-
+                  <strong>Límite</strong>
+                  <p>La operación queda prácticamente en equilibrio.</p>
                 </div>
+              </div>
 
+              <div class="legend-item">
+                <span class="legend-icon bad">❌</span>
+                <div>
+                  <strong>No comprar</strong>
+                  <p>Produce pérdida al precio de mercado actual.</p>
+                </div>
               </div>
 
             </div>
@@ -1000,6 +929,8 @@
       XoluGG TradeLab
       ·
       EA SPORTS FC 27
+      ·
+      <span id="appVersion"></span>
 
     </footer>
 
@@ -1014,7 +945,7 @@
 
   <script src="meta-players.js?v=5"></script>
 
-  <script src="app.js?v=10"></script>
+  <script src="app.js?v=11"></script>
 
 
   <!-- =====================================================
