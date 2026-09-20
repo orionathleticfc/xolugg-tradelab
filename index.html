@@ -13,7 +13,7 @@
 
   <link
     rel="stylesheet"
-    href="style.css?v=11"
+    href="style.css?v=12"
   />
 </head>
 
@@ -712,6 +712,18 @@
 
         </div>
 
+        <div class="popular-context-bar">
+          <div id="popularSnapshotSummary" class="popular-snapshot-summary"
+            aria-label="Último snapshot importado">
+            <span class="popular-snapshot-label">Último snapshot importado</span>
+            <strong id="popularSnapshotStatus" class="popular-snapshot-status snapshot-unknown">
+              ⚪ Snapshot XoluGG · No disponible
+            </strong>
+            <small id="popularSnapshotDetails">No disponible</small>
+          </div>
+          <p id="popularReviewing" class="popular-reviewing" aria-live="polite" hidden></p>
+        </div>
+
 
         <!-- =================================================
              FILTROS
@@ -887,7 +899,7 @@
                 <th>Precio</th>
                 <th>Compra ideal</th>
                 <th>Máximo</th>
-                <th>Actualizado</th>
+                <th>Frescura</th>
                 <th>Acciones</th>
               </tr>
             </thead>
@@ -945,7 +957,7 @@
 
   <script src="meta-players.js?v=5"></script>
 
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 
 
   <!-- =====================================================

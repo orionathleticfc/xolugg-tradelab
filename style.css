@@ -2169,6 +2169,134 @@ footer {
 .field-hint { color: var(--muted); font-size: 10px; }
 .compact-trade-form { align-items: end; }
 
+/* Fase 11: frescura del snapshot y fila activa de Mercado Popular. */
+.popular-context-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: -2px 0 12px;
+}
+
+.popular-snapshot-summary {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.popular-snapshot-label,
+.popular-snapshot-summary small {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.popular-snapshot-status {
+  justify-self: start;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.popular-reviewing {
+  max-width: min(48%, 420px);
+  margin: 0;
+  padding: 6px 9px;
+  overflow: hidden;
+  color: var(--text);
+  background: rgba(39, 241, 163, 0.08);
+  border: 1px solid rgba(39, 241, 163, 0.25);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.snapshot-freshness {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.popular-snapshot-status.snapshot-fresh,
+.snapshot-freshness.snapshot-fresh {
+  color: var(--green);
+  background: rgba(39, 241, 163, 0.10);
+}
+
+.popular-snapshot-status.snapshot-recent,
+.snapshot-freshness.snapshot-recent {
+  color: var(--yellow);
+  background: rgba(241, 200, 75, 0.10);
+}
+
+.popular-snapshot-status.snapshot-aging,
+.snapshot-freshness.snapshot-aging {
+  color: #ffad5c;
+  background: rgba(255, 159, 67, 0.11);
+}
+
+.popular-snapshot-status.snapshot-stale,
+.snapshot-freshness.snapshot-stale {
+  color: var(--red);
+  background: rgba(255, 101, 101, 0.10);
+}
+
+.popular-snapshot-status.snapshot-unknown,
+.snapshot-freshness.snapshot-unknown {
+  color: var(--muted);
+  background: #17303a;
+}
+
+.popular-price-unavailable {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.popular-player-row {
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+@media (hover: hover) {
+  .popular-player-row:hover > td {
+    background: rgba(255, 255, 255, 0.025);
+  }
+}
+
+.popular-player-row.is-selected > td {
+  background: rgba(39, 241, 163, 0.075);
+  box-shadow: inset 3px 0 0 var(--green);
+}
+
+.popular-player-row:focus-visible {
+  outline: none;
+}
+
+.popular-player-row:focus-visible > td {
+  box-shadow: inset 0 0 0 1px var(--green);
+}
+
+.popular-player-row.is-selected:focus-visible > td {
+  box-shadow: inset 3px 0 0 var(--green), inset 0 0 0 1px var(--green);
+}
+
+@media (max-width: 600px) {
+  .popular-context-bar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .popular-reviewing {
+    max-width: 100%;
+  }
+}
+
 
 /* Sugerencias compartidas por los campos Jugador. */
 .player-suggestions {

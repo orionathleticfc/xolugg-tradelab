@@ -24,6 +24,7 @@ let state = {
 
 let metaPriceOverrides = {};
 let selectedCalculatorPlayerId = null;
+let selectedPopularPlayerId = null;
 
 
 /* =========================================================
@@ -54,6 +55,103 @@ function normalizeText(text) {
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .trim();
+}
+
+
+function parseSnapshotTimestamp(value) {
+  if (typeof value !== 'string' || !value.trim()) return null;
+  const timestamp = Date.parse(value);
+  return Number.isFinite(timestamp) ? timestamp : null;
+}
+
+
+function getSnapshotElapsedParts(value, nowValue = Date.now()) {
+  const timestamp = parseSnapshotTimestamp(value);
+  const requestedNow = nowValue instanceof Date ? nowValue.getTime() : Number(nowValue);
+  const now = Number.isFinite(requestedNow) ? requestedNow : Date.now();
+  if (timestamp === null) return null;
+  const totalMinutes = Math.max(0, Math.floor((now - timestamp) / 60000));
+  return {
+    timestamp,
+    totalMinutes,
+    hours: Math.floor(totalMinutes / 60),
+    minutes: totalMinutes % 60,
+    days: Math.floor(totalMinutes / 1440)
+  };
+}
+
+
+function formatSnapshotRelativeTime(value, nowValue = Date.now()) {
+  const elapsed = getSnapshotElapsedParts(value, nowValue);
+  if (!elapsed) return 'No disponible';
+  if (elapsed.totalMinutes < 1) return 'hace unos segundos';
+  if (elapsed.totalMinutes < 60) return 'hace ' + elapsed.totalMinutes + ' min';
+  if (elapsed.hours < 24) {
+    return 'hace ' + elapsed.hours + ' h' +
+      (elapsed.minutes ? ' ' + elapsed.minutes + ' min' : '');
+  }
+  return 'hace ' + elapsed.days + ' ' + (elapsed.days === 1 ? 'día' : 'días');
+}
+
+
+function formatSnapshotCompactTime(value, nowValue = Date.now()) {
+  const elapsed = getSnapshotElapsedParts(value, nowValue);
+  if (!elapsed) return 'No disponible';
+  if (elapsed.totalMinutes < 1) return 'Ahora';
+  if (elapsed.totalMinutes < 60) return elapsed.totalMinutes + ' min';
+  if (elapsed.hours < 24) {
+    return elapsed.hours + ' h' + (elapsed.minutes ? ' ' + elapsed.minutes + ' min' : '');
+  }
+  return elapsed.days + ' ' + (elapsed.days === 1 ? 'día' : 'días');
+}
+
+
+function formatLocalSnapshotDate(value) {
+  const timestamp = parseSnapshotTimestamp(value);
+  if (timestamp === null) return 'No disponible';
+  const date = new Date(timestamp);
+  const localDate = new Intl.DateTimeFormat(undefined, {
+    day: '2-digit', month: '2-digit', year: 'numeric'
+  }).format(date);
+  const localTime = new Intl.DateTimeFormat(undefined, {
+    hour: 'numeric', minute: '2-digit'
+  }).format(date);
+  return localDate + ' · ' + localTime;
+}
+
+
+function getSnapshotFreshness(value, nowValue = Date.now()) {
+  const elapsed = getSnapshotElapsedParts(value, nowValue);
+  if (!elapsed) {
+    return {
+      key: 'unknown', className: 'unknown', icon: '⚪',
+      relativeText: 'No disponible', compactText: 'No disponible',
+      exactText: 'No disponible'
+    };
+  }
+  const state = elapsed.totalMinutes < 120
+    ? ['fresh', '🟢']
+    : elapsed.totalMinutes < 360
+    ? ['recent', '🟡']
+    : elapsed.totalMinutes < 720
+    ? ['aging', '🟠']
+    : ['stale', '🔴'];
+  return {
+    key: state[0],
+    className: state[0],
+    icon: state[1],
+    relativeText: formatSnapshotRelativeTime(value, nowValue),
+    compactText: formatSnapshotCompactTime(value, nowValue),
+    exactText: formatLocalSnapshotDate(value)
+  };
+}
+
+
+function formatSnapshotFileLabel(value) {
+  if (typeof value !== 'string' || !value.trim()) return 'Snapshot no identificado';
+  const match = value.match(/\bFUTBIN\s*(\d+)\b/i);
+  if (match) return 'FUTBIN' + match[1];
+  return value.replace(/\.pdf$/i, '').trim();
 }
 
 
@@ -3721,6 +3819,112 @@ function getPopularPlayerData(card) {
 }
 
 
+function getPopularPlayerSnapshotTimestamp(player) {
+  return player?.fuente?.snapshotObservedAt ??
+    window.PLAYERS_DATA_META?.snapshotObservedAt ??
+    player?.fuente?.importedAt ?? null;
+}
+
+
+function getPopularPricePresentation(player) {
+  if (Number.isFinite(player?.precioEfectivo) && player.precioEfectivo > 0) {
+    return {
+      available: true,
+      text: formatCoins(player.precioEfectivo),
+      sourceText: player.fuentePrecio || 'Precio actual'
+    };
+  }
+  const unavailableAtSource = player?.precioReferencia === null &&
+    String(player?.fuente?.precioPrincipalRaw ?? '').trim() === '0';
+  return {
+    available: false,
+    text: unavailableAtSource ? 'Sin precio FUTBIN' : 'Precio no disponible',
+    sourceText: unavailableAtSource ? 'Sin precio FUTBIN' : 'Precio no disponible'
+  };
+}
+
+
+function renderPopularSnapshotSummary() {
+  const status = document.getElementById?.('popularSnapshotStatus');
+  const details = document.getElementById?.('popularSnapshotDetails');
+  if (!status || !details) return;
+  const metadata = window.PLAYERS_DATA_META || {};
+  const observedAt = metadata.snapshotObservedAt ?? metadata.generatedAt ?? null;
+  const freshness = getSnapshotFreshness(observedAt);
+  const fullFileName = typeof metadata.snapshotFile === 'string' ? metadata.snapshotFile : '';
+  status.className = 'popular-snapshot-status snapshot-' + freshness.className;
+  status.textContent = freshness.icon + ' Snapshot XoluGG · ' + freshness.relativeText;
+  details.textContent = freshness.exactText + ' · ' + formatSnapshotFileLabel(fullFileName);
+  details.title = fullFileName;
+}
+
+
+function getSelectedPopularPlayerId() {
+  return selectedPopularPlayerId;
+}
+
+
+function renderPopularReviewingReference() {
+  const reference = document.getElementById?.('popularReviewing');
+  if (!reference) return;
+  const basePlayer = selectedPopularPlayerId === null ? null : getPopularPlayers().find(
+    player => String(player.id) === String(selectedPopularPlayerId)
+  );
+  if (!basePlayer) {
+    reference.hidden = true;
+    reference.textContent = '';
+    return;
+  }
+  const player = getPopularPlayerData(basePlayer);
+  const price = getPopularPricePresentation(player);
+  reference.textContent = 'Revisando: ' + player.nombre + ' · ' +
+    (price.available ? formatCoins(player.precioEfectivo) : 'Sin precio');
+  reference.hidden = false;
+}
+
+
+function reconcilePopularPlayerSelection() {
+  if (selectedPopularPlayerId !== null && !getPopularPlayers().some(
+    player => String(player.id) === String(selectedPopularPlayerId)
+  )) selectedPopularPlayerId = null;
+  return selectedPopularPlayerId;
+}
+
+
+function applyPopularPlayerSelection() {
+  reconcilePopularPlayerSelection();
+  const rows = document.querySelectorAll?.('[data-popular-player-id]') || [];
+  rows.forEach(row => {
+    const selected = String(row.dataset.popularPlayerId) === String(selectedPopularPlayerId);
+    row.classList.toggle('is-selected', selected);
+    row.setAttribute('aria-selected', String(selected));
+  });
+  renderPopularReviewingReference();
+}
+
+
+function selectPopularPlayer(playerId) {
+  const player = getPopularPlayers().find(item => String(item.id) === String(playerId));
+  selectedPopularPlayerId = player ? player.id : null;
+  applyPopularPlayerSelection();
+  return selectedPopularPlayerId;
+}
+
+
+function clearPopularPlayerSelection() {
+  selectedPopularPlayerId = null;
+  applyPopularPlayerSelection();
+}
+
+
+function handlePopularOutsideClick(event) {
+  const panel = document.querySelector?.('.meta-players-panel');
+  if (selectedPopularPlayerId === null || !panel || panel.contains(event.target)) return false;
+  clearPopularPlayerSelection();
+  return true;
+}
+
+
 let popularQuickPriceLimit = null;
 
 function getPopularAvailableCapital() {
@@ -3864,6 +4068,18 @@ function renderPopularPlayerDetails(player) {
     ? ["div", "han", "kic", "ref", "spd", "pos"]
     : ["pac", "sho", "pas", "dri", "def", "phy"];
   const priceSource = player.fuentePrecio;
+  const pricePresentation = getPopularPricePresentation(player);
+  const observedAt = getPopularPlayerSnapshotTimestamp(player);
+  const changedAt = player.fuente?.lastMarketChangedAt ?? null;
+  const snapshotFile = player.fuente?.snapshotFile ?? window.PLAYERS_DATA_META?.snapshotFile ?? null;
+  const freshnessValue = timestamp => {
+    const freshness = getSnapshotFreshness(timestamp);
+    return freshness.key === 'unknown'
+      ? 'No disponible'
+      : '<span class=\'snapshot-freshness snapshot-' + freshness.className +
+        '\' title=\'' + e(freshness.exactText) + '\'>' + freshness.icon + ' ' +
+        e(freshness.relativeText) + '</span>';
+  };
   const row = document.createElement("tr");
   row.id = "popular-details-" + player.id;
   row.className = "popular-detail-row";
@@ -3893,9 +4109,15 @@ function renderPopularPlayerDetails(player) {
       <dl class="popular-detail-grid popular-detail-prices">
         ${field("Precio de referencia", formatCoins(player.precioReferencia))}
         ${field("Precio actualizado por usuario", formatCoins(player.precioUsuario))}
-        ${field("Precio efectivo", formatCoins(player.precioEfectivo) +
-          `<small class="popular-price-source">${priceSource}</small>`)}
+        ${field("Precio actual", pricePresentation.available
+          ? formatCoins(player.precioEfectivo) +
+          `<small class="popular-price-source">${priceSource}</small>`
+          : `<span class="popular-price-unavailable">${e(pricePresentation.text)}</span>`)}
         ${field("Valor secundario fuente", formatCoins(player.valorSecundarioFuente))}
+        ${field("Observado en snapshot", freshnessValue(observedAt))}
+        ${field("Último cambio detectado", freshnessValue(changedAt))}
+        ${field("Snapshot", `<span title="${e(snapshotFile ?? "")}">${e(formatSnapshotFileLabel(snapshotFile))}</span>`)}
+        ${field("Fuente", value(player.fuente?.nombre ?? "FUTBIN"))}
       </dl>
     </div>
   </td>`;
@@ -3922,6 +4144,8 @@ function togglePopularPlayerDetails(cardId) {
 
 function renderPopularPlayers() {
   updatePopularQuickPriceButtons();
+  renderPopularSnapshotSummary();
+  reconcilePopularPlayerSelection();
   const tbody = document.getElementById("metaPlayersBody");
   if (!tbody) return;
   const cards = getFilteredPopularPlayers();
@@ -3930,20 +4154,27 @@ function renderPopularPlayers() {
   tbody.innerHTML = "";
   if (!cards.length) {
     tbody.innerHTML = '<tr><td colspan="10">No hay cartas que coincidan con los filtros.</td></tr>';
+    applyPopularPlayerSelection();
     return;
   }
   cards.forEach(card => {
     const e = escapePopularHtml;
     const source = card.fuentePrecio;
-    const freshness = getPriceFreshness(card.ultimaActualizacion);
+    const freshness = getSnapshotFreshness(getPopularPlayerSnapshotTimestamp(card));
+    const pricePresentation = getPopularPricePresentation(card);
     const alternatives = (card.posiciones || []).filter(p => p !== card.posicionPrincipal);
     const cardType = card.tipoCarta === "gold" ? "Oro" :
       card.tipoCarta === "special" ? "Especial" : "Unknown";
     const futbinAction = card.futbin?.url ? `
         <a class="meta-action-btn popular-futbin-link" data-meta-action="futbin"
+          data-player-id="${e(card.id)}"
           href="${e(card.futbin.url)}" target="_blank" rel="noopener noreferrer"
           aria-label="Abrir carta de ${e(card.nombre)} en FUTBIN">FUTBIN ↗</a>` : "";
     const row = document.createElement("tr");
+    row.className = 'popular-player-row';
+    row.dataset.popularPlayerId = card.id;
+    row.tabIndex = 0;
+    row.setAttribute('aria-selected', String(String(card.id) === String(selectedPopularPlayerId)));
     row.innerHTML = `
       <td><div class="meta-player-name"><strong>${e(card.nombre)}</strong>
         <span>${e(alternatives.join(" · "))}</span>
@@ -3954,16 +4185,19 @@ function renderPopularPlayers() {
       <td>${e(card.ratingFuente ?? "—")}</td>
       <td><div class="popular-price-editor">
         <input type="number" class="meta-price-input" data-player-id="${e(card.id)}"
-          value="${e(card.precioEfectivo ?? "")}" min="0" placeholder="Precio"
+          value="${e(card.precioEfectivo ?? "")}" min="0"
+          placeholder="${e(pricePresentation.available ? "Precio" : pricePresentation.text)}"
           aria-label="Precio de ${e(card.nombre)}" title="${source}">
         <button class="meta-action-btn" data-meta-action="save-price"
           data-player-id="${e(card.id)}" type="button" title="Guardar precio">💾</button>
-        </div><small class="popular-price-source">${source}</small></td>
+        </div><small class="popular-price-source ${pricePresentation.available ? "" : "popular-price-unavailable"}">
+          ${e(pricePresentation.sourceText)}</small></td>
       <td>${card.compraIdealMin === null ? "—" :
         formatCoins(card.compraIdealMin) + " - " + formatCoins(card.compraIdealMax)}</td>
       <td>${formatCoins(card.compraMaxima)}</td>
-      <td><span class="price-freshness ${card.precioUsuario !== null ? freshness.className : "unknown"}">
-        ${card.precioUsuario !== null ? freshness.text : e(source)}</span></td>
+      <td><span class="snapshot-freshness snapshot-${freshness.className}"
+        title="Observado en XoluGG: ${e(freshness.exactText)}">
+        ${freshness.icon} ${e(freshness.compactText)}</span></td>
       <td><div class="popular-actions">
         <button class="copy-player-button" data-meta-action="copy-name"
           data-player-id="${e(card.id)}" type="button" title="Copiar nombre" aria-label="Copiar nombre de ${e(card.nombre)}">📋</button>
@@ -3976,14 +4210,12 @@ function renderPopularPlayers() {
           ${expandedPopularCards.has(card.id) ? "▴" : "▾"} Detalles</button>
         ${futbinAction}
       </div></td>`;
-    row.querySelector('[data-meta-action="futbin"]')?.addEventListener("click", event => {
-      event.stopPropagation();
-    });
     tbody.appendChild(row);
     if (expandedPopularCards.has(card.id)) {
       tbody.appendChild(renderPopularPlayerDetails(card));
     }
   });
+  applyPopularPlayerSelection();
   activarStepsMetaInputs();
 }
 
@@ -4196,9 +4428,14 @@ function usarPopularEnCalculadora(playerId) {
   }
 
   const player = getPopularPlayerData(basePlayer);
+  const preservedPopularPlayerId = selectedPopularPlayerId;
   document.querySelector(
     '.nav-tab[data-section="dashboardSection"]'
   )?.click();
+  if (preservedPopularPlayerId !== null) {
+    selectedPopularPlayerId = preservedPopularPlayerId;
+    applyPopularPlayerSelection();
+  }
 
   const jugadorInput = document.getElementById("jugador");
   const marketInput = document.getElementById("precioVenta");
@@ -4405,6 +4642,20 @@ function configurarEventosPopular() {
       );
     }
   );
+
+  tbody?.addEventListener('click', event => {
+    const row = event.target.closest('[data-popular-player-id]');
+    if (row) selectPopularPlayer(row.dataset.popularPlayerId);
+  });
+
+  tbody?.addEventListener('keydown', event => {
+    const row = event.target.closest('[data-popular-player-id]');
+    if (!row || (event.key !== 'Enter' && event.key !== ' ')) return;
+    selectPopularPlayer(row.dataset.popularPlayerId);
+    if (event.target === row) event.preventDefault();
+  });
+
+  document.addEventListener('click', handlePopularOutsideClick);
 }
 
 /* =========================================================
