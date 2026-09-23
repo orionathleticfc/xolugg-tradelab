@@ -5,15 +5,15 @@ window.PLAYERS_DATA_META = {
   "generatorVersion": "1.0.0",
   "matcherVersion": "0.4.0",
   "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-  "generatedAt": "2026-09-22T15:32:34.990Z",
-  "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
+  "generatedAt": "2026-09-23T13:26:16.327Z",
+  "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
   "parsedCards": 250,
-  "acceptedCards": 240,
-  "excludedUnavailableTwins": 2,
-  "needsReview": 7,
-  "goldCards": 195,
-  "specialCards": 43,
-  "unknownCards": 2,
+  "acceptedCards": 241,
+  "excludedUnavailableTwins": 3,
+  "needsReview": 6,
+  "goldCards": 190,
+  "specialCards": 48,
+  "unknownCards": 3,
   "parserCards": 250,
   "parserSlots": 250
 };
@@ -42,18 +42,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.1,
-    "popularidadFuente": 622,
-    "precioReferencia": 53500,
+    "popularidadFuente": 849,
+    "precioReferencia": 78000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "53.5K",
+      "precioPrincipalRaw": "78K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -87,18 +87,18 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 3,
     "ratingFuente": 82.4,
-    "popularidadFuente": 505,
-    "precioReferencia": 69000,
+    "popularidadFuente": 316,
+    "precioReferencia": 74000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "69K",
+      "precioPrincipalRaw": "74K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -135,18 +135,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.8,
-    "popularidadFuente": 294,
-    "precioReferencia": 50000,
+    "popularidadFuente": 281,
+    "precioReferencia": 53000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "50K",
+      "precioPrincipalRaw": "53K",
       "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -183,18 +183,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.2,
-    "popularidadFuente": 284,
-    "precioReferencia": 28000,
+    "popularidadFuente": 262,
+    "precioReferencia": 30500,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "28K",
+      "precioPrincipalRaw": "30.5K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -205,46 +205,49 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "konate-84-cb-77-34-65-68-84-85",
-    "nombre": "Konaté",
+    "id": "eric-garcia-85-cb-79-58-77-76-86-82",
+    "nombre": "Eric García",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 84,
+    "ovr": 85,
     "posicionPrincipal": "CB",
     "posiciones": [
-      "CB"
+      "CB",
+      "CDM",
+      "CM",
+      "RB"
     ],
     "stats": {
-      "pac": 77,
-      "sho": 34,
-      "pas": 65,
-      "dri": 68,
-      "def": 84,
-      "phy": 85
+      "pac": 79,
+      "sho": 58,
+      "pas": 77,
+      "dri": 76,
+      "def": 86,
+      "phy": 82
     },
     "pie": "R",
-    "skills": 3,
+    "skills": 2,
     "weakFoot": 3,
-    "ratingFuente": 82.1,
-    "popularidadFuente": 186,
-    "precioReferencia": 4800,
-    "valorSecundarioFuente": 830,
+    "ratingFuente": 85.1,
+    "popularidadFuente": 197,
+    "precioReferencia": 49750,
+    "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "4.8K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "49.75K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 562,
-      "slug": "ibrahima-konate",
-      "url": "https://www.futbin.com/27/player/562/ibrahima-konate"
+      "playerId": 554,
+      "slug": "eric-garcia-martret",
+      "url": "https://www.futbin.com/27/player/554/eric-garcia-martret"
     }
   },
   {
@@ -272,18 +275,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.6,
-    "popularidadFuente": 169,
-    "precioReferencia": 98500,
+    "popularidadFuente": 192,
+    "precioReferencia": 95000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "98.5K",
+      "precioPrincipalRaw": "95K",
       "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -294,49 +297,94 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "lookman-83-st-86-83-73-84-32-68",
-    "nombre": "Lookman",
+    "id": "futbin-27-22778",
+    "nombre": "Álvaro Carreras",
     "version": null,
-    "tipoCarta": "gold",
+    "tipoCarta": "special",
     "ovr": 83,
-    "posicionPrincipal": "ST",
+    "posicionPrincipal": "LB",
     "posiciones": [
-      "ST",
-      "CAM",
-      "LW",
-      "LM"
+      "LB",
+      "LM",
+      "CB"
     ],
     "stats": {
-      "pac": 86,
-      "sho": 83,
-      "pas": 73,
-      "dri": 84,
-      "def": 32,
-      "phy": 68
+      "pac": 88,
+      "sho": 69,
+      "pas": 80,
+      "dri": 82,
+      "def": 78,
+      "phy": 83
     },
-    "pie": "R",
-    "skills": 4,
+    "pie": "L",
+    "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 83,
-    "popularidadFuente": 156,
-    "precioReferencia": 12000,
-    "valorSecundarioFuente": 410,
+    "ratingFuente": 87.3,
+    "popularidadFuente": 183,
+    "precioReferencia": 374000,
+    "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "12K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "374K",
+      "valorSecundarioRaw": "513",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 778,
-      "slug": "ademola-lookman",
-      "url": "https://www.futbin.com/27/player/778/ademola-lookman"
+      "playerId": 22778,
+      "slug": "alvaro-fernandez-carreras",
+      "url": "https://www.futbin.com/27/player/22778/alvaro-fernandez-carreras"
+    }
+  },
+  {
+    "id": "messi-89-cam-76-87-89-90-33-63",
+    "nombre": "Messi",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 89,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "RW",
+      "RM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 76,
+      "sho": 87,
+      "pas": 89,
+      "dri": 90,
+      "def": 33,
+      "phy": 63
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 91.8,
+    "popularidadFuente": 159,
+    "precioReferencia": 59000,
+    "valorSecundarioFuente": 11000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "59K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22,
+      "slug": "lionel-messi",
+      "url": "https://www.futbin.com/27/player/22/lionel-messi"
     }
   },
   {
@@ -366,18 +414,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.1,
-    "popularidadFuente": 155,
-    "precioReferencia": 240000,
+    "popularidadFuente": 159,
+    "precioReferencia": 261000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 1,
-      "precioPrincipalRaw": "240K",
+      "precioPrincipalRaw": "261K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -385,189 +433,6 @@ window.PLAYERS_DATA = [
       "playerId": 621,
       "slug": "salma-celeste-paralluelo-ayingono",
       "url": "https://www.futbin.com/27/player/621/salma-celeste-paralluelo-ayingono"
-    }
-  },
-  {
-    "id": "james-85-lm-90-81-78-87-40-82",
-    "nombre": "James",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "RW",
-      "RM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 81,
-      "pas": 78,
-      "dri": 87,
-      "def": 40,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 5,
-    "ratingFuente": 88.2,
-    "popularidadFuente": 150,
-    "precioReferencia": 69000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "69K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 144,
-      "slug": "lauren-james",
-      "url": "https://www.futbin.com/27/player/144/lauren-james"
-    }
-  },
-  {
-    "id": "messi-89-cam-76-87-89-90-33-63",
-    "nombre": "Messi",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "RW",
-      "RM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 76,
-      "sho": 87,
-      "pas": 89,
-      "dri": 90,
-      "def": 33,
-      "phy": 63
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 91.8,
-    "popularidadFuente": 149,
-    "precioReferencia": 57500,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "57.5K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22,
-      "slug": "lionel-messi",
-      "url": "https://www.futbin.com/27/player/22/lionel-messi"
-    }
-  },
-  {
-    "id": "eric-garcia-85-cb-79-58-77-76-86-82",
-    "nombre": "Eric García",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "CDM",
-      "CM",
-      "RB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 58,
-      "pas": 77,
-      "dri": 76,
-      "def": 86,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 85.1,
-    "popularidadFuente": 145,
-    "precioReferencia": 41000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "41K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 554,
-      "slug": "eric-garcia-martret",
-      "url": "https://www.futbin.com/27/player/554/eric-garcia-martret"
-    }
-  },
-  {
-    "id": "lavelle-87-cam-85-79-84-87-60-65",
-    "nombre": "Lavelle",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 85,
-      "sho": 79,
-      "pas": 84,
-      "dri": 87,
-      "def": 60,
-      "phy": 65
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 87.2,
-    "popularidadFuente": 135,
-    "precioReferencia": 13500,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 1,
-      "precioPrincipalRaw": "13.5K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 54,
-      "slug": "rose-lavelle",
-      "url": "https://www.futbin.com/27/player/54/rose-lavelle"
     }
   },
   {
@@ -593,18 +458,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.8,
-    "popularidadFuente": 135,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "popularidadFuente": 139,
+    "precioReferencia": 114000,
+    "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "114K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -615,46 +480,136 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "lacroix-83-cb-86-46-63-69-84-83",
-    "nombre": "Lacroix",
+    "id": "alvarez-86-st-86-86-82-87-58-77",
+    "nombre": "Alvarez",
     "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 86,
+      "pas": 82,
+      "dri": 87,
+      "def": 58,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 87.6,
+    "popularidadFuente": 134,
+    "precioReferencia": 111000,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "111K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 548,
+      "slug": "julian-alvarez",
+      "url": "https://www.futbin.com/27/player/548/julian-alvarez"
+    }
+  },
+  {
+    "id": "konate-84-cb-77-34-65-68-84-85",
+    "nombre": "Konaté",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
     "posicionPrincipal": "CB",
     "posiciones": [
       "CB"
     ],
     "stats": {
-      "pac": 86,
-      "sho": 46,
-      "pas": 63,
-      "dri": 69,
+      "pac": 77,
+      "sho": 34,
+      "pas": 65,
+      "dri": 68,
       "def": 84,
-      "phy": 83
+      "phy": 85
     },
     "pie": "R",
-    "skills": 2,
+    "skills": 3,
     "weakFoot": 3,
-    "ratingFuente": 84.9,
+    "ratingFuente": 82.1,
     "popularidadFuente": 132,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "precioReferencia": 5600,
+    "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 1,
+      "precioPrincipalRaw": "5.6K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 21755,
-      "slug": "maxence-lacroix",
-      "url": "https://www.futbin.com/27/player/21755/maxence-lacroix"
+      "playerId": 562,
+      "slug": "ibrahima-konate",
+      "url": "https://www.futbin.com/27/player/562/ibrahima-konate"
+    }
+  },
+  {
+    "id": "cherki-86-rw-74-79-85-91-41-67",
+    "nombre": "Cherki",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "CAM",
+      "CM",
+      "RM"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 79,
+      "pas": 85,
+      "dri": 91,
+      "def": 41,
+      "phy": 67
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 5,
+    "ratingFuente": 88.4,
+    "popularidadFuente": 124,
+    "precioReferencia": 73500,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "73.5K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 256,
+      "slug": "rayan-cherki",
+      "url": "https://www.futbin.com/27/player/256/rayan-cherki"
     }
   },
   {
@@ -682,18 +637,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 89.4,
-    "popularidadFuente": 114,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "popularidadFuente": 118,
+    "precioReferencia": 172000,
+    "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "172K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -704,93 +659,48 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "salah-87-rm-84-83-83-86-45-72",
-    "nombre": "Salah",
+    "id": "lavelle-87-cam-85-79-84-87-60-65",
+    "nombre": "Lavelle",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 87,
-    "posicionPrincipal": "RM",
+    "posicionPrincipal": "CAM",
     "posiciones": [
-      "RM",
       "CAM",
-      "RW",
+      "CM",
       "ST"
     ],
     "stats": {
-      "pac": 84,
-      "sho": 83,
-      "pas": 83,
-      "dri": 86,
-      "def": 45,
-      "phy": 72
+      "pac": 85,
+      "sho": 79,
+      "pas": 84,
+      "dri": 87,
+      "def": 60,
+      "phy": 65
     },
     "pie": "L",
     "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 88.9,
-    "popularidadFuente": 103,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "weakFoot": 4,
+    "ratingFuente": 87.2,
+    "popularidadFuente": 116,
+    "precioReferencia": 12000,
+    "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "12K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 738,
-      "slug": "mohamed-salah",
-      "url": "https://www.futbin.com/27/player/738/mohamed-salah"
-    }
-  },
-  {
-    "id": "wilson-88-st-91-87-79-88-45-78",
-    "nombre": "Wilson",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 87,
-      "pas": 79,
-      "dri": 88,
-      "def": 45,
-      "phy": 78
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 87.4,
-    "popularidadFuente": 102,
-    "precioReferencia": 296000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "296K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 38,
-      "slug": "sophia-wilson",
-      "url": "https://www.futbin.com/27/player/38/sophia-wilson"
+      "playerId": 54,
+      "slug": "rose-lavelle",
+      "url": "https://www.futbin.com/27/player/54/rose-lavelle"
     }
   },
   {
@@ -819,18 +729,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 101,
-    "precioReferencia": 46000,
+    "popularidadFuente": 114,
+    "precioReferencia": 44500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "46K",
+      "precioPrincipalRaw": "44.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -838,97 +748,6 @@ window.PLAYERS_DATA = [
       "playerId": 233,
       "slug": "dominik-szoboszlai",
       "url": "https://www.futbin.com/27/player/233/dominik-szoboszlai"
-    }
-  },
-  {
-    "id": "raphinha-88-lw-91-86-85-87-54-76",
-    "nombre": "Raphinha",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "CAM",
-      "RW",
-      "RM",
-      "LM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 86,
-      "pas": 85,
-      "dri": 87,
-      "def": 54,
-      "phy": 76
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 91.7,
-    "popularidadFuente": 94,
-    "precioReferencia": 770000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "770K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 546,
-      "slug": "raphael-dias-belloli",
-      "url": "https://www.futbin.com/27/player/546/raphael-dias-belloli"
-    }
-  },
-  {
-    "id": "marquinhos-87-cb-74-56-75-73-89-78",
-    "nombre": "Marquinhos",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 56,
-      "pas": 75,
-      "dri": 73,
-      "def": 89,
-      "phy": 78
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 85.4,
-    "popularidadFuente": 94,
-    "precioReferencia": 18250,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "18.25K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 651,
-      "slug": "marcos-aoas-correa",
-      "url": "https://www.futbin.com/27/player/651/marcos-aoas-correa"
     }
   },
   {
@@ -956,18 +775,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 85.6,
-    "popularidadFuente": 82,
-    "precioReferencia": 69000,
+    "popularidadFuente": 83,
+    "precioReferencia": 63000,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "69K",
+      "precioPrincipalRaw": "63K",
       "valorSecundarioRaw": "830",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -978,100 +797,11 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "olise-90-rm-83-82-89-91-47-69",
-    "nombre": "Olise",
+    "id": "pedri-90-cm-76-75-89-91-77-75",
+    "nombre": "Pedri",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 90,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "CAM",
-      "RW"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 82,
-      "pas": 89,
-      "dri": 91,
-      "def": 47,
-      "phy": 69
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 3,
-    "ratingFuente": 92,
-    "popularidadFuente": 78,
-    "precioReferencia": 388000,
-    "valorSecundarioFuente": 14000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "388K",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 62,
-      "slug": "michael-olise",
-      "url": "https://www.futbin.com/27/player/62/michael-olise"
-    }
-  },
-  {
-    "id": "nico-williams-84-lw-93-77-79-86-37-67",
-    "nombre": "Nico Williams",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 77,
-      "pas": 79,
-      "dri": 86,
-      "def": 37,
-      "phy": 67
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 86.5,
-    "popularidadFuente": 69,
-    "precioReferencia": 61000,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "61K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 557,
-      "slug": "nicholas-williams-arthuer",
-      "url": "https://www.futbin.com/27/player/557/nicholas-williams-arthuer"
-    }
-  },
-  {
-    "id": "de-jong-86-cm-77-70-85-84-77-77",
-    "nombre": "de Jong",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
     "posicionPrincipal": "CM",
     "posiciones": [
       "CM",
@@ -1079,36 +809,36 @@ window.PLAYERS_DATA = [
       "CAM"
     ],
     "stats": {
-      "pac": 77,
-      "sho": 70,
-      "pas": 85,
-      "dri": 84,
+      "pac": 76,
+      "sho": 75,
+      "pas": 89,
+      "dri": 91,
       "def": 77,
-      "phy": 77
+      "phy": 75
     },
     "pie": "R",
     "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 85.7,
-    "popularidadFuente": 68,
-    "precioReferencia": 134000,
-    "valorSecundarioFuente": 4100,
+    "weakFoot": 4,
+    "ratingFuente": 93.1,
+    "popularidadFuente": 79,
+    "precioReferencia": 221000,
+    "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "134K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "221K",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 552,
-      "slug": "frenkie-de-jong",
-      "url": "https://www.futbin.com/27/player/552/frenkie-de-jong"
+      "playerId": 69,
+      "slug": "pedro-gonzalez-lopez",
+      "url": "https://www.futbin.com/27/player/69/pedro-gonzalez-lopez"
     }
   },
   {
@@ -1136,18 +866,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.9,
-    "popularidadFuente": 65,
-    "precioReferencia": 17500,
+    "popularidadFuente": 78,
+    "precioReferencia": 17000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 2,
-      "precioPrincipalRaw": "17.5K",
+      "precioPrincipalRaw": "17K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -1158,271 +888,49 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "semenyo-85-rw-82-85-79-84-46-80",
-    "nombre": "Semenyo",
+    "id": "salah-87-rm-84-83-83-86-45-72",
+    "nombre": "Salah",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "RW",
+    "ovr": 87,
+    "posicionPrincipal": "RM",
     "posiciones": [
-      "RW",
       "RM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 82,
-      "sho": 85,
-      "pas": 79,
-      "dri": 84,
-      "def": 46,
-      "phy": 80
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 5,
-    "ratingFuente": 82.6,
-    "popularidadFuente": 63,
-    "precioReferencia": 14500,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "14.5K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 223,
-      "slug": "antoine-semenyo",
-      "url": "https://www.futbin.com/27/player/223/antoine-semenyo"
-    }
-  },
-  {
-    "id": "patri-guijarro-88-cdm-78-82-83-88-84-88",
-    "nombre": "Patri Guijarro",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CDM",
-    "posiciones": [
-      "CDM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 78,
-      "sho": 82,
-      "pas": 83,
-      "dri": 88,
-      "def": 84,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 90,
-    "popularidadFuente": 63,
-    "precioReferencia": 218000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "218K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 23,
-      "slug": "patricia-guijarro-gutierrez",
-      "url": "https://www.futbin.com/27/player/23/patricia-guijarro-gutierrez"
-    }
-  },
-  {
-    "id": "frimpong-81-rb-94-62-74-82-72-62",
-    "nombre": "Frimpong",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
+      "CAM",
       "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 94,
-      "sho": 62,
-      "pas": 74,
-      "dri": 82,
-      "def": 72,
-      "phy": 62
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 83.5,
-    "popularidadFuente": 62,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 2,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 266,
-      "slug": "jeremie-frimpong",
-      "url": "https://www.futbin.com/27/player/266/jeremie-frimpong"
-    }
-  },
-  {
-    "id": "balde-82-lb-90-52-75-79-77-69",
-    "nombre": "Balde",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 52,
-      "pas": 75,
-      "dri": 79,
-      "def": 77,
-      "phy": 69
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 81.2,
-    "popularidadFuente": 61,
-    "precioReferencia": 4200,
-    "valorSecundarioFuente": 340,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "4.2K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 848,
-      "slug": "alejandro-balde-martinez",
-      "url": "https://www.futbin.com/27/player/848/alejandro-balde-martinez"
-    }
-  },
-  {
-    "id": "ekitike-85-st-86-83-72-84-33-73",
-    "nombre": "Ekitiké",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 83,
-      "pas": 72,
-      "dri": 84,
-      "def": 33,
-      "phy": 73
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 80.5,
-    "popularidadFuente": 60,
-    "precioReferencia": 44500,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "44.5K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 299,
-      "slug": "hugo-ekitike",
-      "url": "https://www.futbin.com/27/player/299/hugo-ekitike"
-    }
-  },
-  {
-    "id": "gordon-82-lw-91-78-77-82-50-71",
-    "nombre": "Gordon",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "LM",
       "ST"
     ],
     "stats": {
-      "pac": 91,
-      "sho": 78,
-      "pas": 77,
-      "dri": 82,
-      "def": 50,
-      "phy": 71
+      "pac": 84,
+      "sho": 83,
+      "pas": 83,
+      "dri": 86,
+      "def": 45,
+      "phy": 72
     },
-    "pie": "R",
-    "skills": 3,
+    "pie": "L",
+    "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 81.4,
-    "popularidadFuente": 60,
-    "precioReferencia": 2000,
-    "valorSecundarioFuente": 340,
+    "ratingFuente": 88.9,
+    "popularidadFuente": 75,
+    "precioReferencia": 22000,
+    "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "2K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "22K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 843,
-      "slug": "anthony-gordon",
-      "url": "https://www.futbin.com/27/player/843/anthony-gordon"
+      "playerId": 738,
+      "slug": "mohamed-salah",
+      "url": "https://www.futbin.com/27/player/738/mohamed-salah"
     }
   },
   {
@@ -1448,18 +956,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 5,
     "ratingFuente": 91.1,
-    "popularidadFuente": 59,
-    "precioReferencia": 298000,
+    "popularidadFuente": 72,
+    "precioReferencia": 295000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "298K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "295K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -1470,545 +978,51 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "doku-84-lw-91-75-78-88-40-72",
-    "nombre": "Doku",
+    "id": "futbin-27-9924",
+    "nombre": "Georgen",
     "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "LW",
+    "tipoCarta": "special",
+    "ovr": 71,
+    "posicionPrincipal": "RB",
     "posiciones": [
-      "LW",
-      "RW",
-      "RM",
-      "LM"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 75,
-      "pas": 78,
-      "dri": 88,
-      "def": 40,
-      "phy": 72
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 90.4,
-    "popularidadFuente": 59,
-    "precioReferencia": 87000,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "87K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 436,
-      "slug": "jeremy-doku",
-      "url": "https://www.futbin.com/27/player/436/jeremy-doku"
-    }
-  },
-  {
-    "id": "mbeumo-84-rm-89-83-78-86-49-75",
-    "nombre": "Mbeumo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "RW",
-      "ST"
-    ],
-    "stats": {
-      "pac": 89,
-      "sho": 83,
-      "pas": 78,
-      "dri": 86,
-      "def": 49,
-      "phy": 75
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 2,
-    "ratingFuente": 86.1,
-    "popularidadFuente": 59,
-    "precioReferencia": 36000,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "36K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 760,
-      "slug": "bryan-mbeumo",
-      "url": "https://www.futbin.com/27/player/760/bryan-mbeumo"
-    }
-  },
-  {
-    "id": "karchaoui-87-cm-89-76-87-88-79-72",
-    "nombre": "Karchaoui",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
+      "RB",
       "CDM",
-      "LW",
+      "CM",
+      "RM",
       "LM",
       "LB"
     ],
     "stats": {
-      "pac": 89,
-      "sho": 76,
-      "pas": 87,
-      "dri": 88,
-      "def": 79,
-      "phy": 72
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 90.3,
-    "popularidadFuente": 59,
-    "precioReferencia": 70500,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "70.5K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 59,
-      "slug": "sakina-karchaoui",
-      "url": "https://www.futbin.com/27/player/59/sakina-karchaoui"
-    }
-  },
-  {
-    "id": "pedri-90-cm-76-75-89-91-77-75",
-    "nombre": "Pedri",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 90,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 76,
-      "sho": 75,
-      "pas": 89,
-      "dri": 91,
-      "def": 77,
-      "phy": 75
+      "pac": 80,
+      "sho": 50,
+      "pas": 62,
+      "dri": 74,
+      "def": 65,
+      "phy": 68
     },
     "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 93.1,
-    "popularidadFuente": 58,
-    "precioReferencia": 232000,
-    "valorSecundarioFuente": 14000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "232K",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 69,
-      "slug": "pedro-gonzalez-lopez",
-      "url": "https://www.futbin.com/27/player/69/pedro-gonzalez-lopez"
-    }
-  },
-  {
-    "id": "futbin-27-22778",
-    "nombre": "Álvaro Carreras",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM",
-      "CB"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 69,
-      "pas": 80,
-      "dri": 82,
-      "def": 78,
-      "phy": 83
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 87.3,
-    "popularidadFuente": 58,
-    "precioReferencia": 331000,
-    "valorSecundarioFuente": 513,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "331K",
-      "valorSecundarioRaw": "513",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22778,
-      "slug": "alvaro-fernandez-carreras",
-      "url": "https://www.futbin.com/27/player/22778/alvaro-fernandez-carreras"
-    }
-  },
-  {
-    "id": "diani-87-rm-91-84-81-88-56-73",
-    "nombre": "Diani",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "RW"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 84,
-      "pas": 81,
-      "dri": 88,
-      "def": 56,
-      "phy": 73
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 89.9,
-    "popularidadFuente": 58,
-    "precioReferencia": 82000,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "82K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 52,
-      "slug": "kadidiatou-diani",
-      "url": "https://www.futbin.com/27/player/52/kadidiatou-diani"
-    }
-  },
-  {
-    "id": "alvarez-86-st-86-86-82-87-58-77",
-    "nombre": "Alvarez",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 86,
-      "pas": 82,
-      "dri": 87,
-      "def": 58,
-      "phy": 77
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 87.6,
-    "popularidadFuente": 57,
-    "precioReferencia": 120000,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "120K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 548,
-      "slug": "julian-alvarez",
-      "url": "https://www.futbin.com/27/player/548/julian-alvarez"
-    }
-  },
-  {
-    "id": "marcos-llorente-85-rb-91-79-80-82-79-83",
-    "nombre": "Marcos Llorente",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "CM",
-      "RM"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 79,
-      "pas": 80,
-      "dri": 82,
-      "def": 79,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 88.1,
-    "popularidadFuente": 56,
-    "precioReferencia": 97000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "97K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 715,
-      "slug": "marcos-llorente-moreno",
-      "url": "https://www.futbin.com/27/player/715/marcos-llorente-moreno"
-    }
-  },
-  {
-    "id": "cherki-86-rw-74-79-85-91-41-67",
-    "nombre": "Cherki",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "CAM",
-      "CM",
-      "RM"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 79,
-      "pas": 85,
-      "dri": 91,
-      "def": 41,
-      "phy": 67
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 5,
-    "ratingFuente": 88.4,
-    "popularidadFuente": 56,
-    "precioReferencia": 74000,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "74K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 256,
-      "slug": "rayan-cherki",
-      "url": "https://www.futbin.com/27/player/256/rayan-cherki"
-    }
-  },
-  {
-    "id": "vitinha-90-cm-72-81-88-91-75-70",
-    "nombre": "Vitinha",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 90,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 72,
-      "sho": 81,
-      "pas": 88,
-      "dri": 91,
-      "def": 75,
-      "phy": 70
-    },
-    "pie": "R",
-    "skills": 4,
+    "skills": 2,
     "weakFoot": 3,
-    "ratingFuente": 91.1,
-    "popularidadFuente": 53,
-    "precioReferencia": 137000,
-    "valorSecundarioFuente": 14000,
+    "ratingFuente": 73.3,
+    "popularidadFuente": 70,
+    "precioReferencia": 600,
+    "valorSecundarioFuente": 35,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "137K",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "600",
+      "valorSecundarioRaw": "35",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 44,
-      "slug": "vitor-machado-ferreira",
-      "url": "https://www.futbin.com/27/player/44/vitor-machado-ferreira"
-    }
-  },
-  {
-    "id": "kelly-86-rm-89-85-85-84-43-69",
-    "nombre": "Kelly",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "RW",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 89,
-      "sho": 85,
-      "pas": 85,
-      "dri": 84,
-      "def": 43,
-      "phy": 69
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 86.5,
-    "popularidadFuente": 52,
-    "precioReferencia": 26250,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "26.25K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 117,
-      "slug": "chloe-kelly",
-      "url": "https://www.futbin.com/27/player/117/chloe-kelly"
-    }
-  },
-  {
-    "id": "musiala-87-cam-79-81-79-90-62-65",
-    "nombre": "Musiala",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 81,
-      "pas": 79,
-      "dri": 90,
-      "def": 62,
-      "phy": 65
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 89.1,
-    "popularidadFuente": 52,
-    "precioReferencia": 25750,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 3,
-      "precioPrincipalRaw": "25.75K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 346,
-      "slug": "jamal-musiala",
-      "url": "https://www.futbin.com/27/player/346/jamal-musiala"
+      "playerId": 9924,
+      "slug": "alec-georgen",
+      "url": "https://www.futbin.com/27/player/9924/alec-georgen"
     }
   },
   {
@@ -2034,18 +1048,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 85.9,
-    "popularidadFuente": 52,
-    "precioReferencia": 27750,
+    "popularidadFuente": 69,
+    "precioReferencia": 35500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "27.75K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "35.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -2056,359 +1070,48 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "saliba-88-cb-77-41-68-73-90-82",
-    "nombre": "Saliba",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 41,
-      "pas": 68,
-      "dri": 73,
-      "def": 90,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 86.8,
-    "popularidadFuente": 51,
-    "precioReferencia": 120000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "120K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 92,
-      "slug": "william-saliba",
-      "url": "https://www.futbin.com/27/player/92/william-saliba"
-    }
-  },
-  {
-    "id": "kounde-85-rb-82-53-74-78-83-83",
-    "nombre": "Koundé",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "RM",
-      "CB"
-    ],
-    "stats": {
-      "pac": 82,
-      "sho": 53,
-      "pas": 74,
-      "dri": 78,
-      "def": 83,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 80.9,
-    "popularidadFuente": 50,
-    "precioReferencia": 43500,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "43.5K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 746,
-      "slug": "jules-kounde",
-      "url": "https://www.futbin.com/27/player/746/jules-kounde"
-    }
-  },
-  {
-    "id": "bellingham-90-cam-79-86-83-88-79-85",
-    "nombre": "Bellingham",
+    "id": "olise-90-rm-83-82-89-91-47-69",
+    "nombre": "Olise",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 90,
-    "posicionPrincipal": "CAM",
+    "posicionPrincipal": "RM",
     "posiciones": [
+      "RM",
       "CAM",
-      "CDM",
-      "CM",
-      "LW",
-      "LM",
-      "ST"
+      "RW"
     ],
     "stats": {
-      "pac": 79,
-      "sho": 86,
-      "pas": 83,
-      "dri": 88,
-      "def": 79,
-      "phy": 85
+      "pac": 83,
+      "sho": 82,
+      "pas": 89,
+      "dri": 91,
+      "def": 47,
+      "phy": 69
     },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 89.6,
-    "popularidadFuente": 50,
-    "precioReferencia": 265000,
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 3,
+    "ratingFuente": 92,
+    "popularidadFuente": 68,
+    "precioReferencia": 397000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "265K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "397K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 90,
-      "slug": "jude-bellingham",
-      "url": "https://www.futbin.com/27/player/90/jude-bellingham"
-    }
-  },
-  {
-    "id": "van-de-ven-81-cb-90-60-65-72-80-81",
-    "nombre": "van de Ven",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "LB"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 60,
-      "pas": 65,
-      "dri": 72,
-      "def": 80,
-      "phy": 81
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 82.1,
-    "popularidadFuente": 50,
-    "precioReferencia": 40750,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "40.75K",
-      "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 929,
-      "slug": "micky-van-de-ven",
-      "url": "https://www.futbin.com/27/player/929/micky-van-de-ven"
-    }
-  },
-  {
-    "id": "joan-garcia-86-gk-85-85-80-88-46-84",
-    "nombre": "Joan García",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 85,
-      "han": 85,
-      "kic": 80,
-      "ref": 88,
-      "spd": 46,
-      "pos": 84
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 49,
-    "precioReferencia": 38000,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "38K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 551,
-      "slug": "joan-garcia-pons",
-      "url": "https://www.futbin.com/27/player/551/joan-garcia-pons"
-    }
-  },
-  {
-    "id": "joao-neves-88-cm-72-75-84-87-86-82",
-    "nombre": "João Neves",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 72,
-      "sho": 75,
-      "pas": 84,
-      "dri": 87,
-      "def": 86,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 90.2,
-    "popularidadFuente": 49,
-    "precioReferencia": 48000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "48K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 97,
-      "slug": "joao-pedro-goncalves-neves",
-      "url": "https://www.futbin.com/27/player/97/joao-pedro-goncalves-neves"
-    }
-  },
-  {
-    "id": "rice-88-cdm-72-75-86-81-85-84",
-    "nombre": "Rice",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CDM",
-    "posiciones": [
-      "CDM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 72,
-      "sho": 75,
-      "pas": 86,
-      "dri": 81,
-      "def": 85,
-      "phy": 84
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 84.5,
-    "popularidadFuente": 49,
-    "precioReferencia": 10750,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "10.75K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 91,
-      "slug": "declan-rice",
-      "url": "https://www.futbin.com/27/player/91/declan-rice"
-    }
-  },
-  {
-    "id": "ferran-torres-84-st-88-84-78-82-40-74",
-    "nombre": "Ferran Torres",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 84,
-      "pas": 78,
-      "dri": 82,
-      "def": 40,
-      "phy": 74
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 83.2,
-    "popularidadFuente": 49,
-    "precioReferencia": 18500,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "18.5K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 654,
-      "slug": "ferran-torres-garcia",
-      "url": "https://www.futbin.com/27/player/654/ferran-torres-garcia"
+      "playerId": 62,
+      "slug": "michael-olise",
+      "url": "https://www.futbin.com/27/player/62/michael-olise"
     }
   },
   {
@@ -2436,18 +1139,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.6,
-    "popularidadFuente": 49,
-    "precioReferencia": 22250,
+    "popularidadFuente": 67,
+    "precioReferencia": 21500,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "22.25K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "21.5K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -2458,271 +1161,91 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "fermin-85-cam-81-84-80-84-63-72",
-    "nombre": "Fermín",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM",
-      "LM"
-    ],
-    "stats": {
-      "pac": 81,
-      "sho": 84,
-      "pas": 80,
-      "dri": 84,
-      "def": 63,
-      "phy": 72
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 83.1,
-    "popularidadFuente": 48,
-    "precioReferencia": 19000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "19K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 556,
-      "slug": "fermin-lopez-marin",
-      "url": "https://www.futbin.com/27/player/556/fermin-lopez-marin"
-    }
-  },
-  {
-    "id": "upamecano-87-cb-80-45-65-75-86-83",
-    "nombre": "Upamecano",
+    "id": "diani-87-rm-91-84-81-88-56-73",
+    "nombre": "Diani",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 87,
-    "posicionPrincipal": "CB",
+    "posicionPrincipal": "RM",
     "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 45,
-      "pas": 65,
-      "dri": 75,
-      "def": 86,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 86.2,
-    "popularidadFuente": 47,
-    "precioReferencia": 57000,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "57K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 320,
-      "slug": "dayot-upamecano",
-      "url": "https://www.futbin.com/27/player/320/dayot-upamecano"
-    }
-  },
-  {
-    "id": "haaland-91-st-87-92-71-80-47-89",
-    "nombre": "Haaland",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 91,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 92,
-      "pas": 71,
-      "dri": 80,
-      "def": 47,
-      "phy": 89
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 88.7,
-    "popularidadFuente": 46,
-    "precioReferencia": 185000,
-    "valorSecundarioFuente": 19000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "185K",
-      "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 1,
-      "slug": "erling-haaland",
-      "url": "https://www.futbin.com/27/player/1/erling-haaland"
-    }
-  },
-  {
-    "id": "hasegawa-88-cdm-77-71-86-88-81-68",
-    "nombre": "Hasegawa",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CDM",
-    "posiciones": [
-      "CDM",
-      "CAM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 71,
-      "pas": 86,
-      "dri": 88,
-      "def": 81,
-      "phy": 68
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 87.4,
-    "popularidadFuente": 46,
-    "precioReferencia": 9500,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "9.5K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 24,
-      "slug": "yui-hasegawa",
-      "url": "https://www.futbin.com/27/player/24/yui-hasegawa"
-    }
-  },
-  {
-    "id": "valverde-87-cm-90-84-83-81-81-85",
-    "nombre": "Valverde",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "RW",
       "RM",
-      "RB"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 84,
-      "pas": 83,
-      "dri": 81,
-      "def": 81,
-      "phy": 85
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 89.3,
-    "popularidadFuente": 46,
-    "precioReferencia": 469000,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "469K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 547,
-      "slug": "federico-valverde",
-      "url": "https://www.futbin.com/27/player/547/federico-valverde"
-    }
-  },
-  {
-    "id": "claudia-pina-89-lw-91-89-84-88-45-73",
-    "nombre": "Claudia Pina",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "LM",
-      "ST"
+      "RW"
     ],
     "stats": {
       "pac": 91,
-      "sho": 89,
-      "pas": 84,
+      "sho": 84,
+      "pas": 81,
       "dri": 88,
-      "def": 45,
+      "def": 56,
       "phy": 73
     },
     "pie": "R",
     "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 91.5,
-    "popularidadFuente": 45,
-    "precioReferencia": 1590000,
-    "valorSecundarioFuente": 11000,
+    "weakFoot": 4,
+    "ratingFuente": 89.9,
+    "popularidadFuente": 64,
+    "precioReferencia": 77000,
+    "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 4,
-      "precioPrincipalRaw": "1.59M",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "77K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 19,
-      "slug": "claudia-pina-medina",
-      "url": "https://www.futbin.com/27/player/19/claudia-pina-medina"
+      "playerId": 52,
+      "slug": "kadidiatou-diani",
+      "url": "https://www.futbin.com/27/player/52/kadidiatou-diani"
+    }
+  },
+  {
+    "id": "ekitike-85-st-86-83-72-84-33-73",
+    "nombre": "Ekitiké",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 83,
+      "pas": 72,
+      "dri": 84,
+      "def": 33,
+      "phy": 73
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 80.5,
+    "popularidadFuente": 64,
+    "precioReferencia": 44750,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "44.75K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 299,
+      "slug": "hugo-ekitike",
+      "url": "https://www.futbin.com/27/player/299/hugo-ekitike"
     }
   },
   {
@@ -2752,18 +1275,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 83.9,
-    "popularidadFuente": 45,
-    "precioReferencia": 80000,
+    "popularidadFuente": 64,
+    "precioReferencia": 94500,
     "valorSecundarioFuente": 2620,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "80K",
+      "paginaPdf": 2,
+      "precioPrincipalRaw": "94.5K",
       "valorSecundarioRaw": "2.62K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -2771,6 +1294,93 @@ window.PLAYERS_DATA = [
       "playerId": 22770,
       "slug": "esmee-brugts",
       "url": "https://www.futbin.com/27/player/22770/esmee-brugts"
+    }
+  },
+  {
+    "id": "lacroix-83-cb-86-46-63-69-84-83",
+    "nombre": "Lacroix",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 46,
+      "pas": 63,
+      "dri": 69,
+      "def": 84,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 84.9,
+    "popularidadFuente": 64,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21755,
+      "slug": "maxence-lacroix",
+      "url": "https://www.futbin.com/27/player/21755/maxence-lacroix"
+    }
+  },
+  {
+    "id": "wilson-88-st-91-87-79-88-45-78",
+    "nombre": "Wilson",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 87,
+      "pas": 79,
+      "dri": 88,
+      "def": 45,
+      "phy": 78
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 87.4,
+    "popularidadFuente": 63,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 38,
+      "slug": "sophia-wilson",
+      "url": "https://www.futbin.com/27/player/38/sophia-wilson"
     }
   },
   {
@@ -2796,18 +1406,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 89.9,
-    "popularidadFuente": 45,
-    "precioReferencia": 36500,
-    "valorSecundarioFuente": 11000,
+    "popularidadFuente": 60,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "36.5K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -2818,191 +1428,321 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "camavinga-81-cm-79-67-80-82-78-80",
-    "nombre": "Camavinga",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "LB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 67,
-      "pas": 80,
-      "dri": 82,
-      "def": 78,
-      "phy": 80
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 81.4,
-    "popularidadFuente": 44,
-    "precioReferencia": 5000,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "5K",
-      "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 677,
-      "slug": "eduardo-camavinga",
-      "url": "https://www.futbin.com/27/player/677/eduardo-camavinga"
-    }
-  },
-  {
-    "id": "athenea-84-rw-90-78-77-85-25-75",
-    "nombre": "Athenea",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "RM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 78,
-      "pas": 77,
-      "dri": 85,
-      "def": 25,
-      "phy": 75
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 83.8,
-    "popularidadFuente": 44,
-    "precioReferencia": 9200,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "9.2K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 516,
-      "slug": "athenea-del-castillo",
-      "url": "https://www.futbin.com/27/player/516/athenea-del-castillo"
-    }
-  },
-  {
-    "id": "ona-batlle-87-rb-88-62-80-82-82-72",
-    "nombre": "Ona Batlle",
+    "id": "upamecano-87-cb-80-45-65-75-86-83",
+    "nombre": "Upamecano",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 87,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "RM",
-      "LM",
-      "LB"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 62,
-      "pas": 80,
-      "dri": 82,
-      "def": 82,
-      "phy": 72
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 87.5,
-    "popularidadFuente": 44,
-    "precioReferencia": 9100,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "9.1K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 61,
-      "slug": "ona-batlle-pascual",
-      "url": "https://www.futbin.com/27/player/61/ona-batlle-pascual"
-    }
-  },
-  {
-    "id": "pau-cubarsi-86-cb-78-44-69-77-85-81",
-    "nombre": "Pau Cubarsí",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
     "posicionPrincipal": "CB",
     "posiciones": [
       "CB"
     ],
     "stats": {
-      "pac": 78,
-      "sho": 44,
-      "pas": 69,
-      "dri": 77,
-      "def": 85,
-      "phy": 81
+      "pac": 80,
+      "sho": 45,
+      "pas": 65,
+      "dri": 75,
+      "def": 86,
+      "phy": 83
     },
     "pie": "R",
-    "skills": 2,
-    "weakFoot": 4,
-    "ratingFuente": 82,
-    "popularidadFuente": 44,
-    "precioReferencia": 17500,
-    "valorSecundarioFuente": 4100,
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 86.2,
+    "popularidadFuente": 60,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "17.5K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 549,
-      "slug": "pau-cubarsi-paredes",
-      "url": "https://www.futbin.com/27/player/549/pau-cubarsi-paredes"
+      "playerId": 320,
+      "slug": "dayot-upamecano",
+      "url": "https://www.futbin.com/27/player/320/dayot-upamecano"
     }
   },
   {
-    "id": "bouaddi-83-cdm-78-60-77-83-78-80-r-3-3",
-    "nombre": "Bouaddi",
+    "id": "gordon-82-lw-91-78-77-82-50-71",
+    "nombre": "Gordon",
     "version": null,
-    "tipoCarta": "special",
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 78,
+      "pas": 77,
+      "dri": 82,
+      "def": 50,
+      "phy": 71
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 81.4,
+    "popularidadFuente": 60,
+    "precioReferencia": 2200,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "2.2K",
+      "valorSecundarioRaw": "340",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 843,
+      "slug": "anthony-gordon",
+      "url": "https://www.futbin.com/27/player/843/anthony-gordon"
+    }
+  },
+  {
+    "id": "saliba-88-cb-77-41-68-73-90-82",
+    "nombre": "Saliba",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 41,
+      "pas": 68,
+      "dri": 73,
+      "def": 90,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 86.8,
+    "popularidadFuente": 60,
+    "precioReferencia": 114000,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "114K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 92,
+      "slug": "william-saliba",
+      "url": "https://www.futbin.com/27/player/92/william-saliba"
+    }
+  },
+  {
+    "id": "frimpong-81-rb-94-62-74-82-72-62",
+    "nombre": "Frimpong",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 94,
+      "sho": 62,
+      "pas": 74,
+      "dri": 82,
+      "def": 72,
+      "phy": 62
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 83.5,
+    "popularidadFuente": 59,
+    "precioReferencia": 4400,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "4.4K",
+      "valorSecundarioRaw": "280",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 266,
+      "slug": "jeremie-frimpong",
+      "url": "https://www.futbin.com/27/player/266/jeremie-frimpong"
+    }
+  },
+  {
+    "id": "lookman-83-st-86-83-73-84-32-68",
+    "nombre": "Lookman",
+    "version": null,
+    "tipoCarta": "gold",
     "ovr": 83,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 83,
+      "pas": 73,
+      "dri": 84,
+      "def": 32,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 83,
+    "popularidadFuente": 58,
+    "precioReferencia": 14000,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "14K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 778,
+      "slug": "ademola-lookman",
+      "url": "https://www.futbin.com/27/player/778/ademola-lookman"
+    }
+  },
+  {
+    "id": "nico-williams-84-lw-93-77-79-86-37-67",
+    "nombre": "Nico Williams",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 93,
+      "sho": 77,
+      "pas": 79,
+      "dri": 86,
+      "def": 37,
+      "phy": 67
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 86.5,
+    "popularidadFuente": 58,
+    "precioReferencia": 62500,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "62.5K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 557,
+      "slug": "nicholas-williams-arthuer",
+      "url": "https://www.futbin.com/27/player/557/nicholas-williams-arthuer"
+    }
+  },
+  {
+    "id": "vitinha-90-cm-72-81-88-91-75-70",
+    "nombre": "Vitinha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 90,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 72,
+      "sho": 81,
+      "pas": 88,
+      "dri": 91,
+      "def": 75,
+      "phy": 70
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 91.1,
+    "popularidadFuente": 56,
+    "precioReferencia": 124000,
+    "valorSecundarioFuente": 14000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "124K",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 44,
+      "slug": "vitor-machado-ferreira",
+      "url": "https://www.futbin.com/27/player/44/vitor-machado-ferreira"
+    }
+  },
+  {
+    "id": "patri-guijarro-88-cdm-78-82-83-88-84-88",
+    "nombre": "Patri Guijarro",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
     "posicionPrincipal": "CDM",
     "posiciones": [
       "CDM",
@@ -3010,35 +1750,392 @@ window.PLAYERS_DATA = [
     ],
     "stats": {
       "pac": 78,
-      "sho": 60,
-      "pas": 77,
-      "dri": 83,
-      "def": 78,
-      "phy": 80
+      "sho": 82,
+      "pas": 83,
+      "dri": 88,
+      "def": 84,
+      "phy": 88
     },
     "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 82.6,
-    "popularidadFuente": 44,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 513,
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 90,
+    "popularidadFuente": 55,
+    "precioReferencia": 228000,
+    "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "513",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "228K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 22923,
-      "slug": "ayyoub-bouaddi",
-      "url": "https://www.futbin.com/27/player/22923/ayyoub-bouaddi"
+      "playerId": 23,
+      "slug": "patricia-guijarro-gutierrez",
+      "url": "https://www.futbin.com/27/player/23/patricia-guijarro-gutierrez"
+    }
+  },
+  {
+    "id": "joao-neves-88-cm-72-75-84-87-86-82",
+    "nombre": "João Neves",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 72,
+      "sho": 75,
+      "pas": 84,
+      "dri": 87,
+      "def": 86,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 90.2,
+    "popularidadFuente": 55,
+    "precioReferencia": 45500,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "45.5K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 97,
+      "slug": "joao-pedro-goncalves-neves",
+      "url": "https://www.futbin.com/27/player/97/joao-pedro-goncalves-neves"
+    }
+  },
+  {
+    "id": "marcos-llorente-85-rb-91-79-80-82-79-83",
+    "nombre": "Marcos Llorente",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "CM",
+      "RM"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 79,
+      "pas": 80,
+      "dri": 82,
+      "def": 79,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 88.1,
+    "popularidadFuente": 54,
+    "precioReferencia": 91500,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "91.5K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 715,
+      "slug": "marcos-llorente-moreno",
+      "url": "https://www.futbin.com/27/player/715/marcos-llorente-moreno"
+    }
+  },
+  {
+    "id": "karchaoui-87-cm-89-76-87-88-79-72",
+    "nombre": "Karchaoui",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "LW",
+      "LM",
+      "LB"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 76,
+      "pas": 87,
+      "dri": 88,
+      "def": 79,
+      "phy": 72
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 90.3,
+    "popularidadFuente": 53,
+    "precioReferencia": 69500,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "69.5K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 59,
+      "slug": "sakina-karchaoui",
+      "url": "https://www.futbin.com/27/player/59/sakina-karchaoui"
+    }
+  },
+  {
+    "id": "eder-militao-84-cb-79-54-71-72-85-82",
+    "nombre": "Éder Militão",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 54,
+      "pas": 71,
+      "dri": 72,
+      "def": 85,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 83.7,
+    "popularidadFuente": 52,
+    "precioReferencia": 15000,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "15K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 680,
+      "slug": "eder-gabriel-militao",
+      "url": "https://www.futbin.com/27/player/680/eder-gabriel-militao"
+    }
+  },
+  {
+    "id": "mbeumo-84-rm-89-83-78-86-49-75",
+    "nombre": "Mbeumo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM",
+      "RW",
+      "ST"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 83,
+      "pas": 78,
+      "dri": 86,
+      "def": 49,
+      "phy": 75
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 2,
+    "ratingFuente": 86.1,
+    "popularidadFuente": 52,
+    "precioReferencia": 37250,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 3,
+      "precioPrincipalRaw": "37.25K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 760,
+      "slug": "bryan-mbeumo",
+      "url": "https://www.futbin.com/27/player/760/bryan-mbeumo"
+    }
+  },
+  {
+    "id": "gravenberch-85-cdm-79-76-81-83-80-80",
+    "nombre": "Gravenberch",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 76,
+      "pas": 81,
+      "dri": 83,
+      "def": 80,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 82.2,
+    "popularidadFuente": 51,
+    "precioReferencia": 39000,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "39K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 298,
+      "slug": "ryan-gravenberch",
+      "url": "https://www.futbin.com/27/player/298/ryan-gravenberch"
+    }
+  },
+  {
+    "id": "balde-82-lb-90-52-75-79-77-69",
+    "nombre": "Balde",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 52,
+      "pas": 75,
+      "dri": 79,
+      "def": 77,
+      "phy": 69
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 81.2,
+    "popularidadFuente": 51,
+    "precioReferencia": 4300,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "4.3K",
+      "valorSecundarioRaw": "340",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 848,
+      "slug": "alejandro-balde-martinez",
+      "url": "https://www.futbin.com/27/player/848/alejandro-balde-martinez"
+    }
+  },
+  {
+    "id": "ferran-torres-84-st-88-84-78-82-40-74",
+    "nombre": "Ferran Torres",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 84,
+      "pas": 78,
+      "dri": 82,
+      "def": 40,
+      "phy": 74
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 83.2,
+    "popularidadFuente": 50,
+    "precioReferencia": 16500,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "16.5K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 654,
+      "slug": "ferran-torres-garcia",
+      "url": "https://www.futbin.com/27/player/654/ferran-torres-garcia"
     }
   },
   {
@@ -3067,18 +2164,18 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 4,
     "ratingFuente": 85.8,
-    "popularidadFuente": 42,
-    "precioReferencia": 52500,
+    "popularidadFuente": 50,
+    "precioReferencia": 52000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "52.5K",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "52K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3089,46 +2186,365 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "van-dijk-88-cb-70-60-72-70-89-85",
-    "nombre": "van Dijk",
+    "id": "semenyo-85-rw-82-85-79-84-46-80",
+    "nombre": "Semenyo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "RM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 82,
+      "sho": 85,
+      "pas": 79,
+      "dri": 84,
+      "def": 46,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 5,
+    "ratingFuente": 82.6,
+    "popularidadFuente": 49,
+    "precioReferencia": 14250,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "14.25K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 223,
+      "slug": "antoine-semenyo",
+      "url": "https://www.futbin.com/27/player/223/antoine-semenyo"
+    }
+  },
+  {
+    "id": "de-jong-86-cm-77-70-85-84-77-77",
+    "nombre": "de Jong",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 70,
+      "pas": 85,
+      "dri": 84,
+      "def": 77,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.7,
+    "popularidadFuente": 49,
+    "precioReferencia": 130000,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "130K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 552,
+      "slug": "frenkie-de-jong",
+      "url": "https://www.futbin.com/27/player/552/frenkie-de-jong"
+    }
+  },
+  {
+    "id": "hasegawa-88-cdm-77-71-86-88-81-68",
+    "nombre": "Hasegawa",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 88,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CAM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 71,
+      "pas": 86,
+      "dri": 88,
+      "def": 81,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 87.4,
+    "popularidadFuente": 49,
+    "precioReferencia": 10250,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "10.25K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 24,
+      "slug": "yui-hasegawa",
+      "url": "https://www.futbin.com/27/player/24/yui-hasegawa"
+    }
+  },
+  {
+    "id": "pau-cubarsi-86-cb-78-44-69-77-85-81",
+    "nombre": "Pau Cubarsí",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
     "posicionPrincipal": "CB",
     "posiciones": [
       "CB"
     ],
     "stats": {
-      "pac": 70,
-      "sho": 60,
-      "pas": 72,
-      "dri": 70,
-      "def": 89,
-      "phy": 85
+      "pac": 78,
+      "sho": 44,
+      "pas": 69,
+      "dri": 77,
+      "def": 85,
+      "phy": 81
     },
     "pie": "R",
     "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 87.3,
-    "popularidadFuente": 41,
-    "precioReferencia": 61000,
-    "valorSecundarioFuente": 8300,
+    "weakFoot": 4,
+    "ratingFuente": 82,
+    "popularidadFuente": 49,
+    "precioReferencia": 18000,
+    "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "61K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "18K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 96,
-      "slug": "virgil-van-dijk",
-      "url": "https://www.futbin.com/27/player/96/virgil-van-dijk"
+      "playerId": 549,
+      "slug": "pau-cubarsi-paredes",
+      "url": "https://www.futbin.com/27/player/549/pau-cubarsi-paredes"
+    }
+  },
+  {
+    "id": "doku-84-lw-91-75-78-88-40-72",
+    "nombre": "Doku",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "RW",
+      "RM",
+      "LM"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 75,
+      "pas": 78,
+      "dri": 88,
+      "def": 40,
+      "phy": 72
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 90.4,
+    "popularidadFuente": 49,
+    "precioReferencia": 81500,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "81.5K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 436,
+      "slug": "jeremy-doku",
+      "url": "https://www.futbin.com/27/player/436/jeremy-doku"
+    }
+  },
+  {
+    "id": "kelly-86-rm-89-85-85-84-43-69",
+    "nombre": "Kelly",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM",
+      "RW",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 85,
+      "pas": 85,
+      "dri": 84,
+      "def": 43,
+      "phy": 69
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 86.5,
+    "popularidadFuente": 48,
+    "precioReferencia": 24000,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "24K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 117,
+      "slug": "chloe-kelly",
+      "url": "https://www.futbin.com/27/player/117/chloe-kelly"
+    }
+  },
+  {
+    "id": "james-85-lm-90-81-78-87-40-82",
+    "nombre": "James",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "RW",
+      "RM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 81,
+      "pas": 78,
+      "dri": 87,
+      "def": 40,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 5,
+    "ratingFuente": 88.2,
+    "popularidadFuente": 48,
+    "precioReferencia": 63500,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "63.5K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 144,
+      "slug": "lauren-james",
+      "url": "https://www.futbin.com/27/player/144/lauren-james"
+    }
+  },
+  {
+    "id": "musiala-87-cam-79-81-79-90-62-65",
+    "nombre": "Musiala",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 81,
+      "pas": 79,
+      "dri": 90,
+      "def": 62,
+      "phy": 65
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 89.1,
+    "popularidadFuente": 47,
+    "precioReferencia": 24000,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "24K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 346,
+      "slug": "jamal-musiala",
+      "url": "https://www.futbin.com/27/player/346/jamal-musiala"
     }
   },
   {
@@ -3154,18 +2570,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 87.5,
-    "popularidadFuente": 40,
+    "popularidadFuente": 46,
     "precioReferencia": 28750,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
+      "paginaPdf": 4,
       "precioPrincipalRaw": "28.75K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3176,134 +2592,363 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "bremer-86-cb-85-52-59-68-87-85",
-    "nombre": "Bremer",
+    "id": "marquinhos-87-cb-74-56-75-73-89-78",
+    "nombre": "Marquinhos",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
+    "ovr": 87,
     "posicionPrincipal": "CB",
     "posiciones": [
       "CB"
     ],
     "stats": {
-      "pac": 85,
-      "sho": 52,
-      "pas": 59,
-      "dri": 68,
-      "def": 87,
-      "phy": 85
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 2,
-    "ratingFuente": 86.4,
-    "popularidadFuente": 40,
-    "precioReferencia": 40000,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "40K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 459,
-      "slug": "gleison-bremer-silva-nascimento",
-      "url": "https://www.futbin.com/27/player/459/gleison-bremer-silva-nascimento"
-    }
-  },
-  {
-    "id": "russo-88-st-84-88-73-86-39-78",
-    "nombre": "Russo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 84,
-      "sho": 88,
-      "pas": 73,
-      "dri": 86,
-      "def": 39,
+      "pac": 74,
+      "sho": 56,
+      "pas": 75,
+      "dri": 73,
+      "def": 89,
       "phy": 78
     },
     "pie": "R",
-    "skills": 4,
+    "skills": 3,
     "weakFoot": 3,
-    "ratingFuente": 87,
-    "popularidadFuente": 39,
-    "precioReferencia": 25000,
-    "valorSecundarioFuente": 8300,
+    "ratingFuente": 85.4,
+    "popularidadFuente": 45,
+    "precioReferencia": 20000,
+    "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 5,
-      "precioPrincipalRaw": "25K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "20K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 30,
-      "slug": "alessia-russo",
-      "url": "https://www.futbin.com/27/player/30/alessia-russo"
+      "playerId": 651,
+      "slug": "marcos-aoas-correa",
+      "url": "https://www.futbin.com/27/player/651/marcos-aoas-correa"
     }
   },
   {
-    "id": "gravenberch-85-cdm-79-76-81-83-80-80",
-    "nombre": "Gravenberch",
+    "id": "raphinha-88-lw-91-86-85-87-54-76",
+    "nombre": "Raphinha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "CAM",
+      "RW",
+      "RM",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 86,
+      "pas": 85,
+      "dri": 87,
+      "def": 54,
+      "phy": 76
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 91.7,
+    "popularidadFuente": 44,
+    "precioReferencia": 752000,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "752K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 546,
+      "slug": "raphael-dias-belloli",
+      "url": "https://www.futbin.com/27/player/546/raphael-dias-belloli"
+    }
+  },
+  {
+    "id": "fermin-85-cam-81-84-80-84-63-72",
+    "nombre": "Fermín",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 85,
-    "posicionPrincipal": "CDM",
+    "posicionPrincipal": "CAM",
     "posiciones": [
-      "CDM",
-      "CM"
+      "CAM",
+      "CM",
+      "LM"
     ],
     "stats": {
-      "pac": 79,
-      "sho": 76,
-      "pas": 81,
-      "dri": 83,
-      "def": 80,
-      "phy": 80
+      "pac": 81,
+      "sho": 84,
+      "pas": 80,
+      "dri": 84,
+      "def": 63,
+      "phy": 72
     },
     "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 83.1,
+    "popularidadFuente": 43,
+    "precioReferencia": 16750,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 4,
+      "precioPrincipalRaw": "16.75K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 556,
+      "slug": "fermin-lopez-marin",
+      "url": "https://www.futbin.com/27/player/556/fermin-lopez-marin"
+    }
+  },
+  {
+    "id": "pato-85-st-90-85-71-86-33-73-r-1-1",
+    "nombre": "Pato",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 85,
+      "pas": 71,
+      "dri": 86,
+      "def": 33,
+      "phy": 73
+    },
+    "pie": "L",
     "skills": 4,
     "weakFoot": 4,
-    "ratingFuente": 82.2,
-    "popularidadFuente": 39,
-    "precioReferencia": 40000,
+    "ratingFuente": 88.2,
+    "popularidadFuente": 43,
+    "precioReferencia": null,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 5,
-      "precioPrincipalRaw": "40K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 298,
-      "slug": "ryan-gravenberch",
-      "url": "https://www.futbin.com/27/player/298/ryan-gravenberch"
+      "playerId": 20948,
+      "slug": "alexandre-pato",
+      "url": "https://www.futbin.com/27/player/20948/alexandre-pato"
+    }
+  },
+  {
+    "id": "van-de-ven-81-cb-90-60-65-72-80-81",
+    "nombre": "van de Ven",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "LB"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 60,
+      "pas": 65,
+      "dri": 72,
+      "def": 80,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 82.1,
+    "popularidadFuente": 42,
+    "precioReferencia": 41000,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "41K",
+      "valorSecundarioRaw": "280",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 929,
+      "slug": "micky-van-de-ven",
+      "url": "https://www.futbin.com/27/player/929/micky-van-de-ven"
+    }
+  },
+  {
+    "id": "tchouameni-84-cdm-74-70-79-77-83-82",
+    "nombre": "Tchouaméni",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM",
+      "CB"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 70,
+      "pas": 79,
+      "dri": 77,
+      "def": 83,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 42,
+    "precioReferencia": 50000,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "50K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 558,
+      "slug": "aurelien-tchouameni",
+      "url": "https://www.futbin.com/27/player/558/aurelien-tchouameni"
+    }
+  },
+  {
+    "id": "kounde-85-rb-82-53-74-78-83-83",
+    "nombre": "Koundé",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RM",
+      "CB"
+    ],
+    "stats": {
+      "pac": 82,
+      "sho": 53,
+      "pas": 74,
+      "dri": 78,
+      "def": 83,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 80.9,
+    "popularidadFuente": 42,
+    "precioReferencia": 43500,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "43.5K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 746,
+      "slug": "jules-kounde",
+      "url": "https://www.futbin.com/27/player/746/jules-kounde"
+    }
+  },
+  {
+    "id": "valverde-87-cm-90-84-83-81-81-85",
+    "nombre": "Valverde",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "RW",
+      "RM",
+      "RB"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 84,
+      "pas": 83,
+      "dri": 81,
+      "def": 81,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 89.3,
+    "popularidadFuente": 42,
+    "precioReferencia": 449000,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "449K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 547,
+      "slug": "federico-valverde",
+      "url": "https://www.futbin.com/27/player/547/federico-valverde"
     }
   },
   {
@@ -3331,18 +2976,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 87.5,
-    "popularidadFuente": 38,
-    "precioReferencia": 66000,
+    "popularidadFuente": 41,
+    "precioReferencia": 59000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 5,
-      "precioPrincipalRaw": "66K",
+      "precioPrincipalRaw": "59K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3350,6 +2995,231 @@ window.PLAYERS_DATA = [
       "playerId": 622,
       "slug": "tabitha-chawinga",
       "url": "https://www.futbin.com/27/player/622/tabitha-chawinga"
+    }
+  },
+  {
+    "id": "rice-88-cdm-72-75-86-81-85-84",
+    "nombre": "Rice",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 72,
+      "sho": 75,
+      "pas": 86,
+      "dri": 81,
+      "def": 85,
+      "phy": 84
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 84.5,
+    "popularidadFuente": 41,
+    "precioReferencia": 10750,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "10.75K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 91,
+      "slug": "declan-rice",
+      "url": "https://www.futbin.com/27/player/91/declan-rice"
+    }
+  },
+  {
+    "id": "bellingham-90-cam-79-86-83-88-79-85",
+    "nombre": "Bellingham",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 90,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "CDM",
+      "CM",
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 86,
+      "pas": 83,
+      "dri": 88,
+      "def": 79,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 89.6,
+    "popularidadFuente": 41,
+    "precioReferencia": 248000,
+    "valorSecundarioFuente": 14000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "248K",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 90,
+      "slug": "jude-bellingham",
+      "url": "https://www.futbin.com/27/player/90/jude-bellingham"
+    }
+  },
+  {
+    "id": "debinha-87-cam-85-79-85-89-46-57",
+    "nombre": "Debinha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 79,
+      "pas": 85,
+      "dri": 89,
+      "def": 46,
+      "phy": 57
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 5,
+    "ratingFuente": 89.4,
+    "popularidadFuente": 41,
+    "precioReferencia": 18500,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "18.5K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 50,
+      "slug": "debora-c-de-oliveira",
+      "url": "https://www.futbin.com/27/player/50/debora-c-de-oliveira"
+    }
+  },
+  {
+    "id": "thuram-86-st-87-84-77-83-51-83",
+    "nombre": "Thuram",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 84,
+      "pas": 77,
+      "dri": 83,
+      "def": 51,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 87.2,
+    "popularidadFuente": 41,
+    "precioReferencia": 73000,
+    "valorSecundarioFuente": 5120,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "73K",
+      "valorSecundarioRaw": "5.12K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22769,
+      "slug": "marcus-thuram",
+      "url": "https://www.futbin.com/27/player/22769/marcus-thuram"
+    }
+  },
+  {
+    "id": "ona-batlle-87-rb-88-62-80-82-82-72",
+    "nombre": "Ona Batlle",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RM",
+      "LM",
+      "LB"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 62,
+      "pas": 80,
+      "dri": 82,
+      "def": 82,
+      "phy": 72
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 87.5,
+    "popularidadFuente": 40,
+    "precioReferencia": 9100,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "9.1K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 61,
+      "slug": "ona-batlle-pascual",
+      "url": "https://www.futbin.com/27/player/61/ona-batlle-pascual"
     }
   },
   {
@@ -3379,18 +3249,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83.4,
-    "popularidadFuente": 38,
-    "precioReferencia": 33250,
+    "popularidadFuente": 40,
+    "precioReferencia": 32750,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 5,
-      "precioPrincipalRaw": "33.25K",
+      "precioPrincipalRaw": "32.75K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3401,91 +3271,47 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "tchouameni-84-cdm-74-70-79-77-83-82",
-    "nombre": "Tchouaméni",
+    "id": "russo-88-st-84-88-73-86-39-78",
+    "nombre": "Russo",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CDM",
+    "ovr": 88,
+    "posicionPrincipal": "ST",
     "posiciones": [
-      "CDM",
-      "CM",
-      "CB"
+      "ST",
+      "CAM"
     ],
     "stats": {
-      "pac": 74,
-      "sho": 70,
-      "pas": 79,
-      "dri": 77,
-      "def": 83,
-      "phy": 82
+      "pac": 84,
+      "sho": 88,
+      "pas": 73,
+      "dri": 86,
+      "def": 39,
+      "phy": 78
     },
     "pie": "R",
-    "skills": 3,
+    "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 85.8,
-    "popularidadFuente": 37,
-    "precioReferencia": 48750,
-    "valorSecundarioFuente": 830,
+    "ratingFuente": 87,
+    "popularidadFuente": 39,
+    "precioReferencia": 22750,
+    "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 5,
-      "precioPrincipalRaw": "48.75K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "22.75K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 558,
-      "slug": "aurelien-tchouameni",
-      "url": "https://www.futbin.com/27/player/558/aurelien-tchouameni"
-    }
-  },
-  {
-    "id": "eder-militao-84-cb-79-54-71-72-85-82",
-    "nombre": "Éder Militão",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 54,
-      "pas": 71,
-      "dri": 72,
-      "def": 85,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 83.7,
-    "popularidadFuente": 37,
-    "precioReferencia": 14250,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "14.25K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 680,
-      "slug": "eder-gabriel-militao",
-      "url": "https://www.futbin.com/27/player/680/eder-gabriel-militao"
+      "playerId": 30,
+      "slug": "alessia-russo",
+      "url": "https://www.futbin.com/27/player/30/alessia-russo"
     }
   },
   {
@@ -3513,18 +3339,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 81.3,
-    "popularidadFuente": 36,
-    "precioReferencia": 4500,
+    "popularidadFuente": 38,
+    "precioReferencia": 3900,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "4.5K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "3.9K",
       "valorSecundarioRaw": "340",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3532,227 +3358,6 @@ window.PLAYERS_DATA = [
       "playerId": 21987,
       "slug": "omar-marmoush",
       "url": "https://www.futbin.com/27/player/21987/omar-marmoush"
-    }
-  },
-  {
-    "id": "debinha-87-cam-85-79-85-89-46-57",
-    "nombre": "Debinha",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 85,
-      "sho": 79,
-      "pas": 85,
-      "dri": 89,
-      "def": 46,
-      "phy": 57
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 5,
-    "ratingFuente": 89.4,
-    "popularidadFuente": 36,
-    "precioReferencia": 17500,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "17.5K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 50,
-      "slug": "debora-c-de-oliveira",
-      "url": "https://www.futbin.com/27/player/50/debora-c-de-oliveira"
-    }
-  },
-  {
-    "id": "kvaratskhelia-89-lw-86-85-84-90-59-81",
-    "nombre": "Kvaratskhelia",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "RW",
-      "RM",
-      "LM"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 85,
-      "pas": 84,
-      "dri": 90,
-      "def": 59,
-      "phy": 81
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 5,
-    "ratingFuente": 91.7,
-    "popularidadFuente": 36,
-    "precioReferencia": 240000,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "240K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 49,
-      "slug": "khvicha-kvaratskhelia",
-      "url": "https://www.futbin.com/27/player/49/khvicha-kvaratskhelia"
-    }
-  },
-  {
-    "id": "matheus-nunes-83-rb-87-70-80-79-78-75",
-    "nombre": "Matheus Nunes",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "CM"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 70,
-      "pas": 80,
-      "dri": 79,
-      "def": 78,
-      "phy": 75
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 80.6,
-    "popularidadFuente": 35,
-    "precioReferencia": 2600,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "2.6K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 719,
-      "slug": "matheus-luiz-nunes",
-      "url": "https://www.futbin.com/27/player/719/matheus-luiz-nunes"
-    }
-  },
-  {
-    "id": "hincapie-84-lb-83-48-71-72-84-81",
-    "nombre": "Hincapié",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "CB"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 48,
-      "pas": 71,
-      "dri": 72,
-      "def": 84,
-      "phy": 81
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 2,
-    "ratingFuente": 82.7,
-    "popularidadFuente": 35,
-    "precioReferencia": 8800,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "8.8K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 763,
-      "slug": "piero-hincapie",
-      "url": "https://www.futbin.com/27/player/763/piero-hincapie"
-    }
-  },
-  {
-    "id": "malen-83-st-86-83-73-85-38-68",
-    "nombre": "Malen",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 83,
-      "pas": 73,
-      "dri": 85,
-      "def": 38,
-      "phy": 68
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 82.4,
-    "popularidadFuente": 35,
-    "precioReferencia": 7000,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "7K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 478,
-      "slug": "donyell-malen",
-      "url": "https://www.futbin.com/27/player/478/donyell-malen"
     }
   },
   {
@@ -3780,18 +3385,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.1,
-    "popularidadFuente": 34,
-    "precioReferencia": 3100,
+    "popularidadFuente": 38,
+    "precioReferencia": 3000,
     "valorSecundarioFuente": 280,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "3.1K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "3K",
       "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -3802,310 +3407,91 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "barella-87-cm-77-78-84-86-81-72",
-    "nombre": "Barella",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 78,
-      "pas": 84,
-      "dri": 86,
-      "def": 81,
-      "phy": 72
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 86.8,
-    "popularidadFuente": 34,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 456,
-      "slug": "nicolo-barella",
-      "url": "https://www.futbin.com/27/player/456/nicolo-barella"
-    }
-  },
-  {
-    "id": "pato-85-st-90-85-71-86-33-73-r-1-1",
-    "nombre": "Pato",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 85,
-      "pas": 71,
-      "dri": 86,
-      "def": 33,
-      "phy": 73
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 88.2,
-    "popularidadFuente": 33,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20948,
-      "slug": "alexandre-pato",
-      "url": "https://www.futbin.com/27/player/20948/alexandre-pato"
-    }
-  },
-  {
-    "id": "kimmich-88-cdm-71-73-90-84-81-79",
-    "nombre": "Kimmich",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "CDM",
-    "posiciones": [
-      "CDM",
-      "CM",
-      "RB"
-    ],
-    "stats": {
-      "pac": 71,
-      "sho": 73,
-      "pas": 90,
-      "dri": 84,
-      "def": 81,
-      "phy": 79
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 88.8,
-    "popularidadFuente": 32,
-    "precioReferencia": 11250,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "11.25K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 85,
-      "slug": "joshua-kimmich",
-      "url": "https://www.futbin.com/27/player/85/joshua-kimmich"
-    }
-  },
-  {
-    "id": "khusanov-82-cb-88-39-64-68-83-80",
-    "nombre": "Khusanov",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 39,
-      "pas": 64,
-      "dri": 68,
-      "def": 83,
-      "phy": 80
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 83.6,
-    "popularidadFuente": 32,
-    "precioReferencia": 30000,
-    "valorSecundarioFuente": 340,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "30K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 594,
-      "slug": "abdukodir-khusanov",
-      "url": "https://www.futbin.com/27/player/594/abdukodir-khusanov"
-    }
-  },
-  {
-    "id": "pacho-89-cb-80-34-63-65-90-86-l-2-3",
-    "nombre": "Pacho",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 34,
-      "pas": 63,
-      "dri": 65,
-      "def": 90,
-      "phy": 86
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 89.2,
-    "popularidadFuente": 31,
-    "precioReferencia": 203000,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "203K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 25,
-      "slug": "willian-pacho",
-      "url": "https://www.futbin.com/27/player/25/willian-pacho"
-    }
-  },
-  {
-    "id": "safonov-84-gk-83-78-81-87-52-85",
-    "nombre": "Safonov",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 84,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 83,
-      "han": 78,
-      "kic": 81,
-      "ref": 87,
-      "spd": 52,
-      "pos": 85
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 2,
-    "ratingFuente": null,
-    "popularidadFuente": 31,
-    "precioReferencia": 31000,
-    "valorSecundarioFuente": 1040,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 6,
-      "precioPrincipalRaw": "31K",
-      "valorSecundarioRaw": "1.04K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22773,
-      "slug": "matvey-safonov",
-      "url": "https://www.futbin.com/27/player/22773/matvey-safonov"
-    }
-  },
-  {
-    "id": "rafael-leao-83-lw-93-79-79-83-30-73",
-    "nombre": "Rafael Leão",
+    "id": "matheus-nunes-83-rb-87-70-80-79-78-75",
+    "nombre": "Matheus Nunes",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 83,
-    "posicionPrincipal": "LW",
+    "posicionPrincipal": "RB",
     "posiciones": [
-      "LW",
-      "CAM",
-      "LM",
-      "ST"
+      "RB",
+      "CM"
     ],
     "stats": {
-      "pac": 93,
-      "sho": 79,
-      "pas": 79,
-      "dri": 83,
-      "def": 30,
-      "phy": 73
+      "pac": 87,
+      "sho": 70,
+      "pas": 80,
+      "dri": 79,
+      "def": 78,
+      "phy": 75
     },
     "pie": "R",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 84,
-    "popularidadFuente": 31,
-    "precioReferencia": 33250,
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 80.6,
+    "popularidadFuente": 37,
+    "precioReferencia": 2200,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "33.25K",
+      "paginaPdf": 5,
+      "precioPrincipalRaw": "2.2K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 21981,
-      "slug": "rafael-da-conceicao-leao",
-      "url": "https://www.futbin.com/27/player/21981/rafael-da-conceicao-leao"
+      "playerId": 719,
+      "slug": "matheus-luiz-nunes",
+      "url": "https://www.futbin.com/27/player/719/matheus-luiz-nunes"
+    }
+  },
+  {
+    "id": "bouaddi-83-cdm-78-60-77-83-78-80-r-3-3",
+    "nombre": "Bouaddi",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 78,
+      "sho": 60,
+      "pas": 77,
+      "dri": 83,
+      "def": 78,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 82.6,
+    "popularidadFuente": 35,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 513,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "513",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22923,
+      "slug": "ayyoub-bouaddi",
+      "url": "https://www.futbin.com/27/player/22923/ayyoub-bouaddi"
     }
   },
   {
@@ -4132,18 +3518,18 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 95.8,
-    "popularidadFuente": 31,
-    "precioReferencia": 1100000,
+    "popularidadFuente": 35,
+    "precioReferencia": 1070000,
     "valorSecundarioFuente": 19000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "1.1M",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "1.07M",
       "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4154,224 +3540,442 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "caicedo-86-cdm-69-68-77-81-84-82",
-    "nombre": "Caicedo",
+    "id": "joan-garcia-86-gk-85-85-80-88-46-84",
+    "nombre": "Joan García",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 86,
-    "posicionPrincipal": "CDM",
+    "posicionPrincipal": "GK",
     "posiciones": [
-      "CDM",
-      "CM"
+      "GK"
     ],
     "stats": {
-      "pac": 69,
-      "sho": 68,
-      "pas": 77,
-      "dri": 81,
-      "def": 84,
-      "phy": 82
+      "div": 85,
+      "han": 85,
+      "kic": 80,
+      "ref": 88,
+      "spd": 46,
+      "pos": 84
     },
     "pie": "R",
-    "skills": 3,
+    "skills": 1,
     "weakFoot": 3,
-    "ratingFuente": 88.4,
-    "popularidadFuente": 30,
-    "precioReferencia": 25000,
+    "ratingFuente": null,
+    "popularidadFuente": 35,
+    "precioReferencia": 41750,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "25K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "41.75K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 251,
-      "slug": "moises-caicedo",
-      "url": "https://www.futbin.com/27/player/251/moises-caicedo"
+      "playerId": 551,
+      "slug": "joan-garcia-pons",
+      "url": "https://www.futbin.com/27/player/551/joan-garcia-pons"
     }
   },
   {
-    "id": "futbin-27-22764",
-    "nombre": "Nmecha",
+    "id": "claudia-pina-89-lw-91-89-84-88-45-73",
+    "nombre": "Claudia Pina",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "CM",
+    "ovr": 89,
+    "posicionPrincipal": "LW",
     "posiciones": [
-      "CM",
-      "CDM"
+      "LW",
+      "LM",
+      "ST"
     ],
     "stats": {
-      "pac": 84,
-      "sho": 80,
-      "pas": 80,
-      "dri": 85,
-      "def": 83,
-      "phy": 89
+      "pac": 91,
+      "sho": 89,
+      "pas": 84,
+      "dri": 88,
+      "def": 45,
+      "phy": 73
     },
     "pie": "R",
     "skills": 4,
-    "weakFoot": 2,
-    "ratingFuente": 84.9,
-    "popularidadFuente": 30,
-    "precioReferencia": 201000,
-    "valorSecundarioFuente": 5120,
+    "weakFoot": 5,
+    "ratingFuente": 91.5,
+    "popularidadFuente": 35,
+    "precioReferencia": 1450000,
+    "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "201K",
-      "valorSecundarioRaw": "5.12K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "1.45M",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 22764,
-      "slug": "felix-nmecha",
-      "url": "https://www.futbin.com/27/player/22764/felix-nmecha"
+      "playerId": 19,
+      "slug": "claudia-pina-medina",
+      "url": "https://www.futbin.com/27/player/19/claudia-pina-medina"
     }
   },
   {
-    "id": "geyoro-84-cm-89-72-80-82-82-78",
-    "nombre": "Geyoro",
+    "id": "haaland-91-st-87-92-71-80-47-89",
+    "nombre": "Haaland",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 91,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 92,
+      "pas": 71,
+      "dri": 80,
+      "def": 47,
+      "phy": 89
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 88.7,
+    "popularidadFuente": 34,
+    "precioReferencia": 180000,
+    "valorSecundarioFuente": 19000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "180K",
+      "valorSecundarioRaw": "19K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1,
+      "slug": "erling-haaland",
+      "url": "https://www.futbin.com/27/player/1/erling-haaland"
+    }
+  },
+  {
+    "id": "hincapie-84-lb-83-48-71-72-84-81",
+    "nombre": "Hincapié",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 84,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "CB"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 48,
+      "pas": 71,
+      "dri": 72,
+      "def": 84,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 2,
+    "ratingFuente": 82.7,
+    "popularidadFuente": 34,
+    "precioReferencia": 8500,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "8.5K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 763,
+      "slug": "piero-hincapie",
+      "url": "https://www.futbin.com/27/player/763/piero-hincapie"
+    }
+  },
+  {
+    "id": "alvaro-carreras-81-lb-86-66-77-80-75-81",
+    "nombre": "Álvaro Carreras",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM",
+      "CB"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 66,
+      "pas": 77,
+      "dri": 80,
+      "def": 75,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 83.2,
+    "popularidadFuente": 34,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "280",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 684,
+      "slug": "alvaro-fernandez-carreras",
+      "url": "https://www.futbin.com/27/player/684/alvaro-fernandez-carreras"
+    }
+  },
+  {
+    "id": "kimmich-88-cdm-71-73-90-84-81-79",
+    "nombre": "Kimmich",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM",
+      "RB"
+    ],
+    "stats": {
+      "pac": 71,
+      "sho": 73,
+      "pas": 90,
+      "dri": 84,
+      "def": 81,
+      "phy": 79
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 88.8,
+    "popularidadFuente": 34,
+    "precioReferencia": 10750,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "10.75K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 85,
+      "slug": "joshua-kimmich",
+      "url": "https://www.futbin.com/27/player/85/joshua-kimmich"
+    }
+  },
+  {
+    "id": "schlotterbeck-87-cb-81-60-76-74-86-84",
+    "nombre": "Schlotterbeck",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 81,
+      "sho": 60,
+      "pas": 76,
+      "dri": 74,
+      "def": 86,
+      "phy": 84
+    },
+    "pie": "L",
+    "skills": 2,
+    "weakFoot": 2,
+    "ratingFuente": 87.1,
+    "popularidadFuente": 33,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 739,
+      "slug": "nico-schlotterbeck",
+      "url": "https://www.futbin.com/27/player/739/nico-schlotterbeck"
+    }
+  },
+  {
+    "id": "camavinga-81-cm-79-67-80-82-78-80",
+    "nombre": "Camavinga",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
     "posicionPrincipal": "CM",
     "posiciones": [
       "CM",
       "CDM",
-      "CAM"
+      "LB"
     ],
     "stats": {
-      "pac": 89,
-      "sho": 72,
+      "pac": 79,
+      "sho": 67,
       "pas": 80,
       "dri": 82,
-      "def": 82,
-      "phy": 78
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 82.7,
-    "popularidadFuente": 29,
-    "precioReferencia": 37250,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "37.25K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 750,
-      "slug": "grace-geyoro",
-      "url": "https://www.futbin.com/27/player/750/grace-geyoro"
-    }
-  },
-  {
-    "id": "banda-88-st-92-84-64-80-33-82",
-    "nombre": "Banda",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 84,
-      "pas": 64,
-      "dri": 80,
-      "def": 33,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.6,
-    "popularidadFuente": 28,
-    "precioReferencia": 11000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "11K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 48,
-      "slug": "barbra-banda",
-      "url": "https://www.futbin.com/27/player/48/barbra-banda"
-    }
-  },
-  {
-    "id": "hemp-87-lm-92-77-83-87-63-69",
-    "nombre": "Hemp",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 77,
-      "pas": 83,
-      "dri": 87,
-      "def": 63,
-      "phy": 69
+      "def": 78,
+      "phy": 80
     },
     "pie": "L",
     "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 88.3,
-    "popularidadFuente": 28,
-    "precioReferencia": 8400,
-    "valorSecundarioFuente": 5500,
+    "ratingFuente": 81.4,
+    "popularidadFuente": 33,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "8.4K",
-      "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 66,
-      "slug": "lauren-hemp",
-      "url": "https://www.futbin.com/27/player/66/lauren-hemp"
+      "playerId": 677,
+      "slug": "eduardo-camavinga",
+      "url": "https://www.futbin.com/27/player/677/eduardo-camavinga"
+    }
+  },
+  {
+    "id": "khusanov-82-cb-88-39-64-68-83-80",
+    "nombre": "Khusanov",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 39,
+      "pas": 64,
+      "dri": 68,
+      "def": 83,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 83.6,
+    "popularidadFuente": 32,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 594,
+      "slug": "abdukodir-khusanov",
+      "url": "https://www.futbin.com/27/player/594/abdukodir-khusanov"
+    }
+  },
+  {
+    "id": "van-dijk-88-cb-70-60-72-70-89-85",
+    "nombre": "van Dijk",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 70,
+      "sho": 60,
+      "pas": 72,
+      "dri": 70,
+      "def": 89,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 87.3,
+    "popularidadFuente": 32,
+    "precioReferencia": 60000,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "60K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 96,
+      "slug": "virgil-van-dijk",
+      "url": "https://www.futbin.com/27/player/96/virgil-van-dijk"
     }
   },
   {
@@ -4396,18 +4000,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 84.7,
-    "popularidadFuente": 28,
-    "precioReferencia": 26000,
+    "popularidadFuente": 31,
+    "precioReferencia": 25000,
     "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": "26K",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "25K",
       "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4415,6 +4019,93 @@ window.PLAYERS_DATA = [
       "playerId": 238,
       "slug": "alexander-isak",
       "url": "https://www.futbin.com/27/player/238/alexander-isak"
+    }
+  },
+  {
+    "id": "bremer-86-cb-85-52-59-68-87-85",
+    "nombre": "Bremer",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 52,
+      "pas": 59,
+      "dri": 68,
+      "def": 87,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 2,
+    "ratingFuente": 86.4,
+    "popularidadFuente": 31,
+    "precioReferencia": 33750,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "33.75K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 459,
+      "slug": "gleison-bremer-silva-nascimento",
+      "url": "https://www.futbin.com/27/player/459/gleison-bremer-silva-nascimento"
+    }
+  },
+  {
+    "id": "barella-87-cm-77-78-84-86-81-72",
+    "nombre": "Barella",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 78,
+      "pas": 84,
+      "dri": 86,
+      "def": 81,
+      "phy": 72
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 86.8,
+    "popularidadFuente": 30,
+    "precioReferencia": 7200,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 6,
+      "precioPrincipalRaw": "7.2K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 456,
+      "slug": "nicolo-barella",
+      "url": "https://www.futbin.com/27/player/456/nicolo-barella"
     }
   },
   {
@@ -4442,18 +4133,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 83.9,
-    "popularidadFuente": 28,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "popularidadFuente": 29,
+    "precioReferencia": 4900,
+    "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "4.9K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4464,267 +4155,49 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "diaz-88-lm-82-82-83-87-44-74",
-    "nombre": "Díaz",
+    "id": "kvaratskhelia-89-lw-86-85-84-90-59-81",
+    "nombre": "Kvaratskhelia",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "LM",
+    "ovr": 89,
+    "posicionPrincipal": "LW",
     "posiciones": [
-      "LM",
       "LW",
-      "ST"
-    ],
-    "stats": {
-      "pac": 82,
-      "sho": 82,
-      "pas": 83,
-      "dri": 87,
-      "def": 44,
-      "phy": 74
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 85.9,
-    "popularidadFuente": 27,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 74,
-      "slug": "luis-diaz",
-      "url": "https://www.futbin.com/27/player/74/luis-diaz"
-    }
-  },
-  {
-    "id": "alvaro-carreras-81-lb-86-66-77-80-75-81",
-    "nombre": "Álvaro Carreras",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM",
-      "CB"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 66,
-      "pas": 77,
-      "dri": 80,
-      "def": 75,
-      "phy": 81
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 83.2,
-    "popularidadFuente": 27,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 684,
-      "slug": "alvaro-fernandez-carreras",
-      "url": "https://www.futbin.com/27/player/684/alvaro-fernandez-carreras"
-    }
-  },
-  {
-    "id": "hernandez-82-lb-89-78-78-82-76-83",
-    "nombre": "Hernández",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
+      "RW",
+      "RM",
       "LM"
     ],
     "stats": {
-      "pac": 89,
-      "sho": 78,
-      "pas": 78,
-      "dri": 82,
-      "def": 76,
-      "phy": 83
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 83.6,
-    "popularidadFuente": 27,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 579,
-      "slug": "theo-hernandez",
-      "url": "https://www.futbin.com/27/player/579/theo-hernandez"
-    }
-  },
-  {
-    "id": "dybala-85-cam-77-84-85-86-42-62",
-    "nombre": "Dybala",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 84,
-      "pas": 85,
-      "dri": 86,
-      "def": 42,
-      "phy": 62
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 3,
-    "ratingFuente": 87.1,
-    "popularidadFuente": 26,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 466,
-      "slug": "paulo-dybala",
-      "url": "https://www.futbin.com/27/player/466/paulo-dybala"
-    }
-  },
-  {
-    "id": "thuram-86-st-87-84-77-83-51-83",
-    "nombre": "Thuram",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 86,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 84,
-      "pas": 77,
-      "dri": 83,
-      "def": 51,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 87.2,
-    "popularidadFuente": 26,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 7,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22769,
-      "slug": "marcus-thuram",
-      "url": "https://www.futbin.com/27/player/22769/marcus-thuram"
-    }
-  },
-  {
-    "id": "lacroix-82-cb-86-45-61-67-83-82",
-    "nombre": "Lacroix",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
       "pac": 86,
-      "sho": 45,
-      "pas": 61,
-      "dri": 67,
-      "def": 83,
-      "phy": 82
+      "sho": 85,
+      "pas": 84,
+      "dri": 90,
+      "def": 59,
+      "phy": 81
     },
     "pie": "R",
-    "skills": 2,
-    "weakFoot": 2,
-    "ratingFuente": 81.9,
-    "popularidadFuente": 26,
-    "precioReferencia": 21000,
-    "valorSecundarioFuente": 340,
+    "skills": 5,
+    "weakFoot": 5,
+    "ratingFuente": 91.7,
+    "popularidadFuente": 29,
+    "precioReferencia": 240000,
+    "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "21K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "240K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 422,
-      "slug": "maxence-lacroix",
-      "url": "https://www.futbin.com/27/player/422/maxence-lacroix"
+      "playerId": 49,
+      "slug": "khvicha-kvaratskhelia",
+      "url": "https://www.futbin.com/27/player/49/khvicha-kvaratskhelia"
     }
   },
   {
@@ -4752,18 +4225,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 83.8,
-    "popularidadFuente": 26,
-    "precioReferencia": 1600,
+    "popularidadFuente": 29,
+    "precioReferencia": 1700,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "1.6K",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "1.7K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4771,6 +4244,719 @@ window.PLAYERS_DATA = [
       "playerId": 787,
       "slug": "joao-pedro-cavaco-cancelo",
       "url": "https://www.futbin.com/27/player/787/joao-pedro-cavaco-cancelo"
+    }
+  },
+  {
+    "id": "laimer-85-rb-86-69-78-77-81-77",
+    "nombre": "Laimer",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "CDM",
+      "RM",
+      "LB"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 69,
+      "pas": 78,
+      "dri": 77,
+      "def": 81,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 82.9,
+    "popularidadFuente": 29,
+    "precioReferencia": 10750,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "10.75K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 312,
+      "slug": "konrad-laimer",
+      "url": "https://www.futbin.com/27/player/312/konrad-laimer"
+    }
+  },
+  {
+    "id": "diaz-88-lm-82-82-83-87-44-74",
+    "nombre": "Díaz",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "LW",
+      "ST"
+    ],
+    "stats": {
+      "pac": 82,
+      "sho": 82,
+      "pas": 83,
+      "dri": 87,
+      "def": 44,
+      "phy": 74
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.9,
+    "popularidadFuente": 28,
+    "precioReferencia": 14250,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "14.25K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 74,
+      "slug": "luis-diaz",
+      "url": "https://www.futbin.com/27/player/74/luis-diaz"
+    }
+  },
+  {
+    "id": "geyoro-84-cm-89-72-80-82-82-78",
+    "nombre": "Geyoro",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 72,
+      "pas": 80,
+      "dri": 82,
+      "def": 82,
+      "phy": 78
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 82.7,
+    "popularidadFuente": 28,
+    "precioReferencia": 36750,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "36.75K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 750,
+      "slug": "grace-geyoro",
+      "url": "https://www.futbin.com/27/player/750/grace-geyoro"
+    }
+  },
+  {
+    "id": "rabiot-85-cm-81-79-81-81-78-85",
+    "nombre": "Rabiot",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 81,
+      "sho": 79,
+      "pas": 81,
+      "dri": 81,
+      "def": 78,
+      "phy": 85
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 80.9,
+    "popularidadFuente": 28,
+    "precioReferencia": 6300,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "6.3K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 465,
+      "slug": "adrien-rabiot",
+      "url": "https://www.futbin.com/27/player/465/adrien-rabiot"
+    }
+  },
+  {
+    "id": "futbin-27-22926",
+    "nombre": "Rodrigo Mora",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "CDM",
+      "CM",
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 72,
+      "pas": 81,
+      "dri": 84,
+      "def": 46,
+      "phy": 50
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 28,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 513,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "513",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22926,
+      "slug": "rodrigo-mora-de-carvalho",
+      "url": "https://www.futbin.com/27/player/22926/rodrigo-mora-de-carvalho"
+    }
+  },
+  {
+    "id": "futbin-27-22764",
+    "nombre": "Nmecha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 84,
+      "sho": 80,
+      "pas": 80,
+      "dri": 85,
+      "def": 83,
+      "phy": 89
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 2,
+    "ratingFuente": 84.9,
+    "popularidadFuente": 28,
+    "precioReferencia": 259000,
+    "valorSecundarioFuente": 5120,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "259K",
+      "valorSecundarioRaw": "5.12K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22764,
+      "slug": "felix-nmecha",
+      "url": "https://www.futbin.com/27/player/22764/felix-nmecha"
+    }
+  },
+  {
+    "id": "rafael-leao-83-lw-93-79-79-83-30-73",
+    "nombre": "Rafael Leão",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "CAM",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 93,
+      "sho": 79,
+      "pas": 79,
+      "dri": 83,
+      "def": 30,
+      "phy": 73
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 84,
+    "popularidadFuente": 27,
+    "precioReferencia": 30750,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "30.75K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21981,
+      "slug": "rafael-da-conceicao-leao",
+      "url": "https://www.futbin.com/27/player/21981/rafael-da-conceicao-leao"
+    }
+  },
+  {
+    "id": "hemp-87-lm-92-77-83-87-63-69",
+    "nombre": "Hemp",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 92,
+      "sho": 77,
+      "pas": 83,
+      "dri": 87,
+      "def": 63,
+      "phy": 69
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 88.3,
+    "popularidadFuente": 27,
+    "precioReferencia": 7000,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": "7K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 66,
+      "slug": "lauren-hemp",
+      "url": "https://www.futbin.com/27/player/66/lauren-hemp"
+    }
+  },
+  {
+    "id": "futbin-27-22780",
+    "nombre": "Álvaro Carreras",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM",
+      "CB"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 69,
+      "pas": 80,
+      "dri": 82,
+      "def": 78,
+      "phy": 83
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 87.3,
+    "popularidadFuente": 27,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22780,
+      "slug": "alvaro-fernandez-carreras",
+      "url": "https://www.futbin.com/27/player/22780/alvaro-fernandez-carreras"
+    }
+  },
+  {
+    "id": "hernandez-82-lb-89-78-78-82-76-83",
+    "nombre": "Hernández",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 78,
+      "pas": 78,
+      "dri": 82,
+      "def": 76,
+      "phy": 83
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 83.6,
+    "popularidadFuente": 26,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 579,
+      "slug": "theo-hernandez",
+      "url": "https://www.futbin.com/27/player/579/theo-hernandez"
+    }
+  },
+  {
+    "id": "safonov-84-gk-83-78-81-87-52-85",
+    "nombre": "Safonov",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 84,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 83,
+      "han": 78,
+      "kic": 81,
+      "ref": 87,
+      "spd": 52,
+      "pos": 85
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 2,
+    "ratingFuente": null,
+    "popularidadFuente": 26,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 7,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22773,
+      "slug": "matvey-safonov",
+      "url": "https://www.futbin.com/27/player/22773/matvey-safonov"
+    }
+  },
+  {
+    "id": "futbin-27-21976",
+    "nombre": "Martínez",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 83,
+      "han": 81,
+      "kic": 82,
+      "ref": 85,
+      "spd": 50,
+      "pos": 85
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 4,
+    "ratingFuente": null,
+    "popularidadFuente": 26,
+    "precioReferencia": 28500,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "28.5K",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21976,
+      "slug": "emiliano-martinez",
+      "url": "https://www.futbin.com/27/player/21976/emiliano-martinez"
+    }
+  },
+  {
+    "id": "malen-83-st-86-83-73-85-38-68",
+    "nombre": "Malen",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 83,
+      "pas": 73,
+      "dri": 85,
+      "def": 38,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 82.4,
+    "popularidadFuente": 26,
+    "precioReferencia": 6500,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "6.5K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 478,
+      "slug": "donyell-malen",
+      "url": "https://www.futbin.com/27/player/478/donyell-malen"
+    }
+  },
+  {
+    "id": "dybala-85-cam-77-84-85-86-42-62",
+    "nombre": "Dybala",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 84,
+      "pas": 85,
+      "dri": 86,
+      "def": 42,
+      "phy": 62
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 3,
+    "ratingFuente": 87.1,
+    "popularidadFuente": 26,
+    "precioReferencia": 14750,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "14.75K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 466,
+      "slug": "paulo-dybala",
+      "url": "https://www.futbin.com/27/player/466/paulo-dybala"
+    }
+  },
+  {
+    "id": "mbappe-91-st-96-91-80-92-29-76",
+    "nombre": "Mbappé",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 91,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "LW"
+    ],
+    "stats": {
+      "pac": 96,
+      "sho": 91,
+      "pas": 80,
+      "dri": 92,
+      "def": 29,
+      "phy": 76
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 95.4,
+    "popularidadFuente": 26,
+    "precioReferencia": 4290000,
+    "valorSecundarioFuente": 19000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "4.29M",
+      "valorSecundarioRaw": "19K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 8,
+      "slug": "kylian-mbappe",
+      "url": "https://www.futbin.com/27/player/8/kylian-mbappe"
+    }
+  },
+  {
+    "id": "o-reilly-83-lb-83-70-78-79-81-81",
+    "nombre": "O'Reilly",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 70,
+      "pas": 78,
+      "dri": 79,
+      "def": 81,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 2,
+    "ratingFuente": 77.7,
+    "popularidadFuente": 25,
+    "precioReferencia": 6300,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "6.3K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 435,
+      "slug": "nico-oreilly",
+      "url": "https://www.futbin.com/27/player/435/nico-oreilly"
     }
   },
   {
@@ -4797,17 +4983,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 82.6,
     "popularidadFuente": 25,
-    "precioReferencia": 18500,
+    "precioReferencia": 17500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 8,
-      "precioPrincipalRaw": "18.5K",
+      "precioPrincipalRaw": "17.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4815,6 +5001,800 @@ window.PLAYERS_DATA = [
       "playerId": 237,
       "slug": "sandro-tonali",
       "url": "https://www.futbin.com/27/player/237/sandro-tonali"
+    }
+  },
+  {
+    "id": "buhl-88-lm-84-85-85-86-37-74",
+    "nombre": "Bühl",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 84,
+      "sho": 85,
+      "pas": 85,
+      "dri": 86,
+      "def": 37,
+      "phy": 74
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 89.2,
+    "popularidadFuente": 24,
+    "precioReferencia": 10000,
+    "valorSecundarioFuente": 8300,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "10K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 29,
+      "slug": "klara-buhl",
+      "url": "https://www.futbin.com/27/player/29/klara-buhl"
+    }
+  },
+  {
+    "id": "ibanez-83-cb-87-48-58-69-83-86",
+    "nombre": "Ibañez",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "RB"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 48,
+      "pas": 58,
+      "dri": 69,
+      "def": 83,
+      "phy": 86
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 2,
+    "ratingFuente": 84.7,
+    "popularidadFuente": 24,
+    "precioReferencia": 16500,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "16.5K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 572,
+      "slug": "roger-ibanez-da-silva",
+      "url": "https://www.futbin.com/27/player/572/roger-ibanez-da-silva"
+    }
+  },
+  {
+    "id": "pablo-barrios-83-cm-80-71-78-83-75-78",
+    "nombre": "Pablo Barrios",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 80,
+      "sho": 71,
+      "pas": 78,
+      "dri": 83,
+      "def": 75,
+      "phy": 78
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 80.8,
+    "popularidadFuente": 24,
+    "precioReferencia": 1200,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "1.2K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 783,
+      "slug": "pablo-barrios-rivas",
+      "url": "https://www.futbin.com/27/player/783/pablo-barrios-rivas"
+    }
+  },
+  {
+    "id": "lacroix-82-cb-86-45-61-67-83-82",
+    "nombre": "Lacroix",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 45,
+      "pas": 61,
+      "dri": 67,
+      "def": 83,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 2,
+    "ratingFuente": 81.9,
+    "popularidadFuente": 24,
+    "precioReferencia": 19250,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "19.25K",
+      "valorSecundarioRaw": "340",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 422,
+      "slug": "maxence-lacroix",
+      "url": "https://www.futbin.com/27/player/422/maxence-lacroix"
+    }
+  },
+  {
+    "id": "bacha-86-lb-88-73-85-82-79-81",
+    "nombre": "Bacha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 73,
+      "pas": 85,
+      "dri": 82,
+      "def": 79,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 88.9,
+    "popularidadFuente": 24,
+    "precioReferencia": 23000,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "23K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 623,
+      "slug": "selma-bacha",
+      "url": "https://www.futbin.com/27/player/623/selma-bacha"
+    }
+  },
+  {
+    "id": "pacho-89-cb-80-34-63-65-90-86-l-2-3",
+    "nombre": "Pacho",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 89,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 80,
+      "sho": 34,
+      "pas": 63,
+      "dri": 65,
+      "def": 90,
+      "phy": 86
+    },
+    "pie": "L",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 89.2,
+    "popularidadFuente": 24,
+    "precioReferencia": 196000,
+    "valorSecundarioFuente": 11000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": "196K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 25,
+      "slug": "willian-pacho",
+      "url": "https://www.futbin.com/27/player/25/willian-pacho"
+    }
+  },
+  {
+    "id": "athenea-84-rw-90-78-77-85-25-75",
+    "nombre": "Athenea",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "RM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 78,
+      "pas": 77,
+      "dri": 85,
+      "def": 25,
+      "phy": 75
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 83.8,
+    "popularidadFuente": 24,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 516,
+      "slug": "athenea-del-castillo",
+      "url": "https://www.futbin.com/27/player/516/athenea-del-castillo"
+    }
+  },
+  {
+    "id": "caicedo-85-lw-93-75-78-89-37-68",
+    "nombre": "Caicedo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "CAM",
+      "CM",
+      "LM"
+    ],
+    "stats": {
+      "pac": 93,
+      "sho": 75,
+      "pas": 78,
+      "dri": 89,
+      "def": 37,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 86.5,
+    "popularidadFuente": 23,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 517,
+      "slug": "linda-caicedo",
+      "url": "https://www.futbin.com/27/player/517/linda-caicedo"
+    }
+  },
+  {
+    "id": "gvardiol-85-cb-78-70-76-77-85-82",
+    "nombre": "Gvardiol",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "LB"
+    ],
+    "stats": {
+      "pac": 78,
+      "sho": 70,
+      "pas": 76,
+      "dri": 77,
+      "def": 85,
+      "phy": 82
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 5,
+    "ratingFuente": 83.4,
+    "popularidadFuente": 23,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 8,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 438,
+      "slug": "josko-gvardiol",
+      "url": "https://www.futbin.com/27/player/438/josko-gvardiol"
+    }
+  },
+  {
+    "id": "yldz-84-cam-85-81-79-85-59-70",
+    "nombre": "Yıldız",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 81,
+      "pas": 79,
+      "dri": 85,
+      "def": 59,
+      "phy": 70
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 83.9,
+    "popularidadFuente": 23,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 469,
+      "slug": "kenan-yldz",
+      "url": "https://www.futbin.com/27/player/469/kenan-yldz"
+    }
+  },
+  {
+    "id": "futbin-27-20960",
+    "nombre": "Valencia",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 75,
+      "pas": 81,
+      "dri": 83,
+      "def": 79,
+      "phy": 87
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 23,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20960,
+      "slug": "antonio-valencia",
+      "url": "https://www.futbin.com/27/player/20960/antonio-valencia"
+    }
+  },
+  {
+    "id": "banda-88-st-92-84-64-80-33-82",
+    "nombre": "Banda",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 92,
+      "sho": 84,
+      "pas": 64,
+      "dri": 80,
+      "def": 33,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.6,
+    "popularidadFuente": 23,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 48,
+      "slug": "barbra-banda",
+      "url": "https://www.futbin.com/27/player/48/barbra-banda"
+    }
+  },
+  {
+    "id": "nuno-mendes-89-lb-94-77-80-86-84-80",
+    "nombre": "Nuno Mendes",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 89,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM"
+    ],
+    "stats": {
+      "pac": 94,
+      "sho": 77,
+      "pas": 80,
+      "dri": 86,
+      "def": 84,
+      "phy": 80
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 92.7,
+    "popularidadFuente": 23,
+    "precioReferencia": 415000,
+    "valorSecundarioFuente": 11000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "415K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 39,
+      "slug": "nuno-alexandre-tavares-mendes",
+      "url": "https://www.futbin.com/27/player/39/nuno-alexandre-tavares-mendes"
+    }
+  },
+  {
+    "id": "futbin-27-22765",
+    "nombre": "Nmecha",
+    "version": null,
+    "tipoCarta": "unknown",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 84,
+      "sho": 80,
+      "pas": 80,
+      "dri": 85,
+      "def": 83,
+      "phy": 89
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 2,
+    "ratingFuente": 84.9,
+    "popularidadFuente": 22,
+    "precioReferencia": 360000,
+    "valorSecundarioFuente": 7690,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "360K",
+      "valorSecundarioRaw": "7.69K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22765,
+      "slug": "felix-nmecha",
+      "url": "https://www.futbin.com/27/player/22765/felix-nmecha"
+    }
+  },
+  {
+    "id": "rudiger-83-cb-75-54-71-69-83-85",
+    "nombre": "Rüdiger",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 75,
+      "sho": 54,
+      "pas": 71,
+      "dri": 69,
+      "def": 83,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 83.7,
+    "popularidadFuente": 22,
+    "precioReferencia": 3000,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "3K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 683,
+      "slug": "antonio-rudiger",
+      "url": "https://www.futbin.com/27/player/683/antonio-rudiger"
+    }
+  },
+  {
+    "id": "donnarumma-89-gk-90-83-72-90-46-88",
+    "nombre": "Donnarumma",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 89,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 90,
+      "han": 83,
+      "kic": 72,
+      "ref": 90,
+      "spd": 46,
+      "pos": 88
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 22,
+    "precioReferencia": 56500,
+    "valorSecundarioFuente": 11000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "56.5K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 67,
+      "slug": "gianluigi-donnarumma",
+      "url": "https://www.futbin.com/27/player/67/gianluigi-donnarumma"
+    }
+  },
+  {
+    "id": "futbin-27-22767",
+    "nombre": "Bronze",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "RM",
+      "RB"
+    ],
+    "stats": {
+      "pac": 73,
+      "sho": 70,
+      "pas": 82,
+      "dri": 82,
+      "def": 86,
+      "phy": 88
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 85.6,
+    "popularidadFuente": 22,
+    "precioReferencia": 22500,
+    "valorSecundarioFuente": 5120,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "22.5K",
+      "valorSecundarioRaw": "5.12K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22767,
+      "slug": "lucy-bronze",
+      "url": "https://www.futbin.com/27/player/22767/lucy-bronze"
+    }
+  },
+  {
+    "id": "mamardashvili-83-gk-82-81-75-83-47-82",
+    "nombre": "Mamardashvili",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 82,
+      "han": 81,
+      "kic": 75,
+      "ref": 83,
+      "spd": 47,
+      "pos": 82
+    },
+    "pie": "L",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 22,
+    "precioReferencia": 4500,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "4.5K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 280,
+      "slug": "giorgi-mamardashvili",
+      "url": "https://www.futbin.com/27/player/280/giorgi-mamardashvili"
     }
   },
   {
@@ -4842,18 +5822,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 86.8,
-    "popularidadFuente": 24,
-    "precioReferencia": 8800,
+    "popularidadFuente": 21,
+    "precioReferencia": 7500,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "8.8K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "7.5K",
       "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -4864,310 +5844,93 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "schlotterbeck-87-cb-81-60-76-74-86-84",
-    "nombre": "Schlotterbeck",
+    "id": "dumornay-88-st-92-85-79-90-60-73",
+    "nombre": "Dumornay",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CB",
+    "ovr": 88,
+    "posicionPrincipal": "ST",
     "posiciones": [
-      "CB"
+      "ST",
+      "CDM",
+      "CAM",
+      "CM"
     ],
     "stats": {
-      "pac": 81,
-      "sho": 60,
-      "pas": 76,
-      "dri": 74,
-      "def": 86,
-      "phy": 84
+      "pac": 92,
+      "sho": 85,
+      "pas": 79,
+      "dri": 90,
+      "def": 60,
+      "phy": 73
     },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 2,
-    "ratingFuente": 87.1,
-    "popularidadFuente": 24,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 5,
+    "ratingFuente": 91.1,
+    "popularidadFuente": 21,
+    "precioReferencia": 1170000,
+    "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "1.17M",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 739,
-      "slug": "nico-schlotterbeck",
-      "url": "https://www.futbin.com/27/player/739/nico-schlotterbeck"
+      "playerId": 43,
+      "slug": "melchie-dumornay",
+      "url": "https://www.futbin.com/27/player/43/melchie-dumornay"
     }
   },
   {
-    "id": "o-reilly-83-lb-83-70-78-79-81-81",
-    "nombre": "O'Reilly",
+    "id": "davies-82-lb-93-66-78-84-74-76",
+    "nombre": "Davies",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 83,
+    "ovr": 82,
     "posicionPrincipal": "LB",
     "posiciones": [
       "LB",
-      "CDM",
-      "CM"
+      "LM"
     ],
     "stats": {
-      "pac": 83,
-      "sho": 70,
+      "pac": 93,
+      "sho": 66,
       "pas": 78,
-      "dri": 79,
-      "def": 81,
-      "phy": 81
+      "dri": 84,
+      "def": 74,
+      "phy": 76
     },
     "pie": "L",
-    "skills": 3,
-    "weakFoot": 2,
-    "ratingFuente": 77.7,
-    "popularidadFuente": 23,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 435,
-      "slug": "nico-oreilly",
-      "url": "https://www.futbin.com/27/player/435/nico-oreilly"
-    }
-  },
-  {
-    "id": "ibanez-83-cb-87-48-58-69-83-86",
-    "nombre": "Ibañez",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "RB"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 48,
-      "pas": 58,
-      "dri": 69,
-      "def": 83,
-      "phy": 86
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 2,
-    "ratingFuente": 84.7,
-    "popularidadFuente": 22,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 572,
-      "slug": "roger-ibanez-da-silva",
-      "url": "https://www.futbin.com/27/player/572/roger-ibanez-da-silva"
-    }
-  },
-  {
-    "id": "rodri-90-cdm-62-78-86-81-85-81",
-    "nombre": "Rodri",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 90,
-    "posicionPrincipal": "CDM",
-    "posiciones": [
-      "CDM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 62,
-      "sho": 78,
-      "pas": 86,
-      "dri": 81,
-      "def": 85,
-      "phy": 81
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 85.8,
-    "popularidadFuente": 22,
-    "precioReferencia": 31750,
-    "valorSecundarioFuente": 14000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "31.75K",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 13,
-      "slug": "rodrigo-hernandez-cascante",
-      "url": "https://www.futbin.com/27/player/13/rodrigo-hernandez-cascante"
-    }
-  },
-  {
-    "id": "gvardiol-85-cb-78-70-76-77-85-82",
-    "nombre": "Gvardiol",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "LB"
-    ],
-    "stats": {
-      "pac": 78,
-      "sho": 70,
-      "pas": 76,
-      "dri": 77,
-      "def": 85,
-      "phy": 82
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 5,
-    "ratingFuente": 83.4,
-    "popularidadFuente": 22,
-    "precioReferencia": 14250,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "14.25K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 438,
-      "slug": "josko-gvardiol",
-      "url": "https://www.futbin.com/27/player/438/josko-gvardiol"
-    }
-  },
-  {
-    "id": "futbin-27-22759",
-    "nombre": "Lamine Yamal",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 91,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 85,
-      "pas": 88,
-      "dri": 94,
-      "def": 40,
-      "phy": 63
-    },
-    "pie": "L",
-    "skills": 5,
+    "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 94.2,
-    "popularidadFuente": 22,
-    "precioReferencia": 2170000,
-    "valorSecundarioFuente": 23750,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "2.17M",
-      "valorSecundarioRaw": "23.75K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22759,
-      "slug": "lamine-yamal-nasraoui-ebana",
-      "url": "https://www.futbin.com/27/player/22759/lamine-yamal-nasraoui-ebana"
-    }
-  },
-  {
-    "id": "mamardashvili-83-gk-82-81-75-83-47-82",
-    "nombre": "Mamardashvili",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 82,
-      "han": 81,
-      "kic": 75,
-      "ref": 83,
-      "spd": 47,
-      "pos": 82
-    },
-    "pie": "L",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
+    "ratingFuente": 82.6,
     "popularidadFuente": 21,
     "precioReferencia": 4700,
-    "valorSecundarioFuente": 410,
+    "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
+      "paginaPdf": 9,
       "precioPrincipalRaw": "4.7K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "valorSecundarioRaw": "340",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 280,
-      "slug": "giorgi-mamardashvili",
-      "url": "https://www.futbin.com/27/player/280/giorgi-mamardashvili"
+      "playerId": 827,
+      "slug": "alphonso-davies",
+      "url": "https://www.futbin.com/27/player/827/alphonso-davies"
     }
   },
   {
@@ -5196,17 +5959,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 5,
     "ratingFuente": 87.5,
     "popularidadFuente": 21,
-    "precioReferencia": 17250,
+    "precioReferencia": 16000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "17.25K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "16K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -5214,812 +5977,6 @@ window.PLAYERS_DATA = [
       "playerId": 475,
       "slug": "christian-pulisic",
       "url": "https://www.futbin.com/27/player/475/christian-pulisic"
-    }
-  },
-  {
-    "id": "mbappe-91-st-96-91-80-92-29-76",
-    "nombre": "Mbappé",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 91,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "LW"
-    ],
-    "stats": {
-      "pac": 96,
-      "sho": 91,
-      "pas": 80,
-      "dri": 92,
-      "def": 29,
-      "phy": 76
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 95.4,
-    "popularidadFuente": 21,
-    "precioReferencia": 4170000,
-    "valorSecundarioFuente": 19000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "4.17M",
-      "valorSecundarioRaw": "19K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 8,
-      "slug": "kylian-mbappe",
-      "url": "https://www.futbin.com/27/player/8/kylian-mbappe"
-    }
-  },
-  {
-    "id": "futbin-27-20942",
-    "nombre": "Guarin",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 84,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 85,
-      "pas": 82,
-      "dri": 83,
-      "def": 75,
-      "phy": 88
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 85.5,
-    "popularidadFuente": 21,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 8,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "830",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20942,
-      "slug": "fredy-guarin",
-      "url": "https://www.futbin.com/27/player/20942/fredy-guarin"
-    }
-  },
-  {
-    "id": "rogers-84-cam-76-82-82-84-67-78",
-    "nombre": "Rogers",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 76,
-      "sho": 82,
-      "pas": 82,
-      "dri": 84,
-      "def": 67,
-      "phy": 78
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 83.5,
-    "popularidadFuente": 21,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 406,
-      "slug": "morgan-rogers",
-      "url": "https://www.futbin.com/27/player/406/morgan-rogers"
-    }
-  },
-  {
-    "id": "futbin-27-22780",
-    "nombre": "Álvaro Carreras",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM",
-      "CB"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 69,
-      "pas": 80,
-      "dri": 82,
-      "def": 78,
-      "phy": 83
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 87.3,
-    "popularidadFuente": 21,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22780,
-      "slug": "alvaro-fernandez-carreras",
-      "url": "https://www.futbin.com/27/player/22780/alvaro-fernandez-carreras"
-    }
-  },
-  {
-    "id": "futbin-27-745",
-    "nombre": "Barcola",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "RW",
-      "RM",
-      "LM"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 76,
-      "pas": 78,
-      "dri": 84,
-      "def": 39,
-      "phy": 67
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85,
-    "popularidadFuente": 21,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 745,
-      "slug": "bradley-barcola",
-      "url": "https://www.futbin.com/27/player/745/bradley-barcola"
-    }
-  },
-  {
-    "id": "spence-83-lb-90-57-75-82-80-78",
-    "nombre": "Spence",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "RB"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 57,
-      "pas": 75,
-      "dri": 82,
-      "def": 80,
-      "phy": 78
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 83.8,
-    "popularidadFuente": 20,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21749,
-      "slug": "djed-spence",
-      "url": "https://www.futbin.com/27/player/21749/djed-spence"
-    }
-  },
-  {
-    "id": "futbin-27-20965",
-    "nombre": "Hulk",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW"
-    ],
-    "stats": {
-      "pac": 89,
-      "sho": 86,
-      "pas": 81,
-      "dri": 86,
-      "def": 46,
-      "phy": 87
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 87.6,
-    "popularidadFuente": 20,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20965,
-      "slug": "hulk",
-      "url": "https://www.futbin.com/27/player/20965/hulk"
-    }
-  },
-  {
-    "id": "caicedo-85-lw-93-75-78-89-37-68",
-    "nombre": "Caicedo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "CAM",
-      "CM",
-      "LM"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 75,
-      "pas": 78,
-      "dri": 89,
-      "def": 37,
-      "phy": 68
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 86.5,
-    "popularidadFuente": 20,
-    "precioReferencia": 29000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "29K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 517,
-      "slug": "linda-caicedo",
-      "url": "https://www.futbin.com/27/player/517/linda-caicedo"
-    }
-  },
-  {
-    "id": "rabiot-85-cm-81-79-81-81-78-85",
-    "nombre": "Rabiot",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 81,
-      "sho": 79,
-      "pas": 81,
-      "dri": 81,
-      "def": 78,
-      "phy": 85
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 80.9,
-    "popularidadFuente": 20,
-    "precioReferencia": 7200,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "7.2K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 465,
-      "slug": "adrien-rabiot",
-      "url": "https://www.futbin.com/27/player/465/adrien-rabiot"
-    }
-  },
-  {
-    "id": "futbin-27-20953",
-    "nombre": "Richards",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 57,
-      "pas": 73,
-      "dri": 76,
-      "def": 84,
-      "phy": 89
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 85.3,
-    "popularidadFuente": 20,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20953,
-      "slug": "micah-richards",
-      "url": "https://www.futbin.com/27/player/20953/micah-richards"
-    }
-  },
-  {
-    "id": "dumornay-88-st-92-85-79-90-60-73",
-    "nombre": "Dumornay",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CDM",
-      "CAM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 85,
-      "pas": 79,
-      "dri": 90,
-      "def": 60,
-      "phy": 73
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 91.1,
-    "popularidadFuente": 20,
-    "precioReferencia": 1150000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "1.15M",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 43,
-      "slug": "melchie-dumornay",
-      "url": "https://www.futbin.com/27/player/43/melchie-dumornay"
-    }
-  },
-  {
-    "id": "david-luiz-85-cb-79-69-78-75-84-83-r-3-3",
-    "nombre": "David Luiz",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 69,
-      "pas": 78,
-      "dri": 75,
-      "def": 84,
-      "phy": 83
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 86.7,
-    "popularidadFuente": 19,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20945,
-      "slug": "david-luiz",
-      "url": "https://www.futbin.com/27/player/20945/david-luiz"
-    }
-  },
-  {
-    "id": "nuno-mendes-89-lb-94-77-80-86-84-80",
-    "nombre": "Nuno Mendes",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM"
-    ],
-    "stats": {
-      "pac": 94,
-      "sho": 77,
-      "pas": 80,
-      "dri": 86,
-      "def": 84,
-      "phy": 80
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 92.7,
-    "popularidadFuente": 19,
-    "precioReferencia": 394000,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "394K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 39,
-      "slug": "nuno-alexandre-tavares-mendes",
-      "url": "https://www.futbin.com/27/player/39/nuno-alexandre-tavares-mendes"
-    }
-  },
-  {
-    "id": "victor-munoz-79-lm-94-74-70-80-50-65",
-    "nombre": "Víctor Muñoz",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 79,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "RW",
-      "RM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 94,
-      "sho": 74,
-      "pas": 70,
-      "dri": 80,
-      "def": 50,
-      "phy": 65
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 79.7,
-    "popularidadFuente": 19,
-    "precioReferencia": 1400,
-    "valorSecundarioFuente": 160,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "1.4K",
-      "valorSecundarioRaw": "160",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 1186,
-      "slug": "victor-munoz-villanueva",
-      "url": "https://www.futbin.com/27/player/1186/victor-munoz-villanueva"
-    }
-  },
-  {
-    "id": "yldz-84-cam-85-81-79-85-59-70",
-    "nombre": "Yıldız",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "LW",
-      "LM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 85,
-      "sho": 81,
-      "pas": 79,
-      "dri": 85,
-      "def": 59,
-      "phy": 70
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 83.9,
-    "popularidadFuente": 19,
-    "precioReferencia": 4500,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "4.5K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 469,
-      "slug": "kenan-yldz",
-      "url": "https://www.futbin.com/27/player/469/kenan-yldz"
-    }
-  },
-  {
-    "id": "buhl-88-lm-84-85-85-86-37-74",
-    "nombre": "Bühl",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 84,
-      "sho": 85,
-      "pas": 85,
-      "dri": 86,
-      "def": 37,
-      "phy": 74
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 89.2,
-    "popularidadFuente": 18,
-    "precioReferencia": 9700,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "9.7K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 29,
-      "slug": "klara-buhl",
-      "url": "https://www.futbin.com/27/player/29/klara-buhl"
-    }
-  },
-  {
-    "id": "remy-84-st-91-84-70-78-37-72",
-    "nombre": "Remy",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 84,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 84,
-      "pas": 70,
-      "dri": 78,
-      "def": 37,
-      "phy": 72
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 85.8,
-    "popularidadFuente": 18,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20950,
-      "slug": "loic-remy",
-      "url": "https://www.futbin.com/27/player/20950/loic-remy"
-    }
-  },
-  {
-    "id": "beerensteyn-83-st-90-82-73-86-50-76",
-    "nombre": "Beerensteyn",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "RW",
-      "RM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 82,
-      "pas": 73,
-      "dri": 86,
-      "def": 50,
-      "phy": 76
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 2,
-    "ratingFuente": 84.2,
-    "popularidadFuente": 18,
-    "precioReferencia": 16500,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 9,
-      "precioPrincipalRaw": "16.5K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 511,
-      "slug": "lineth-beerensteyn",
-      "url": "https://www.futbin.com/27/player/511/lineth-beerensteyn"
     }
   },
   {
@@ -6049,18 +6006,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 83.9,
-    "popularidadFuente": 18,
-    "precioReferencia": 113000,
+    "popularidadFuente": 20,
+    "precioReferencia": 141000,
     "valorSecundarioFuente": 3940,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "113K",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "141K",
       "valorSecundarioRaw": "3.94K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -6068,6 +6025,50 @@ window.PLAYERS_DATA = [
       "playerId": 22771,
       "slug": "esmee-brugts",
       "url": "https://www.futbin.com/27/player/22771/esmee-brugts"
+    }
+  },
+  {
+    "id": "caicedo-86-cdm-69-68-77-81-84-82",
+    "nombre": "Caicedo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 69,
+      "sho": 68,
+      "pas": 77,
+      "dri": 81,
+      "def": 84,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 88.4,
+    "popularidadFuente": 20,
+    "precioReferencia": 25000,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 9,
+      "precioPrincipalRaw": "25K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 251,
+      "slug": "moises-caicedo",
+      "url": "https://www.futbin.com/27/player/251/moises-caicedo"
     }
   },
   {
@@ -6095,18 +6096,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 3,
     "ratingFuente": 84.4,
-    "popularidadFuente": 18,
-    "precioReferencia": 19000,
+    "popularidadFuente": 19,
+    "precioReferencia": 18750,
     "valorSecundarioFuente": 425,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "19K",
+      "precioPrincipalRaw": "18.75K",
       "valorSecundarioRaw": "425",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -6117,135 +6118,316 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "openda-80-st-94-79-69-78-30-75",
-    "nombre": "Openda",
+    "id": "gabriel-89-cb-64-44-64-66-91-84",
+    "nombre": "Gabriel",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 80,
-    "posicionPrincipal": "ST",
+    "ovr": 89,
+    "posicionPrincipal": "CB",
     "posiciones": [
-      "ST",
-      "CAM"
+      "CB"
     ],
     "stats": {
-      "pac": 94,
-      "sho": 79,
-      "pas": 69,
-      "dri": 78,
-      "def": 30,
-      "phy": 75
+      "pac": 64,
+      "sho": 44,
+      "pas": 64,
+      "dri": 66,
+      "def": 91,
+      "phy": 84
     },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 82.8,
-    "popularidadFuente": 18,
-    "precioReferencia": 4400,
-    "valorSecundarioFuente": 180,
+    "pie": "L",
+    "skills": 2,
+    "weakFoot": 2,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 19,
+    "precioReferencia": 19250,
+    "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "4.4K",
-      "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "19.25K",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 1058,
-      "slug": "lois-openda",
-      "url": "https://www.futbin.com/27/player/1058/lois-openda"
+      "playerId": 78,
+      "slug": "gabriel-dos-s-magalhaes",
+      "url": "https://www.futbin.com/27/player/78/gabriel-dos-s-magalhaes"
     }
   },
   {
-    "id": "bacha-86-lb-88-73-85-82-79-81",
-    "nombre": "Bacha",
+    "id": "dani-olmo-84-cam-74-79-82-85-51-59",
+    "nombre": "Dani Olmo",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "LB",
+    "ovr": 84,
+    "posicionPrincipal": "CAM",
     "posiciones": [
-      "LB",
+      "CAM",
+      "CM",
       "LW",
       "LM"
     ],
     "stats": {
-      "pac": 88,
-      "sho": 73,
-      "pas": 85,
-      "dri": 82,
-      "def": 79,
-      "phy": 81
+      "pac": 74,
+      "sho": 79,
+      "pas": 82,
+      "dri": 85,
+      "def": 51,
+      "phy": 59
     },
-    "pie": "L",
+    "pie": "R",
     "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 88.9,
-    "popularidadFuente": 18,
-    "precioReferencia": 22500,
-    "valorSecundarioFuente": 4100,
+    "weakFoot": 4,
+    "ratingFuente": 85.4,
+    "popularidadFuente": 19,
+    "precioReferencia": 1400,
+    "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "22.5K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "1.4K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 623,
-      "slug": "selma-bacha",
-      "url": "https://www.futbin.com/27/player/623/selma-bacha"
+      "playerId": 764,
+      "slug": "daniel-olmo-carvajal",
+      "url": "https://www.futbin.com/27/player/764/daniel-olmo-carvajal"
     }
   },
   {
-    "id": "courtois-90-gk-87-89-78-90-46-90",
-    "nombre": "Courtois",
+    "id": "dembele-90-st-90-89-83-93-55-70-l-5-5",
+    "nombre": "Dembélé",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 90,
-    "posicionPrincipal": "GK",
+    "posicionPrincipal": "ST",
     "posiciones": [
-      "GK"
+      "ST",
+      "CAM",
+      "RW",
+      "RM"
     ],
     "stats": {
-      "div": 87,
-      "han": 89,
-      "kic": 78,
-      "ref": 90,
-      "spd": 46,
-      "pos": 90
+      "pac": 90,
+      "sho": 89,
+      "pas": 83,
+      "dri": 93,
+      "def": 55,
+      "phy": 70
     },
     "pie": "L",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 18,
-    "precioReferencia": 89500,
+    "skills": 5,
+    "weakFoot": 5,
+    "ratingFuente": 95.5,
+    "popularidadFuente": 19,
+    "precioReferencia": 2020000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "89.5K",
+      "precioPrincipalRaw": "2.02M",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 98,
-      "slug": "thibaut-courtois",
-      "url": "https://www.futbin.com/27/player/98/thibaut-courtois"
+      "playerId": 31,
+      "slug": "ousmane-dembele",
+      "url": "https://www.futbin.com/27/player/31/ousmane-dembele"
+    }
+  },
+  {
+    "id": "tomori-80-cb-85-40-63-68-80-80",
+    "nombre": "Tomori",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 80,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 40,
+      "pas": 63,
+      "dri": 68,
+      "def": 80,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 4,
+    "ratingFuente": 81,
+    "popularidadFuente": 19,
+    "precioReferencia": 2300,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "2.3K",
+      "valorSecundarioRaw": "180",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1078,
+      "slug": "fikayo-tomori",
+      "url": "https://www.futbin.com/27/player/1078/fikayo-tomori"
+    }
+  },
+  {
+    "id": "futbin-27-20957",
+    "nombre": "Balotelli",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 87,
+      "pas": 71,
+      "dri": 84,
+      "def": 34,
+      "phy": 81
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 86.1,
+    "popularidadFuente": 19,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20957,
+      "slug": "mario-balotelli",
+      "url": "https://www.futbin.com/27/player/20957/mario-balotelli"
+    }
+  },
+  {
+    "id": "mateo-85-st-87-85-80-85-56-77-r-4-4",
+    "nombre": "Mateo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM",
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 85,
+      "pas": 80,
+      "dri": 85,
+      "def": 56,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 18,
+    "precioReferencia": 8200,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "8.2K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 627,
+      "slug": "clara-mateo",
+      "url": "https://www.futbin.com/27/player/627/clara-mateo"
+    }
+  },
+  {
+    "id": "futbin-27-21983",
+    "nombre": "Diaby",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM",
+      "RW",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 94,
+      "sho": 69,
+      "pas": 76,
+      "dri": 85,
+      "def": 44,
+      "phy": 59
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 84.7,
+    "popularidadFuente": 18,
+    "precioReferencia": 1200,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "1.2K",
+      "valorSecundarioRaw": "340",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21983,
+      "slug": "moussa-diaby",
+      "url": "https://www.futbin.com/27/player/21983/moussa-diaby"
     }
   },
   {
@@ -6274,17 +6456,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 2,
     "ratingFuente": 80.4,
     "popularidadFuente": 18,
-    "precioReferencia": 1900,
+    "precioReferencia": 1800,
     "valorSecundarioFuente": 160,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 10,
-      "precioPrincipalRaw": "1.9K",
+      "precioPrincipalRaw": "1.8K",
       "valorSecundarioRaw": "160",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -6292,895 +6474,6 @@ window.PLAYERS_DATA = [
       "playerId": 616,
       "slug": "endrick-felipe-moreira-de-sousa",
       "url": "https://www.futbin.com/27/player/616/endrick-felipe-moreira-de-sousa"
-    }
-  },
-  {
-    "id": "gabriel-89-cb-64-44-64-66-91-84",
-    "nombre": "Gabriel",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 64,
-      "sho": 44,
-      "pas": 64,
-      "dri": 66,
-      "def": 91,
-      "phy": 84
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 2,
-    "ratingFuente": 85.3,
-    "popularidadFuente": 18,
-    "precioReferencia": 18250,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "18.25K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 78,
-      "slug": "gabriel-dos-s-magalhaes",
-      "url": "https://www.futbin.com/27/player/78/gabriel-dos-s-magalhaes"
-    }
-  },
-  {
-    "id": "nmecha-85-cm-83-78-78-84-82-88",
-    "nombre": "Nmecha",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 78,
-      "pas": 78,
-      "dri": 84,
-      "def": 82,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 2,
-    "ratingFuente": 83.3,
-    "popularidadFuente": 17,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 324,
-      "slug": "felix-nmecha",
-      "url": "https://www.futbin.com/27/player/324/felix-nmecha"
-    }
-  },
-  {
-    "id": "davies-82-lb-93-66-78-84-74-76",
-    "nombre": "Davies",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LM"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 66,
-      "pas": 78,
-      "dri": 84,
-      "def": 74,
-      "phy": 76
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 82.6,
-    "popularidadFuente": 17,
-    "precioReferencia": 4500,
-    "valorSecundarioFuente": 340,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "4.5K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 827,
-      "slug": "alphonso-davies",
-      "url": "https://www.futbin.com/27/player/827/alphonso-davies"
-    }
-  },
-  {
-    "id": "oblak-88-gk-85-90-79-87-46-86",
-    "nombre": "Oblak",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 85,
-      "han": 90,
-      "kic": 79,
-      "ref": 87,
-      "spd": 46,
-      "pos": 86
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 17,
-    "precioReferencia": 18000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "18K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 89,
-      "slug": "jan-oblak",
-      "url": "https://www.futbin.com/27/player/89/jan-oblak"
-    }
-  },
-  {
-    "id": "dembele-90-st-90-89-83-93-55-70-l-5-5",
-    "nombre": "Dembélé",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 90,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM",
-      "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 89,
-      "pas": 83,
-      "dri": 93,
-      "def": 55,
-      "phy": 70
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 5,
-    "ratingFuente": 95.5,
-    "popularidadFuente": 17,
-    "precioReferencia": 2130000,
-    "valorSecundarioFuente": 14000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "2.13M",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 31,
-      "slug": "ousmane-dembele",
-      "url": "https://www.futbin.com/27/player/31/ousmane-dembele"
-    }
-  },
-  {
-    "id": "futbin-27-21582",
-    "nombre": "Kohler",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 89,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 51,
-      "pas": 63,
-      "dri": 62,
-      "def": 91,
-      "phy": 90
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 90.6,
-    "popularidadFuente": 17,
-    "precioReferencia": 133000,
-    "valorSecundarioFuente": 13750,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "133K",
-      "valorSecundarioRaw": "13.75K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21582,
-      "slug": "kohler",
-      "url": "https://www.futbin.com/27/player/21582/kohler"
-    }
-  },
-  {
-    "id": "donnarumma-89-gk-90-83-72-90-46-88",
-    "nombre": "Donnarumma",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 90,
-      "han": 83,
-      "kic": 72,
-      "ref": 90,
-      "spd": 46,
-      "pos": 88
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 16,
-    "precioReferencia": 58500,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "58.5K",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 67,
-      "slug": "gianluigi-donnarumma",
-      "url": "https://www.futbin.com/27/player/67/gianluigi-donnarumma"
-    }
-  },
-  {
-    "id": "futbin-27-22761",
-    "nombre": "Dumornay",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 89,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "CAM",
-      "LM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 86,
-      "pas": 81,
-      "dri": 91,
-      "def": 62,
-      "phy": 75
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 93,
-    "popularidadFuente": 16,
-    "precioReferencia": 1890000,
-    "valorSecundarioFuente": 13750,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "1.89M",
-      "valorSecundarioRaw": "13.75K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22761,
-      "slug": "melchie-dumornay",
-      "url": "https://www.futbin.com/27/player/22761/melchie-dumornay"
-    }
-  },
-  {
-    "id": "futbin-27-73",
-    "nombre": "Harder",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "RW",
-      "RM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 82,
-      "sho": 81,
-      "pas": 80,
-      "dri": 88,
-      "def": 28,
-      "phy": 79
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.2,
-    "popularidadFuente": 16,
-    "precioReferencia": 6600,
-    "valorSecundarioFuente": 5500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 10,
-      "precioPrincipalRaw": "6.6K",
-      "valorSecundarioRaw": "5.5K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 73,
-      "slug": "pernille-harder",
-      "url": "https://www.futbin.com/27/player/73/pernille-harder"
-    }
-  },
-  {
-    "id": "futbin-27-21983",
-    "nombre": "Diaby",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "RW",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 94,
-      "sho": 69,
-      "pas": 76,
-      "dri": 85,
-      "def": 44,
-      "phy": 59
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 84.7,
-    "popularidadFuente": 16,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21983,
-      "slug": "moussa-diaby",
-      "url": "https://www.futbin.com/27/player/21983/moussa-diaby"
-    }
-  },
-  {
-    "id": "futbin-27-21753",
-    "nombre": "Mika Mármol",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "LB"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 64,
-      "pas": 70,
-      "dri": 75,
-      "def": 83,
-      "phy": 85
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 82.9,
-    "popularidadFuente": 16,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21753,
-      "slug": "mika-marmol-medina",
-      "url": "https://www.futbin.com/27/player/21753/mika-marmol-medina"
-    }
-  },
-  {
-    "id": "de-paul-83-cm-75-77-83-83-75-83-r-4-3",
-    "nombre": "De Paul",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "CAM",
-      "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 75,
-      "sho": 77,
-      "pas": 83,
-      "dri": 83,
-      "def": 75,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 82.3,
-    "popularidadFuente": 16,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 725,
-      "slug": "rodrigo-de-paul",
-      "url": "https://www.futbin.com/27/player/725/rodrigo-de-paul"
-    }
-  },
-  {
-    "id": "miedema-87-cam-83-86-80-86-34-82",
-    "nombre": "Miedema",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 86,
-      "pas": 80,
-      "dri": 86,
-      "def": 34,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.3,
-    "popularidadFuente": 16,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 60,
-      "slug": "vivianne-miedema",
-      "url": "https://www.futbin.com/27/player/60/vivianne-miedema"
-    }
-  },
-  {
-    "id": "lamine-yamal-90-rw-86-84-87-93-38-61",
-    "nombre": "Lamine Yamal",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 90,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "RM"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 84,
-      "pas": 87,
-      "dri": 93,
-      "def": 38,
-      "phy": 61
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 3,
-    "ratingFuente": 91.9,
-    "popularidadFuente": 16,
-    "precioReferencia": 1290000,
-    "valorSecundarioFuente": 14000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "1.29M",
-      "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 81,
-      "slug": "lamine-yamal-nasraoui-ebana",
-      "url": "https://www.futbin.com/27/player/81/lamine-yamal-nasraoui-ebana"
-    }
-  },
-  {
-    "id": "futbin-27-733",
-    "nombre": "Reus",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 78,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CDM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 53,
-      "sho": 81,
-      "pas": 81,
-      "dri": 79,
-      "def": 52,
-      "phy": 61
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 76.9,
-    "popularidadFuente": 16,
-    "precioReferencia": 1000,
-    "valorSecundarioFuente": 140,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "1K",
-      "valorSecundarioRaw": "140",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 733,
-      "slug": "marco-reus",
-      "url": "https://www.futbin.com/27/player/733/marco-reus"
-    }
-  },
-  {
-    "id": "laimer-85-rb-86-69-78-77-81-77",
-    "nombre": "Laimer",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "CDM",
-      "RM",
-      "LB"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 69,
-      "pas": 78,
-      "dri": 77,
-      "def": 81,
-      "phy": 77
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 82.9,
-    "popularidadFuente": 15,
-    "precioReferencia": 11500,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "11.5K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 312,
-      "slug": "konrad-laimer",
-      "url": "https://www.futbin.com/27/player/312/konrad-laimer"
-    }
-  },
-  {
-    "id": "futbin-27-21573",
-    "nombre": "Vialli",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 89,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 89,
-      "pas": 72,
-      "dri": 83,
-      "def": 42,
-      "phy": 79
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 85.8,
-    "popularidadFuente": 15,
-    "precioReferencia": 132000,
-    "valorSecundarioFuente": 13750,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "132K",
-      "valorSecundarioRaw": "13.75K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21573,
-      "slug": "vialli",
-      "url": "https://www.futbin.com/27/player/21573/vialli"
-    }
-  },
-  {
-    "id": "tomori-80-cb-85-40-63-68-80-80",
-    "nombre": "Tomori",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 80,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 85,
-      "sho": 40,
-      "pas": 63,
-      "dri": 68,
-      "def": 80,
-      "phy": 80
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 4,
-    "ratingFuente": 81,
-    "popularidadFuente": 15,
-    "precioReferencia": 2300,
-    "valorSecundarioFuente": 180,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "2.3K",
-      "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 1078,
-      "slug": "fikayo-tomori",
-      "url": "https://www.futbin.com/27/player/1078/fikayo-tomori"
-    }
-  },
-  {
-    "id": "heaps-86-cm-76-84-86-84-64-80-r-4-3",
-    "nombre": "Heaps",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "CAM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 76,
-      "sho": 84,
-      "pas": 86,
-      "dri": 84,
-      "def": 64,
-      "phy": 80
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 85.1,
-    "popularidadFuente": 15,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 740,
-      "slug": "lindsey-heaps",
-      "url": "https://www.futbin.com/27/player/740/lindsey-heaps"
-    }
-  },
-  {
-    "id": "osimhen-85-st-89-84-65-78-51-86",
-    "nombre": "Osimhen",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 89,
-      "sho": 84,
-      "pas": 65,
-      "dri": 78,
-      "def": 51,
-      "phy": 86
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 84.2,
-    "popularidadFuente": 15,
-    "precioReferencia": 4800,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "4.8K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 747,
-      "slug": "victor-osimhen",
-      "url": "https://www.futbin.com/27/player/747/victor-osimhen"
     }
   },
   {
@@ -7206,18 +6499,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 4,
     "ratingFuente": 86.5,
-    "popularidadFuente": 15,
-    "precioReferencia": 6800,
+    "popularidadFuente": 18,
+    "precioReferencia": 7000,
     "valorSecundarioFuente": 5500,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "6.8K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "7K",
       "valorSecundarioRaw": "5.5K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -7228,139 +6521,310 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "futbin-27-21975",
-    "nombre": "Fernández",
+    "id": "futbin-27-218",
+    "nombre": "Alisson",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 85,
+      "han": 87,
+      "kic": 82,
+      "ref": 86,
+      "spd": 50,
+      "pos": 86
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 18,
+    "precioReferencia": 46500,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": "46.5K",
+      "valorSecundarioRaw": "5.5K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 218,
+      "slug": "alisson-ramses-becker",
+      "url": "https://www.futbin.com/27/player/218/alisson-ramses-becker"
+    }
+  },
+  {
+    "id": "rogers-84-cam-76-82-82-84-67-78",
+    "nombre": "Rogers",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "CM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 76,
+      "sho": 82,
+      "pas": 82,
+      "dri": 84,
+      "def": 67,
+      "phy": 78
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 83.5,
+    "popularidadFuente": 18,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 406,
+      "slug": "morgan-rogers",
+      "url": "https://www.futbin.com/27/player/406/morgan-rogers"
+    }
+  },
+  {
+    "id": "degaard-86-cm-65-78-88-87-66-63-l-5-2",
+    "nombre": "Ødegaard",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 86,
     "posicionPrincipal": "CM",
     "posiciones": [
       "CM",
-      "CDM",
       "CAM"
     ],
     "stats": {
-      "pac": 68,
+      "pac": 65,
       "sho": 78,
-      "pas": 86,
+      "pas": 88,
+      "dri": 87,
+      "def": 66,
+      "phy": 63
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 2,
+    "ratingFuente": 85.9,
+    "popularidadFuente": 18,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 243,
+      "slug": "martin-odegaard",
+      "url": "https://www.futbin.com/27/player/243/martin-odegaard"
+    }
+  },
+  {
+    "id": "futbin-27-22768",
+    "nombre": "Thuram",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 84,
+      "pas": 77,
       "dri": 83,
-      "def": 74,
-      "phy": 76
+      "def": 51,
+      "phy": 83
     },
     "pie": "R",
     "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 83.4,
-    "popularidadFuente": 15,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 4100,
+    "ratingFuente": 87.2,
+    "popularidadFuente": 17,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "4.1K",
+      "paginaPdf": 10,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 21975,
-      "slug": "enzo-fernandez",
-      "url": "https://www.futbin.com/27/player/21975/enzo-fernandez"
+      "playerId": 22768,
+      "slug": "marcus-thuram",
+      "url": "https://www.futbin.com/27/player/22768/marcus-thuram"
     }
   },
   {
-    "id": "reiten-86-lb-86-80-85-85-79-69",
-    "nombre": "Reiten",
+    "id": "futbin-27-20942",
+    "nombre": "Guarin",
     "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "LB",
+    "tipoCarta": "special",
+    "ovr": 84,
+    "posicionPrincipal": "CM",
     "posiciones": [
-      "LB",
-      "LW",
-      "LM"
+      "CM"
     ],
     "stats": {
-      "pac": 86,
-      "sho": 80,
-      "pas": 85,
-      "dri": 85,
-      "def": 79,
-      "phy": 69
+      "pac": 79,
+      "sho": 85,
+      "pas": 82,
+      "dri": 83,
+      "def": 75,
+      "phy": 88
     },
     "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 89.6,
-    "popularidadFuente": 15,
-    "precioReferencia": 4600,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 11,
-      "precioPrincipalRaw": "4.6K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 696,
-      "slug": "guro-reiten",
-      "url": "https://www.futbin.com/27/player/696/guro-reiten"
-    }
-  },
-  {
-    "id": "futbin-27-754",
-    "nombre": "Anyomi",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 82,
-      "pas": 74,
-      "dri": 84,
-      "def": 55,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 4,
+    "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 83.4,
-    "popularidadFuente": 15,
-    "precioReferencia": 7900,
+    "ratingFuente": 85.5,
+    "popularidadFuente": 17,
+    "precioReferencia": null,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 11,
-      "precioPrincipalRaw": "7.9K",
+      "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "830",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 754,
-      "slug": "nicole-anyomi",
-      "url": "https://www.futbin.com/27/player/754/nicole-anyomi"
+      "playerId": 20942,
+      "slug": "fredy-guarin",
+      "url": "https://www.futbin.com/27/player/20942/fredy-guarin"
+    }
+  },
+  {
+    "id": "futbin-27-21675",
+    "nombre": "Giuly",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM",
+      "RW"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 83,
+      "pas": 81,
+      "dri": 85,
+      "def": 49,
+      "phy": 64
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 86.8,
+    "popularidadFuente": 17,
+    "precioReferencia": 105000,
+    "valorSecundarioFuente": 5120,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "105K",
+      "valorSecundarioRaw": "5.12K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21675,
+      "slug": "giuly",
+      "url": "https://www.futbin.com/27/player/21675/giuly"
+    }
+  },
+  {
+    "id": "thuram-81-cm-79-74-78-79-81-85",
+    "nombre": "Thuram",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 74,
+      "pas": 78,
+      "dri": 79,
+      "def": 81,
+      "phy": 85
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 81.2,
+    "popularidadFuente": 17,
+    "precioReferencia": 3200,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "3.2K",
+      "valorSecundarioRaw": "280",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 944,
+      "slug": "khephren-thuram",
+      "url": "https://www.futbin.com/27/player/944/khephren-thuram"
     }
   },
   {
@@ -7388,18 +6852,18 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 82.1,
-    "popularidadFuente": 15,
-    "precioReferencia": 3500,
+    "popularidadFuente": 17,
+    "precioReferencia": 3100,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 11,
-      "precioPrincipalRaw": "3.5K",
+      "precioPrincipalRaw": "3.1K",
       "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -7410,356 +6874,49 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "degaard-86-cm-65-78-88-87-66-63-l-5-2",
-    "nombre": "Ødegaard",
+    "id": "thompson-85-lm-93-81-78-83-47-67",
+    "nombre": "Thompson",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "CM",
+    "ovr": 85,
+    "posicionPrincipal": "LM",
     "posiciones": [
-      "CM",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 65,
-      "sho": 78,
-      "pas": 88,
-      "dri": 87,
-      "def": 66,
-      "phy": 63
-    },
-    "pie": "L",
-    "skills": 5,
-    "weakFoot": 2,
-    "ratingFuente": 85.9,
-    "popularidadFuente": 15,
-    "precioReferencia": 5300,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "5.3K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 243,
-      "slug": "martin-odegaard",
-      "url": "https://www.futbin.com/27/player/243/martin-odegaard"
-    }
-  },
-  {
-    "id": "diomande-81-cb-80-26-52-70-80-88",
-    "nombre": "Diomande",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 26,
-      "pas": 52,
-      "dri": 70,
-      "def": 80,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 83.6,
-    "popularidadFuente": 15,
-    "precioReferencia": 3400,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "3.4K",
-      "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 411,
-      "slug": "ousmane-diomande",
-      "url": "https://www.futbin.com/27/player/411/ousmane-diomande"
-    }
-  },
-  {
-    "id": "futbin-27-22762",
-    "nombre": "David Raya",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 89,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 88,
-      "han": 87,
-      "kic": 89,
-      "ref": 89,
-      "spd": 60,
-      "pos": 88
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 15,
-    "precioReferencia": 287000,
-    "valorSecundarioFuente": 13750,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "287K",
-      "valorSecundarioRaw": "13.75K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22762,
-      "slug": "david-raya-martin",
-      "url": "https://www.futbin.com/27/player/22762/david-raya-martin"
-    }
-  },
-  {
-    "id": "rudiger-83-cb-75-54-71-69-83-85",
-    "nombre": "Rüdiger",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 75,
-      "sho": 54,
-      "pas": 71,
-      "dri": 69,
-      "def": 83,
-      "phy": 85
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 83.7,
-    "popularidadFuente": 15,
-    "precioReferencia": 3000,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "3K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 683,
-      "slug": "antonio-rudiger",
-      "url": "https://www.futbin.com/27/player/683/antonio-rudiger"
-    }
-  },
-  {
-    "id": "foden-84-cam-77-82-82-88-57-53",
-    "nombre": "Foden",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "RW",
-      "CM",
-      "RM"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 82,
-      "pas": 82,
-      "dri": 88,
-      "def": 57,
-      "phy": 53
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 2,
-    "ratingFuente": 84,
-    "popularidadFuente": 15,
-    "precioReferencia": 1300,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "1.3K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 437,
-      "slug": "phil-foden",
-      "url": "https://www.futbin.com/27/player/437/phil-foden"
-    }
-  },
-  {
-    "id": "joao-felix-83-cam-81-81-79-84-45-71",
-    "nombre": "João Félix",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "LW",
       "LM",
-      "ST"
+      "RW",
+      "RM",
+      "LW"
     ],
     "stats": {
-      "pac": 81,
+      "pac": 93,
       "sho": 81,
-      "pas": 79,
-      "dri": 84,
-      "def": 45,
-      "phy": 71
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 86.1,
-    "popularidadFuente": 15,
-    "precioReferencia": 7500,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "7.5K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 570,
-      "slug": "joao-felix-sequeira",
-      "url": "https://www.futbin.com/27/player/570/joao-felix-sequeira"
-    }
-  },
-  {
-    "id": "pablo-barrios-83-cm-80-71-78-83-75-78",
-    "nombre": "Pablo Barrios",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 71,
       "pas": 78,
       "dri": 83,
-      "def": 75,
-      "phy": 78
+      "def": 47,
+      "phy": 67
     },
     "pie": "R",
-    "skills": 3,
+    "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 80.8,
-    "popularidadFuente": 14,
-    "precioReferencia": 1100,
-    "valorSecundarioFuente": 410,
+    "ratingFuente": 83.7,
+    "popularidadFuente": 17,
+    "precioReferencia": 4700,
+    "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "1.1K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "4.7K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 783,
-      "slug": "pablo-barrios-rivas",
-      "url": "https://www.futbin.com/27/player/783/pablo-barrios-rivas"
-    }
-  },
-  {
-    "id": "futbin-27-960",
-    "nombre": "Pubill",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "RB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 56,
-      "pas": 71,
-      "dri": 74,
-      "def": 81,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 82,
-    "popularidadFuente": 14,
-    "precioReferencia": 1200,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "1.2K",
-      "valorSecundarioRaw": "280",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 960,
-      "slug": "marc-pubill-pages",
-      "url": "https://www.futbin.com/27/player/960/marc-pubill-pages"
+      "playerId": 118,
+      "slug": "alyssa-thompson",
+      "url": "https://www.futbin.com/27/player/118/alyssa-thompson"
     }
   },
   {
@@ -7785,18 +6942,18 @@ window.PLAYERS_DATA = [
     "skills": 5,
     "weakFoot": 5,
     "ratingFuente": 92.5,
-    "popularidadFuente": 14,
-    "precioReferencia": 528000,
+    "popularidadFuente": 17,
+    "precioReferencia": 533000,
     "valorSecundarioFuente": 11000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "528K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "533K",
       "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -7829,18 +6986,18 @@ window.PLAYERS_DATA = [
     "skills": 2,
     "weakFoot": 3,
     "ratingFuente": 78.9,
-    "popularidadFuente": 14,
-    "precioReferencia": 1100,
+    "popularidadFuente": 16,
+    "precioReferencia": 1000,
     "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "1.1K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "1K",
       "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -7851,46 +7008,671 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "futbin-27-51",
-    "nombre": "Irene Paredes",
+    "id": "futbin-27-21573",
+    "nombre": "Vialli",
     "version": null,
-    "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "CB",
+    "tipoCarta": "special",
+    "ovr": 89,
+    "posicionPrincipal": "ST",
     "posiciones": [
-      "CB"
+      "ST"
     ],
     "stats": {
-      "pac": 74,
-      "sho": 52,
-      "pas": 67,
-      "dri": 70,
-      "def": 88,
-      "phy": 84
+      "pac": 86,
+      "sho": 89,
+      "pas": 72,
+      "dri": 83,
+      "def": 42,
+      "phy": 79
     },
     "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 85.5,
-    "popularidadFuente": 14,
-    "precioReferencia": 7000,
-    "valorSecundarioFuente": 5500,
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 16,
+    "precioReferencia": 121000,
+    "valorSecundarioFuente": 13750,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "7K",
-      "valorSecundarioRaw": "5.5K",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "121K",
+      "valorSecundarioRaw": "13.75K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 51,
-      "slug": "irene-paredes-hernandez",
-      "url": "https://www.futbin.com/27/player/51/irene-paredes-hernandez"
+      "playerId": 21573,
+      "slug": "vialli",
+      "url": "https://www.futbin.com/27/player/21573/vialli"
+    }
+  },
+  {
+    "id": "futbin-27-73",
+    "nombre": "Harder",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "RW",
+      "RM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 82,
+      "sho": 81,
+      "pas": 80,
+      "dri": 88,
+      "def": 28,
+      "phy": 79
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.2,
+    "popularidadFuente": 16,
+    "precioReferencia": 6800,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "6.8K",
+      "valorSecundarioRaw": "5.5K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 73,
+      "slug": "pernille-harder",
+      "url": "https://www.futbin.com/27/player/73/pernille-harder"
+    }
+  },
+  {
+    "id": "beerensteyn-83-st-90-82-73-86-50-76",
+    "nombre": "Beerensteyn",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "RW",
+      "RM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 82,
+      "pas": 73,
+      "dri": 86,
+      "def": 50,
+      "phy": 76
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 2,
+    "ratingFuente": 84.2,
+    "popularidadFuente": 16,
+    "precioReferencia": 14500,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "14.5K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 511,
+      "slug": "lineth-beerensteyn",
+      "url": "https://www.futbin.com/27/player/511/lineth-beerensteyn"
+    }
+  },
+  {
+    "id": "nmecha-85-cm-83-78-78-84-82-88",
+    "nombre": "Nmecha",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 78,
+      "pas": 78,
+      "dri": 84,
+      "def": 82,
+      "phy": 88
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 2,
+    "ratingFuente": 83.3,
+    "popularidadFuente": 16,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 324,
+      "slug": "felix-nmecha",
+      "url": "https://www.futbin.com/27/player/324/felix-nmecha"
+    }
+  },
+  {
+    "id": "david-luiz-85-cb-79-69-78-75-84-83-r-3-3",
+    "nombre": "David Luiz",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 69,
+      "pas": 78,
+      "dri": 75,
+      "def": 84,
+      "phy": 83
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 86.7,
+    "popularidadFuente": 16,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20945,
+      "slug": "david-luiz",
+      "url": "https://www.futbin.com/27/player/20945/david-luiz"
+    }
+  },
+  {
+    "id": "hakimi-88-rb-92-79-81-82-82-81-r-3-4",
+    "nombre": "Hakimi",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RM"
+    ],
+    "stats": {
+      "pac": 92,
+      "sho": 79,
+      "pas": 81,
+      "dri": 82,
+      "def": 82,
+      "phy": 81
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 90.9,
+    "popularidadFuente": 15,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 102,
+      "slug": "achraf-hakimi",
+      "url": "https://www.futbin.com/27/player/102/achraf-hakimi"
+    }
+  },
+  {
+    "id": "futbin-27-21587",
+    "nombre": "Márquez",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 88,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "CDM"
+    ],
+    "stats": {
+      "pac": 75,
+      "sho": 65,
+      "pas": 76,
+      "dri": 74,
+      "def": 90,
+      "phy": 88
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 87,
+    "popularidadFuente": 15,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21587,
+      "slug": "marquez",
+      "url": "https://www.futbin.com/27/player/21587/marquez"
+    }
+  },
+  {
+    "id": "futbin-27-785",
+    "nombre": "Kanté",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 65,
+      "pas": 73,
+      "dri": 80,
+      "def": 83,
+      "phy": 79
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 81,
+    "popularidadFuente": 15,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 11,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 785,
+      "slug": "ngolo-kante",
+      "url": "https://www.futbin.com/27/player/785/ngolo-kante"
+    }
+  },
+  {
+    "id": "miedema-87-cam-83-86-80-86-34-82",
+    "nombre": "Miedema",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 86,
+      "pas": 80,
+      "dri": 86,
+      "def": 34,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 15,
+    "precioReferencia": 6900,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "6.9K",
+      "valorSecundarioRaw": "5.5K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 60,
+      "slug": "vivianne-miedema",
+      "url": "https://www.futbin.com/27/player/60/vivianne-miedema"
+    }
+  },
+  {
+    "id": "de-paul-83-cm-75-77-83-83-75-83-r-4-3",
+    "nombre": "De Paul",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM",
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 75,
+      "sho": 77,
+      "pas": 83,
+      "dri": 83,
+      "def": 75,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 82.3,
+    "popularidadFuente": 15,
+    "precioReferencia": 1800,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.8K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 725,
+      "slug": "rodrigo-de-paul",
+      "url": "https://www.futbin.com/27/player/725/rodrigo-de-paul"
+    }
+  },
+  {
+    "id": "futbin-27-165",
+    "nombre": "Baltimore",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "LW",
+      "LB"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 74,
+      "pas": 83,
+      "dri": 86,
+      "def": 72,
+      "phy": 71
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 86.2,
+    "popularidadFuente": 15,
+    "precioReferencia": 3000,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "3K",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 165,
+      "slug": "sandy-baltimore",
+      "url": "https://www.futbin.com/27/player/165/sandy-baltimore"
+    }
+  },
+  {
+    "id": "futbin-27-21618",
+    "nombre": "Zamorano",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 88,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 84,
+      "sho": 88,
+      "pas": 69,
+      "dri": 84,
+      "def": 42,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 86.9,
+    "popularidadFuente": 15,
+    "precioReferencia": 102000,
+    "valorSecundarioFuente": 10380,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "102K",
+      "valorSecundarioRaw": "10.38K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21618,
+      "slug": "zamorano",
+      "url": "https://www.futbin.com/27/player/21618/zamorano"
+    }
+  },
+  {
+    "id": "openda-80-st-94-79-69-78-30-75",
+    "nombre": "Openda",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 80,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 94,
+      "sho": 79,
+      "pas": 69,
+      "dri": 78,
+      "def": 30,
+      "phy": 75
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 82.8,
+    "popularidadFuente": 15,
+    "precioReferencia": 4000,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "4K",
+      "valorSecundarioRaw": "180",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1058,
+      "slug": "lois-openda",
+      "url": "https://www.futbin.com/27/player/1058/lois-openda"
+    }
+  },
+  {
+    "id": "futbin-27-20965",
+    "nombre": "Hulk",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 86,
+      "pas": 81,
+      "dri": 86,
+      "def": 46,
+      "phy": 87
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 87.6,
+    "popularidadFuente": 15,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20965,
+      "slug": "hulk",
+      "url": "https://www.futbin.com/27/player/20965/hulk"
+    }
+  },
+  {
+    "id": "futbin-27-849",
+    "nombre": "Moleiro",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "CAM",
+      "CM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 76,
+      "pas": 77,
+      "dri": 84,
+      "def": 51,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 84.2,
+    "popularidadFuente": 15,
+    "precioReferencia": 1400,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.4K",
+      "valorSecundarioRaw": "340",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 849,
+      "slug": "alberto-moleiro-gonzalez",
+      "url": "https://www.futbin.com/27/player/849/alberto-moleiro-gonzalez"
     }
   },
   {
@@ -7918,18 +7700,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 81.1,
-    "popularidadFuente": 14,
-    "precioReferencia": 3400,
+    "popularidadFuente": 15,
+    "precioReferencia": 3000,
     "valorSecundarioFuente": 340,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "3.4K",
+      "precioPrincipalRaw": "3K",
       "valorSecundarioRaw": "340",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -7940,51 +7722,269 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "cucurella-86-lb-75-64-79-78-84-78",
-    "nombre": "Cucurella",
+    "id": "futbin-27-294",
+    "nombre": "Konsa",
     "version": null,
-    "tipoCarta": "unknown",
-    "ovr": 86,
-    "posicionPrincipal": "LB",
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "CB",
     "posiciones": [
-      "LB"
+      "CB"
     ],
     "stats": {
-      "pac": 75,
-      "sho": 64,
-      "pas": 79,
-      "dri": 78,
-      "def": 84,
-      "phy": 78
+      "pac": 71,
+      "sho": 55,
+      "pas": 72,
+      "dri": 75,
+      "def": 86,
+      "phy": 80
     },
-    "pie": "L",
-    "skills": 3,
+    "pie": "R",
+    "skills": 2,
     "weakFoot": 3,
-    "ratingFuente": 83,
-    "popularidadFuente": 14,
-    "precioReferencia": 4500,
-    "valorSecundarioFuente": 4100,
+    "ratingFuente": 79.8,
+    "popularidadFuente": 15,
+    "precioReferencia": 1600,
+    "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "4.5K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "1.6K",
+      "valorSecundarioRaw": "830",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 550,
-      "slug": "marc-cucurella-saseta",
-      "url": "https://www.futbin.com/27/player/550/marc-cucurella-saseta"
+      "playerId": 294,
+      "slug": "ezri-konsa",
+      "url": "https://www.futbin.com/27/player/294/ezri-konsa"
     }
   },
   {
-    "id": "kane-90-st-62-94-83-82-49-83",
-    "nombre": "Kane",
+    "id": "vini-jr-89-lw-93-85-80-91-31-71",
+    "nombre": "Vini Jr.",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 89,
+    "posicionPrincipal": "LW",
+    "posiciones": [
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 93,
+      "sho": 85,
+      "pas": 80,
+      "dri": 91,
+      "def": 31,
+      "phy": 71
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 93,
+    "popularidadFuente": 14,
+    "precioReferencia": 1150000,
+    "valorSecundarioFuente": 11000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "1.15M",
+      "valorSecundarioRaw": "11K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 80,
+      "slug": "vinicius-jose-de-oliveira-junior",
+      "url": "https://www.futbin.com/27/player/80/vinicius-jose-de-oliveira-junior"
+    }
+  },
+  {
+    "id": "futbin-27-22762",
+    "nombre": "David Raya",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 89,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 88,
+      "han": 87,
+      "kic": 89,
+      "ref": 89,
+      "spd": 60,
+      "pos": 88
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 14,
+    "precioReferencia": 299000,
+    "valorSecundarioFuente": 13750,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "299K",
+      "valorSecundarioRaw": "13.75K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22762,
+      "slug": "david-raya-martin",
+      "url": "https://www.futbin.com/27/player/22762/david-raya-martin"
+    }
+  },
+  {
+    "id": "courtois-90-gk-87-89-78-90-46-90",
+    "nombre": "Courtois",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 90,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 87,
+      "han": 89,
+      "kic": 78,
+      "ref": 90,
+      "spd": 46,
+      "pos": 90
+    },
+    "pie": "L",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 14,
+    "precioReferencia": 93500,
+    "valorSecundarioFuente": 14000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "93.5K",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 98,
+      "slug": "thibaut-courtois",
+      "url": "https://www.futbin.com/27/player/98/thibaut-courtois"
+    }
+  },
+  {
+    "id": "rodri-90-cdm-62-78-86-81-85-81",
+    "nombre": "Rodri",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 90,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 62,
+      "sho": 78,
+      "pas": 86,
+      "dri": 81,
+      "def": 85,
+      "phy": 81
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 14,
+    "precioReferencia": 33750,
+    "valorSecundarioFuente": 14000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "33.75K",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 13,
+      "slug": "rodrigo-hernandez-cascante",
+      "url": "https://www.futbin.com/27/player/13/rodrigo-hernandez-cascante"
+    }
+  },
+  {
+    "id": "diomande-81-cb-80-26-52-70-80-88",
+    "nombre": "Diomande",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 80,
+      "sho": 26,
+      "pas": 52,
+      "dri": 70,
+      "def": 80,
+      "phy": 88
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 83.6,
+    "popularidadFuente": 14,
+    "precioReferencia": 3000,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 12,
+      "precioPrincipalRaw": "3K",
+      "valorSecundarioRaw": "280",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 411,
+      "slug": "ousmane-diomande",
+      "url": "https://www.futbin.com/27/player/411/ousmane-diomande"
+    }
+  },
+  {
+    "id": "futbin-27-7",
+    "nombre": "Shaw",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 90,
@@ -7993,482 +7993,219 @@ window.PLAYERS_DATA = [
       "ST"
     ],
     "stats": {
-      "pac": 62,
-      "sho": 94,
-      "pas": 83,
-      "dri": 82,
-      "def": 49,
-      "phy": 83
+      "pac": 79,
+      "sho": 90,
+      "pas": 71,
+      "dri": 81,
+      "def": 42,
+      "phy": 88
     },
     "pie": "R",
     "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 87.8,
+    "ratingFuente": 89.4,
     "popularidadFuente": 14,
-    "precioReferencia": 29500,
+    "precioReferencia": 26000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "29.5K",
+      "precioPrincipalRaw": "26K",
       "valorSecundarioRaw": "14K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 55,
-      "slug": "harry-kane",
-      "url": "https://www.futbin.com/27/player/55/harry-kane"
+      "playerId": 7,
+      "slug": "khadija-shaw",
+      "url": "https://www.futbin.com/27/player/7/khadija-shaw"
     }
   },
   {
-    "id": "futbin-27-458",
-    "nombre": "Dimarco",
+    "id": "guler-83-rm-77-79-85-84-55-57",
+    "nombre": "Güler",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "LB",
+    "ovr": 83,
+    "posicionPrincipal": "RM",
     "posiciones": [
-      "LB",
-      "LM"
-    ],
-    "stats": {
-      "pac": 81,
-      "sho": 78,
-      "pas": 85,
-      "dri": 81,
-      "def": 80,
-      "phy": 74
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 2,
-    "ratingFuente": 83.8,
-    "popularidadFuente": 14,
-    "precioReferencia": 4400,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 12,
-      "precioPrincipalRaw": "4.4K",
-      "valorSecundarioRaw": "4.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 458,
-      "slug": "federico-dimarco",
-      "url": "https://www.futbin.com/27/player/458/federico-dimarco"
-    }
-  },
-  {
-    "id": "thompson-85-lm-93-81-78-83-47-67",
-    "nombre": "Thompson",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "RW",
       "RM",
-      "LW"
+      "CDM",
+      "CAM",
+      "RW",
+      "CM"
     ],
     "stats": {
-      "pac": 93,
-      "sho": 81,
-      "pas": 78,
-      "dri": 83,
-      "def": 47,
-      "phy": 67
+      "pac": 77,
+      "sho": 79,
+      "pas": 85,
+      "dri": 84,
+      "def": 55,
+      "phy": 57
     },
-    "pie": "R",
+    "pie": "L",
     "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 83.7,
+    "ratingFuente": 84.7,
     "popularidadFuente": 14,
-    "precioReferencia": 5200,
-    "valorSecundarioFuente": 2100,
+    "precioReferencia": 1200,
+    "valorSecundarioFuente": 410,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 12,
-      "precioPrincipalRaw": "5.2K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "1.2K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 118,
-      "slug": "alyssa-thompson",
-      "url": "https://www.futbin.com/27/player/118/alyssa-thompson"
+      "playerId": 678,
+      "slug": "arda-guler",
+      "url": "https://www.futbin.com/27/player/678/arda-guler"
     }
   },
   {
-    "id": "hakimi-88-rb-92-79-81-82-82-81-r-3-4",
-    "nombre": "Hakimi",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "RM"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 79,
-      "pas": 81,
-      "dri": 82,
-      "def": 82,
-      "phy": 81
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 90.9,
-    "popularidadFuente": 14,
-    "precioReferencia": 208000,
-    "valorSecundarioFuente": 8300,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "208K",
-      "valorSecundarioRaw": "8.3K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 102,
-      "slug": "achraf-hakimi",
-      "url": "https://www.futbin.com/27/player/102/achraf-hakimi"
-    }
-  },
-  {
-    "id": "futbin-27-555",
-    "nombre": "Unai Simón",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "GK",
-    "posiciones": [
-      "GK"
-    ],
-    "stats": {
-      "div": 84,
-      "han": 81,
-      "kic": 76,
-      "ref": 85,
-      "spd": 49,
-      "pos": 82
-    },
-    "pie": "R",
-    "skills": 1,
-    "weakFoot": 3,
-    "ratingFuente": null,
-    "popularidadFuente": 14,
-    "precioReferencia": 14000,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "14K",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 555,
-      "slug": "unai-simon-mendibil",
-      "url": "https://www.futbin.com/27/player/555/unai-simon-mendibil"
-    }
-  },
-  {
-    "id": "futbin-27-20957",
-    "nombre": "Balotelli",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 85,
-      "sho": 87,
-      "pas": 71,
-      "dri": 84,
-      "def": 34,
-      "phy": 81
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 86.1,
-    "popularidadFuente": 14,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20957,
-      "slug": "mario-balotelli",
-      "url": "https://www.futbin.com/27/player/20957/mario-balotelli"
-    }
-  },
-  {
-    "id": "murillo-82-cb-79-55-67-71-82-83",
-    "nombre": "Murillo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 55,
-      "pas": 67,
-      "dri": 71,
-      "def": 82,
-      "phy": 83
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 81.6,
-    "popularidadFuente": 14,
-    "precioReferencia": 3000,
-    "valorSecundarioFuente": 340,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "3K",
-      "valorSecundarioRaw": "340",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 824,
-      "slug": "murillo-costa-dos-santos",
-      "url": "https://www.futbin.com/27/player/824/murillo-costa-dos-santos"
-    }
-  },
-  {
-    "id": "bastoni-86-cb-74-47-76-78-86-82",
-    "nombre": "Bastoni",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 47,
-      "pas": 76,
-      "dri": 78,
-      "def": 86,
-      "phy": 82
-    },
-    "pie": "L",
-    "skills": 2,
-    "weakFoot": 2,
-    "ratingFuente": 81.7,
-    "popularidadFuente": 14,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 461,
-      "slug": "alessandro-bastoni",
-      "url": "https://www.futbin.com/27/player/461/alessandro-bastoni"
-    }
-  },
-  {
-    "id": "timber-84-rb-76-48-76-78-83-78",
-    "nombre": "Timber",
+    "id": "quinones-84-st-91-83-70-81-37-82",
+    "nombre": "Quiñones",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 84,
-    "posicionPrincipal": "RB",
+    "posicionPrincipal": "ST",
     "posiciones": [
-      "RB",
-      "RM",
-      "LM",
-      "CB",
-      "LB"
+      "ST",
+      "CAM",
+      "LW",
+      "LM"
     ],
     "stats": {
-      "pac": 76,
-      "sho": 48,
-      "pas": 76,
-      "dri": 78,
-      "def": 83,
-      "phy": 78
+      "pac": 91,
+      "sho": 83,
+      "pas": 70,
+      "dri": 81,
+      "def": 37,
+      "phy": 82
     },
     "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 80.1,
-    "popularidadFuente": 13,
-    "precioReferencia": 1900,
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 82.6,
+    "popularidadFuente": 14,
+    "precioReferencia": 2400,
     "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "1.9K",
+      "precioPrincipalRaw": "2.4K",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 762,
-      "slug": "jurrien-timber",
-      "url": "https://www.futbin.com/27/player/762/jurrien-timber"
+      "playerId": 568,
+      "slug": "julian-quinones",
+      "url": "https://www.futbin.com/27/player/568/julian-quinones"
     }
   },
   {
-    "id": "futbin-27-22926",
-    "nombre": "Rodrigo Mora",
+    "id": "futbin-27-21652",
+    "nombre": "Rui Costa",
     "version": null,
     "tipoCarta": "special",
-    "ovr": 83,
+    "ovr": 87,
     "posicionPrincipal": "CAM",
     "posiciones": [
       "CAM",
-      "CDM",
-      "CM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 83,
+      "sho": 80,
+      "pas": 88,
+      "dri": 86,
+      "def": 43,
+      "phy": 76
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 90,
+    "popularidadFuente": 14,
+    "precioReferencia": 166000,
+    "valorSecundarioFuente": 6880,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "166K",
+      "valorSecundarioRaw": "6.88K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21652,
+      "slug": "cesar-costa",
+      "url": "https://www.futbin.com/27/player/21652/cesar-costa"
+    }
+  },
+  {
+    "id": "futbin-27-22761",
+    "nombre": "Dumornay",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 89,
+    "posicionPrincipal": "LW",
+    "posiciones": [
       "LW",
+      "CAM",
       "LM",
       "ST"
     ],
     "stats": {
-      "pac": 83,
-      "sho": 72,
+      "pac": 93,
+      "sho": 86,
       "pas": 81,
-      "dri": 84,
-      "def": 46,
-      "phy": 50
+      "dri": 91,
+      "def": 62,
+      "phy": 75
     },
     "pie": "R",
     "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.3,
-    "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 513,
+    "weakFoot": 5,
+    "ratingFuente": 93,
+    "popularidadFuente": 14,
+    "precioReferencia": 1770000,
+    "valorSecundarioFuente": 13750,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "513",
+      "precioPrincipalRaw": "1.77M",
+      "valorSecundarioRaw": "13.75K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 22926,
-      "slug": "rodrigo-mora-de-carvalho",
-      "url": "https://www.futbin.com/27/player/22926/rodrigo-mora-de-carvalho"
-    }
-  },
-  {
-    "id": "futbin-27-22925",
-    "nombre": "Pedro Gonçalves",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 83,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "CAM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 83,
-      "pas": 83,
-      "dri": 84,
-      "def": 64,
-      "phy": 70
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.9,
-    "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 513,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "513",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22925,
-      "slug": "pedro-antonio-pereira-goncalves",
-      "url": "https://www.futbin.com/27/player/22925/pedro-antonio-pereira-goncalves"
+      "playerId": 22761,
+      "slug": "melchie-dumornay",
+      "url": "https://www.futbin.com/27/player/22761/melchie-dumornay"
     }
   },
   {
@@ -8498,7 +8235,7 @@ window.PLAYERS_DATA = [
     "skills": 4,
     "weakFoot": 4,
     "ratingFuente": 86.1,
-    "popularidadFuente": 13,
+    "popularidadFuente": 14,
     "precioReferencia": null,
     "valorSecundarioFuente": 830,
     "fuente": {
@@ -8506,10 +8243,10 @@ window.PLAYERS_DATA = [
       "paginaPdf": 13,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -8517,6 +8254,403 @@ window.PLAYERS_DATA = [
       "playerId": 20955,
       "slug": "giovani-dos-santos",
       "url": "https://www.futbin.com/27/player/20955/giovani-dos-santos"
+    }
+  },
+  {
+    "id": "futbin-27-22766",
+    "nombre": "Bronze",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "RM",
+      "RB"
+    ],
+    "stats": {
+      "pac": 73,
+      "sho": 70,
+      "pas": 82,
+      "dri": 82,
+      "def": 86,
+      "phy": 88
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 85.6,
+    "popularidadFuente": 14,
+    "precioReferencia": 55000,
+    "valorSecundarioFuente": 7690,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "55K",
+      "valorSecundarioRaw": "7.69K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22766,
+      "slug": "lucy-bronze",
+      "url": "https://www.futbin.com/27/player/22766/lucy-bronze"
+    }
+  },
+  {
+    "id": "futbin-27-947",
+    "nombre": "Mario Gila",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 81,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 53,
+      "pas": 68,
+      "dri": 75,
+      "def": 81,
+      "phy": 79
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 4,
+    "ratingFuente": 80.9,
+    "popularidadFuente": 13,
+    "precioReferencia": 1100,
+    "valorSecundarioFuente": 280,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "1.1K",
+      "valorSecundarioRaw": "280",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 947,
+      "slug": "mario-gila-fuentes",
+      "url": "https://www.futbin.com/27/player/947/mario-gila-fuentes"
+    }
+  },
+  {
+    "id": "futbin-27-20959",
+    "nombre": "Walcott",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW"
+    ],
+    "stats": {
+      "pac": 96,
+      "sho": 79,
+      "pas": 74,
+      "dri": 85,
+      "def": 39,
+      "phy": 65
+    },
+    "pie": "L",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 87.7,
+    "popularidadFuente": 13,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20959,
+      "slug": "theo-walcott",
+      "url": "https://www.futbin.com/27/player/20959/theo-walcott"
+    }
+  },
+  {
+    "id": "lamine-yamal-90-rw-86-84-87-93-38-61",
+    "nombre": "Lamine Yamal",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 90,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 84,
+      "pas": 87,
+      "dri": 93,
+      "def": 38,
+      "phy": 61
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 3,
+    "ratingFuente": 91.9,
+    "popularidadFuente": 13,
+    "precioReferencia": 1210000,
+    "valorSecundarioFuente": 14000,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "1.21M",
+      "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 81,
+      "slug": "lamine-yamal-nasraoui-ebana",
+      "url": "https://www.futbin.com/27/player/81/lamine-yamal-nasraoui-ebana"
+    }
+  },
+  {
+    "id": "osimhen-85-st-89-84-65-78-51-86",
+    "nombre": "Osimhen",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 84,
+      "pas": 65,
+      "dri": 78,
+      "def": 51,
+      "phy": 86
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 84.2,
+    "popularidadFuente": 13,
+    "precioReferencia": 4200,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "4.2K",
+      "valorSecundarioRaw": "2.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 747,
+      "slug": "victor-osimhen",
+      "url": "https://www.futbin.com/27/player/747/victor-osimhen"
+    }
+  },
+  {
+    "id": "heaps-86-cm-76-84-86-84-64-80-r-4-3",
+    "nombre": "Heaps",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 76,
+      "sho": 84,
+      "pas": 86,
+      "dri": 84,
+      "def": 64,
+      "phy": 80
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.1,
+    "popularidadFuente": 13,
+    "precioReferencia": 4300,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "4.3K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 740,
+      "slug": "lindsey-heaps",
+      "url": "https://www.futbin.com/27/player/740/lindsey-heaps"
+    }
+  },
+  {
+    "id": "futbin-27-1442",
+    "nombre": "Palestra",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 78,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB",
+      "RM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 65,
+      "pas": 69,
+      "dri": 80,
+      "def": 70,
+      "phy": 81
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 77.8,
+    "popularidadFuente": 13,
+    "precioReferencia": 1800,
+    "valorSecundarioFuente": 140,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "1.8K",
+      "valorSecundarioRaw": "140",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1442,
+      "slug": "marco-palestra",
+      "url": "https://www.futbin.com/27/player/1442/marco-palestra"
+    }
+  },
+  {
+    "id": "futbin-27-754",
+    "nombre": "Anyomi",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 84,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 82,
+      "pas": 74,
+      "dri": 84,
+      "def": 55,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 83.4,
+    "popularidadFuente": 13,
+    "precioReferencia": 6300,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "6.3K",
+      "valorSecundarioRaw": "830",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 754,
+      "slug": "nicole-anyomi",
+      "url": "https://www.futbin.com/27/player/754/nicole-anyomi"
+    }
+  },
+  {
+    "id": "futbin-27-22772",
+    "nombre": "Safonov",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 84,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 83,
+      "han": 78,
+      "kic": 81,
+      "ref": 87,
+      "spd": 52,
+      "pos": 85
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 2,
+    "ratingFuente": null,
+    "popularidadFuente": 13,
+    "precioReferencia": 49250,
+    "valorSecundarioFuente": 1560,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "49.25K",
+      "valorSecundarioRaw": "1.56K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22772,
+      "slug": "matvey-safonov",
+      "url": "https://www.futbin.com/27/player/22772/matvey-safonov"
     }
   },
   {
@@ -8542,17 +8676,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 3,
     "ratingFuente": 83.8,
     "popularidadFuente": 13,
-    "precioReferencia": 10000,
+    "precioReferencia": 10250,
     "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "10K",
+      "precioPrincipalRaw": "10.25K",
       "valorSecundarioRaw": "8.3K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -8563,269 +8697,48 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "mateo-85-st-87-85-80-85-56-77-r-4-4",
-    "nombre": "Mateo",
+    "id": "mctominay-86-cm-80-83-77-82-80-86",
+    "nombre": "McTominay",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "ST",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
     "posiciones": [
-      "ST",
-      "CAM",
-      "RW",
-      "RM"
+      "CM",
+      "CDM",
+      "CAM"
     ],
     "stats": {
-      "pac": 87,
-      "sho": 85,
-      "pas": 80,
-      "dri": 85,
-      "def": 56,
-      "phy": 77
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.8,
-    "popularidadFuente": 13,
-    "precioReferencia": 10500,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "10.5K",
-      "valorSecundarioRaw": "2.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 627,
-      "slug": "clara-mateo",
-      "url": "https://www.futbin.com/27/player/627/clara-mateo"
-    }
-  },
-  {
-    "id": "futbin-27-20960",
-    "nombre": "Valencia",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 75,
-      "pas": 81,
-      "dri": 83,
-      "def": 79,
-      "phy": 87
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 85.3,
-    "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 20960,
-      "slug": "antonio-valencia",
-      "url": "https://www.futbin.com/27/player/20960/antonio-valencia"
-    }
-  },
-  {
-    "id": "inaki-williams-80-rw-92-79-74-77-47-83",
-    "nombre": "Iñaki Williams",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 80,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "RM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 92,
-      "sho": 79,
-      "pas": 74,
-      "dri": 77,
-      "def": 47,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 80.7,
-    "popularidadFuente": 13,
-    "precioReferencia": 2000,
-    "valorSecundarioFuente": 180,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "2K",
-      "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 1095,
-      "slug": "inaki-williams-arthuer",
-      "url": "https://www.futbin.com/27/player/1095/inaki-williams-arthuer"
-    }
-  },
-  {
-    "id": "futbin-27-21803",
-    "nombre": "Agüero",
-    "version": null,
-    "tipoCarta": "unknown",
-    "ovr": 89,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 88,
-      "sho": 90,
-      "pas": 78,
-      "dri": 89,
-      "def": 33,
-      "phy": 74
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 92.1,
-    "popularidadFuente": 13,
-    "precioReferencia": 3200000,
-    "valorSecundarioFuente": 16500,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 13,
-      "precioPrincipalRaw": "3.2M",
-      "valorSecundarioRaw": "16.5K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21803,
-      "slug": "aguero",
-      "url": "https://www.futbin.com/27/player/21803/aguero"
-    }
-  },
-  {
-    "id": "futbin-27-21611",
-    "nombre": "Milito",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 88,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 89,
-      "pas": 75,
-      "dri": 84,
-      "def": 43,
-      "phy": 80
+      "pac": 80,
+      "sho": 83,
+      "pas": 77,
+      "dri": 82,
+      "def": 80,
+      "phy": 86
     },
     "pie": "R",
     "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 86.7,
+    "weakFoot": 3,
+    "ratingFuente": 81,
     "popularidadFuente": 13,
-    "precioReferencia": 117000,
-    "valorSecundarioFuente": 10380,
+    "precioReferencia": 4500,
+    "valorSecundarioFuente": 4100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 13,
-      "precioPrincipalRaw": "117K",
-      "valorSecundarioRaw": "10.38K",
+      "precioPrincipalRaw": "4.5K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 21611,
-      "slug": "milito",
-      "url": "https://www.futbin.com/27/player/21611/milito"
-    }
-  },
-  {
-    "id": "futbin-27-21747",
-    "nombre": "Diomande",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 84,
-    "posicionPrincipal": "RW",
-    "posiciones": [
-      "RW",
-      "RM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 77,
-      "pas": 75,
-      "dri": 87,
-      "def": 47,
-      "phy": 70
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 88.4,
-    "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21747,
-      "slug": "yan-diomande",
-      "url": "https://www.futbin.com/27/player/21747/yan-diomande"
+      "playerId": 457,
+      "slug": "scott-mctominay",
+      "url": "https://www.futbin.com/27/player/457/scott-mctominay"
     }
   },
   {
@@ -8855,17 +8768,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 82.5,
     "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
+    "precioReferencia": 17750,
+    "valorSecundarioFuente": 180,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
+      "paginaPdf": 13,
+      "precioPrincipalRaw": "17.75K",
+      "valorSecundarioRaw": "180",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -8876,806 +8789,46 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "martinez-87-st-80-88-76-85-51-74",
-    "nombre": "Martínez",
+    "id": "futbin-27-555",
+    "nombre": "Unai Simón",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 87,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 88,
-      "pas": 76,
-      "dri": 85,
-      "def": 51,
-      "phy": 74
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 86.9,
-    "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 454,
-      "slug": "lautaro-martinez",
-      "url": "https://www.futbin.com/27/player/454/lautaro-martinez"
-    }
-  },
-  {
-    "id": "futbin-27-214",
-    "nombre": "David Raya",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 88,
+    "ovr": 85,
     "posicionPrincipal": "GK",
     "posiciones": [
       "GK"
     ],
     "stats": {
-      "div": 87,
-      "han": 86,
-      "kic": 88,
-      "ref": 88,
-      "spd": 58,
-      "pos": 86
+      "div": 84,
+      "han": 81,
+      "kic": 76,
+      "ref": 85,
+      "spd": 49,
+      "pos": 82
     },
     "pie": "R",
     "skills": 1,
     "weakFoot": 3,
     "ratingFuente": null,
     "popularidadFuente": 13,
-    "precioReferencia": null,
-    "valorSecundarioFuente": null,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": null,
-      "valorSecundarioRaw": null,
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 214,
-      "slug": "david-raya-martin",
-      "url": "https://www.futbin.com/27/player/214/david-raya-martin"
-    }
-  },
-  {
-    "id": "futbin-27-1442",
-    "nombre": "Palestra",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 78,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "RM"
-    ],
-    "stats": {
-      "pac": 90,
-      "sho": 65,
-      "pas": 69,
-      "dri": 80,
-      "def": 70,
-      "phy": 81
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 77.8,
-    "popularidadFuente": 12,
-    "precioReferencia": 1700,
-    "valorSecundarioFuente": 140,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "1.7K",
-      "valorSecundarioRaw": "140",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 1442,
-      "slug": "marco-palestra",
-      "url": "https://www.futbin.com/27/player/1442/marco-palestra"
-    }
-  },
-  {
-    "id": "futbin-27-22767",
-    "nombre": "Bronze",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 86,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "RM",
-      "RB"
-    ],
-    "stats": {
-      "pac": 73,
-      "sho": 70,
-      "pas": 82,
-      "dri": 82,
-      "def": 86,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 85.6,
-    "popularidadFuente": 12,
-    "precioReferencia": 19750,
-    "valorSecundarioFuente": 5120,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "19.75K",
-      "valorSecundarioRaw": "5.12K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22767,
-      "slug": "lucy-bronze",
-      "url": "https://www.futbin.com/27/player/22767/lucy-bronze"
-    }
-  },
-  {
-    "id": "futbin-27-22766",
-    "nombre": "Bronze",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 86,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "RM",
-      "RB"
-    ],
-    "stats": {
-      "pac": 73,
-      "sho": 70,
-      "pas": 82,
-      "dri": 82,
-      "def": 86,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 85.6,
-    "popularidadFuente": 12,
-    "precioReferencia": 40750,
-    "valorSecundarioFuente": 7690,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "40.75K",
-      "valorSecundarioRaw": "7.69K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22766,
-      "slug": "lucy-bronze",
-      "url": "https://www.futbin.com/27/player/22766/lucy-bronze"
-    }
-  },
-  {
-    "id": "futbin-27-22768",
-    "nombre": "Thuram",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 86,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 84,
-      "pas": 77,
-      "dri": 83,
-      "def": 51,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 87.2,
-    "popularidadFuente": 12,
-    "precioReferencia": 100000,
-    "valorSecundarioFuente": 7690,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "100K",
-      "valorSecundarioRaw": "7.69K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 22768,
-      "slug": "marcus-thuram",
-      "url": "https://www.futbin.com/27/player/22768/marcus-thuram"
-    }
-  },
-  {
-    "id": "vini-jr-89-lw-93-85-80-91-31-71",
-    "nombre": "Vini Jr.",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 89,
-    "posicionPrincipal": "LW",
-    "posiciones": [
-      "LW",
-      "LM",
-      "ST"
-    ],
-    "stats": {
-      "pac": 93,
-      "sho": 85,
-      "pas": 80,
-      "dri": 91,
-      "def": 31,
-      "phy": 71
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 4,
-    "ratingFuente": 93,
-    "popularidadFuente": 12,
-    "precioReferencia": 1280000,
-    "valorSecundarioFuente": 11000,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "1.28M",
-      "valorSecundarioRaw": "11K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 80,
-      "slug": "vinicius-jose-de-oliveira-junior",
-      "url": "https://www.futbin.com/27/player/80/vinicius-jose-de-oliveira-junior"
-    }
-  },
-  {
-    "id": "futbin-27-757",
-    "nombre": "Eze",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 80,
-      "pas": 82,
-      "dri": 87,
-      "def": 57,
-      "phy": 68
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 84.6,
-    "popularidadFuente": 12,
-    "precioReferencia": 1500,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "1.5K",
-      "valorSecundarioRaw": "830",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 757,
-      "slug": "eberechi-eze",
-      "url": "https://www.futbin.com/27/player/757/eberechi-eze"
-    }
-  },
-  {
-    "id": "futbin-27-849",
-    "nombre": "Moleiro",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 82,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "CAM",
-      "CM",
-      "LW"
-    ],
-    "stats": {
-      "pac": 86,
-      "sho": 76,
-      "pas": 77,
-      "dri": 84,
-      "def": 51,
-      "phy": 68
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 84.2,
-    "popularidadFuente": 12,
-    "precioReferencia": 900,
-    "valorSecundarioFuente": 340,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "900",
-      "valorSecundarioRaw": "340",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 849,
-      "slug": "alberto-moleiro-gonzalez",
-      "url": "https://www.futbin.com/27/player/849/alberto-moleiro-gonzalez"
-    }
-  },
-  {
-    "id": "futbin-27-625",
-    "nombre": "Katoto",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 84,
-      "sho": 84,
-      "pas": 77,
-      "dri": 82,
-      "def": 39,
-      "phy": 75
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 84.8,
-    "popularidadFuente": 12,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "4.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 625,
-      "slug": "marie-katoto",
-      "url": "https://www.futbin.com/27/player/625/marie-katoto"
-    }
-  },
-  {
-    "id": "araujo-80-cb-79-54-64-59-78-81",
-    "nombre": "Araujo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 80,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "RB"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 54,
-      "pas": 64,
-      "dri": 59,
-      "def": 78,
-      "phy": 81
-    },
-    "pie": "R",
-    "skills": 2,
-    "weakFoot": 3,
-    "ratingFuente": 80.8,
-    "popularidadFuente": 12,
-    "precioReferencia": 3000,
-    "valorSecundarioFuente": 180,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "3K",
-      "valorSecundarioRaw": "180",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 413,
-      "slug": "ronald-araujo",
-      "url": "https://www.futbin.com/27/player/413/ronald-araujo"
-    }
-  },
-  {
-    "id": "quinones-84-st-91-83-70-81-37-82",
-    "nombre": "Quiñones",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "ST",
-    "posiciones": [
-      "ST",
-      "CAM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 83,
-      "pas": 70,
-      "dri": 81,
-      "def": 37,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 82.6,
-    "popularidadFuente": 12,
-    "precioReferencia": 2700,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "2.7K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 568,
-      "slug": "julian-quinones",
-      "url": "https://www.futbin.com/27/player/568/julian-quinones"
-    }
-  },
-  {
-    "id": "futbin-27-742",
-    "nombre": "Cascarino",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "RW"
-    ],
-    "stats": {
-      "pac": 91,
-      "sho": 75,
-      "pas": 78,
-      "dri": 88,
-      "def": 49,
-      "phy": 67
-    },
-    "pie": "R",
-    "skills": 5,
-    "weakFoot": 2,
-    "ratingFuente": 85.7,
-    "popularidadFuente": 12,
-    "precioReferencia": 4800,
+    "precioReferencia": 14000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 14,
-      "precioPrincipalRaw": "4.8K",
+      "precioPrincipalRaw": "14K",
       "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 742,
-      "slug": "delphine-cascarino",
-      "url": "https://www.futbin.com/27/player/742/delphine-cascarino"
-    }
-  },
-  {
-    "id": "futbin-27-165",
-    "nombre": "Baltimore",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "LM",
-    "posiciones": [
-      "LM",
-      "LW",
-      "LB"
-    ],
-    "stats": {
-      "pac": 89,
-      "sho": 74,
-      "pas": 83,
-      "dri": 86,
-      "def": 72,
-      "phy": 71
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 86.2,
-    "popularidadFuente": 12,
-    "precioReferencia": 2900,
-    "valorSecundarioFuente": 2100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 14,
-      "precioPrincipalRaw": "2.9K",
-      "valorSecundarioRaw": "2.1K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 165,
-      "slug": "sandy-baltimore",
-      "url": "https://www.futbin.com/27/player/165/sandy-baltimore"
-    }
-  },
-  {
-    "id": "greenwood-83-rm-83-85-78-84-37-63",
-    "nombre": "Greenwood",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "CAM",
-      "RW",
-      "ST"
-    ],
-    "stats": {
-      "pac": 83,
-      "sho": 85,
-      "pas": 78,
-      "dri": 84,
-      "def": 37,
-      "phy": 63
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 85.1,
-    "popularidadFuente": 11,
-    "precioReferencia": 2600,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "2.6K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 786,
-      "slug": "mason-greenwood",
-      "url": "https://www.futbin.com/27/player/786/mason-greenwood"
-    }
-  },
-  {
-    "id": "thuram-81-cm-79-74-78-79-81-85",
-    "nombre": "Thuram",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 79,
-      "sho": 74,
-      "pas": 78,
-      "dri": 79,
-      "def": 81,
-      "phy": 85
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 81.2,
-    "popularidadFuente": 11,
-    "precioReferencia": 3200,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "3.2K",
-      "valorSecundarioRaw": "280",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 944,
-      "slug": "khephren-thuram",
-      "url": "https://www.futbin.com/27/player/944/khephren-thuram"
-    }
-  },
-  {
-    "id": "futbin-27-532",
-    "nombre": "Koné",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 74,
-      "pas": 77,
-      "dri": 83,
-      "def": 77,
-      "phy": 83
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 77.9,
-    "popularidadFuente": 11,
-    "precioReferencia": 850,
-    "valorSecundarioFuente": 280,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "850",
-      "valorSecundarioRaw": "280",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 532,
-      "slug": "kouadio-manu-kone",
-      "url": "https://www.futbin.com/27/player/532/kouadio-manu-kone"
-    }
-  },
-  {
-    "id": "dani-olmo-84-cam-74-79-82-85-51-59",
-    "nombre": "Dani Olmo",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 74,
-      "sho": 79,
-      "pas": 82,
-      "dri": 85,
-      "def": 51,
-      "phy": 59
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 85.4,
-    "popularidadFuente": 11,
-    "precioReferencia": 1300,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "1.3K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 764,
-      "slug": "daniel-olmo-carvajal",
-      "url": "https://www.futbin.com/27/player/764/daniel-olmo-carvajal"
+      "playerId": 555,
+      "slug": "unai-simon-mendibil",
+      "url": "https://www.futbin.com/27/player/555/unai-simon-mendibil"
     }
   },
   {
@@ -9703,18 +8856,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.7,
-    "popularidadFuente": 11,
+    "popularidadFuente": 13,
     "precioReferencia": null,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
+      "paginaPdf": 14,
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -9725,8 +8878,94 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "futbin-27-7",
-    "nombre": "Shaw",
+    "id": "futbin-27-20953",
+    "nombre": "Richards",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 85,
+    "posicionPrincipal": "RB",
+    "posiciones": [
+      "RB"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 57,
+      "pas": 73,
+      "dri": 76,
+      "def": 84,
+      "phy": 89
+    },
+    "pie": "L",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 13,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20953,
+      "slug": "micah-richards",
+      "url": "https://www.futbin.com/27/player/20953/micah-richards"
+    }
+  },
+  {
+    "id": "futbin-27-222",
+    "nombre": "Pickford",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 85,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 84,
+      "han": 80,
+      "kic": 89,
+      "ref": 87,
+      "spd": 57,
+      "pos": 82
+    },
+    "pie": "L",
+    "skills": 1,
+    "weakFoot": 4,
+    "ratingFuente": null,
+    "popularidadFuente": 13,
+    "precioReferencia": 14750,
+    "valorSecundarioFuente": 2100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "14.75K",
+      "valorSecundarioRaw": "2.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 222,
+      "slug": "jordan-pickford",
+      "url": "https://www.futbin.com/27/player/222/jordan-pickford"
+    }
+  },
+  {
+    "id": "kane-90-st-62-94-83-82-49-83",
+    "nombre": "Kane",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 90,
@@ -9735,79 +8974,170 @@ window.PLAYERS_DATA = [
       "ST"
     ],
     "stats": {
-      "pac": 79,
-      "sho": 90,
-      "pas": 71,
-      "dri": 81,
-      "def": 42,
-      "phy": 88
+      "pac": 62,
+      "sho": 94,
+      "pas": 83,
+      "dri": 82,
+      "def": 49,
+      "phy": 83
     },
     "pie": "R",
     "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 89.4,
-    "popularidadFuente": 11,
-    "precioReferencia": 24500,
+    "ratingFuente": 87.8,
+    "popularidadFuente": 13,
+    "precioReferencia": 29000,
     "valorSecundarioFuente": 14000,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "24.5K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "29K",
       "valorSecundarioRaw": "14K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 7,
-      "slug": "khadija-shaw",
-      "url": "https://www.futbin.com/27/player/7/khadija-shaw"
+      "playerId": 55,
+      "slug": "harry-kane",
+      "url": "https://www.futbin.com/27/player/55/harry-kane"
     }
   },
   {
-    "id": "futbin-27-947",
-    "nombre": "Mario Gila",
+    "id": "futbin-27-758",
+    "nombre": "Matheus Cunha",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "CB",
+    "ovr": 84,
+    "posicionPrincipal": "LM",
     "posiciones": [
-      "CB"
+      "LM",
+      "CAM",
+      "LW",
+      "ST"
     ],
     "stats": {
-      "pac": 85,
-      "sho": 53,
-      "pas": 68,
-      "dri": 75,
-      "def": 81,
-      "phy": 79
+      "pac": 77,
+      "sho": 86,
+      "pas": 79,
+      "dri": 84,
+      "def": 44,
+      "phy": 73
     },
     "pie": "R",
-    "skills": 2,
+    "skills": 4,
     "weakFoot": 4,
-    "ratingFuente": 80.9,
-    "popularidadFuente": 11,
-    "precioReferencia": 1100,
-    "valorSecundarioFuente": 280,
+    "ratingFuente": 82.6,
+    "popularidadFuente": 12,
+    "precioReferencia": 2800,
+    "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "1.1K",
-      "valorSecundarioRaw": "280",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "2.8K",
+      "valorSecundarioRaw": "830",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 947,
-      "slug": "mario-gila-fuentes",
-      "url": "https://www.futbin.com/27/player/947/mario-gila-fuentes"
+      "playerId": 758,
+      "slug": "matheus-santos-carneiro-da-cunha",
+      "url": "https://www.futbin.com/27/player/758/matheus-santos-carneiro-da-cunha"
+    }
+  },
+  {
+    "id": "futbin-27-625",
+    "nombre": "Katoto",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 84,
+      "sho": 84,
+      "pas": 77,
+      "dri": 82,
+      "def": 39,
+      "phy": 75
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 84.8,
+    "popularidadFuente": 12,
+    "precioReferencia": 4400,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "4.4K",
+      "valorSecundarioRaw": "4.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 625,
+      "slug": "marie-katoto",
+      "url": "https://www.futbin.com/27/player/625/marie-katoto"
+    }
+  },
+  {
+    "id": "futbin-27-637",
+    "nombre": "Olga Carmona",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LM"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 74,
+      "pas": 78,
+      "dri": 80,
+      "def": 80,
+      "phy": 75
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.3,
+    "popularidadFuente": 12,
+    "precioReferencia": 2400,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "2.4K",
+      "valorSecundarioRaw": "410",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 637,
+      "slug": "olga-carmona-garcia",
+      "url": "https://www.futbin.com/27/player/637/olga-carmona-garcia"
     }
   },
   {
@@ -9833,18 +9163,18 @@ window.PLAYERS_DATA = [
     "skills": 3,
     "weakFoot": 3,
     "ratingFuente": 82.8,
-    "popularidadFuente": 11,
-    "precioReferencia": 13500,
+    "popularidadFuente": 12,
+    "precioReferencia": 14500,
     "valorSecundarioFuente": 225,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "13.5K",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "14.5K",
       "valorSecundarioRaw": "225",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -9855,89 +9185,707 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "gyokeres-86-st-81-87-72-78-44-87",
-    "nombre": "Gyökeres",
+    "id": "futbin-27-1046",
+    "nombre": "Spence",
+    "version": null,
+    "tipoCarta": "unknown",
+    "ovr": 80,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "RB"
+    ],
+    "stats": {
+      "pac": 89,
+      "sho": 54,
+      "pas": 71,
+      "dri": 79,
+      "def": 76,
+      "phy": 75
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 79.2,
+    "popularidadFuente": 12,
+    "precioReferencia": 1300,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "1.3K",
+      "valorSecundarioRaw": "180",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1046,
+      "slug": "djed-spence",
+      "url": "https://www.futbin.com/27/player/1046/djed-spence"
+    }
+  },
+  {
+    "id": "futbin-27-21591",
+    "nombre": "Keßler",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 88,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 81,
+      "sho": 85,
+      "pas": 88,
+      "dri": 87,
+      "def": 78,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 88.7,
+    "popularidadFuente": 12,
+    "precioReferencia": 130000,
+    "valorSecundarioFuente": 10380,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "130K",
+      "valorSecundarioRaw": "10.38K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21591,
+      "slug": "keler",
+      "url": "https://www.futbin.com/27/player/21591/keler"
+    }
+  },
+  {
+    "id": "reiten-86-lb-86-80-85-85-79-69",
+    "nombre": "Reiten",
     "version": null,
     "tipoCarta": "gold",
     "ovr": 86,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "LW",
+      "LM"
+    ],
+    "stats": {
+      "pac": 86,
+      "sho": 80,
+      "pas": 85,
+      "dri": 85,
+      "def": 79,
+      "phy": 69
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 89.6,
+    "popularidadFuente": 12,
+    "precioReferencia": 4400,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "4.4K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 696,
+      "slug": "guro-reiten",
+      "url": "https://www.futbin.com/27/player/696/guro-reiten"
+    }
+  },
+  {
+    "id": "futbin-27-22459",
+    "nombre": "Riquelme",
+    "version": null,
+    "tipoCarta": "unknown",
+    "ovr": 88,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 85,
+      "pas": 90,
+      "dri": 91,
+      "def": 33,
+      "phy": 68
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 90,
+    "popularidadFuente": 12,
+    "precioReferencia": 285000,
+    "valorSecundarioFuente": 12450,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "285K",
+      "valorSecundarioRaw": "12.45K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22459,
+      "slug": "riquelme",
+      "url": "https://www.futbin.com/27/player/22459/riquelme"
+    }
+  },
+  {
+    "id": "joao-felix-83-cam-81-81-79-84-45-71",
+    "nombre": "João Félix",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "CAM",
+    "posiciones": [
+      "CAM",
+      "LW",
+      "LM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 81,
+      "sho": 81,
+      "pas": 79,
+      "dri": 84,
+      "def": 45,
+      "phy": 71
+    },
+    "pie": "R",
+    "skills": 5,
+    "weakFoot": 4,
+    "ratingFuente": 86.1,
+    "popularidadFuente": 11,
+    "precioReferencia": 6300,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "6.3K",
+      "valorSecundarioRaw": "410",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 570,
+      "slug": "joao-felix-sequeira",
+      "url": "https://www.futbin.com/27/player/570/joao-felix-sequeira"
+    }
+  },
+  {
+    "id": "futbin-27-21611",
+    "nombre": "Milito",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 88,
     "posicionPrincipal": "ST",
     "posiciones": [
       "ST"
     ],
     "stats": {
-      "pac": 81,
-      "sho": 87,
-      "pas": 72,
-      "dri": 78,
-      "def": 44,
-      "phy": 87
+      "pac": 83,
+      "sho": 89,
+      "pas": 75,
+      "dri": 84,
+      "def": 43,
+      "phy": 80
     },
     "pie": "R",
     "skills": 3,
     "weakFoot": 4,
-    "ratingFuente": 84.1,
+    "ratingFuente": 86.7,
     "popularidadFuente": 11,
-    "precioReferencia": 14750,
-    "valorSecundarioFuente": 4100,
+    "precioReferencia": 109000,
+    "valorSecundarioFuente": 10380,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "14.75K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "paginaPdf": 14,
+      "precioPrincipalRaw": "109K",
+      "valorSecundarioRaw": "10.38K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 252,
-      "slug": "viktor-gyokeres",
-      "url": "https://www.futbin.com/27/player/252/viktor-gyokeres"
+      "playerId": 21611,
+      "slug": "milito",
+      "url": "https://www.futbin.com/27/player/21611/milito"
     }
   },
   {
-    "id": "futbin-27-22772",
-    "nombre": "Safonov",
+    "id": "futbin-27-21610",
+    "nombre": "Laudehr",
     "version": null,
     "tipoCarta": "special",
-    "ovr": 84,
+    "ovr": 88,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "RM",
+      "LM"
+    ],
+    "stats": {
+      "pac": 85,
+      "sho": 79,
+      "pas": 83,
+      "dri": 85,
+      "def": 82,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 88.3,
+    "popularidadFuente": 11,
+    "precioReferencia": 172000,
+    "valorSecundarioFuente": 10380,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "172K",
+      "valorSecundarioRaw": "10.38K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21610,
+      "slug": "simone-laudehr",
+      "url": "https://www.futbin.com/27/player/21610/simone-laudehr"
+    }
+  },
+  {
+    "id": "futbin-27-21975",
+    "nombre": "Fernández",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CM",
+    "posiciones": [
+      "CM",
+      "CDM",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 68,
+      "sho": 78,
+      "pas": 86,
+      "dri": 83,
+      "def": 74,
+      "phy": 76
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 83.4,
+    "popularidadFuente": 11,
+    "precioReferencia": 4300,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "4.3K",
+      "valorSecundarioRaw": "4.1K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21975,
+      "slug": "enzo-fernandez",
+      "url": "https://www.futbin.com/27/player/21975/enzo-fernandez"
+    }
+  },
+  {
+    "id": "futbin-27-22759",
+    "nombre": "Lamine Yamal",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 91,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 87,
+      "sho": 85,
+      "pas": 88,
+      "dri": 94,
+      "def": 40,
+      "phy": 63
+    },
+    "pie": "L",
+    "skills": 5,
+    "weakFoot": 3,
+    "ratingFuente": 94.2,
+    "popularidadFuente": 11,
+    "precioReferencia": 2140000,
+    "valorSecundarioFuente": 23750,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "2.14M",
+      "valorSecundarioRaw": "23.75K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22759,
+      "slug": "lamine-yamal-nasraoui-ebana",
+      "url": "https://www.futbin.com/27/player/22759/lamine-yamal-nasraoui-ebana"
+    }
+  },
+  {
+    "id": "futbin-27-531",
+    "nombre": "Wesley",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 80,
+    "posicionPrincipal": "LB",
+    "posiciones": [
+      "LB",
+      "RM",
+      "LM",
+      "RB"
+    ],
+    "stats": {
+      "pac": 90,
+      "sho": 63,
+      "pas": 75,
+      "dri": 81,
+      "def": 75,
+      "phy": 77
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 79.9,
+    "popularidadFuente": 11,
+    "precioReferencia": 1400,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "1.4K",
+      "valorSecundarioRaw": "180",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 531,
+      "slug": "wesley-vinicius-franca-lima",
+      "url": "https://www.futbin.com/27/player/531/wesley-vinicius-franca-lima"
+    }
+  },
+  {
+    "id": "bastoni-86-cb-74-47-76-78-86-82",
+    "nombre": "Bastoni",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 47,
+      "pas": 76,
+      "dri": 78,
+      "def": 86,
+      "phy": 82
+    },
+    "pie": "L",
+    "skills": 2,
+    "weakFoot": 2,
+    "ratingFuente": 81.7,
+    "popularidadFuente": 11,
+    "precioReferencia": 4400,
+    "valorSecundarioFuente": 4100,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "4.4K",
+      "valorSecundarioRaw": "4.1K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 461,
+      "slug": "alessandro-bastoni",
+      "url": "https://www.futbin.com/27/player/461/alessandro-bastoni"
+    }
+  },
+  {
+    "id": "futbin-27-21582",
+    "nombre": "Kohler",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 89,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 51,
+      "pas": 63,
+      "dri": 62,
+      "def": 91,
+      "phy": 90
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 90.6,
+    "popularidadFuente": 11,
+    "precioReferencia": 127000,
+    "valorSecundarioFuente": 13750,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "127K",
+      "valorSecundarioRaw": "13.75K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21582,
+      "slug": "kohler",
+      "url": "https://www.futbin.com/27/player/21582/kohler"
+    }
+  },
+  {
+    "id": "oblak-88-gk-85-90-79-87-46-86",
+    "nombre": "Oblak",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 88,
     "posicionPrincipal": "GK",
     "posiciones": [
       "GK"
     ],
     "stats": {
-      "div": 83,
-      "han": 78,
-      "kic": 81,
+      "div": 85,
+      "han": 90,
+      "kic": 79,
       "ref": 87,
-      "spd": 52,
-      "pos": 85
+      "spd": 46,
+      "pos": 86
     },
     "pie": "R",
     "skills": 1,
-    "weakFoot": 2,
+    "weakFoot": 3,
     "ratingFuente": null,
     "popularidadFuente": 11,
-    "precioReferencia": 45500,
-    "valorSecundarioFuente": 1560,
+    "precioReferencia": 19000,
+    "valorSecundarioFuente": 8300,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 15,
-      "precioPrincipalRaw": "45.5K",
-      "valorSecundarioRaw": "1.56K",
+      "precioPrincipalRaw": "19K",
+      "valorSecundarioRaw": "8.3K",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 22772,
-      "slug": "matvey-safonov",
-      "url": "https://www.futbin.com/27/player/22772/matvey-safonov"
+      "playerId": 89,
+      "slug": "jan-oblak",
+      "url": "https://www.futbin.com/27/player/89/jan-oblak"
+    }
+  },
+  {
+    "id": "futbin-27-224",
+    "nombre": "Rúben Dias",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 58,
+      "sho": 44,
+      "pas": 69,
+      "dri": 69,
+      "def": 87,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 4,
+    "ratingFuente": 82.7,
+    "popularidadFuente": 11,
+    "precioReferencia": 6600,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "6.6K",
+      "valorSecundarioRaw": "5.5K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 224,
+      "slug": "ruben-santos-gato-alves-dias",
+      "url": "https://www.futbin.com/27/player/224/ruben-santos-gato-alves-dias"
+    }
+  },
+  {
+    "id": "futbin-27-51",
+    "nombre": "Irene Paredes",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 87,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 52,
+      "pas": 67,
+      "dri": 70,
+      "def": 88,
+      "phy": 84
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 85.5,
+    "popularidadFuente": 11,
+    "precioReferencia": 6900,
+    "valorSecundarioFuente": 5500,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "6.9K",
+      "valorSecundarioRaw": "5.5K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 51,
+      "slug": "irene-paredes-hernandez",
+      "url": "https://www.futbin.com/27/player/51/irene-paredes-hernandez"
+    }
+  },
+  {
+    "id": "araujo-80-cb-79-54-64-59-78-81",
+    "nombre": "Araujo",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 80,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB",
+      "RB"
+    ],
+    "stats": {
+      "pac": 79,
+      "sho": 54,
+      "pas": 64,
+      "dri": 59,
+      "def": 78,
+      "phy": 81
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 80.8,
+    "popularidadFuente": 11,
+    "precioReferencia": 3000,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "3K",
+      "valorSecundarioRaw": "180",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 413,
+      "slug": "ronald-araujo",
+      "url": "https://www.futbin.com/27/player/413/ronald-araujo"
     }
   },
   {
@@ -9973,8 +9921,8 @@ window.PLAYERS_DATA = [
       "precioPrincipalRaw": "4.5K",
       "valorSecundarioRaw": "4.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
     },
     "activo": true,
@@ -9986,54 +9934,55 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "cristiano-ronaldo-84-st-67-88-75-78-33-75",
-    "nombre": "Cristiano Ronaldo",
+    "id": "futbin-27-742",
+    "nombre": "Cascarino",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "ST",
+    "ovr": 85,
+    "posicionPrincipal": "RM",
     "posiciones": [
-      "ST"
+      "RM",
+      "RW"
     ],
     "stats": {
-      "pac": 67,
-      "sho": 88,
-      "pas": 75,
-      "dri": 78,
-      "def": 33,
-      "phy": 75
+      "pac": 91,
+      "sho": 75,
+      "pas": 78,
+      "dri": 88,
+      "def": 49,
+      "phy": 67
     },
     "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 81.1,
-    "popularidadFuente": 10,
-    "precioReferencia": 1200,
-    "valorSecundarioFuente": 830,
+    "skills": 5,
+    "weakFoot": 2,
+    "ratingFuente": 85.7,
+    "popularidadFuente": 11,
+    "precioReferencia": 4500,
+    "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 15,
-      "precioPrincipalRaw": "1.2K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "4.5K",
+      "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 565,
-      "slug": "c-ronaldo-dos-santos-aveiro",
-      "url": "https://www.futbin.com/27/player/565/c-ronaldo-dos-santos-aveiro"
+      "playerId": 742,
+      "slug": "delphine-cascarino",
+      "url": "https://www.futbin.com/27/player/742/delphine-cascarino"
     }
   },
   {
-    "id": "futbin-27-652",
-    "nombre": "Fabián Ruiz",
+    "id": "reijnders-84-cm-75-78-81-83-71-76",
+    "nombre": "Reijnders",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 86,
+    "ovr": 84,
     "posicionPrincipal": "CM",
     "posiciones": [
       "CM",
@@ -10041,36 +9990,255 @@ window.PLAYERS_DATA = [
       "CAM"
     ],
     "stats": {
-      "pac": 60,
-      "sho": 77,
-      "pas": 83,
-      "dri": 82,
-      "def": 77,
-      "phy": 73
+      "pac": 75,
+      "sho": 78,
+      "pas": 81,
+      "dri": 83,
+      "def": 71,
+      "phy": 76
     },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 80.8,
-    "popularidadFuente": 10,
-    "precioReferencia": 4300,
-    "valorSecundarioFuente": 4100,
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 82.3,
+    "popularidadFuente": 11,
+    "precioReferencia": 1500,
+    "valorSecundarioFuente": 830,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 15,
-      "precioPrincipalRaw": "4.3K",
-      "valorSecundarioRaw": "4.1K",
+      "precioPrincipalRaw": "1.5K",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 652,
-      "slug": "fabian-ruiz-pena",
-      "url": "https://www.futbin.com/27/player/652/fabian-ruiz-pena"
+      "playerId": 759,
+      "slug": "tijjani-reijnders",
+      "url": "https://www.futbin.com/27/player/759/tijjani-reijnders"
+    }
+  },
+  {
+    "id": "inaki-williams-80-rw-92-79-74-77-47-83",
+    "nombre": "Iñaki Williams",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 80,
+    "posicionPrincipal": "RW",
+    "posiciones": [
+      "RW",
+      "RM",
+      "ST"
+    ],
+    "stats": {
+      "pac": 92,
+      "sho": 79,
+      "pas": 74,
+      "dri": 77,
+      "def": 47,
+      "phy": 83
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 80.7,
+    "popularidadFuente": 10,
+    "precioReferencia": 2000,
+    "valorSecundarioFuente": 180,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "2K",
+      "valorSecundarioRaw": "180",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1095,
+      "slug": "inaki-williams-arthuer",
+      "url": "https://www.futbin.com/27/player/1095/inaki-williams-arthuer"
+    }
+  },
+  {
+    "id": "futbin-27-421",
+    "nombre": "João Pedro",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 83,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "CAM"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 83,
+      "pas": 74,
+      "dri": 84,
+      "def": 38,
+      "phy": 74
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 80.9,
+    "popularidadFuente": 10,
+    "precioReferencia": 1100,
+    "valorSecundarioFuente": 410,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "1.1K",
+      "valorSecundarioRaw": "410",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 421,
+      "slug": "joao-pedro-junqueira-de-jesus",
+      "url": "https://www.futbin.com/27/player/421/joao-pedro-junqueira-de-jesus"
+    }
+  },
+  {
+    "id": "futbin-27-21703",
+    "nombre": "Giuly",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 86,
+    "posicionPrincipal": "RM",
+    "posiciones": [
+      "RM",
+      "RW"
+    ],
+    "stats": {
+      "pac": 88,
+      "sho": 83,
+      "pas": 81,
+      "dri": 85,
+      "def": 49,
+      "phy": 64
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 86.8,
+    "popularidadFuente": 10,
+    "precioReferencia": 140000,
+    "valorSecundarioFuente": 7690,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 15,
+      "precioPrincipalRaw": "140K",
+      "valorSecundarioRaw": "7.69K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21703,
+      "slug": "giuly",
+      "url": "https://www.futbin.com/27/player/21703/giuly"
+    }
+  },
+  {
+    "id": "futbin-27-460",
+    "nombre": "Carnesecchi",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 86,
+    "posicionPrincipal": "GK",
+    "posiciones": [
+      "GK"
+    ],
+    "stats": {
+      "div": 84,
+      "han": 85,
+      "kic": 76,
+      "ref": 87,
+      "spd": 30,
+      "pos": 86
+    },
+    "pie": "R",
+    "skills": 1,
+    "weakFoot": 3,
+    "ratingFuente": null,
+    "popularidadFuente": 10,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 460,
+      "slug": "marco-carnesecchi",
+      "url": "https://www.futbin.com/27/player/460/marco-carnesecchi"
+    }
+  },
+  {
+    "id": "futbin-27-21760",
+    "nombre": "Diomande",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "CB",
+    "posiciones": [
+      "CB"
+    ],
+    "stats": {
+      "pac": 82,
+      "sho": 29,
+      "pas": 55,
+      "dri": 72,
+      "def": 82,
+      "phy": 89
+    },
+    "pie": "R",
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 86.1,
+    "popularidadFuente": 10,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21760,
+      "slug": "ousmane-diomande",
+      "url": "https://www.futbin.com/27/player/21760/ousmane-diomande"
     }
   },
   {
@@ -10096,17 +10264,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 3,
     "ratingFuente": 88.1,
     "popularidadFuente": 10,
-    "precioReferencia": 234000,
-    "valorSecundarioFuente": 6880,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
     "fuente": {
       "nombre": "FUTBIN",
-      "paginaPdf": 15,
-      "precioPrincipalRaw": "234K",
-      "valorSecundarioRaw": "6.88K",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -10114,6 +10282,141 @@ window.PLAYERS_DATA = [
       "playerId": 21642,
       "slug": "georges",
       "url": "https://www.futbin.com/27/player/21642/georges"
+    }
+  },
+  {
+    "id": "victor-munoz-79-lm-94-74-70-80-50-65",
+    "nombre": "Víctor Muñoz",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 79,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "RW",
+      "RM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 94,
+      "sho": 74,
+      "pas": 70,
+      "dri": 80,
+      "def": 50,
+      "phy": 65
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 3,
+    "ratingFuente": 79.7,
+    "popularidadFuente": 10,
+    "precioReferencia": null,
+    "valorSecundarioFuente": null,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": null,
+      "valorSecundarioRaw": null,
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 1186,
+      "slug": "victor-munoz-villanueva",
+      "url": "https://www.futbin.com/27/player/1186/victor-munoz-villanueva"
+    }
+  },
+  {
+    "id": "remy-84-st-91-84-70-78-37-72",
+    "nombre": "Remy",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 84,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST",
+      "RW",
+      "RM"
+    ],
+    "stats": {
+      "pac": 91,
+      "sho": 84,
+      "pas": 70,
+      "dri": 78,
+      "def": 37,
+      "phy": 72
+    },
+    "pie": "L",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 10,
+    "precioReferencia": null,
+    "valorSecundarioFuente": 830,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "0",
+      "valorSecundarioRaw": "830",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 20950,
+      "slug": "loic-remy",
+      "url": "https://www.futbin.com/27/player/20950/loic-remy"
+    }
+  },
+  {
+    "id": "futbin-27-22757",
+    "nombre": "Goretzka",
+    "version": null,
+    "tipoCarta": "gold",
+    "ovr": 82,
+    "posicionPrincipal": "CDM",
+    "posiciones": [
+      "CDM",
+      "CM"
+    ],
+    "stats": {
+      "pac": 77,
+      "sho": 78,
+      "pas": 80,
+      "dri": 80,
+      "def": 80,
+      "phy": 82
+    },
+    "pie": "R",
+    "skills": 3,
+    "weakFoot": 4,
+    "ratingFuente": 80.5,
+    "popularidadFuente": 10,
+    "precioReferencia": 1200,
+    "valorSecundarioFuente": 340,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "1.2K",
+      "valorSecundarioRaw": "340",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 22757,
+      "slug": "goretzka",
+      "url": "https://www.futbin.com/27/player/22757/goretzka"
     }
   },
   {
@@ -10143,17 +10446,17 @@ window.PLAYERS_DATA = [
     "weakFoot": 4,
     "ratingFuente": 86.4,
     "popularidadFuente": 10,
-    "precioReferencia": 160000,
+    "precioReferencia": 159000,
     "valorSecundarioFuente": 6880,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "160K",
+      "precioPrincipalRaw": "159K",
       "valorSecundarioRaw": "6.88K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
@@ -10164,11 +10467,11 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "futbin-27-758",
-    "nombre": "Matheus Cunha",
+    "id": "futbin-27-699",
+    "nombre": "Swanson",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 84,
+    "ovr": 85,
     "posicionPrincipal": "LM",
     "posiciones": [
       "LM",
@@ -10177,347 +10480,36 @@ window.PLAYERS_DATA = [
       "ST"
     ],
     "stats": {
-      "pac": 77,
-      "sho": 86,
-      "pas": 79,
-      "dri": 84,
-      "def": 44,
-      "phy": 73
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 82.6,
-    "popularidadFuente": 10,
-    "precioReferencia": 2600,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "2.6K",
-      "valorSecundarioRaw": "830",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 758,
-      "slug": "matheus-santos-carneiro-da-cunha",
-      "url": "https://www.futbin.com/27/player/758/matheus-santos-carneiro-da-cunha"
-    }
-  },
-  {
-    "id": "futbin-27-420",
-    "nombre": "James",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "RB",
-    "posiciones": [
-      "RB",
-      "CDM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 76,
-      "sho": 71,
-      "pas": 83,
-      "dri": 78,
-      "def": 83,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 4,
-    "ratingFuente": 81,
-    "popularidadFuente": 10,
-    "precioReferencia": 2700,
-    "valorSecundarioFuente": 830,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "2.7K",
-      "valorSecundarioRaw": "830",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 420,
-      "slug": "reece-james",
-      "url": "https://www.futbin.com/27/player/420/reece-james"
-    }
-  },
-  {
-    "id": "futbin-27-21587",
-    "nombre": "Márquez",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 88,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB",
-      "CDM"
-    ],
-    "stats": {
-      "pac": 75,
-      "sho": 65,
-      "pas": 76,
-      "dri": 74,
-      "def": 90,
-      "phy": 88
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 87,
-    "popularidadFuente": 10,
-    "precioReferencia": 142000,
-    "valorSecundarioFuente": 10380,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "142K",
-      "valorSecundarioRaw": "10.38K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21587,
-      "slug": "marquez",
-      "url": "https://www.futbin.com/27/player/21587/marquez"
-    }
-  },
-  {
-    "id": "futbin-27-21652",
-    "nombre": "Rui Costa",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM",
-      "CM"
-    ],
-    "stats": {
-      "pac": 83,
+      "pac": 84,
       "sho": 80,
-      "pas": 88,
-      "dri": 86,
-      "def": 43,
-      "phy": 76
+      "pas": 82,
+      "dri": 83,
+      "def": 42,
+      "phy": 58
     },
     "pie": "R",
     "skills": 4,
-    "weakFoot": 4,
-    "ratingFuente": 90,
-    "popularidadFuente": 10,
-    "precioReferencia": 175000,
-    "valorSecundarioFuente": 6880,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "175K",
-      "valorSecundarioRaw": "6.88K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21652,
-      "slug": "cesar-costa",
-      "url": "https://www.futbin.com/27/player/21652/cesar-costa"
-    }
-  },
-  {
-    "id": "mctominay-86-cm-80-83-77-82-80-86",
-    "nombre": "McTominay",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 86,
-    "posicionPrincipal": "CM",
-    "posiciones": [
-      "CM",
-      "CDM",
-      "CAM"
-    ],
-    "stats": {
-      "pac": 80,
-      "sho": 83,
-      "pas": 77,
-      "dri": 82,
-      "def": 80,
-      "phy": 86
-    },
-    "pie": "R",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 81,
-    "popularidadFuente": 10,
-    "precioReferencia": 4700,
-    "valorSecundarioFuente": 4100,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "4.7K",
-      "valorSecundarioRaw": "4.1K",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 457,
-      "slug": "scott-mctominay",
-      "url": "https://www.futbin.com/27/player/457/scott-mctominay"
-    }
-  },
-  {
-    "id": "futbin-27-439",
-    "nombre": "Guéhi",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 85,
-    "posicionPrincipal": "CB",
-    "posiciones": [
-      "CB"
-    ],
-    "stats": {
-      "pac": 69,
-      "sho": 46,
-      "pas": 70,
-      "dri": 72,
-      "def": 85,
-      "phy": 82
-    },
-    "pie": "R",
-    "skills": 2,
     "weakFoot": 5,
-    "ratingFuente": 84.2,
+    "ratingFuente": 83,
     "popularidadFuente": 10,
-    "precioReferencia": 4000,
+    "precioReferencia": 3000,
     "valorSecundarioFuente": 2100,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "4K",
+      "precioPrincipalRaw": "3K",
       "valorSecundarioRaw": "2.1K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 439,
-      "slug": "marc-guehi",
-      "url": "https://www.futbin.com/27/player/439/marc-guehi"
-    }
-  },
-  {
-    "id": "futbin-27-21657",
-    "nombre": "Aimar",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 87,
-    "posicionPrincipal": "CAM",
-    "posiciones": [
-      "CAM"
-    ],
-    "stats": {
-      "pac": 84,
-      "sho": 79,
-      "pas": 87,
-      "dri": 88,
-      "def": 46,
-      "phy": 65
-    },
-    "pie": "R",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 90.5,
-    "popularidadFuente": 10,
-    "precioReferencia": 168000,
-    "valorSecundarioFuente": 6880,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "168K",
-      "valorSecundarioRaw": "6.88K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21657,
-      "slug": "aimar",
-      "url": "https://www.futbin.com/27/player/21657/aimar"
-    }
-  },
-  {
-    "id": "guler-83-rm-77-79-85-84-55-57",
-    "nombre": "Güler",
-    "version": null,
-    "tipoCarta": "gold",
-    "ovr": 83,
-    "posicionPrincipal": "RM",
-    "posiciones": [
-      "RM",
-      "CDM",
-      "CAM",
-      "RW",
-      "CM"
-    ],
-    "stats": {
-      "pac": 77,
-      "sho": 79,
-      "pas": 85,
-      "dri": 84,
-      "def": 55,
-      "phy": 57
-    },
-    "pie": "L",
-    "skills": 4,
-    "weakFoot": 3,
-    "ratingFuente": 84.7,
-    "popularidadFuente": 10,
-    "precioReferencia": 1200,
-    "valorSecundarioFuente": 410,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "1.2K",
-      "valorSecundarioRaw": "410",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 678,
-      "slug": "arda-guler",
-      "url": "https://www.futbin.com/27/player/678/arda-guler"
+      "playerId": 699,
+      "slug": "mallory-swanson",
+      "url": "https://www.futbin.com/27/player/699/mallory-swanson"
     }
   },
   {
@@ -10554,8 +10546,8 @@ window.PLAYERS_DATA = [
       "precioPrincipalRaw": "0",
       "valorSecundarioRaw": "10.38K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
       "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
     },
     "activo": true,
@@ -10567,182 +10559,221 @@ window.PLAYERS_DATA = [
     }
   },
   {
-    "id": "futbin-27-892",
-    "nombre": "Kundananji",
+    "id": "futbin-27-1500",
+    "nombre": "Bisseck",
     "version": null,
     "tipoCarta": "gold",
-    "ovr": 81,
-    "posicionPrincipal": "LM",
+    "ovr": 78,
+    "posicionPrincipal": "CB",
     "posiciones": [
-      "LM",
-      "CAM",
-      "LW",
-      "ST"
+      "CB"
     ],
     "stats": {
-      "pac": 94,
-      "sho": 80,
-      "pas": 73,
-      "dri": 82,
-      "def": 59,
-      "phy": 88
+      "pac": 78,
+      "sho": 57,
+      "pas": 64,
+      "dri": 72,
+      "def": 77,
+      "phy": 80
     },
     "pie": "R",
-    "skills": 4,
-    "weakFoot": 5,
-    "ratingFuente": 84.2,
+    "skills": 2,
+    "weakFoot": 3,
+    "ratingFuente": 77.8,
     "popularidadFuente": 10,
-    "precioReferencia": 2400,
-    "valorSecundarioFuente": 280,
+    "precioReferencia": 1000,
+    "valorSecundarioFuente": 140,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "2.4K",
-      "valorSecundarioRaw": "280",
+      "precioPrincipalRaw": "1K",
+      "valorSecundarioRaw": "140",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 892,
-      "slug": "racheal-kundananji",
-      "url": "https://www.futbin.com/27/player/892/racheal-kundananji"
+      "playerId": 1500,
+      "slug": "yann-aurel-bisseck",
+      "url": "https://www.futbin.com/27/player/1500/yann-aurel-bisseck"
     }
   },
   {
-    "id": "reijnders-84-cm-75-78-81-83-71-76",
-    "nombre": "Reijnders",
+    "id": "futbin-27-21624",
+    "nombre": "Rui Costa",
     "version": null,
-    "tipoCarta": "gold",
-    "ovr": 84,
-    "posicionPrincipal": "CM",
+    "tipoCarta": "special",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
     "posiciones": [
-      "CM",
-      "CDM",
-      "CAM"
+      "CAM",
+      "CM"
     ],
     "stats": {
-      "pac": 75,
-      "sho": 78,
-      "pas": 81,
-      "dri": 83,
-      "def": 71,
+      "pac": 83,
+      "sho": 80,
+      "pas": 88,
+      "dri": 86,
+      "def": 43,
       "phy": 76
     },
     "pie": "R",
     "skills": 4,
     "weakFoot": 4,
-    "ratingFuente": 82.3,
+    "ratingFuente": 90,
     "popularidadFuente": 10,
-    "precioReferencia": 1500,
-    "valorSecundarioFuente": 830,
+    "precioReferencia": 208000,
+    "valorSecundarioFuente": 10310,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
-      "precioPrincipalRaw": "1.5K",
-      "valorSecundarioRaw": "830",
-      "importedAt": "2026-09-22T15:32:32.748Z",
+      "precioPrincipalRaw": "208K",
+      "valorSecundarioRaw": "10.31K",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 759,
-      "slug": "tijjani-reijnders",
-      "url": "https://www.futbin.com/27/player/759/tijjani-reijnders"
+      "playerId": 21624,
+      "slug": "cesar-costa",
+      "url": "https://www.futbin.com/27/player/21624/cesar-costa"
     }
   },
   {
-    "id": "futbin-27-20959",
-    "nombre": "Walcott",
+    "id": "futbin-27-21657",
+    "nombre": "Aimar",
     "version": null,
     "tipoCarta": "special",
-    "ovr": 85,
-    "posicionPrincipal": "RW",
+    "ovr": 87,
+    "posicionPrincipal": "CAM",
     "posiciones": [
-      "RW"
+      "CAM"
     ],
     "stats": {
-      "pac": 96,
+      "pac": 84,
       "sho": 79,
-      "pas": 74,
-      "dri": 85,
-      "def": 39,
+      "pas": 87,
+      "dri": 88,
+      "def": 46,
       "phy": 65
     },
-    "pie": "L",
-    "skills": 3,
+    "pie": "R",
+    "skills": 4,
     "weakFoot": 3,
-    "ratingFuente": 87.7,
+    "ratingFuente": 90.5,
+    "popularidadFuente": 10,
+    "precioReferencia": 160000,
+    "valorSecundarioFuente": 6880,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "160K",
+      "valorSecundarioRaw": "6.88K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21657,
+      "slug": "aimar",
+      "url": "https://www.futbin.com/27/player/21657/aimar"
+    }
+  },
+  {
+    "id": "futbin-27-21619",
+    "nombre": "Berbatov",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 87,
+    "posicionPrincipal": "ST",
+    "posiciones": [
+      "ST"
+    ],
+    "stats": {
+      "pac": 81,
+      "sho": 85,
+      "pas": 81,
+      "dri": 89,
+      "def": 34,
+      "phy": 74
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 3,
+    "ratingFuente": 85.8,
+    "popularidadFuente": 10,
+    "precioReferencia": 150000,
+    "valorSecundarioFuente": 10310,
+    "fuente": {
+      "nombre": "FUTBIN",
+      "paginaPdf": 16,
+      "precioPrincipalRaw": "150K",
+      "valorSecundarioRaw": "10.31K",
+      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
+    },
+    "activo": true,
+    "futbin": {
+      "game": 27,
+      "playerId": 21619,
+      "slug": "berbatov",
+      "url": "https://www.futbin.com/27/player/21619/berbatov"
+    }
+  },
+  {
+    "id": "futbin-27-22925",
+    "nombre": "Pedro Gonçalves",
+    "version": null,
+    "tipoCarta": "special",
+    "ovr": 83,
+    "posicionPrincipal": "LM",
+    "posiciones": [
+      "LM",
+      "CAM",
+      "LW"
+    ],
+    "stats": {
+      "pac": 74,
+      "sho": 83,
+      "pas": 83,
+      "dri": 84,
+      "def": 64,
+      "phy": 70
+    },
+    "pie": "R",
+    "skills": 4,
+    "weakFoot": 4,
+    "ratingFuente": 85.9,
     "popularidadFuente": 9,
     "precioReferencia": null,
-    "valorSecundarioFuente": 2100,
+    "valorSecundarioFuente": 513,
     "fuente": {
       "nombre": "FUTBIN",
       "paginaPdf": 16,
       "precioPrincipalRaw": "0",
-      "valorSecundarioRaw": "2.1K",
+      "valorSecundarioRaw": "513",
       "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
+      "snapshotObservedAt": "2026-09-23T13:26:14.037Z",
+      "importedAt": "2026-09-23T13:26:14.037Z",
+      "lastMarketChangedAt": "2026-09-23T13:26:14.037Z"
     },
     "activo": true,
     "futbin": {
       "game": 27,
-      "playerId": 20959,
-      "slug": "theo-walcott",
-      "url": "https://www.futbin.com/27/player/20959/theo-walcott"
-    }
-  },
-  {
-    "id": "futbin-27-21715",
-    "nombre": "Bompastor",
-    "version": null,
-    "tipoCarta": "special",
-    "ovr": 86,
-    "posicionPrincipal": "LB",
-    "posiciones": [
-      "LB",
-      "LW",
-      "LM"
-    ],
-    "stats": {
-      "pac": 87,
-      "sho": 80,
-      "pas": 85,
-      "dri": 85,
-      "def": 82,
-      "phy": 74
-    },
-    "pie": "L",
-    "skills": 3,
-    "weakFoot": 3,
-    "ratingFuente": 88.1,
-    "popularidadFuente": 9,
-    "precioReferencia": 206000,
-    "valorSecundarioFuente": 7690,
-    "fuente": {
-      "nombre": "FUTBIN",
-      "paginaPdf": 16,
-      "precioPrincipalRaw": "206K",
-      "valorSecundarioRaw": "7.69K",
-      "snapshotFile": "EA FC 27 Popular Players _ FUTBIN.pdf",
-      "snapshotObservedAt": "2026-09-22T15:32:32.748Z",
-      "importedAt": "2026-09-22T15:32:32.748Z",
-      "lastMarketChangedAt": "2026-09-22T15:32:32.748Z"
-    },
-    "activo": true,
-    "futbin": {
-      "game": 27,
-      "playerId": 21715,
-      "slug": "bompastor",
-      "url": "https://www.futbin.com/27/player/21715/bompastor"
+      "playerId": 22925,
+      "slug": "pedro-antonio-pereira-goncalves",
+      "url": "https://www.futbin.com/27/player/22925/pedro-antonio-pereira-goncalves"
     }
   }
 ];
