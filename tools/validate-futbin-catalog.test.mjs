@@ -115,16 +115,16 @@ test('authoritative source round-trips both metadata and PLAYERS_DATA', () => {
   const productionValidation = validateFutbinCatalogs(
     production.catalog, structuredClone(production.catalog), production.metadata);
   assert.equal(productionValidation.valid, true);
-assert(production.catalog.length > 0);
+  assert(production.catalog.length > 0);
   assert.equal(new Set(production.catalog.map(record => record.id)).size, production.catalog.length);
   assert.equal(production.catalog.some(record => record.precioReferencia === 0), false);
 });
 
-test('T/U/V. publisher advertises DryRun details, REEMPLAZAR guard and no DryRun push path', () => {
+test('T/U/V. publisher advertises DryRun details, OK guard and no DryRun push path', () => {
   const source = fs.readFileSync(new URL('./update-futbin.ps1', import.meta.url), 'utf8');
   for (const text of ['ACTUALIZACION SNAPSHOT', 'Removals:', 'Special:', 'Unknown:',
     'Excluded unavailable twins:',
-    'Escribe $requiredConfirmation', '"REEMPLAZAR"', 'players-data.js no fue modificado',
+    'Escribe $requiredConfirmation', '"OK"', 'players-data.js no fue modificado',
     'No se creo commit ni se hizo push']) assert(source.includes(text), text);
   assert.match(source, /if \(\$DryRun\)[\s\S]*?exit 0[\s\S]*?git push/);
 });

@@ -294,7 +294,7 @@ try {
   }
 
   $requiredConfirmation = if ($validation.summary.mode -eq "authoritative-snapshot" -and
-      $validation.summary.removedIds -gt 0) { "REEMPLAZAR" } else { "PUBLICAR" }
+      $validation.summary.removedIds -gt 0) { "OK" } else { "PUBLICAR" }
   Write-Host ""
   Write-Host -NoNewline "Escribe $requiredConfirmation para continuar: "
   $confirmation = Read-Host
