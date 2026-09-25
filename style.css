@@ -1166,6 +1166,81 @@ select option {
     9px;
 }
 
+.watchlist-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.watchlist-search {
+  max-width: 240px;
+  height: 34px;
+}
+
+.watchlist-recent-button {
+  flex: 0 0 auto;
+  min-height: 34px;
+}
+
+.watchlist-recent-button.is-active {
+  color: var(--green);
+  border-color: rgba(39, 241, 163, 0.45);
+  background: rgba(39, 241, 163, 0.08);
+}
+
+.watchlist-table-wrapper {
+  max-height: 430px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+.watchlist-table-wrapper th {
+  box-shadow: 0 1px 0 var(--border-soft);
+}
+
+.watchlist-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.watchlist-sort-button:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+[data-watch-sort-header].is-active,
+[data-watch-sort-header].is-active .watchlist-sort-button {
+  color: var(--green);
+}
+
+.watchlist-sort-indicator {
+  min-width: 9px;
+  font-size: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 table {
   width: 100%;
 
@@ -1967,6 +2042,19 @@ footer {
 
     flex-direction:
       column;
+  }
+
+  .watchlist-toolbar {
+    align-items: stretch;
+  }
+
+  .watchlist-search {
+    min-width: 0;
+    max-width: none;
+  }
+
+  .watchlist-table-wrapper {
+    max-height: 340px;
   }
 
 }

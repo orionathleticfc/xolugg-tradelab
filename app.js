@@ -26,6 +26,12 @@ let metaPriceOverrides = {};
 let selectedCalculatorPlayerId = null;
 let selectedPopularPlayerId = null;
 
+const watchlistView = {
+  query: "",
+  sortKey: null,
+  sortDirection: "asc"
+};
+
 
 /* =========================================================
    UTILIDADES
@@ -1171,6 +1177,141 @@ function getWatchlistDisplayData(item) {
 }
 
 
+function getWatchlistSortValue(item, display, sortKey) {
+  switch (sortKey) {
+    case "jugador":
+      return item.jugador;
+    case "mercado":
+      return display.market;
+    case "good":
+      return display.thresholds?.good ?? null;
+    case "protected":
+      return display.thresholds?.protected ?? null;
+    case "bid":
+      return display.bid;
+    case "status":
+      return display.status.label;
+    default:
+      return null;
+  }
+}
+
+
+function compareWatchlistValues(left, right, sortKey, direction) {
+  const leftEmpty = left === null || left === undefined || left === "—";
+  const rightEmpty = right === null || right === undefined || right === "—";
+
+  if (leftEmpty || rightEmpty) {
+    if (leftEmpty && rightEmpty) return 0;
+    return leftEmpty ? 1 : -1;
+  }
+
+  const comparison = sortKey === "jugador" || sortKey === "status"
+    ? String(left).localeCompare(String(right), "es", {
+        sensitivity: "base",
+        numeric: true
+      })
+    : Number(left) - Number(right);
+
+  return direction === "desc" ? -comparison : comparison;
+}
+
+
+function getWatchlistViewItems(
+  items = state.watchlist,
+  view = watchlistView
+) {
+  const query = normalizeText(view.query);
+  const visible = items
+    .map((item, originalIndex) => ({
+      item,
+      originalIndex,
+      display: getWatchlistDisplayData(item)
+    }))
+    .filter(({ item }) => !query || normalizeText(item.jugador).includes(query));
+
+  if (!view.sortKey) {
+    return visible;
+  }
+
+  return visible.sort((left, right) => {
+    const comparison = compareWatchlistValues(
+      getWatchlistSortValue(left.item, left.display, view.sortKey),
+      getWatchlistSortValue(right.item, right.display, view.sortKey),
+      view.sortKey,
+      view.sortDirection
+    );
+    return comparison || left.originalIndex - right.originalIndex;
+  });
+}
+
+
+function updateWatchlistControls() {
+  const headers = document.querySelectorAll?.("[data-watch-sort-header]") || [];
+
+  headers.forEach((header) => {
+    const key = header.dataset.watchSortHeader;
+    const active = watchlistView.sortKey === key;
+    header.setAttribute(
+      "aria-sort",
+      active
+        ? (watchlistView.sortDirection === "asc" ? "ascending" : "descending")
+        : "none"
+    );
+    header.classList.toggle("is-active", active);
+
+    const indicator = header.querySelector(".watchlist-sort-indicator");
+    if (indicator) {
+      indicator.textContent = active
+        ? (watchlistView.sortDirection === "asc" ? "↑" : "↓")
+        : "";
+    }
+  });
+
+  const recentButton = document.getElementById("btnWatchlistRecentes");
+  if (recentButton) {
+    const isDefault = !watchlistView.sortKey;
+    recentButton.classList.toggle("is-active", isDefault);
+    recentButton.setAttribute("aria-pressed", String(isDefault));
+  }
+}
+
+
+function setWatchlistSort(sortKey) {
+  if (watchlistView.sortKey === sortKey) {
+    watchlistView.sortDirection = watchlistView.sortDirection === "asc"
+      ? "desc"
+      : "asc";
+  } else {
+    watchlistView.sortKey = sortKey;
+    watchlistView.sortDirection = "asc";
+  }
+  renderWatchlist();
+}
+
+
+function resetWatchlistSort() {
+  watchlistView.sortKey = null;
+  watchlistView.sortDirection = "asc";
+  renderWatchlist();
+}
+
+
+function setWatchlistSearch(value) {
+  watchlistView.query = String(value || "");
+  renderWatchlist();
+}
+
+
+function resetWatchlistView() {
+  watchlistView.query = "";
+  watchlistView.sortKey = null;
+  watchlistView.sortDirection = "asc";
+  const search = document.getElementById("watchlistSearch");
+  if (search) search.value = "";
+}
+
+
 function renderWatchlist() {
   const tbody = document.getElementById("watchlistBody");
 
@@ -1179,6 +1320,7 @@ function renderWatchlist() {
   }
 
   tbody.innerHTML = "";
+  updateWatchlistControls();
 
   if (state.watchlist.length === 0) {
     tbody.innerHTML =
@@ -1186,8 +1328,15 @@ function renderWatchlist() {
     return;
   }
 
-  state.watchlist.forEach((item) => {
-    const display = getWatchlistDisplayData(item);
+  const visibleItems = getWatchlistViewItems();
+
+  if (visibleItems.length === 0) {
+    tbody.innerHTML =
+      '<tr><td colspan="7" class="empty-table-cell">No hay coincidencias</td></tr>';
+    return;
+  }
+
+  visibleItems.forEach(({ item, display }) => {
     const tr = document.createElement("tr");
     const playerCell = document.createElement("td");
     const playerName = document.createElement("strong");
@@ -1249,6 +1398,7 @@ function limpiarWatchlist() {
   }
 
   state.watchlist = [];
+  resetWatchlistView();
   saveState();
   renderWatchlist();
   renderCapital();
@@ -3263,6 +3413,26 @@ function configurarEventosTablas() {
       );
     }
   );
+
+  const watchlistSearch =
+    document.getElementById("watchlistSearch");
+  watchlistSearch?.addEventListener(
+    "input",
+    (event) => setWatchlistSearch(event.target.value)
+  );
+
+  document
+    .getElementById("btnWatchlistRecentes")
+    ?.addEventListener("click", resetWatchlistSort);
+
+  const watchlistSortButtons =
+    document.querySelectorAll?.("[data-watch-sort]") || [];
+  watchlistSortButtons.forEach((button) => {
+    button.addEventListener(
+      "click",
+      () => setWatchlistSort(button.dataset.watchSort)
+    );
+  });
 
 
   const historialBody =
