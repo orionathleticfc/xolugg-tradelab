@@ -32,6 +32,9 @@ const watchlistView = {
   sortDirection: "asc"
 };
 
+let editingWatchlistItemId = null;
+let watchlistEditFeedback = "";
+
 
 /* =========================================================
    UTILIDADES
@@ -281,7 +284,7 @@ function aplicarStepDinamico(input) {
   }
 
   const esPrecio = input.matches(
-    "#precioVenta, #precioCompra, #tradeCompra, #tradeVenta, #metaMaxPrice, .meta-price-input"
+    "#precioVenta, #precioCompra, #tradeCompra, #tradeVenta, #metaMaxPrice, .meta-price-input, .watchlist-price-input"
   );
   let valorAnterior = Number(input.value) || 0;
 
@@ -1146,18 +1149,34 @@ function addToWatchlist() {
 }
 
 
-function getWatchlistMarket(item) {
-  const basePlayer = item.playerId === null || item.playerId === undefined
+function getWatchlistPlayer(item) {
+  return item.playerId === null || item.playerId === undefined
     ? null
     : getPopularPlayers().find(
         (player) => String(player.id) === String(item.playerId)
       );
+}
+
+
+function getWatchlistMarket(item) {
+  const basePlayer = getWatchlistPlayer(item);
   const effectivePrice = basePlayer
     ? getPopularPlayerData(basePlayer).precioEfectivo
     : null;
 
-  return normalizePositiveCoin(effectivePrice) ??
-    normalizePositiveCoin(item.mercado);
+  return basePlayer
+    ? normalizePositiveCoin(effectivePrice)
+    : normalizePositiveCoin(item.mercado);
+}
+
+
+function getValidWatchlistFutbinUrl(item) {
+  const value = getWatchlistPlayer(item)?.futbin?.url;
+  if (typeof value !== "string") return null;
+  const url = value.trim();
+  return /^https:\/\/www\.futbin\.com\/27\/player\/\d+\/[^/?#]+\/?$/.test(url)
+    ? url
+    : null;
 }
 
 
@@ -1189,8 +1208,6 @@ function getWatchlistSortValue(item, display, sortKey) {
       return display.thresholds?.protected ?? null;
     case "bid":
       return display.bid;
-    case "status":
-      return display.status.label;
     default:
       return null;
   }
@@ -1206,7 +1223,7 @@ function compareWatchlistValues(left, right, sortKey, direction) {
     return leftEmpty ? 1 : -1;
   }
 
-  const comparison = sortKey === "jugador" || sortKey === "status"
+  const comparison = sortKey === "jugador"
     ? String(left).localeCompare(String(right), "es", {
         sensitivity: "base",
         numeric: true
@@ -1312,6 +1329,82 @@ function resetWatchlistView() {
 }
 
 
+function focusWatchlistPriceInput() {
+  const input = document.getElementById("watchlistPriceInput");
+  aplicarStepDinamico(input);
+  input?.focus();
+  input?.select?.();
+}
+
+
+function focusWatchlistEditButton(itemId) {
+  const buttons = document.querySelectorAll?.('[data-watch-action="edit"]') || [];
+  Array.from(buttons).find(
+    (button) => String(button.dataset.watchId) === String(itemId)
+  )?.focus();
+}
+
+
+function beginWatchlistPriceEdit(itemId) {
+  const item = state.watchlist.find(
+    (candidate) => String(candidate.id) === String(itemId)
+  );
+  if (!item || !getWatchlistPlayer(item)) return false;
+  editingWatchlistItemId = item.id;
+  watchlistEditFeedback = "";
+  renderWatchlist();
+  focusWatchlistPriceInput();
+  return true;
+}
+
+
+function cancelWatchlistPriceEdit(itemId = editingWatchlistItemId) {
+  const previousId = itemId;
+  editingWatchlistItemId = null;
+  watchlistEditFeedback = "";
+  renderWatchlist();
+  focusWatchlistEditButton(previousId);
+}
+
+
+function saveWatchlistPrice(itemId) {
+  const item = state.watchlist.find(
+    (candidate) => String(candidate.id) === String(itemId)
+  );
+  const input = document.getElementById("watchlistPriceInput");
+  if (!item || !input || !getWatchlistPlayer(item)) return false;
+
+  const result = saveManualPlayerPrice(item.playerId, input.value);
+  if (!result.ok) {
+    watchlistEditFeedback = "Ingresa un precio entero mayor que 0.";
+    renderWatchlist();
+    focusWatchlistPriceInput();
+    return false;
+  }
+
+  editingWatchlistItemId = null;
+  watchlistEditFeedback = "";
+  refreshManualPriceViews(item.playerId);
+  focusWatchlistEditButton(itemId);
+  return true;
+}
+
+
+function restoreWatchlistFutbinPrice(itemId) {
+  const item = state.watchlist.find(
+    (candidate) => String(candidate.id) === String(itemId)
+  );
+  if (!item || !getWatchlistPlayer(item)) return false;
+  const result = removeManualPlayerPrice(item.playerId);
+  if (!result.ok) return false;
+  editingWatchlistItemId = null;
+  watchlistEditFeedback = "";
+  refreshManualPriceViews(item.playerId);
+  focusWatchlistEditButton(itemId);
+  return true;
+}
+
+
 function renderWatchlist() {
   const tbody = document.getElementById("watchlistBody");
 
@@ -1324,7 +1417,7 @@ function renderWatchlist() {
 
   if (state.watchlist.length === 0) {
     tbody.innerHTML =
-      '<tr><td colspan="7" class="empty-table-cell">No hay jugadores en seguimiento</td></tr>';
+      '<tr><td colspan="6" class="empty-table-cell">No hay jugadores en seguimiento</td></tr>';
     return;
   }
 
@@ -1332,45 +1425,96 @@ function renderWatchlist() {
 
   if (visibleItems.length === 0) {
     tbody.innerHTML =
-      '<tr><td colspan="7" class="empty-table-cell">No hay coincidencias</td></tr>';
+      '<tr><td colspan="6" class="empty-table-cell">No hay coincidencias</td></tr>';
     return;
   }
 
   visibleItems.forEach(({ item, display }) => {
+    const e = escapePopularHtml;
+    const player = getWatchlistPlayer(item);
+    const futbinUrl = getValidWatchlistFutbinUrl(item);
+    const isEditing = String(editingWatchlistItemId) === String(item.id);
     const tr = document.createElement("tr");
+    tr.dataset.watchItemId = String(item.id);
     const playerCell = document.createElement("td");
+    playerCell.className = "watchlist-player-cell";
     const playerName = document.createElement("strong");
     playerName.textContent = item.jugador;
     playerCell.appendChild(playerName);
     tr.appendChild(playerCell);
 
-    [
-      formatCoins(display.market),
-      display.thresholds
-        ? "≤ " + formatCoins(display.thresholds.good)
-        : "—",
-      display.thresholds
-        ? "≤ " + formatCoins(display.thresholds.protected)
-        : "—",
-      formatCoins(display.bid)
-    ].forEach((value) => {
-      const cell = document.createElement("td");
-      cell.textContent = value;
-      tr.appendChild(cell);
-    });
+    const marketCell = document.createElement("td");
+    marketCell.className = isEditing ? "watchlist-market-cell is-editing" : "watchlist-market-cell";
+    if (isEditing) {
+      marketCell.colSpan = 4;
+      const hasManualPrice = getPopularPlayerData(player).precioUsuario !== null;
+      marketCell.innerHTML =
+        '<div class="watchlist-price-editor">' +
+          '<label class="visually-hidden" for="watchlistPriceInput">' +
+            'Precio de mercado de ' + e(item.jugador) +
+          '</label>' +
+          '<input id="watchlistPriceInput" class="watchlist-price-input" ' +
+            'type="number" min="1" inputmode="numeric" ' +
+            'value="' + e(display.market ?? "") + '" ' +
+            'aria-describedby="watchlistPriceFeedback">' +
+          '<button class="watchlist-action-button primary" data-watch-action="save" ' +
+            'data-watch-id="' + e(item.id) + '" type="button">Guardar</button>' +
+          '<button class="watchlist-action-button" data-watch-action="cancel" ' +
+            'data-watch-id="' + e(item.id) + '" type="button">Cancelar</button>' +
+          (hasManualPrice
+            ? '<button class="watchlist-action-button restore" data-watch-action="restore" ' +
+                'data-watch-id="' + e(item.id) + '" type="button">' +
+                'Restaurar FUTBIN</button>'
+            : '') +
+        '</div>' +
+        '<span id="watchlistPriceFeedback" class="watchlist-price-feedback" role="alert">' +
+          e(watchlistEditFeedback) +
+        '</span>';
+    } else {
+      marketCell.textContent = display.market === null && player
+        ? "Sin precio FUTBIN"
+        : formatCoins(display.market);
+    }
+    tr.appendChild(marketCell);
 
-    const statusCell = document.createElement("td");
-    const badge = document.createElement("span");
-    badge.className = "opportunity-badge " + display.status.className;
-    badge.textContent = display.status.label;
-    statusCell.appendChild(badge);
-    tr.appendChild(statusCell);
+    if (!isEditing) {
+      [
+        display.thresholds
+          ? "≤ " + formatCoins(display.thresholds.good)
+          : "—",
+        display.thresholds
+          ? "≤ " + formatCoins(display.thresholds.protected)
+          : "—",
+        formatCoins(display.bid)
+      ].forEach((value) => {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        tr.appendChild(cell);
+      });
+    }
 
     const actionCell = document.createElement("td");
+    actionCell.className = "watchlist-actions-cell";
     actionCell.innerHTML =
-      '<button class="remove-button" data-watch-delete="' +
-      String(item.id) +
-      '" type="button" title="Eliminar">×</button>';
+      '<div class="watchlist-actions">' +
+        (player
+          ? '<button class="watchlist-action-button" data-watch-action="edit" ' +
+              'data-watch-id="' + e(item.id) + '" type="button" ' +
+              'aria-label="Editar precio de ' + e(item.jugador) + '">Editar</button>'
+          : '<button class="watchlist-action-button" type="button" disabled ' +
+              'aria-label="No se puede editar ' + e(item.jugador) +
+              ' porque no tiene una carta vinculada">Editar</button>') +
+        (futbinUrl
+          ? '<a class="watchlist-action-button futbin" href="' + e(futbinUrl) +
+              '" target="_blank" rel="noopener noreferrer" ' +
+              'aria-label="Abrir ' + e(item.jugador) + ' en FUTBIN">FUTBIN ↗</a>'
+          : '<span class="watchlist-action-unavailable" ' +
+              'aria-label="FUTBIN no disponible para ' + e(item.jugador) +
+              '">FUTBIN</span>') +
+        '<button class="remove-button" data-watch-delete="' + e(item.id) +
+          '" type="button" title="Eliminar" ' +
+          'aria-label="Eliminar ' + e(item.jugador) + ' de Watchlist">×</button>' +
+      '</div>';
     tr.appendChild(actionCell);
     tbody.appendChild(tr);
   });
@@ -1381,6 +1525,10 @@ function removeWatchlistItem(id) {
   state.watchlist = state.watchlist.filter(
     (item) => String(item.id) !== String(id)
   );
+  if (String(editingWatchlistItemId) === String(id)) {
+    editingWatchlistItemId = null;
+    watchlistEditFeedback = "";
+  }
 
   saveState();
   renderWatchlist();
@@ -1398,6 +1546,8 @@ function limpiarWatchlist() {
   }
 
   state.watchlist = [];
+  editingWatchlistItemId = null;
+  watchlistEditFeedback = "";
   resetWatchlistView();
   saveState();
   renderWatchlist();
@@ -3396,23 +3546,37 @@ function configurarEventosTablas() {
   watchlistBody?.addEventListener(
     "click",
     (event) => {
-      const button =
-        event.target.closest(
-          "[data-watch-delete]"
-        );
-
-
-      if (!button) {
+      const deleteButton = event.target.closest("[data-watch-delete]");
+      if (deleteButton) {
+        removeWatchlistItem(deleteButton.dataset.watchDelete);
         return;
       }
 
-
-      removeWatchlistItem(
-        button.dataset
-          .watchDelete
-      );
+      const actionButton = event.target.closest("[data-watch-action]");
+      if (!actionButton) return;
+      const itemId = actionButton.dataset.watchId;
+      if (actionButton.dataset.watchAction === "edit") {
+        beginWatchlistPriceEdit(itemId);
+      } else if (actionButton.dataset.watchAction === "save") {
+        saveWatchlistPrice(itemId);
+      } else if (actionButton.dataset.watchAction === "cancel") {
+        cancelWatchlistPriceEdit(itemId);
+      } else if (actionButton.dataset.watchAction === "restore") {
+        restoreWatchlistFutbinPrice(itemId);
+      }
     }
   );
+
+  watchlistBody?.addEventListener("keydown", (event) => {
+    if (!event.target.closest(".watchlist-price-input")) return;
+    if (event.key === "Enter") {
+      event.preventDefault();
+      saveWatchlistPrice(editingWatchlistItemId);
+    } else if (event.key === "Escape") {
+      event.preventDefault();
+      cancelWatchlistPriceEdit(editingWatchlistItemId);
+    }
+  });
 
   const watchlistSearch =
     document.getElementById("watchlistSearch");
@@ -3944,6 +4108,77 @@ function savePopularPrices() {
   localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(popularPriceOverrides));
 }
 
+function persistPopularPriceOverrides(next) {
+  const normalized = normalizePopularPrices(next);
+  try {
+    localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(normalized));
+    popularPriceOverrides = normalized;
+    return { ok: true };
+  } catch (error) {
+    console.error("No se pudo guardar el precio:", error);
+    return { ok: false, reason: "storage" };
+  }
+}
+
+function saveManualPlayerPrice(
+  cardId,
+  rawPrice,
+  updatedAt = new Date().toISOString()
+) {
+  const card = getPopularPlayers().find(
+    (player) => String(player.id) === String(cardId)
+  );
+  const price = typeof rawPrice === "string" && rawPrice.trim() === ""
+    ? NaN
+    : Number(rawPrice);
+  if (
+    !card ||
+    !Number.isFinite(price) ||
+    !Number.isInteger(price) ||
+    price <= 0
+  ) {
+    return { ok: false, reason: "invalid" };
+  }
+
+  const entry = normalizePopularPriceEntry({ price, updatedAt });
+  if (!entry) return { ok: false, reason: "invalid" };
+  const result = persistPopularPriceOverrides({
+    ...popularPriceOverrides,
+    [card.id]: entry
+  });
+  return result.ok ? { ok: true, entry } : result;
+}
+
+function removeManualPlayerPrice(cardId) {
+  const card = getPopularPlayers().find(
+    (player) => String(player.id) === String(cardId)
+  );
+  if (!card) return { ok: false, reason: "missing-card" };
+  const next = { ...popularPriceOverrides };
+  delete next[card.id];
+  return persistPopularPriceOverrides(next);
+}
+
+function updateCalculatorPriceForPlayer(cardId) {
+  if (String(selectedCalculatorPlayerId) !== String(cardId)) return false;
+  const card = getPopularPlayers().find(
+    (player) => String(player.id) === String(cardId)
+  );
+  const marketInput = document.getElementById("precioVenta");
+  if (!card || !marketInput) return false;
+  const effectivePrice = getPopularPlayerData(card).precioEfectivo;
+  marketInput.value = effectivePrice ?? "";
+  if (effectivePrice) marketInput.step = getMarketStep(effectivePrice);
+  calcularTrade();
+  return true;
+}
+
+function refreshManualPriceViews(cardId) {
+  renderPopularPlayers();
+  renderWatchlist();
+  updateCalculatorPriceForPlayer(cardId);
+}
+
 function resolvePopularPrice(card, manualEntry) {
   const referencePrice = Number.isFinite(card?.precioReferencia) &&
     card.precioReferencia > 0 ? card.precioReferencia : null;
@@ -4355,7 +4590,7 @@ function renderPopularPlayers() {
       <td>${e(card.ratingFuente ?? "—")}</td>
       <td><div class="popular-price-editor">
         <input type="number" class="meta-price-input" data-player-id="${e(card.id)}"
-          value="${e(card.precioEfectivo ?? "")}" min="0"
+          value="${e(card.precioEfectivo ?? "")}" min="1" step="1"
           placeholder="${e(pricePresentation.available ? "Precio" : pricePresentation.text)}"
           aria-label="Precio de ${e(card.nombre)}" title="${source}">
         <button class="meta-action-btn" data-meta-action="save-price"
@@ -4390,31 +4625,25 @@ function renderPopularPlayers() {
 }
 
 function actualizarPrecioPopular(cardId) {
-  if (!getPopularPlayers().some(card => card.id === cardId)) return;
+  if (!getPopularPlayers().some(card => String(card.id) === String(cardId))) return;
   const input = Array.from(document.querySelectorAll(".meta-price-input"))
-    .find(input => input.dataset.playerId === cardId);
+    .find(input => String(input.dataset.playerId) === String(cardId));
   if (!input) return;
-  const next = { ...popularPriceOverrides };
+  let result;
   if (input.value.trim() === "") {
-    delete next[cardId];
+    result = removeManualPlayerPrice(cardId);
   } else {
-    const price = Number(input.value);
-    if (!Number.isFinite(price) || price <= 0) {
+    result = saveManualPlayerPrice(cardId, input.value);
+    if (!result.ok && result.reason === "invalid") {
       alert("Ingresa un precio v\u00e1lido.");
       return;
     }
-    next[cardId] = { price, updatedAt: new Date().toISOString() };
   }
-  try {
-    localStorage.setItem(STORAGE_POPULAR_PRICES, JSON.stringify(next));
-    popularPriceOverrides = next;
-  } catch (error) {
-    console.error("No se pudo guardar el precio:", error);
+  if (!result.ok) {
     alert("No se pudo guardar el precio. Intenta de nuevo.");
     return;
   }
-  renderPopularPlayers();
-  renderWatchlist();
+  refreshManualPriceViews(cardId);
 }
 
 function limpiarFiltrosPopular() {

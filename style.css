@@ -1191,7 +1191,8 @@ select option {
 
 .watchlist-table-wrapper {
   max-height: 430px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   overscroll-behavior: contain;
 }
 
@@ -1210,6 +1211,8 @@ select option {
   color: inherit;
   font: inherit;
   font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
   cursor: pointer;
 }
 
@@ -1227,6 +1230,135 @@ select option {
 .watchlist-sort-indicator {
   min-width: 9px;
   font-size: 12px;
+}
+
+.watchlist-table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
+
+.watchlist-table th,
+.watchlist-table td {
+  padding: 7px 4px;
+  overflow: hidden;
+  font-size: 11px;
+  text-overflow: ellipsis;
+}
+
+.watchlist-table th {
+  white-space: normal;
+}
+
+.watchlist-table th:nth-child(1) { width: 18%; }
+.watchlist-table th:nth-child(2) { width: 13%; }
+.watchlist-table th:nth-child(3) { width: 15%; }
+.watchlist-table th:nth-child(4) { width: 18%; }
+.watchlist-table th:nth-child(5) { width: 11%; }
+.watchlist-table th:nth-child(6) { width: 25%; }
+
+.watchlist-player-cell,
+.watchlist-player-cell strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.watchlist-player-cell strong {
+  display: block;
+}
+
+.watchlist-market-cell.is-editing {
+  overflow: visible;
+  white-space: normal;
+}
+
+.watchlist-price-editor,
+.watchlist-actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.watchlist-price-editor {
+  flex-wrap: wrap;
+}
+
+.watchlist-price-input {
+  width: 118px;
+  height: 32px;
+  font-variant-numeric: tabular-nums;
+}
+
+.watchlist-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 4px 6px;
+  border: 1px solid #315462;
+  border-radius: 7px;
+  background: #10242e;
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 750;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.watchlist-action-button:hover,
+.watchlist-action-button:focus-visible {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.watchlist-action-button:focus-visible,
+.watchlist-price-input:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.watchlist-action-button.primary {
+  border-color: rgba(39, 241, 163, 0.5);
+  background: rgba(39, 241, 163, 0.12);
+  color: var(--green);
+}
+
+.watchlist-action-button.restore {
+  color: #78c9ff;
+}
+
+.watchlist-action-button:disabled,
+.watchlist-action-unavailable {
+  opacity: 0.48;
+  cursor: not-allowed;
+}
+
+.watchlist-price-feedback {
+  display: block;
+  min-height: 14px;
+  margin-top: 3px;
+  color: var(--red);
+  font-size: 10px;
+}
+
+.watchlist-actions-cell,
+.watchlist-actions-header {
+  background: #0d1d26;
+}
+
+.watchlist-actions-cell {
+  z-index: 1;
+}
+
+.watchlist-actions-cell .remove-button {
+  flex: 0 0 auto;
+  padding: 2px 3px;
+}
+
+tbody tr:hover .watchlist-actions-cell {
+  background: #10242e;
 }
 
 .visually-hidden {
@@ -2055,6 +2187,11 @@ footer {
 
   .watchlist-table-wrapper {
     max-height: 340px;
+    overflow-x: auto;
+  }
+
+  .watchlist-table {
+    min-width: 680px;
   }
 
 }
