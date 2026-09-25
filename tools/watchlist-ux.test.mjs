@@ -116,13 +116,13 @@ test("I. Mi puja vacía queda al final en ambas direcciones", () => {
   }
 });
 
-test("J. Estado se puede ordenar de forma estable", () => {
+test("J. Estado ya no se expone como columna ordenable", () => {
   const { context } = loadApp();
-  const rows = view(context, { sortKey: "status" });
-  const labels = rows.map(row => row.display.status.label);
-  const expected = [...labels].sort((a, b) =>
-    a.localeCompare(b, "es", { sensitivity: "base", numeric: true }));
-  assert.deepEqual(labels, expected);
+  assert.equal(context.getWatchlistSortValue({}, {
+    status: { label: "Excelente" }
+  }, "status"), null);
+  assert.doesNotMatch(htmlSource, /data-watch-sort="status"/);
+  assert.doesNotMatch(htmlSource, />\s*Estado\s*</);
 });
 
 test("K. el segundo click invierte la dirección", () => {
@@ -239,7 +239,7 @@ test("U. mobile usa botones táctiles y no depende de hover", () => {
 
 test("V. lista grande conserva scroll interno y header sticky", () => {
   assert.match(cssSource,
-    /\.watchlist-table-wrapper\s*\{[^}]*max-height:\s*430px;[^}]*overflow:\s*auto;/s);
+    /\.watchlist-table-wrapper\s*\{[^}]*max-height:\s*430px;[^}]*overflow-x:\s*hidden;[^}]*overflow-y:\s*auto;/s);
   assert.match(cssSource, /th\s*\{[^}]*position:\s*sticky;[^}]*top:\s*0;/s);
   assert.match(cssSource,
     /@media \(max-width:\s*550px\)[\s\S]*?\.watchlist-table-wrapper\s*\{[^}]*max-height:\s*340px;/);
