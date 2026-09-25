@@ -548,8 +548,32 @@
 
             </div>
 
+            <div class="watchlist-toolbar">
 
-            <div class="table-wrapper compact-table">
+              <label class="visually-hidden" for="watchlistSearch">
+                Buscar jugador en Watchlist
+              </label>
+
+              <input
+                id="watchlistSearch"
+                class="watchlist-search"
+                type="search"
+                placeholder="Buscar jugador..."
+                autocomplete="off"
+              >
+
+              <button
+                id="btnWatchlistRecentes"
+                class="small-button watchlist-recent-button is-active"
+                type="button"
+                aria-pressed="true"
+              >
+                ↕ Recientes
+              </button>
+
+            </div>
+
+            <div class="table-wrapper compact-table watchlist-table-wrapper">
 
               <table>
 
@@ -557,28 +581,40 @@
 
                   <tr>
 
-                    <th>
-                      Jugador
+                    <th data-watch-sort-header="jugador" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="jugador" type="button">
+                        Jugador <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
-                    <th>
-                      Mercado
+                    <th data-watch-sort-header="mercado" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="mercado" type="button">
+                        Mercado <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
-                    <th>
-                      Compra buena
+                    <th data-watch-sort-header="good" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="good" type="button">
+                        Compra buena <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
-                    <th>
-                      Compra protegida
+                    <th data-watch-sort-header="protected" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="protected" type="button">
+                        Compra protegida <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
-                    <th>
-                      Mi puja
+                    <th data-watch-sort-header="bid" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="bid" type="button">
+                        Mi puja <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
-                    <th>
-                      Estado
+                    <th data-watch-sort-header="status" aria-sort="none">
+                      <button class="watchlist-sort-button" data-watch-sort="status" type="button">
+                        Estado <span class="watchlist-sort-indicator" aria-hidden="true"></span>
+                      </button>
                     </th>
 
                     <th></th>
